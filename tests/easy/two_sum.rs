@@ -1,4 +1,4 @@
-// #1 Two Sum
+// # 1. Two Sum
 struct Solution;
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
@@ -14,7 +14,7 @@ impl Solution {
 }
 
 #[test]
-fn two_sum() {
+fn test_two_sum() {
     let result = Solution::two_sum(vec![2, 7, 11, 15], 9);
     assert_eq!(vec![0, 1], result);
     let result = Solution::two_sum(vec![0, 4, 3, 0], 0);
