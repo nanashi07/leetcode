@@ -1,4 +1,5 @@
 // # 4. Median of Two Sorted Arrays
+// https://leetcode.com/problems/median-of-two-sorted-arrays/
 struct Solution;
 impl Solution {
     pub fn find_median_sorted_arrays(nums1: Vec<i32>, nums2: Vec<i32>) -> f64 {
