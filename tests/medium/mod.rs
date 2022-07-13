@@ -6,3 +6,5 @@ mod longest_substring_without_repeating_characters;
 mod longest_palindromic_substring;
 // # 6. Zigzag Conversion
 mod zigzag_conversion;
+// # 7. Reverse Integer
+mod reverse_integer;
