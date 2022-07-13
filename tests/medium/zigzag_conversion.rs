@@ -14,31 +14,31 @@ impl Solution {
                 results.push(String::new());
             }
 
-            for n in 0..(len / l + 1) {
-                for row_index in 0..(l / 2 + 1) {
+            for n in 0..=(len / l) {
+                for row_index in 0..=(l / 2) {
                     if row_index == 0 {
                         let shift = 0;
                         let pos = l * n + shift;
                         if pos < len {
-                            results[row_index].push_str(&s[pos..(pos + 1)]);
+                            results[row_index].push_str(&s[pos..=(pos)]);
                         }
                     } else if row_index == l / 2 {
                         let shift = l / 2;
                         let pos = l * n + shift;
                         if pos < len {
-                            results[row_index].push_str(&s[pos..(pos + 1)]);
+                            results[row_index].push_str(&s[pos..=(pos)]);
                         }
                     } else {
                         let shift = row_index;
                         let pos = l * n + shift;
                         if pos < len {
-                            results[row_index].push_str(&s[pos..(pos + 1)]);
+                            results[row_index].push_str(&s[pos..=(pos)]);
                         }
 
                         let shift = l - row_index;
                         let pos = l * n + shift;
                         if pos < len {
-                            results[row_index].push_str(&s[pos..(pos + 1)]);
+                            results[row_index].push_str(&s[pos..=(pos)]);
                         }
                     }
                 }
