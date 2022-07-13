@@ -29,17 +29,17 @@ impl Solution {
 
 #[test]
 fn test_reverse() {
-    // let x = 123;
-    // let result = Solution::reverse(x);
-    // assert_eq!(321, result, "x = {}", x);
+    let x = 123;
+    let result = Solution::reverse(x);
+    assert_eq!(321, result, "x = {}", x);
 
-    // let x = -123;
-    // let result = Solution::reverse(x);
-    // assert_eq!(-321, result, "x = {}", x);
+    let x = -123;
+    let result = Solution::reverse(x);
+    assert_eq!(-321, result, "x = {}", x);
 
-    // let x = 120;
-    // let result = Solution::reverse(x);
-    // assert_eq!(21, result, "x = {}", x);
+    let x = 120;
+    let result = Solution::reverse(x);
+    assert_eq!(21, result, "x = {}", x);
 
     let x = 1534236469;
     let result = Solution::reverse(x);
