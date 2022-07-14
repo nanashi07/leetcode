@@ -8,3 +8,5 @@ mod longest_palindromic_substring;
 mod zigzag_conversion;
 // # 7. Reverse Integer
 mod reverse_integer;
+// # 8. String to Integer (atoi)
+mod string_to_integer_atoi;
