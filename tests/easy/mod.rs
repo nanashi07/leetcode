@@ -4,3 +4,5 @@ mod two_sum;
 mod palindrome_number;
 // # 13. Roman to Integer
 mod roman_to_integer;
+// # 14. Longest Common Prefix
+mod longest_common_prefix;
