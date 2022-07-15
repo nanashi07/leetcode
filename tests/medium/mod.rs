@@ -12,3 +12,5 @@ mod reverse_integer;
 mod string_to_integer_atoi;
 // # 11. Container With Most Water
 mod container_with_most_water;
+// # 12. Integer to Roman
+mod integer_to_roman;
