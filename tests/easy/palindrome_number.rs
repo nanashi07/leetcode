@@ -1,6 +1,7 @@
 // # 9. Palindrome Number
 // https://leetcode.com/problems/palindrome-number/
 struct Solution;
+
 impl Solution {
     pub fn is_palindrome(x: i32) -> bool {
         if x.is_negative() {

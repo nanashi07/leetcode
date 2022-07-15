@@ -1,6 +1,7 @@
 // # 5. Longest Palindromic Substring
 // https://leetcode.com/problems/longest-palindromic-substring/
 struct Solution;
+
 impl Solution {
     pub fn longest_palindrome(s: String) -> String {
         let len = s.len();

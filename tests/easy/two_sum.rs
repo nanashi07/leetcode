@@ -1,6 +1,7 @@
 // # 1. Two Sum
 // https://leetcode.com/problems/two-sum/
 struct Solution;
+
 impl Solution {
     pub fn two_sum(nums: Vec<i32>, target: i32) -> Vec<i32> {
         for (i1, v1) in nums.iter().enumerate() {

@@ -1,6 +1,7 @@
 // # 7. Reverse Integer
 // https://leetcode.com/problems/reverse-integer/
 struct Solution;
+
 impl Solution {
     pub fn reverse(x: i32) -> i32 {
         let mut r: i32 = 0;

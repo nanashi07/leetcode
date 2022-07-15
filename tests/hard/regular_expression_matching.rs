@@ -1,10 +1,11 @@
 // # 10. Regular Expression Matching
 // https://leetcode.com/problems/regular-expression-matching/
 struct Solution;
+
 impl Solution {
     fn next(p: &str, pos: usize) -> (char, bool) {
         if let Some(c) = p.chars().nth(pos) {
-            // check pattern follwing *
+            // check pattern following *
             if let Some(n) = p.chars().nth(pos + 1) {
                 if n == '*' {
                     return (c, true);
@@ -101,6 +102,7 @@ impl Solution {
 
 // from standard solution
 struct Answer;
+
 impl Answer {
     pub fn is_match(s: String, p: String) -> bool {
         Answer::find(&s, &p)

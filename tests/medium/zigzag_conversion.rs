@@ -1,6 +1,7 @@
 // # 6. Zigzag Conversion
 // https://leetcode.com/problems/zigzag-conversion/
 struct Solution;
+
 impl Solution {
     pub fn convert(s: String, num_rows: i32) -> String {
         if num_rows == 1 {

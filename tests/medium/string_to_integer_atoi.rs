@@ -1,6 +1,7 @@
 // # 8. String to Integer (atoi)
 // https://leetcode.com/problems/string-to-integer-atoi/
 struct Solution;
+
 impl Solution {
     pub fn my_atoi(s: String) -> i32 {
         let mut start = false;

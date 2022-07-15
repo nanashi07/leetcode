@@ -3,6 +3,7 @@ use std::time::Instant;
 // # 11. Container With Most Water
 // https://leetcode.com/problems/container-with-most-water/
 struct Solution;
+
 impl Solution {
     pub fn max_area(height: Vec<i32>) -> i32 {
         let mut max = 0;
@@ -28,19 +29,19 @@ fn test_max_area() {
     let time = Instant::now();
     let height = vec![1, 8, 6, 2, 5, 4, 8, 3, 7];
     let result = Solution::max_area(height.clone());
-    println!("coset time: {:?}", time.elapsed());
-    assert_eq!(49, result, "hight: {:?}", &height);
+    println!("cost time: {:?}", time.elapsed());
+    assert_eq!(49, result, "height: {:?}", &height);
 
     let time = Instant::now();
     let height = vec![1, 1];
     let result = Solution::max_area(height.clone());
-    println!("coset time: {:?}", time.elapsed());
-    assert_eq!(1, result, "hight: {:?}", &height);
+    println!("cost time: {:?}", time.elapsed());
+    assert_eq!(1, result, "height: {:?}", &height);
 
     let time = Instant::now();
     let height = read_case_01();
     let result = Solution::max_area(height.clone());
-    println!("coset time: {:?}", time.elapsed());
+    println!("cost time: {:?}", time.elapsed());
     assert_eq!(705634720, result);
 }
 

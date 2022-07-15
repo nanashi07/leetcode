@@ -3,6 +3,7 @@
 use std::{cmp::max, collections::HashSet};
 
 struct Solution;
+
 impl Solution {
     pub fn length_of_longest_substring(s: String) -> i32 {
         let mut m = 0;
