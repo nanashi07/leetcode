@@ -5,6 +5,7 @@ use std::time::Instant;
 struct Solution;
 
 impl Solution {
+    // CHECKED: performance solution
     pub fn max_area(height: Vec<i32>) -> i32 {
         let mut max = 0;
         let mut left: usize = 0;
