@@ -6,3 +6,5 @@ mod palindrome_number;
 mod roman_to_integer;
 // # 14. Longest Common Prefix
 mod longest_common_prefix;
+// # 20. Valid Parentheses
+mod valid_parentheses;
