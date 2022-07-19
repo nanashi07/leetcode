@@ -20,3 +20,5 @@ mod three_sum;
 mod three_sum_closest;
 // # 17. Letter Combinations of a Phone Number
 mod letter_combinations_of_a_phone_number;
+// # 18. 4Sum
+mod four_sum;
