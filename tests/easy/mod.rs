@@ -8,3 +8,5 @@ mod roman_to_integer;
 mod longest_common_prefix;
 // # 20. Valid Parentheses
 mod valid_parentheses;
+// # 21. Merge Two Sorted Lists
+mod merge_two_sorted_lists;

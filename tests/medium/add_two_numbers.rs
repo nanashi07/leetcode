@@ -1,20 +1,22 @@
+use crate::shared::{create_node_list, ListNode};
+
 // # 2. Add Two Numbers
 // https://leetcode.com/problems/add-two-numbers/
 struct Solution;
 
 // Definition for singly-linked list.
-#[derive(PartialEq, Eq, Clone, Debug)]
-pub struct ListNode {
-    pub val: i32,
-    pub next: Option<Box<ListNode>>,
-}
+// #[derive(PartialEq, Eq, Clone, Debug)]
+// pub struct ListNode {
+//     pub val: i32,
+//     pub next: Option<Box<ListNode>>,
+// }
 
-impl ListNode {
-    #[inline]
-    fn new(val: i32) -> Self {
-        ListNode { next: None, val }
-    }
-}
+// impl ListNode {
+//     #[inline]
+//     fn new(val: i32) -> Self {
+//         ListNode { next: None, val }
+//     }
+// }
 
 impl Solution {
     pub fn add_two_numbers(
@@ -65,49 +67,34 @@ impl Solution {
             values.push(extra);
         }
 
-        Solution::create_node_list(&values)
-    }
-
-    fn create_node_list(values: &[i32]) -> Option<Box<ListNode>> {
-        let mut nodes: Vec<Box<ListNode>> = values
-            .iter()
-            .rev()
-            .map(|v| Box::new(ListNode::new(*v)))
-            .collect();
-
-        let result = nodes.iter_mut().reduce(|last, item| {
-            item.next = Some(Box::clone(last));
-            item
-        });
-
-        Some(result.unwrap().clone())
+        create_node_list(&values)
     }
 }
 
 #[test]
 fn test_add_tw_numbers() {
-    let l1 = Solution::create_node_list(&[2, 4, 3]);
-    let l2 = Solution::create_node_list(&[5, 6, 4]);
+    let l1 = create_node_list(&[2, 4, 3]);
+    let l2 = create_node_list(&[5, 6, 4]);
     println!("l1: {:?}", &l1);
     println!("l2: {:?}", &l2);
     let result = Solution::add_two_numbers(l1, l2);
-    let expected = Solution::create_node_list(&[7, 0, 8]);
+    let expected = create_node_list(&[7, 0, 8]);
     print!("expected: {:?}", &expected);
     assert_eq!(expected, result);
 
-    let l1 = Solution::create_node_list(&[9, 9, 9, 9, 9, 9, 9]);
-    let l2 = Solution::create_node_list(&[9, 9, 9, 9]);
+    let l1 = create_node_list(&[9, 9, 9, 9, 9, 9, 9]);
+    let l2 = create_node_list(&[9, 9, 9, 9]);
     println!("l1: {:?}", &l1);
     println!("l2: {:?}", &l2);
     let result = Solution::add_two_numbers(l1, l2);
-    let expected = Solution::create_node_list(&[8, 9, 9, 9, 0, 0, 0, 1]);
+    let expected = create_node_list(&[8, 9, 9, 9, 0, 0, 0, 1]);
     print!("expected: {:?}", &expected);
     assert_eq!(expected, result);
 }
 
 #[test]
 fn test_create_node_list() {
-    let result = Solution::create_node_list(&[2, 3, 4]);
+    let result = create_node_list(&[2, 3, 4]);
     let expected = Some(Box::new(ListNode {
         val: 2,
         next: Some(Box::new(ListNode {
