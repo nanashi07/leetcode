@@ -24,3 +24,5 @@ mod letter_combinations_of_a_phone_number;
 mod four_sum;
 // # 19. Remove Nth Node From End of List
 mod remove_nth_node_from_end_of_list;
+// # 22. Generate Parentheses
+mod generate_parentheses;

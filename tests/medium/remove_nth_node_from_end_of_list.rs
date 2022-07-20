@@ -1,7 +1,6 @@
-use crate::shared::{create_node_list, ListNode};
-
 // # 19. Remove Nth Node From End of List
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/
+use crate::shared::{create_node_list, ListNode};
 struct Solution;
 
 // Definition for singly-linked list.
