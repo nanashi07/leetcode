@@ -26,3 +26,5 @@ mod four_sum;
 mod remove_nth_node_from_end_of_list;
 // # 22. Generate Parentheses
 mod generate_parentheses;
+// # 24. Swap Nodes in Pairs
+mod swap_nodes_in_pairs;
