@@ -10,3 +10,5 @@ mod longest_common_prefix;
 mod valid_parentheses;
 // # 21. Merge Two Sorted Lists
 mod merge_two_sorted_lists;
+// # 26. Remove Duplicates from Sorted Array
+mod remove_duplicates_from_sorted_array;
