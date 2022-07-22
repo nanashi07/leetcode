@@ -12,3 +12,5 @@ mod valid_parentheses;
 mod merge_two_sorted_lists;
 // # 26. Remove Duplicates from Sorted Array
 mod remove_duplicates_from_sorted_array;
+// # 27. Remove Element
+mod remove_element;
