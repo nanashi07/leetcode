@@ -9,7 +9,7 @@ impl Solution {
         if dividend == i32::MIN && divisor == -1 {
             return i32::MAX;
         }
-        // one is negative, another is positive
+        // XOR: sone is negative, another is positive
         let sign = (dividend > 0) ^ (divisor > 0);
         // Convert to i64 or else abs(-2147483648) overflows
         let mut dividend = (dividend as i64).abs();
