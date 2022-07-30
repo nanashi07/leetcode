@@ -1,7 +1,6 @@
-use std::collections::HashMap;
-
 // # 30. Substring with Concatenation of All Words
 // https://leetcode.com/problems/substring-with-concatenation-of-all-words/
+use std::collections::HashMap;
 struct Solution;
 
 impl Solution {
@@ -41,6 +40,7 @@ impl Solution {
 
         result
     }
+
     // https://leetcode.com/problems/substring-with-concatenation-of-all-words/discuss/13658/Easy-Two-Map-Solution-(C%2B%2BJava)
     pub fn _find_substring(s: String, words: Vec<String>) -> Vec<i32> {
         let len = words[0].len();

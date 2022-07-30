@@ -30,3 +30,5 @@ mod generate_parentheses;
 mod swap_nodes_in_pairs;
 // # 29. Divide Two Integers
 mod divide_two_integers;
+// # 31. Next Permutation
+mod next_permutation;
