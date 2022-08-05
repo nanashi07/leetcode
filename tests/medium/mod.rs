@@ -32,3 +32,5 @@ mod swap_nodes_in_pairs;
 mod divide_two_integers;
 // # 31. Next Permutation
 mod next_permutation;
+// # 33. Search in Rotated Sorted Array
+mod search_in_rotated_sorted_array;
