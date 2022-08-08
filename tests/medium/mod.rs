@@ -34,3 +34,5 @@ mod divide_two_integers;
 mod next_permutation;
 // # 33. Search in Rotated Sorted Array
 mod search_in_rotated_sorted_array;
+// # 34. Find First and Last Position of Element in Sorted Array
+mod find_first_and_last_position_of_element_in_sorted_array;
