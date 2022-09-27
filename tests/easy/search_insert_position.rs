@@ -3,7 +3,22 @@
 struct Solution;
 
 impl Solution {
+    // ref: https://leetcode.com/problems/search-insert-position/discuss/15080/My-8-line-Java-solution
     pub fn search_insert(nums: Vec<i32>, target: i32) -> i32 {
+        let mut low = 0;
+        let mut high = nums.len();
+        while low < high {
+            let mid = low + (high - low) / 2; // low<=mid, mid<high
+            if nums[mid] >= target {
+                high = mid; // high always decreases (even high-low==1)
+            } else {
+                low = mid + 1; // low always increases
+            }
+        }
+        return low as i32;
+    }
+
+    pub fn search_insert2(nums: Vec<i32>, target: i32) -> i32 {
         if nums.len() == 0 {
             return 0;
         }
