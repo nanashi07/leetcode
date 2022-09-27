@@ -16,3 +16,5 @@ mod remove_duplicates_from_sorted_array;
 mod remove_element;
 // # 28. Implement strStr()
 mod implement_strstr;
+// # 35. Search Insert Position
+mod search_insert_position;
