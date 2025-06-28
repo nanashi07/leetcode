@@ -1,11 +1,51 @@
 // # 36. Valid Sudoku
 // https://leetcode.com/problems/valid-sudoku/
 
+use std::collections::HashSet;
+
 struct Solution;
 
 impl Solution {
     pub fn is_valid_sudoku(board: Vec<Vec<char>>) -> bool {
-        todo!()
+        let len = board.len();
+
+        for x in 0..len {
+            let fills = &board[x]
+                .iter()
+                .filter(|ele| **ele != '.')
+                .collect::<Vec<&char>>();
+            let uniq: HashSet<_> = fills.iter().cloned().collect();
+            if fills.len() != uniq.len() {
+                println!("row {} has duplicate", x);
+                return false;
+            }
+
+            let mut uniq: HashSet<&char> = HashSet::new();
+            for y in 0..len {
+                let c = &board[y][x];
+                if *c != '.' && !uniq.insert(c) {
+                    println!("column {} has duplicate", y);
+                    return false;
+                }
+            }
+        }
+
+        for ox in 0..(len / 3) {
+            for oy in 0..(len / 3) {
+                let mut uniq: HashSet<&char> = HashSet::new();
+                for x in 0..3 {
+                    for y in 0..3 {
+                        let c = &board[ox * 3 + x][oy * 3 + y];
+                        if *c != '.' && !uniq.insert(c) {
+                            println!("block [{},{}] [{},{}] has duplicate {}", ox, oy, x, y, c);
+                            return false;
+                        }
+                    }
+                }
+            }
+        }
+
+        true
     }
 }
 
