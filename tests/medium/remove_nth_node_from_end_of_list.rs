@@ -32,8 +32,6 @@ impl Solution {
             }
         }
 
-        std::mem::drop(current);
-
         let pos = len - n;
 
         // read option usage from

@@ -18,7 +18,7 @@ impl Solution {
         return low as i32;
     }
 
-    pub fn search_insert2(nums: Vec<i32>, target: i32) -> i32 {
+    pub fn _search_insert2(nums: Vec<i32>, target: i32) -> i32 {
         if nums.len() == 0 {
             return 0;
         }

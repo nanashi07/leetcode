@@ -13,7 +13,7 @@ impl Solution {
             }
             // self is *, skip and go next
             if c == '*' {
-                return Solution::next(p.clone(), pos + 1);
+                return Solution::next(p, pos + 1);
             }
             return (c, false);
         } else {
