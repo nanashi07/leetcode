@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     // counting sort (best performance on leetcode)
-    pub fn sort_array2(mut nums: Vec<i32>) -> Vec<i32> {
+    pub fn _sort_array2(mut nums: Vec<i32>) -> Vec<i32> {
         let mut counts = [0; 100_001];
 
         for n in nums.drain(..) {
@@ -15,7 +15,7 @@ impl Solution {
         }
 
         for adjusted_n in 0..=100_000 {
-            let mut count = counts[adjusted_n];
+            let count = counts[adjusted_n];
 
             if count > 0 {
                 let n = adjusted_n as i32 - 50_000;
