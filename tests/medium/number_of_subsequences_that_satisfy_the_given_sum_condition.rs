@@ -17,7 +17,7 @@ impl Solution {
         }
 
         let mut left = 0;
-        let mut right = nums_copy.len() as i32 - 1; // possible incorrect index use usize
+        let mut right = nums_copy.len() as i32 - 1; // possible minus so cannot be usize type
         let mut count: i32 = 0;
 
         while left <= right {
@@ -112,5 +112,12 @@ mod tests {
         ];
         let target = 32;
         assert_eq!(91931447, Solution::num_subseq(nums, target));
+    }
+
+    #[test]
+    fn test_num_subseq_7() {
+        let nums = vec![1];
+        let target = 1;
+        assert_eq!(0, Solution::num_subseq(nums, target));
     }
 }
