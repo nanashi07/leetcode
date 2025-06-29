@@ -7,7 +7,7 @@ impl Solution {
     pub fn num_subseq(nums: Vec<i32>, target: i32) -> i32 {
         let modulus: i32 = 10_i32.pow(9) + 7;
 
-        // sorted, but not quite sure since it should be subsequences?
+        // sorted by hint, but not quite sure why since it should be subsequences
         let mut nums_copy = nums;
         nums_copy.sort();
 
