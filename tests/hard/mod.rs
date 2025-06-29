@@ -10,3 +10,5 @@ mod reverse_nodes_in_k_group;
 mod substring_with_concatenation_of_all_words;
 // # 32. Longest Valid Parentheses
 mod longest_valid_parentheses;
+// # 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
+mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
