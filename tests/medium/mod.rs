@@ -38,3 +38,5 @@ mod search_in_rotated_sorted_array;
 mod find_first_and_last_position_of_element_in_sorted_array;
 // # 36. Valid Sudoku
 mod valid_sudoku;
+// # 1498. Number of Subsequences That Satisfy the Given Sum Condition
+mod number_of_subsequences_that_satisfy_the_given_sum_condition;
