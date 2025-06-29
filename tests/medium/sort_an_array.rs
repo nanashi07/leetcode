@@ -4,7 +4,7 @@
 struct Solution;
 
 impl Solution {
-    // counting sort (best performance on leetcode)
+    // counting sort (the best performance on leetcode submissions)
     pub fn _sort_array2(mut nums: Vec<i32>) -> Vec<i32> {
         let mut counts = [0; 100_001];
 
@@ -28,7 +28,7 @@ impl Solution {
         nums
     }
 
-    // insertion sort
+    // insertion sort, submissions
     pub fn sort_array(nums: Vec<i32>) -> Vec<i32> {
         let mut nums = nums;
         let len = nums.len();
@@ -51,7 +51,7 @@ impl Solution {
         nums
     }
 
-    // bubble sort
+    // bubble sort, too slow
     pub fn _bubble_sort_array(nums: Vec<i32>) -> Vec<i32> {
         let len = nums.len();
         let mut nums = nums;
