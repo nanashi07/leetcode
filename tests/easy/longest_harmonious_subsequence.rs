@@ -4,7 +4,7 @@
 struct Solution;
 impl Solution {
     // best code sample from leetcode submissions
-    pub fn best_find_lhs(mut nums: Vec<i32>) -> i32 {
+    pub fn _best_find_lhs(mut nums: Vec<i32>) -> i32 {
         nums.sort_unstable();
         let mut max = 0;
         let mut start = 0;
