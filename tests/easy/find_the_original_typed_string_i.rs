@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn possible_string_count(word: String) -> i32 {
-        todo!()
+        let mut last_c: Option<char> = None;
+        let mut duplicated = 0;
+
+        for c in word.chars() {
+            if last_c == Some(c) {
+                duplicated += 1;
+            } else {
+                last_c = Some(c);
+            }
+        }
+
+        duplicated + 1
     }
 }
 
