@@ -18,6 +18,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
 - [2099. Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
+- [3330. Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/)
 
 ### Medium Problems
 

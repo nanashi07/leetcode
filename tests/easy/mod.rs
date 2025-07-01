@@ -22,3 +22,5 @@ mod search_insert_position;
 mod longest_harmonious_subsequence;
 // # 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
+// # 3330. Find the Original Typed String I
+mod find_the_original_typed_string_i;
