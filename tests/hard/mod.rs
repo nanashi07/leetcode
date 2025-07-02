@@ -9,4 +9,6 @@ mod reverse_nodes_in_k_group;
 // # 30. Substring with Concatenation of All Words
 mod substring_with_concatenation_of_all_words;
 // # 32. Longest Valid Parentheses
+mod find_the_original_typed_string_ii;
+// # 3333. Find the Original Typed String II
 mod longest_valid_parentheses;

@@ -52,6 +52,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 - [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+- [3333. Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/)
 
 ## How to Run
 
