@@ -5,7 +5,16 @@ struct Solution;
 
 impl Solution {
     pub fn kth_character(k: i32) -> char {
-        todo!()
+        let mut workd = vec![0];
+        loop {
+            workd.extend(workd.iter().map(|x| *x + 1).collect::<Vec<i32>>());
+            if workd.len() as i32 > k {
+                break;
+            }
+        }
+
+        let n = (workd[k as usize - 1] as u32) % 26;
+        char::from_u32(n + ('a' as u32)).unwrap()
     }
 }
 
