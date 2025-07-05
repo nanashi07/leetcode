@@ -10,3 +10,5 @@ mod reverse_nodes_in_k_group;
 mod substring_with_concatenation_of_all_words;
 // # 32. Longest Valid Parentheses
 mod longest_valid_parentheses;
+// # 3307. Find the K-th Character in String Game II
+mod find_the_k_th_character_in_string_game_ii;
