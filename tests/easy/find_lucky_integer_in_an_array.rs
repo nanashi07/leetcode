@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn find_lucky(arr: Vec<i32>) -> i32 {
-        todo!()
+        println!("arr: {:?}", arr);
+        let mut arr = arr;
+        arr.sort();
+        let mut luck_num = -1;
+        let mut count = 0;
+        let mut last_item: Option<i32> = None;
+        for i in 0..arr.len() {
+            if Some(arr[i]) == last_item {
+                count += 1;
+            } else {
+                if i > 0 && count == arr[i - 1] {
+                    luck_num = count;
+                }
+                count = 1;
+                last_item = Some(arr[i]);
+            }
+        }
+
+        if count == arr[arr.len() - 1] {
+            luck_num = count;
+        }
+
+        luck_num
     }
 }
 
