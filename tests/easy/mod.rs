@@ -25,4 +25,5 @@ mod find_subsequence_of_length_k_with_the_largest_sum;
 // # 3304. Find the K-th Character in String Game I
 mod find_the_k_th_character_in_string_game_i;
 // # 3330. Find the Original Typed String I
+mod find_lucky_integer_in_an_array;
 mod find_the_original_typed_string_i;
