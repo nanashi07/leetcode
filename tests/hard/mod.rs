@@ -12,3 +12,5 @@ mod substring_with_concatenation_of_all_words;
 mod longest_valid_parentheses;
 // # 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
 mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
+// # 3307. Find the K-th Character in String Game II
+mod find_the_k_th_character_in_string_game_ii;
