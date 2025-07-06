@@ -1,7 +1,13 @@
 // # 1865. Finding Pairs With a Certain Sum
 // https://leetcode.com/problems/finding-pairs-with-a-certain-sum/
 
-struct FindSumPairs {}
+use std::collections::HashMap;
+
+struct FindSumPairs {
+    hash_nums1: HashMap<i32, i32>,
+    hash_nums2: HashMap<i32, i32>,
+    nums2: Vec<i32>,
+}
 
 /**
  * `&self` means the method takes an immutable reference.
@@ -9,15 +15,52 @@ struct FindSumPairs {}
  */
 impl FindSumPairs {
     fn new(nums1: Vec<i32>, nums2: Vec<i32>) -> Self {
-        todo!()
+        let mut hash_nums1 = HashMap::new();
+        let mut hash_nums2 = HashMap::new();
+        for x in nums1 {
+            Self::put(&mut hash_nums1, x, 1)
+        }
+        for x in &nums2 {
+            Self::put(&mut hash_nums2, *x, 1)
+        }
+
+        Self {
+            hash_nums1,
+            hash_nums2,
+            nums2,
+        }
     }
 
-    fn add(&self, index: i32, val: i32) {
-        todo!()
+    fn put(map: &mut HashMap<i32, i32>, key: i32, incremental: i32) {
+        if let Some(value) = map.get_mut(&key) {
+            *value += incremental;
+        } else {
+            map.insert(key, incremental);
+        }
+    }
+
+    fn add(&mut self, index: i32, val: i32) {
+        let v = self.nums2[index as usize];
+        Self::put(&mut self.hash_nums2, v, -1);
+        Self::put(&mut self.hash_nums2, v + val, 1);
+        self.nums2[index as usize] += val;
     }
 
     fn count(&self, tot: i32) -> i32 {
-        todo!()
+        let mut count = 0;
+        self.hash_nums1
+            .iter()
+            .filter(|(&k1, &_v1)| k1 < tot)
+            .for_each(|(&k1, &v1)| {
+                count += v1
+                    * self
+                        .hash_nums2
+                        .iter()
+                        .filter(|(&k2, &_v2)| k1 + k2 == tot)
+                        .fold(0, |acc, (&_k2, &v2)| acc + v2)
+            });
+
+        count
     }
 }
 
@@ -27,4 +70,56 @@ impl FindSumPairs {
  * obj.add(index, val);
  * let ret_2: i32 = obj.count(tot);
  */
-fn empty() {}
+#[cfg(test)]
+mod tests {
+    use crate::medium::finding_pairs_with_a_certain_sum::FindSumPairs;
+
+    #[test]
+    fn test_find_sum_pairs() {
+        // ["FindSumPairs", "count", "add", "count", "count", "add", "add", "count"]
+        // [[[1, 1, 2, 2, 2, 3], [1, 4, 5, 2, 5, 4]], [7], [3, 2], [8], [4], [0, 1], [1, 1], [7]]
+        // output:
+        // [null, 8, null, 2, 1, null, null, 11]
+
+        let mut results: Vec<i32> = Vec::new();
+
+        let actions = [
+            "FindSumPairs",
+            "count",
+            "add",
+            "count",
+            "count",
+            "add",
+            "add",
+            "count",
+        ]
+        .to_vec();
+        let args = [
+            // [[1, 1, 2, 2, 2, 3], [1, 4, 5, 2, 5, 4]],
+            [7].to_vec(),
+            [3, 2].to_vec(),
+            [8].to_vec(),
+            [4].to_vec(),
+            [0, 1].to_vec(),
+            [1, 1].to_vec(),
+            [7].to_vec(),
+        ];
+
+        let mut find_sum_pairs =
+            FindSumPairs::new([1, 1, 2, 2, 2, 3].to_vec(), [1, 4, 5, 2, 5, 4].to_vec());
+
+        for i in 1..actions.len() {
+            match actions[i] {
+                "count" => {
+                    results.push(find_sum_pairs.count(args[i - 1][0]));
+                }
+                "add" => {
+                    find_sum_pairs.add(args[i - 1][0], args[i - 1][1]);
+                }
+                _ => {}
+            }
+        }
+
+        assert_eq!([8, 2, 1, 11].to_vec(), results);
+    }
+}
