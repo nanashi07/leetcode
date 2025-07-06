@@ -47,20 +47,13 @@ impl FindSumPairs {
     }
 
     fn count(&self, tot: i32) -> i32 {
-        let mut count = 0;
-        self.hash_nums1
-            .iter()
-            .filter(|(&k1, &_v1)| k1 < tot)
-            .for_each(|(&k1, &v1)| {
-                count += v1
-                    * self
-                        .hash_nums2
-                        .iter()
-                        .filter(|(&k2, &_v2)| k1 + k2 == tot)
-                        .fold(0, |acc, (&_k2, &v2)| acc + v2)
-            });
-
-        count
+        self.hash_nums1.iter().fold(0, |acc, (&k1, &v1)| {
+            acc + if let Some(&v2) = self.hash_nums2.get(&(tot - k1)) {
+                v2 * v1
+            } else {
+                0
+            }
+        })
     }
 }
 
