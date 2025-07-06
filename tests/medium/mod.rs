@@ -42,3 +42,5 @@ mod valid_sudoku;
 mod sort_an_array;
 // # 1498. Number of Subsequences That Satisfy the Given Sum Condition
 mod number_of_subsequences_that_satisfy_the_given_sum_condition;
+// # 1865. Finding Pairs With a Certain Sum
+mod finding_pairs_with_a_certain_sum;
