@@ -1,63 +1,58 @@
 // # 3333. Find the Original Typed String II
 // https://leetcode.com/problems/find-the-original-typed-string-ii/
 
-use std::collections::HashSet;
-
 struct Solution;
 
 impl Solution {
+    // https://leetcode.com/problems/find-the-original-typed-string-ii/solutions/6910352/kotlin-rust/
+    // https://leetcode.com/problems/find-the-original-typed-string-ii/solutions/5982440/optimized-tabulation/
     pub fn possible_string_count(word: String, k: i32) -> i32 {
-        println!("word: {}, k: {}", &word, &k);
-        const MOD: i32 = 10_i32.pow(9) + 7;
+        // count each duplicated char block
+        let g = word
+            .as_bytes()
+            .chunk_by(|a, b| a == b)
+            .map(|c| c.len() as i64)
+            .collect::<Vec<_>>();
+        const M: i64 = 1_000_000_007;
+        let mut all = 1;
+        // calculate all possible combinations
+        for &c in &g {
+            all = (all * c) % M
+        }
+        // return directly
+        if k as usize <= g.len() {
+            return all as i32;
+        };
+        // how many duplicated chars to base
+        let n = k as usize - g.len();
+        // remove base chars and count -1
+        let g = g
+            .iter()
+            .filter(|&&c| c > 1)
+            .map(|&c| c - 1)
+            .collect::<Vec<_>>();
 
-        let mut counter: Vec<i32> = vec![];
-        let mut last_c: Option<char> = None;
-        for c in word.chars() {
-            if last_c == Some(c) {
-                let l = counter.len();
-                counter[l - 1] += 1;
-            } else {
-                counter.push(1);
-                last_c = Some(c);
+        let mut dp = vec![vec![0; n]; 2];
+        dp[0][0] = 1i64;
+        let mut ps = vec![0; n + 1];
+
+        // === calculate dp ===
+        // duplicated group length
+        for i in 0..g.len() {
+            // additional chars length
+            for kk in 0..n {
+                // ???
+                ps[kk + 1] = (ps[kk] + dp[i % 2][kk]) % M;
+                dp[1 - (i % 2)][kk] = (ps[kk + 1] - ps[(0.max(kk as i64 - g[i])) as usize]) % M;
             }
         }
-        println!("counter: {:?}", &counter);
 
-        let mut hash: HashSet<String> = HashSet::new();
-        let min = counter.len() as i32;
-        let mut num = 0;
-        for i in 0..k - min {
-            num += Self::count_x(
-                &mut hash,
-                &counter.iter().map(|x| *x - 1).collect::<Vec<i32>>(),
-                i,
-            );
+        let mut bad = 0;
+        for i in 0..n {
+            bad = (bad + dp[g.len() % 2][i]) % M
         }
 
-        println!("num: {:?}", &num);
-        println!("ccc: {:?}", counter.iter().fold(1, |acc, x| acc * x));
-        println!("hash: {:?}", &hash);
-        // num
-        counter.iter().fold(1, |acc, x| acc * x % MOD) - (hash.len() as i32)
-    }
-
-    fn count_x(hash: &mut HashSet<String>, ct: &[i32], x: i32) -> i32 {
-        println!("ctt: {:?}, x: {}", &ct, x);
-        let mut sum = 0;
-        if x > 0 {
-            for i in 0..ct.len() {
-                if ct[i] > 0 {
-                    let mut ctt = ct.to_vec();
-                    ctt[i] -= 1;
-                    sum += Self::count_x(hash, &ctt, x - 1);
-                }
-            }
-        } else {
-            println!("xx: {:?}", &ct);
-            hash.insert(format!("{:?}", &ct));
-            return 1;
-        }
-        sum
+        ((all + M - bad) % M) as i32
     }
 }
 
