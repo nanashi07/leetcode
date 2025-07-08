@@ -36,6 +36,7 @@ impl Solution {
                 }
             }
             println!("joinable events: {:?}", &pq);
+            // join the earliest event
             if let Some(Reverse(_)) = pq.pop() {
                 count += 1;
             }
