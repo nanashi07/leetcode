@@ -10,18 +10,24 @@ impl Solution {
     // https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/solutions/6914754/maximum-number-of-events-that-can-be-attended/
     pub fn max_events(events: Vec<Vec<i32>>) -> i32 {
         let mut events = events;
+        // sort events so can iterator accordingly
         events.sort_by(|a, b| a[0].cmp(&b[0]));
         println!("events: {:?}", &events);
         let max_day = events.iter().map(|e| e[1]).max().unwrap_or(0);
         let mut pq = BinaryHeap::new();
-        let mut ans = 0;
-        let mut j = 0;
+        let mut count = 0;
+        let mut i = 0;
+
+        // iterator from the first day to last day
         for day in 1..=max_day {
-            while j < events.len() && events[j][0] <= day {
-                pq.push(Reverse(events[j][1]));
-                j += 1;
+            // get all started events
+            while i < events.len() && events[i][0] <= day {
+                println!("day: {}, add event: {:?}", day, &events[i]);
+                pq.push(Reverse(events[i][1]));
+                i += 1;
             }
-            println!("j: {}, pg: {:?}", j, &pq);
+            println!("all ongoing events: {:?}", &pq);
+            // remove expired events (ended time before than day)
             while let Some(&Reverse(end)) = pq.peek() {
                 if end < day {
                     pq.pop();
@@ -29,13 +35,13 @@ impl Solution {
                     break;
                 }
             }
-            println!("pg1: {:?}", &pq);
+            println!("joinable events: {:?}", &pq);
             if let Some(Reverse(_)) = pq.pop() {
-                ans += 1;
+                count += 1;
             }
-            println!("day: {}, pg2: {:?}", day, &pq);
+            println!("remained ongoing events: {:?}", &pq);
         }
-        ans
+        count
     }
 }
 
