@@ -20,13 +20,11 @@ impl Solution {
         println!("spaces: {:?}", &spaces);
 
         // calculate max sum
-        let mut max = 0;
-        for i in 0..(spaces.len() - k as usize) {
-            let mut sum = 0;
-
-            for j in 0..=(k as usize) {
-                sum += spaces[i + j];
-            }
+        let mut sum: i32 = spaces.iter().take(k as usize + 1).sum();
+        let mut max = sum;
+        println!("max : {}", sum);
+        for i in 1..(spaces.len() - k as usize) {
+            sum = sum - spaces[i - 1] + spaces[i + k as usize];
             max = max.max(sum);
         }
 
@@ -70,6 +68,18 @@ mod tests {
         let end_time = [1, 2, 3, 4, 5].to_vec();
         assert_eq!(
             0,
+            Solution::max_free_time(event_time, k, start_time, end_time)
+        );
+    }
+
+    #[test]
+    fn test_max_free_time_4() {
+        let event_time = 21;
+        let k = 1;
+        let start_time = [7, 10, 16].to_vec();
+        let end_time = [10, 14, 18].to_vec();
+        assert_eq!(
+            7,
             Solution::max_free_time(event_time, k, start_time, end_time)
         );
     }
