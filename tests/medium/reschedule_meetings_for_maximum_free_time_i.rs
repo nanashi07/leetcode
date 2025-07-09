@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn max_free_time(event_time: i32, k: i32, start_time: Vec<i32>, end_time: Vec<i32>) -> i32 {
-        todo!()
+        println!(
+            "event_time: {}, k: {}, start_time: {:?}, end_time: {:?}",
+            event_time, k, &start_time, &end_time
+        );
+        let len = start_time.len();
+        let mut spaces: Vec<i32> = Vec::new();
+        spaces.push(start_time[0]);
+        for i in 0..len - 1 {
+            let end = end_time[i];
+            spaces.push(start_time[i + 1] - end);
+        }
+        spaces.push(event_time - end_time[end_time.len() - 1]);
+        println!("spaces: {:?}", &spaces);
+
+        // calculate max sum
+        let mut max = 0;
+        for i in 0..(spaces.len() - k as usize) {
+            let mut sum = 0;
+
+            for j in 0..=(k as usize) {
+                sum += spaces[i + j];
+            }
+            max = max.max(sum);
+        }
+
+        max
     }
 }
 
