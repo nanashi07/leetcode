@@ -4,8 +4,18 @@
 struct Solution;
 
 impl Solution {
+    // https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/solutions/3496792/maximum-number-of-events-that-can-be-attended-ii/
     pub fn max_value(events: Vec<Vec<i32>>, k: i32) -> i32 {
-        todo!()
+        let mut events = events;
+        events.sort_unstable();
+        println!("events: {:?}", &events);
+
+        let mut day = 0;
+        let mut sum = 0;
+
+        for i in 0..events.len() {}
+
+        0
     }
 }
 
