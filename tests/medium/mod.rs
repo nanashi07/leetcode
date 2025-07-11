@@ -48,3 +48,5 @@ mod number_of_subsequences_that_satisfy_the_given_sum_condition;
 mod finding_pairs_with_a_certain_sum;
 // # 3439. Reschedule Meetings for Maximum Free Time I
 mod reschedule_meetings_for_maximum_free_time_i;
+// # 3440. Reschedule Meetings for Maximum Free Time II
+mod reschedule_meetings_for_maximum_free_time_ii;
