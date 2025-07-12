@@ -5,6 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn most_booked(n: i32, meetings: Vec<Vec<i32>>) -> i32 {
+        let mut rooms_use_count = vec![0; n as usize];
+        let mut rooms_use = vec![0; n as usize];
+        let mut meetings = meetings;
+
+        for m in 0..meetings.len() {
+            let mut meeting = &meetings[m];
+
+            for r in 0..rooms_use.len() {
+                if rooms_use[r] > meeting[0] {
+                    // next or
+                }
+            }
+        }
+
         todo!()
     }
 }
