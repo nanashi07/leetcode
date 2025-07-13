@@ -61,6 +61,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
 - [3307. Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/)
+- [3333. Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/)
 
 ## How to Run
 
