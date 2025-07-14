@@ -23,7 +23,14 @@ struct Solution;
 // }
 impl Solution {
     pub fn get_decimal_value(head: Option<Box<ListNode>>) -> i32 {
-        todo!()
+        let mut head = head;
+        let mut n = 0;
+        while let Some(value) = head {
+            n = n << 1;
+            n += value.val;
+            head = value.next
+        }
+        n
     }
 }
 
@@ -42,5 +49,11 @@ mod tests {
     fn test_get_decimal_value_2() {
         let head = create_node_list(&[0]);
         assert_eq!(0, Solution::get_decimal_value(head));
+    }
+
+    #[test]
+    fn test_get_decimal_value_3() {
+        let head = create_node_list(&[1, 0, 0, 1, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0]);
+        assert_eq!(18880, Solution::get_decimal_value(head));
     }
 }
