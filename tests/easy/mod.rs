@@ -26,6 +26,8 @@ mod find_lucky_integer_in_an_array;
 mod convert_binary_number_in_a_linked_list_to_integer;
 // # 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
+// # 3136. Valid Word
+mod valid_word;
 // # 3304. Find the K-th Character in String Game I
 mod find_the_k_th_character_in_string_game_i;
 // # 3330. Find the Original Typed String I
