@@ -48,6 +48,8 @@ mod number_of_subsequences_that_satisfy_the_given_sum_condition;
 mod finding_pairs_with_a_certain_sum;
 // # 2410. Maximum Matching of Players With Trainers
 mod maximum_matching_of_players_with_trainers;
+// # 3201. Find the Maximum Length of Valid Subsequence I
+mod find_the_maximum_length_of_valid_subsequence_i;
 // # 3439. Reschedule Meetings for Maximum Free Time I
 mod reschedule_meetings_for_maximum_free_time_i;
 // # 3440. Reschedule Meetings for Maximum Free Time II
