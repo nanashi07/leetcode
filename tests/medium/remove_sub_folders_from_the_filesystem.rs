@@ -5,7 +5,17 @@ struct Solution;
 
 impl Solution {
     pub fn remove_subfolders(folder: Vec<String>) -> Vec<String> {
-        todo!()
+        let mut folder = folder;
+        folder.sort_unstable();
+        let mut output: Vec<String> = Vec::new();
+
+        for f in folder {
+            if output.is_empty() || !f.starts_with(&format!("{}/", &output[output.len() - 1])) {
+                output.push(f.clone())
+            }
+        }
+
+        output
     }
 }
 
