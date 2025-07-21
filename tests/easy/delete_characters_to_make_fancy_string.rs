@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn make_fancy_string(s: String) -> String {
-        todo!()
+        println!("s: {}", &s);
+        if s.len() < 3 {
+            return s;
+        }
+        let mut r: Vec<char> = Vec::new();
+        for c in s.chars() {
+            if r.len() >= 2 && r[r.len() - 1] == c && r[r.len() - 2] == c {
+                continue;
+            }
+            r.push(c);
+        }
+        r.iter().collect()
     }
 }
 
