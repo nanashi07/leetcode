@@ -24,6 +24,8 @@ mod longest_harmonious_subsequence;
 mod find_lucky_integer_in_an_array;
 // # 1290. Convert Binary Number in a Linked List to Integer
 mod convert_binary_number_in_a_linked_list_to_integer;
+// # 1957. Delete Characters to Make Fancy String
+mod delete_characters_to_make_fancy_string;
 // # 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
 // # 3136. Valid Word
