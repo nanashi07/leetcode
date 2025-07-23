@@ -48,6 +48,8 @@ mod maximum_number_of_events_that_can_be_attended;
 mod number_of_subsequences_that_satisfy_the_given_sum_condition;
 // # 1695. Maximum Erasure Value
 mod maximum_erasure_value;
+// # 1717. Maximum Score From Removing Substrings
+mod maximum_score_from_removing_substrings;
 // # 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
 // # 2410. Maximum Matching of Players With Trainers
