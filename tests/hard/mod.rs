@@ -12,6 +12,8 @@ mod substring_with_concatenation_of_all_words;
 mod longest_valid_parentheses;
 // # 1900. The Earliest and Latest Rounds Where Players Compete
 mod the_earliest_and_latest_rounds_where_players_compete;
+// # 2322. Minimum Score After Removals on a Tree
+mod minimum_score_after_removals_on_a_tree;
 // # 3307. Find the K-th Character in String Game II
 mod find_the_k_th_character_in_string_game_ii;
 // # 3333. Find the Original Typed String II

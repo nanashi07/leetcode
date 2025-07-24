@@ -68,6 +68,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
+- [2322. Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/)
 - [3307. Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/)
 - [3333. Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/)
 
