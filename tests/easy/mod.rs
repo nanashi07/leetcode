@@ -34,3 +34,5 @@ mod valid_word;
 mod find_the_k_th_character_in_string_game_i;
 // # 3330. Find the Original Typed String I
 mod find_the_original_typed_string_i;
+// # 3487. Maximum Unique Subarray Sum After Deletion
+mod maximum_unique_subarray_sum_after_deletion;
