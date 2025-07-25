@@ -24,6 +24,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3136. Valid Word](https://leetcode.com/problems/valid-word/)
 - [3304. Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/)
 - [3330. Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/)
+- [3487. Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/)
 
 ### Medium Problems
 
