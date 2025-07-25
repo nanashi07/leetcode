@@ -9,7 +9,6 @@ impl Solution {
 
         let rx = "ab";
         let ry = "ba";
-        let mut s = s;
         let mut sum = 0;
 
         let replace = |input: String, replace: &str| {
