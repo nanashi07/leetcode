@@ -16,3 +16,5 @@ mod the_earliest_and_latest_rounds_where_players_compete;
 mod find_the_k_th_character_in_string_game_ii;
 // # 3333. Find the Original Typed String II
 mod find_the_original_typed_string_ii;
+// # 3480. Maximize Subarrays After Removing One Conflicting Pair
+mod maximize_subarrays_after_removing_one_conflicting_pair;
