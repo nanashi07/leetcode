@@ -28,6 +28,8 @@ mod convert_binary_number_in_a_linked_list_to_integer;
 mod delete_characters_to_make_fancy_string;
 // # 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
+// # 2210. Count Hills and Valleys in an Array
+mod count_hills_and_valleys_in_an_array;
 // # 3136. Valid Word
 mod valid_word;
 // # 3304. Find the K-th Character in String Game I
