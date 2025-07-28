@@ -52,6 +52,8 @@ mod maximum_erasure_value;
 mod maximum_score_from_removing_substrings;
 // # 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
+// # 2044. Count Number of Maximum Bitwise-OR Subsets
+mod count_number_of_maximum_bitwise_or_subsets;
 // # 2410. Maximum Matching of Players With Trainers
 mod maximum_matching_of_players_with_trainers;
 // # 3201. Find the Maximum Length of Valid Subsequence I
