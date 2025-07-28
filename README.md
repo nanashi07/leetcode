@@ -55,6 +55,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1695. Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)
 - [1717. Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/)
 - [1865. Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/)
+- [2044. Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)
 - [2410. Maximum Matching of Players With Trainers](https://leetcode.com/problems/maximum-matching-of-players-with-trainers/)
 - [3201. Find the Maximum Length of Valid Subsequence I](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-i/)
 - [3202. Find the Maximum Length of Valid Subsequence II](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-ii/)
