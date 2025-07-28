@@ -4,8 +4,28 @@
 struct Solution;
 
 impl Solution {
+    // https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/editorial/
     pub fn count_max_or_subsets(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {:?}", &nums);
+
+        let mut xor = 0;
+        for n in &nums {
+            xor = xor | *n;
+        }
+        println!("xor: {}", &xor);
+
+        Self::count(&nums, 0, 0, xor)
+    }
+
+    fn count(nums: &Vec<i32>, index: usize, current_xor: i32, target_xor: i32) -> i32 {
+        if index == nums.len() {
+            return if current_xor == target_xor { 1 } else { 0 };
+        }
+        // next by filling with it or not
+        let count_without = Self::count(nums, index + 1, current_xor, target_xor);
+        let count_with = Self::count(nums, index + 1, current_xor | nums[index], target_xor);
+
+        count_with + count_without
     }
 }
 
