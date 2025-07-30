@@ -56,6 +56,8 @@ mod finding_pairs_with_a_certain_sum;
 mod count_number_of_maximum_bitwise_or_subsets;
 // # 2410. Maximum Matching of Players With Trainers
 mod maximum_matching_of_players_with_trainers;
+// # 2419. Longest Subarray With Maximum Bitwise AND
+mod longest_subarray_with_maximum_bitwise_and;
 // # 3201. Find the Maximum Length of Valid Subsequence I
 mod find_the_maximum_length_of_valid_subsequence_i;
 // # 3202. Find the Maximum Length of Valid Subsequence II
