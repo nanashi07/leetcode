@@ -17,11 +17,12 @@ impl Solution {
             let mut tmp: HashSet<i32> = HashSet::new();
 
             tmp.insert(n);
-            // bitwise OR curr to n into a new XOR set
+            // bitwise OR curr with n into a new XOR set
             for c in &curr {
                 tmp.insert(*c | n);
             }
             println!("tmp: {:?}", &tmp);
+            // re-assign for next round
             curr = tmp;
 
             for c in &curr {
