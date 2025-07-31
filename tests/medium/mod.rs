@@ -38,6 +38,8 @@ mod search_in_rotated_sorted_array;
 mod find_first_and_last_position_of_element_in_sorted_array;
 // # 36. Valid Sudoku
 mod valid_sudoku;
+// # 898. Bitwise ORs of Subarrays
+mod bitwise_ors_of_subarrays;
 // 912. Sort an Array
 mod sort_an_array;
 // # 1233. Remove Sub-Folders from the Filesystem
