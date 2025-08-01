@@ -18,6 +18,8 @@ mod remove_element;
 mod implement_strstr;
 // # 35. Search Insert Position
 mod search_insert_position;
+// # 118. Pascal's Triangle
+mod pascals_triangle;
 // # 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
 // # 1394. Find Lucky Integer in an Array

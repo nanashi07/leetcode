@@ -16,6 +16,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [27. Remove Element](https://leetcode.com/problems/remove-element/)
 - [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/)
 - [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+- [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
 - [1394. Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/)
