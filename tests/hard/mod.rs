@@ -12,6 +12,8 @@ mod substring_with_concatenation_of_all_words;
 mod longest_valid_parentheses;
 // # 1900. The Earliest and Latest Rounds Where Players Compete
 mod the_earliest_and_latest_rounds_where_players_compete;
+// # 2106. Maximum Fruits Harvested After at Most K Steps
+mod maximum_fruits_harvested_after_at_most_k_steps;
 // # 2561. Rearranging Fruits
 mod rearranging_fruits;
 // # 3307. Find the K-th Character in String Game II
