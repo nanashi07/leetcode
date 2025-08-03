@@ -5,7 +5,42 @@ struct Solution;
 
 impl Solution {
     pub fn max_total_fruits(fruits: Vec<Vec<i32>>, start_pos: i32, k: i32) -> i32 {
-        todo!()
+        let n = fruits.len();
+        let mut sum = vec![0; n + 1];
+        let mut indices = vec![0; n];
+
+        // Build prefix sum and indices arrays
+        for i in 0..n {
+            sum[i + 1] = sum[i] + fruits[i][1];
+            indices[i] = fruits[i][0];
+        }
+
+        let mut ans = 0;
+
+        // Try all possible distributions of steps
+        for x in 0..=k / 2 {
+            // Move left x steps, then move right k - x steps
+            let y = k - 2 * x;
+            let left = start_pos - x;
+            let right = start_pos + y;
+
+            let start = indices.binary_search(&left).unwrap_or_else(|i| i);
+            let end = indices.binary_search(&(right + 1)).unwrap_or_else(|i| i);
+
+            ans = ans.max(sum[end] - sum[start]);
+
+            // Move right x steps, then move left k - x steps
+            let y = k - 2 * x;
+            let left = start_pos - y;
+            let right = start_pos + x;
+
+            let start = indices.binary_search(&left).unwrap_or_else(|i| i);
+            let end = indices.binary_search(&(right + 1)).unwrap_or_else(|i| i);
+
+            ans = ans.max(sum[end] - sum[start]);
+        }
+
+        ans
     }
 }
 
