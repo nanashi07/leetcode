@@ -40,7 +40,9 @@ mod find_first_and_last_position_of_element_in_sorted_array;
 mod valid_sudoku;
 // # 898. Bitwise ORs of Subarrays
 mod bitwise_ors_of_subarrays;
-// 912. Sort an Array
+// # 904. Fruit Into Baskets
+mod fruit_into_baskets;
+// # 912. Sort an Array
 mod sort_an_array;
 // # 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
