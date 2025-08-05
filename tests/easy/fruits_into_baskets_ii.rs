@@ -5,7 +5,27 @@ struct Solution;
 
 impl Solution {
     pub fn num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {
-        todo!()
+        println!("fruits: {:?}, baskets: {:?}", &fruits, &baskets);
+
+        let mut remains = 0;
+        let mut baskets = baskets;
+
+        for i in 0..fruits.len() {
+            let fruit = fruits[i];
+            let len = (&baskets).len();
+            for j in 0..len {
+                if fruit <= baskets[j] {
+                    baskets.remove(j);
+                    break;
+                }
+            }
+
+            if len == baskets.len() {
+                remains += 1;
+            }
+        }
+
+        remains
     }
 }
 
