@@ -38,5 +38,7 @@ mod valid_word;
 mod find_the_k_th_character_in_string_game_i;
 // # 3330. Find the Original Typed String I
 mod find_the_original_typed_string_i;
+// # 3477. Fruits Into Baskets II
+mod fruits_into_baskets_ii;
 // # 3487. Maximum Unique Subarray Sum After Deletion
 mod maximum_unique_subarray_sum_after_deletion;
