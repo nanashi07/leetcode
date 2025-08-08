@@ -25,6 +25,7 @@ fn dp(fruits: &Vec<Vec<i32>>, n: usize) -> i32 {
 }
 
 impl Solution {
+    // https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/
     pub fn max_collected_fruits(mut fruits: Vec<Vec<i32>>) -> i32 {
         let n = fruits.len();
         let mut ans = (0..n).map(|i| fruits[i][i]).sum::<i32>();
