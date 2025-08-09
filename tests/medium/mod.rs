@@ -70,3 +70,5 @@ mod find_the_maximum_length_of_valid_subsequence_ii;
 mod reschedule_meetings_for_maximum_free_time_i;
 // # 3440. Reschedule Meetings for Maximum Free Time II
 mod reschedule_meetings_for_maximum_free_time_ii;
+// # 3479. Fruits Into Baskets III
+mod fruits_into_baskets_iii;
