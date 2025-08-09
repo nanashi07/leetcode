@@ -20,6 +20,8 @@ mod implement_strstr;
 mod search_insert_position;
 // # 118. Pascal's Triangle
 mod pascals_triangle;
+// # 231. Power of Two
+mod power_of_two;
 // # 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
 // # 1394. Find Lucky Integer in an Array
