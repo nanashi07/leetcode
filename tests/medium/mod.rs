@@ -66,6 +66,8 @@ mod maximum_matching_of_players_with_trainers;
 mod longest_subarray_with_maximum_bitwise_and;
 // # 2438. Range Product Queries of Powers
 mod range_product_queries_of_powers;
+// # 2787. Ways to Express an Integer as Sum of Powers
+mod ways_to_express_an_integer_as_sum_of_powers;
 // # 3201. Find the Maximum Length of Valid Subsequence I
 mod find_the_maximum_length_of_valid_subsequence_i;
 // # 3202. Find the Maximum Length of Valid Subsequence II
