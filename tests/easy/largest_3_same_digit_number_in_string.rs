@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn largest_good_integer(num: String) -> String {
-        todo!()
+        println!("num: {:?}", &num);
+
+        let mut count = 0;
+        let mut good_integer = ' ';
+        let mut last: char = ' ';
+
+        for c in num.chars() {
+            if last == c {
+                count += 1;
+            } else {
+                count = 1;
+                last = c;
+            }
+
+            if count >= 3 && good_integer < last {
+                good_integer = last;
+            }
+        }
+
+        if good_integer == ' ' {
+            "".to_owned()
+        } else {
+            good_integer.to_string().repeat(3)
+        }
     }
 }
 
