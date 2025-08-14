@@ -25,6 +25,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1957. Delete Characters to Make Fancy String](https://leetcode.com/problems/delete-characters-to-make-fancy-string/)
 - [2099. Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
 - [2210. Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/)
+- [2264. Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/)
 - [3136. Valid Word](https://leetcode.com/problems/valid-word/)
 - [3304. Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/)
 - [3330. Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/)
