@@ -36,6 +36,8 @@ mod delete_characters_to_make_fancy_string;
 mod find_subsequence_of_length_k_with_the_largest_sum;
 // # 2210. Count Hills and Valleys in an Array
 mod count_hills_and_valleys_in_an_array;
+// # 2264. Largest 3-Same-Digit Number in String
+mod largest_3_same_digit_number_in_string;
 // # 3136. Valid Word
 mod valid_word;
 // # 3304. Find the K-th Character in String Game I
