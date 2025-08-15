@@ -24,6 +24,8 @@ mod pascals_triangle;
 mod power_of_two;
 // # 326. Power of Three
 mod power_of_three;
+// # 342. Power of Four
+mod power_of_four;
 // # 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
 // # 1394. Find Lucky Integer in an Array

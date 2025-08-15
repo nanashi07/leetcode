@@ -1,0 +1,33 @@
+// # 342. Power of Four
+// https://leetcode.com/problems/power-of-four/description/?envType=daily-question&envId=2025-08-15
+
+struct Solution;
+
+impl Solution {
+    pub fn is_power_of_four(n: i32) -> bool {
+        todo!()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::easy::power_of_four::Solution;
+
+    #[test]
+    fn test_is_power_of_four_1() {
+        let n = 16;
+        assert_eq!(true, Solution::is_power_of_four(n));
+    }
+
+    #[test]
+    fn test_is_power_of_four_2() {
+        let n = 5;
+        assert_eq!(false, Solution::is_power_of_four(n));
+    }
+
+    #[test]
+    fn test_is_power_of_four_3() {
+        let n = 1;
+        assert_eq!(true, Solution::is_power_of_four(n));
+    }
+}
