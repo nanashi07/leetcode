@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn is_power_of_four(n: i32) -> bool {
-        todo!()
+        println!("n: {}", n);
+
+        let mut n = n;
+
+        while n > 1 {
+            if n % 4 > 0 {
+                return false;
+            }
+            n = n >> 2
+        }
+
+        n == 1
     }
 }
 
