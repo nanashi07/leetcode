@@ -5,7 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn maximum69_number(num: i32) -> i32 {
-        todo!()
+        println!("num: {}", num);
+
+        let mut num = num.to_string();
+        num.replacen("6", "9", 1).parse().unwrap()
     }
 }
 
