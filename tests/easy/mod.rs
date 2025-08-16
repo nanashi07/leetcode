@@ -28,10 +28,12 @@ mod power_of_three;
 mod power_of_four;
 // # 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
-// # 1394. Find Lucky Integer in an Array
-mod find_lucky_integer_in_an_array;
 // # 1290. Convert Binary Number in a Linked List to Integer
 mod convert_binary_number_in_a_linked_list_to_integer;
+// # 1323. Maximum 69 Number
+mod maximum_69_number;
+// # 1394. Find Lucky Integer in an Array
+mod find_lucky_integer_in_an_array;
 // # 1957. Delete Characters to Make Fancy String
 mod delete_characters_to_make_fancy_string;
 // # 2099. Find Subsequence of Length K With the Largest Sum
