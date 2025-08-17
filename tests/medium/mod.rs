@@ -38,6 +38,8 @@ mod search_in_rotated_sorted_array;
 mod find_first_and_last_position_of_element_in_sorted_array;
 // # 36. Valid Sudoku
 mod valid_sudoku;
+// # 837. New 21 Game
+mod new_21_game;
 // # 869. Reordered Power of 2
 mod reordered_power_of_2;
 // # 898. Bitwise ORs of Subarrays

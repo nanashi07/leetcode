@@ -1,5 +1,5 @@
 // # 231. Power of Two
-// https://leetcode.com/problems/power-of-two/description/?envType=daily-question&envId=2025-08-09
+// https://leetcode.com/problems/power-of-two/
 
 struct Solution;
 

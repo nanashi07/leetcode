@@ -1,5 +1,5 @@
 // # 2438. Range Product Queries of Powers
-// https://leetcode.com/problems/range-product-queries-of-powers/description/?envType=daily-question&envId=2025-08-11
+// https://leetcode.com/problems/range-product-queries-of-powers/
 
 struct Solution;
 
