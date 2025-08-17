@@ -1,5 +1,5 @@
 // # 1323. Maximum 69 Number
-// https://leetcode.com/problems/maximum-69-number/description/?envType=daily-question&envId=2025-08-16
+// https://leetcode.com/problems/maximum-69-number/
 
 struct Solution;
 
@@ -7,7 +7,7 @@ impl Solution {
     pub fn maximum69_number(num: i32) -> i32 {
         println!("num: {}", num);
 
-        let mut num = num.to_string();
+        let num = num.to_string();
         num.replacen("6", "9", 1).parse().unwrap()
     }
 }

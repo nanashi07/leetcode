@@ -1,5 +1,5 @@
 // # 326. Power of Three
-// https://leetcode.com/problems/power-of-three/description/?envType=daily-question&envId=2025-08-13
+// https://leetcode.com/problems/power-of-three/
 
 struct Solution;
 
