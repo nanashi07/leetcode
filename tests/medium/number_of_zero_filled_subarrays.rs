@@ -1,11 +1,38 @@
 // # 2348. Number of Zero-Filled Subarrays
-// https://leetcode.com/problems/number-of-zero-filled-subarrays/description/?envType=daily-question&envId=2025-08-19
+// https://leetcode.com/problems/number-of-zero-filled-subarrays/
 
 struct Solution;
 
 impl Solution {
     pub fn zero_filled_subarray(nums: Vec<i32>) -> i64 {
-        todo!()
+        println!("nums: {:?}", &nums);
+
+        let mut len = 0;
+        let mut sum = 0;
+
+        // calculate subarrays
+        let calc = |l: i64| {
+            let mut l = l;
+            let mut s = 0;
+            while l > 0 {
+                s += l;
+                l -= 1;
+            }
+            s
+        };
+
+        for i in 0..nums.len() {
+            let n = nums[i];
+
+            if n == 0 {
+                len += 1;
+            } else {
+                sum += calc(len);
+                len = 0;
+            }
+        }
+
+        sum + calc(len)
     }
 }
 
