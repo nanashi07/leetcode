@@ -62,6 +62,8 @@ mod maximum_score_from_removing_substrings;
 mod finding_pairs_with_a_certain_sum;
 // # 2044. Count Number of Maximum Bitwise-OR Subsets
 mod count_number_of_maximum_bitwise_or_subsets;
+// # 2348. Number of Zero-Filled Subarrays
+mod number_of_zero_filled_subarrays;
 // # 2410. Maximum Matching of Players With Trainers
 mod maximum_matching_of_players_with_trainers;
 // # 2419. Longest Subarray With Maximum Bitwise AND
