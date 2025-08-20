@@ -24,6 +24,8 @@ mod delete_duplicate_folders_in_system;
 mod maximum_fruits_harvested_after_at_most_k_steps;
 // # 2163. Minimum Difference in Sums After Removal of Elements
 mod minimum_difference_in_sums_after_removal_of_elements;
+// # 2322. Minimum Score After Removals on a Tree
+mod minimum_score_after_removals_on_a_tree;
 // # 2402. Meeting Rooms III
 mod meeting_rooms_iii;
 // # 2561. Rearranging Fruits
