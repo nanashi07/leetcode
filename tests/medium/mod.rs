@@ -50,6 +50,8 @@ mod fruit_into_baskets;
 mod sort_an_array;
 // # 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
+// # 1277. Count Square Submatrices with All Ones
+mod count_square_submatrices_with_all_ones;
 // # 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
 // # 1498. Number of Subsequences That Satisfy the Given Sum Condition
