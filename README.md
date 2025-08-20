@@ -88,6 +88,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 - [679. 24 Game](https://leetcode.com/problems/24-game/)
 - [1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/)
+- [1751. Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/)
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
 - [2106. Maximum Fruits Harvested After at Most K Steps](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/)
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)

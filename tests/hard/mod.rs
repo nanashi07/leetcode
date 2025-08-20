@@ -14,6 +14,8 @@ mod longest_valid_parentheses;
 mod twenty_four_game;
 // # 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
 mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
+// # 1751. Maximum Number of Events That Can Be Attended II
+mod maximum_number_of_events_that_can_be_attended_ii;
 // # 1900. The Earliest and Latest Rounds Where Players Compete
 mod the_earliest_and_latest_rounds_where_players_compete;
 // # 2106. Maximum Fruits Harvested After at Most K Steps
