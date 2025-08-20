@@ -17,12 +17,17 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/)
 - [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 - [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
+- [231. Power of Two](https://leetcode.com/problems/power-of-two/)
+- [326. Power of Three](https://leetcode.com/problems/power-of-three/)
+- [342. Power of Four](https://leetcode.com/problems/power-of-four/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
+- [1323. Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)
 - [1394. Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/)
 - [1957. Delete Characters to Make Fancy String](https://leetcode.com/problems/delete-characters-to-make-fancy-string/)
 - [2099. Find Subsequence of Length K With the Largest Sum](https://leetcode.com/problems/find-subsequence-of-length-k-with-the-largest-sum/)
 - [2210. Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/)
+- [2264. Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/)
 - [3136. Valid Word](https://leetcode.com/problems/valid-word/)
 - [3304. Find the K-th Character in String Game I](https://leetcode.com/problems/find-the-k-th-character-in-string-game-i/)
 - [3330. Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/)
@@ -50,22 +55,30 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
 - [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
+- [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
+- [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
 - [898. Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/)
 - [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 - [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
 - [1233. Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/)
+- [1277. Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 - [1353. Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
 - [1498. Number of Subsequences That Satisfy the Given Sum Condition](https://leetcode.com/problems/number-of-subsequences-that-satisfy-the-given-sum-condition/)
 - [1695. Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)
 - [1717. Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/)
 - [1865. Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/)
 - [2044. Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)
+- [2348. Number of Zero-Filled Subarrays](https://leetcode.com/problems/number-of-zero-filled-subarrays/)
 - [2419. Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/)
 - [2410. Maximum Matching of Players With Trainers](https://leetcode.com/problems/maximum-matching-of-players-with-trainers/)
+- [2411. Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/)
+- [2438. Range Product Queries of Powers](https://leetcode.com/problems/range-product-queries-of-powers/)
+- [2787. Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/)
 - [3201. Find the Maximum Length of Valid Subsequence I](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-i/)
 - [3202. Find the Maximum Length of Valid Subsequence II](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-ii/)
 - [3439. Reschedule Meetings for Maximum Free Time I](https://leetcode.com/problems/reschedule-meetings-for-maximum-free-time-i/)
 - [3440. Reschedule Meetings for Maximum Free Time II](https://leetcode.com/problems/reschedule-meetings-for-maximum-free-time-ii/)
+- [3479. Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/)
 
 ### Hard Problems
 
@@ -75,12 +88,20 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [25. Reverse Nodes in k-Group](https://leetcode.com/problems/reverse-nodes-in-k-group/)
 - [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
+- [679. 24 Game](https://leetcode.com/problems/24-game/)
+- [1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows](https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/)
+- [1751. Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/)
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
+- [1948. Delete Duplicate Folders in System](https://leetcode.com/problems/delete-duplicate-folders-in-system/)
 - [2106. Maximum Fruits Harvested After at Most K Steps](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/)
+- [2163. Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/)
+- [2322. Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/)
+- [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)
 - [3307. Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/)
 - [3333. Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/)
 - [3363. Find the Maximum Number of Fruits Collected](https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/)
+- [3480. Maximize Subarrays After Removing One Conflicting Pair](https://leetcode.com/problems/maximize-subarrays-after-removing-one-conflicting-pair/)
 
 ## How to Run
 
@@ -102,7 +123,7 @@ cargo test test_sort_array
 ```
 tests/
 ├── easy/           # Easy difficulty problems
-├── medium/         # Medium difficulty problems  
+├── medium/         # Medium difficulty problems
 ├── hard/           # Hard difficulty problems
 └── shared/         # Shared utilities
 ```
