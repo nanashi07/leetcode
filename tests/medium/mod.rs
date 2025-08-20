@@ -68,6 +68,8 @@ mod count_number_of_maximum_bitwise_or_subsets;
 mod number_of_zero_filled_subarrays;
 // # 2410. Maximum Matching of Players With Trainers
 mod maximum_matching_of_players_with_trainers;
+// # 2411. Smallest Subarrays With Maximum Bitwise OR
+mod smallest_subarrays_with_maximum_bitwise_or;
 // # 2419. Longest Subarray With Maximum Bitwise AND
 mod longest_subarray_with_maximum_bitwise_and;
 // # 2438. Range Product Queries of Powers
