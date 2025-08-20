@@ -91,6 +91,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1751. Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/)
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
 - [2106. Maximum Fruits Harvested After at Most K Steps](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/)
+- [2163. Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/)
 - [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)
 - [3307. Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/)
@@ -116,7 +117,7 @@ cargo test test_sort_array
 ```
 tests/
 ├── easy/           # Easy difficulty problems
-├── medium/         # Medium difficulty problems  
+├── medium/         # Medium difficulty problems
 ├── hard/           # Hard difficulty problems
 └── shared/         # Shared utilities
 ```
