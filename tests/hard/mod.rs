@@ -20,6 +20,8 @@ mod maximum_number_of_events_that_can_be_attended_ii;
 mod the_earliest_and_latest_rounds_where_players_compete;
 // # 2106. Maximum Fruits Harvested After at Most K Steps
 mod maximum_fruits_harvested_after_at_most_k_steps;
+// # 2402. Meeting Rooms III
+mod meeting_rooms_iii;
 // # 2561. Rearranging Fruits
 mod rearranging_fruits;
 // # 3307. Find the K-th Character in String Game II
