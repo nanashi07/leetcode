@@ -98,6 +98,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)
 - [3307. Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/)
 - [3333. Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/)
+- [3480. Maximize Subarrays After Removing One Conflicting Pair](https://leetcode.com/problems/maximize-subarrays-after-removing-one-conflicting-pair/)
 
 ## How to Run
 
