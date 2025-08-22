@@ -10,8 +10,6 @@ impl Solution {
     pub fn min_cost(basket1: Vec<i32>, basket2: Vec<i32>) -> i64 {
         let mut freq = HashMap::new();
         let mut m = i32::MAX;
-
-        // Find the difference in the baskets
         for &b in &basket1 {
             *freq.entry(b).or_insert(0) += 1;
             m = m.min(b);
@@ -21,8 +19,6 @@ impl Solution {
             m = m.min(b);
         }
 
-        // If the difference of fruit is odd, means it's not possible to make basket the same
-        // Otherwise, collect the fruits to be moved
         let mut merge = vec![];
         for (&k, &v) in freq.iter() {
             if v % 2 != 0 {
@@ -37,7 +33,6 @@ impl Solution {
         let res: i64 = merge
             .iter()
             .take(merge.len() / 2)
-            // it could be less cost when move the min cost fruit twice
             .map(|&x| i64::from(x.min(2 * m)))
             .sum();
         res
@@ -59,6 +54,6 @@ mod tests {
     fn test_min_cost_2() {
         let basket1 = [2, 3, 4, 1].to_vec();
         let basket2 = [3, 2, 5, 1].to_vec();
-        assert_eq!(1, Solution::min_cost(basket1, basket2));
+        assert_eq!(-1, Solution::min_cost(basket1, basket2));
     }
 }

@@ -58,6 +58,8 @@ mod count_square_submatrices_with_all_ones;
 mod maximum_number_of_events_that_can_be_attended;
 // # 1498. Number of Subsequences That Satisfy the Given Sum Condition
 mod number_of_subsequences_that_satisfy_the_given_sum_condition;
+// # 1504. Count Submatrices With All Ones
+mod count_submatrices_with_all_ones;
 // # 1695. Maximum Erasure Value
 mod maximum_erasure_value;
 // # 1717. Maximum Score From Removing Substrings

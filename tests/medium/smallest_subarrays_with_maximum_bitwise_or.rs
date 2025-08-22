@@ -38,13 +38,13 @@ impl Solution {
 
         let mut counter = vec![];
         for i in 0..nums.len() {
-            counter.push(1.max(Self::count(&nums, i, 0, 0, xor).0 - i as i32));
+            counter.push(1.max(Self::_count(&nums, i, 0, 0, xor).0 - i as i32));
         }
 
         counter
     }
 
-    fn count(
+    fn _count(
         nums: &Vec<i32>,
         index: usize,
         skip: i32,
@@ -56,14 +56,14 @@ impl Solution {
         }
 
         let (next_count, next_xor) =
-            Self::count(nums, index + 1, skip, current_xor | nums[index], target_xor);
+            Self::_count(nums, index + 1, skip, current_xor | nums[index], target_xor);
 
         if current_xor < next_xor {
             return (next_count, next_xor);
         }
 
         let (next_count, next_xor) =
-            Self::count(nums, index + 1, skip + 1, current_xor, target_xor);
+            Self::_count(nums, index + 1, skip + 1, current_xor, target_xor);
 
         if current_xor < next_xor {
             return (next_count, next_xor);

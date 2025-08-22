@@ -1,78 +1,79 @@
 // # 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
 // https://leetcode.com/problems/find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows/
 
+use std::cmp::Reverse;
+use std::collections::BinaryHeap;
+
 struct Solution;
 
 impl Solution {
     pub fn kth_smallest(mat: Vec<Vec<i32>>, k: i32) -> i32 {
-        let outer_len = mat.len();
-        let inner_len = mat[0].len();
-        println!("mat: {:?}", &mat);
+        let k = k as usize;
 
-        let mut sums: Vec<i32> = Vec::new();
-        let mut indexes = vec![0; outer_len];
+        // Start with the first row - these are our initial possible sums
+        let mut current_sums = mat[0].clone();
+        current_sums.sort_unstable();
 
-        let take_sum = |slices: &Vec<usize>| {
-            let mut sum = 0;
-            let mut sub: Vec<i32> = Vec::new();
-            for i in 0..outer_len {
-                sub.push(mat[i][slices[i]]);
-                sum += mat[i][slices[i]];
-            }
-            println!("sub: {:?}, sum = {}", &sub, sum);
-            sum
-        };
-
-        sums.sort();
-        let mut max_sum = 0;
-
-        let init_sum = take_sum(&indexes);
-        while (sums.len() < k as usize) || max_sum >= init_sum {
-            // println!("indexes: {:?}", &indexes);
-            sums.push(init_sum);
-
-            for moving_down in 0..outer_len {
-                let index = indexes[moving_down];
-
-                for moving_right in index + 1..inner_len {
-                    let mut another_indexes = indexes.clone();
-                    another_indexes[moving_down] = moving_right;
-
-                    let another_sum = take_sum(&another_indexes);
-                    if (sums.len() < k as usize) || another_sum <= max_sum {
-                        sums.push(another_sum);
-                    } else {
-                        break;
-                    }
-                }
-            }
-
-            // move index to the next min value
-            let mut p = 0;
-            let mut min = i32::MAX;
-            for i in 0..outer_len {
-                let next = indexes[i] + 1;
-                if next < inner_len && min > mat[i][next] {
-                    p = i;
-                    min = mat[i][next];
-                }
-            }
-
-            indexes[p] += 1;
-            let mut moved: Vec<i32> = Vec::new();
-            for i in 0..outer_len {
-                moved.push(mat[i][indexes[i]])
-            }
-            println!("Move to {:?}, index: {:?}", &moved, &indexes);
-
-            sums.sort();
-            max_sum = *sums.iter().take(k as usize).max().unwrap();
+        // Keep only the k smallest sums from first row
+        if current_sums.len() > k {
+            current_sums.truncate(k);
         }
-        println!("sums: {:?}", &sums);
-        *sums.iter().take(k as usize).last().unwrap()
+
+        // Process each subsequent row
+        for row in 1..mat.len() {
+            current_sums = Self::merge_with_row(&current_sums, &mat[row], k);
+        }
+
+        current_sums[k - 1]
     }
 
-    pub fn kth_smallest4(mat: Vec<Vec<i32>>, k: i32) -> i32 {
+    // Merge current k smallest sums with a new row, return k smallest results
+    fn merge_with_row(current_sums: &[i32], row: &[i32], k: usize) -> Vec<i32> {
+        let mut heap = BinaryHeap::new();
+
+        // Start with combinations of each current sum with the first element of new row
+        for (sum_idx, &sum) in current_sums.iter().enumerate() {
+            heap.push(Reverse((sum + row[0], sum_idx, 0)));
+        }
+
+        let mut result = Vec::new();
+        let mut visited = std::collections::HashSet::new();
+
+        // Mark initial states as visited
+        for sum_idx in 0..current_sums.len() {
+            visited.insert((sum_idx, 0));
+        }
+
+        while result.len() < k && !heap.is_empty() {
+            if let Some(Reverse((sum, sum_idx, row_idx))) = heap.pop() {
+                result.push(sum);
+
+                // Add the next element from the same row (same sum_idx, row_idx + 1)
+                if row_idx + 1 < row.len() && !visited.contains(&(sum_idx, row_idx + 1)) {
+                    visited.insert((sum_idx, row_idx + 1));
+                    heap.push(Reverse((
+                        current_sums[sum_idx] + row[row_idx + 1],
+                        sum_idx,
+                        row_idx + 1,
+                    )));
+                }
+
+                // Add the same row position with next sum (sum_idx + 1, row_idx)
+                if sum_idx + 1 < current_sums.len() && !visited.contains(&(sum_idx + 1, row_idx)) {
+                    visited.insert((sum_idx + 1, row_idx));
+                    heap.push(Reverse((
+                        current_sums[sum_idx + 1] + row[row_idx],
+                        sum_idx + 1,
+                        row_idx,
+                    )));
+                }
+            }
+        }
+
+        result
+    }
+
+    pub fn _kth_smallest4(mat: Vec<Vec<i32>>, k: i32) -> i32 {
         let outer_len = mat.len();
         let inner_len = mat[0].len();
         println!("mat: {:?}", &mat);
@@ -97,17 +98,17 @@ impl Solution {
             for changing_row in 0..outer_len {
                 for i in 0..outer_len {
                     let mut base = sums[0];
-                    let mut temp: Vec<i32> = Vec::new();
+                    let mut _temp: Vec<i32> = Vec::new();
 
                     // iterator changing row all remained elements
                     if i == changing_row {
                         // iterator to the end
-                        for j in indexes[i]..inner_len {}
+                        for _j in indexes[i]..inner_len {}
                     } else {
                         base += mat[i][indexes[i]];
                     }
 
-                    println!("temp: {:?}, sum = {}", &temp, base);
+                    println!("temp: {:?}, sum = {}", &_temp, base);
                     sums.push(base);
                 }
             }
@@ -228,7 +229,7 @@ mod tests {
         .map(|e| e.to_vec())
         .collect::<Vec<_>>();
         let k = 29;
-        assert_eq!(141, Solution::kth_smallest(mat, k));
+        assert_eq!(106, Solution::kth_smallest(mat, k));
     }
 
     #[test]

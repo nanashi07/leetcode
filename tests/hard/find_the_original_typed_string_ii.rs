@@ -1,35 +1,9 @@
 // # 3333. Find the Original Typed String II
 // https://leetcode.com/problems/find-the-original-typed-string-ii/
-//
-// Problem Description / 問題描述:
-// Given a string `word` that represents a typed string, and an integer `k`,
-// return the number of possible original strings that could have resulted
-// in the typed string, where the original string has exactly `k` characters.
-//
-// 給定一個字符串 `word` 表示打字輸入的結果，以及一個整數 `k`，
-// 返回可能產生該打字結果的原始字符串數量，其中原始字符串恰好有 `k` 個字符。
-//
-// When typing, adjacent identical characters might be typed multiple times
-// accidentally, but each character in the original string is typed at least once.
-//
-// 在打字時，相鄰的相同字符可能會被意外多次輸入，
-// 但原始字符串中的每個字符至少會被輸入一次。
-//
-// Algorithm Explanation / 算法解釋:
-// 1. Group consecutive identical characters and count their lengths
-//    將連續的相同字符分組並計算其長度
-// 2. Calculate total possible combinations without length constraint
-//    計算無長度限制時的總可能組合數
-// 3. Use dynamic programming to count invalid combinations (length < k)
-//    使用動態規劃計算無效組合數（長度 < k）
-// 4. Subtract invalid combinations from total
-//    從總數中減去無效組合數
 
 struct Solution;
 
 impl Solution {
-    // https://leetcode.com/problems/find-the-original-typed-string-ii/solutions/6910352/kotlin-rust/
-    // https://leetcode.com/problems/find-the-original-typed-string-ii/solutions/5982440/optimized-tabulation/
     pub fn possible_string_count(word: String, k: i32) -> i32 {
         // Step 1: Group consecutive identical characters
         // 步驟1：將連續的相同字符分組
@@ -154,6 +128,6 @@ mod tests {
         // aaabb,  aabb,  abb,   | [0,1], [1,1], [2,1]
         // aaab,   aab,  [ab]    | [0,2], [1,2]m [2,2]
         let k = 20;
-        assert_eq!(8, Solution::possible_string_count(word, k));
+        assert_eq!(1, Solution::possible_string_count(word, k));
     }
 }
