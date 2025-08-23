@@ -30,6 +30,8 @@ mod minimum_score_after_removals_on_a_tree;
 mod meeting_rooms_iii;
 // # 2561. Rearranging Fruits
 mod rearranging_fruits;
+// # 3197. Find the Minimum Area to Cover All Ones II
+mod find_the_minimum_area_to_cover_all_ones_ii;
 // # 3307. Find the K-th Character in String Game II
 mod find_the_k_th_character_in_string_game_ii;
 // # 3333. Find the Original Typed String II
