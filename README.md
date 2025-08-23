@@ -101,6 +101,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2322. Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/)
 - [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)
+- [3197. Find the Minimum Area to Cover All Ones II](https://leetcode.com/problems/find-the-minimum-area-to-cover-all-ones-ii/)
 - [3307. Find the K-th Character in String Game II](https://leetcode.com/problems/find-the-k-th-character-in-string-game-ii/)
 - [3333. Find the Original Typed String II](https://leetcode.com/problems/find-the-original-typed-string-ii/)
 - [3363. Find the Maximum Number of Fruits Collected](https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/)
