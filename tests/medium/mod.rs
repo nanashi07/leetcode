@@ -56,6 +56,8 @@ mod remove_sub_folders_from_the_filesystem;
 mod count_square_submatrices_with_all_ones;
 // # 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
+// # 1493. Longest Subarray of 1's After Deleting One Element
+mod longest_subarray_of_1s_after_deleting_one_element;
 // # 1498. Number of Subsequences That Satisfy the Given Sum Condition
 mod number_of_subsequences_that_satisfy_the_given_sum_condition;
 // # 1504. Count Submatrices With All Ones
