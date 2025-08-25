@@ -38,6 +38,8 @@ mod search_in_rotated_sorted_array;
 mod find_first_and_last_position_of_element_in_sorted_array;
 // # 36. Valid Sudoku
 mod valid_sudoku;
+// # 498. Diagonal Traverse
+mod diagonal_traverse;
 // # 808. Soup Servings
 mod soup_servings;
 // # 837. New 21 Game
