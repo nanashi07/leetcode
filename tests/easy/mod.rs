@@ -42,6 +42,8 @@ mod find_subsequence_of_length_k_with_the_largest_sum;
 mod count_hills_and_valleys_in_an_array;
 // # 2264. Largest 3-Same-Digit Number in String
 mod largest_3_same_digit_number_in_string;
+// # 3000. Maximum Area of Longest Diagonal Rectangle
+mod maximum_area_of_longest_diagonal_rectangle;
 // # 3136. Valid Word
 mod valid_word;
 // # 3304. Find the K-th Character in String Game I
