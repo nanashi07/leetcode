@@ -38,5 +38,7 @@ mod find_the_k_th_character_in_string_game_ii;
 mod find_the_original_typed_string_ii;
 // # 3363. Find the Maximum Number of Fruits Collected
 mod find_the_maximum_number_of_fruits_collected;
+// # 3459. Length of Longest V-Shaped Diagonal Segment
+mod length_of_longest_v_shaped_diagonal_segment;
 // # 3480. Maximize Subarrays After Removing One Conflicting Pair
 mod maximize_subarrays_after_removing_one_conflicting_pair;
