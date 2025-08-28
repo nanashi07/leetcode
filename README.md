@@ -85,6 +85,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3202. Find the Maximum Length of Valid Subsequence II](https://leetcode.com/problems/find-the-maximum-length-of-valid-subsequence-ii/)
 - [3439. Reschedule Meetings for Maximum Free Time I](https://leetcode.com/problems/reschedule-meetings-for-maximum-free-time-i/)
 - [3440. Reschedule Meetings for Maximum Free Time II](https://leetcode.com/problems/reschedule-meetings-for-maximum-free-time-ii/)
+- [3446. Sort Matrix by Diagonals](https://leetcode.com/problems/sort-matrix-by-diagonals/)
 - [3479. Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/)
 
 ### Hard Problems
