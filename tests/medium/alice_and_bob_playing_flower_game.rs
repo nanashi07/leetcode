@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn flower_game(n: i32, m: i32) -> i64 {
-        todo!()
+        println!("n: {n}, m: {m}");
+
+        // Alice wins when the total number of flowers is odd
+        // This happens when one player picks odd flowers and the other picks even flowers
+
+        // Count odd and even numbers from 1 to n
+        let odd_n = (n + 1) / 2;
+        let even_n = n / 2;
+
+        // Count odd and even numbers from 1 to m
+        let odd_m = (m + 1) / 2;
+        let even_m = m / 2;
+
+        // Alice wins when: (odd_n * even_m) + (even_n * odd_m)
+        let result = (odd_n as i64 * even_m as i64) + (even_n as i64 * odd_m as i64);
+
+        result
     }
 }
 
