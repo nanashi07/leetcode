@@ -10,6 +10,8 @@ mod reverse_nodes_in_k_group;
 mod substring_with_concatenation_of_all_words;
 // # 32. Longest Valid Parentheses
 mod longest_valid_parentheses;
+// # 37. Sudoku Solver
+mod sudoku_solver;
 // # 679. 24 Game
 mod twenty_four_game;
 // # 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
