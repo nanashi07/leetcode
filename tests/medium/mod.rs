@@ -68,6 +68,8 @@ mod count_submatrices_with_all_ones;
 mod maximum_erasure_value;
 // # 1717. Maximum Score From Removing Substrings
 mod maximum_score_from_removing_substrings;
+// # 1792. Maximum Average Pass Ratio
+mod maximum_average_pass_ratio;
 // # 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
 // # 2044. Count Number of Maximum Bitwise-OR Subsets
