@@ -88,6 +88,8 @@ mod range_product_queries_of_powers;
 mod ways_to_express_an_integer_as_sum_of_powers;
 // # 3021. Alice and Bob Playing Flower Game
 mod alice_and_bob_playing_flower_game;
+// # 3025. Find the Number of Ways to Place People I
+mod find_the_number_of_ways_to_place_people_i;
 // # 3195. Find the Minimum Area to Cover All Ones I
 mod find_the_minimum_area_to_cover_all_ones_i;
 // # 3201. Find the Maximum Length of Valid Subsequence I
