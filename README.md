@@ -34,6 +34,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3330. Find the Original Typed String I](https://leetcode.com/problems/find-the-original-typed-string-i/)
 - [3477. Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/)
 - [3487. Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/)
+- [3516. Find Closest Person](https://leetcode.com/problems/find-closest-person/)
 
 ### Medium Problems
 
