@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn find_closest(x: i32, y: i32, z: i32) -> i32 {
-        todo!()
+        println!("x: {x}, y: {y}, z: {z}");
+
+        let xz = (z - x).abs();
+        let yz = (z - y).abs();
+
+        println!("xz: {xz}, yz: {yz}");
+
+        if xz == yz {
+            0
+        } else if xz < yz {
+            1
+        } else {
+            2
+        }
     }
 }
 
