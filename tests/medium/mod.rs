@@ -84,6 +84,8 @@ mod smallest_subarrays_with_maximum_bitwise_or;
 mod longest_subarray_with_maximum_bitwise_and;
 // # 2438. Range Product Queries of Powers
 mod range_product_queries_of_powers;
+// # 2749. Minimum Operations to Make the Integer Zero
+mod minimum_operations_to_make_the_integer_zero;
 // # 2787. Ways to Express an Integer as Sum of Powers
 mod ways_to_express_an_integer_as_sum_of_powers;
 // # 3021. Alice and Bob Playing Flower Game
