@@ -46,3 +46,5 @@ mod find_the_maximum_number_of_fruits_collected;
 mod length_of_longest_v_shaped_diagonal_segment;
 // # 3480. Maximize Subarrays After Removing One Conflicting Pair
 mod maximize_subarrays_after_removing_one_conflicting_pair;
+// # 3495. Minimum Operations to Make Array Elements Zero
+mod minimum_operations_to_make_array_elements_zero;
