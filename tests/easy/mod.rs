@@ -30,6 +30,8 @@ mod power_of_four;
 mod longest_harmonious_subsequence;
 // # 1290. Convert Binary Number in a Linked List to Integer
 mod convert_binary_number_in_a_linked_list_to_integer;
+// # 1304. Find N Unique Integers Sum up to Zero
+mod find_n_unique_integers_sum_up_to_zero;
 // # 1323. Maximum 69 Number
 mod maximum_69_number;
 // # 1394. Find Lucky Integer in an Array
