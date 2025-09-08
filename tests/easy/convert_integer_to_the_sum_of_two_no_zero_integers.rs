@@ -5,7 +5,31 @@ struct Solution;
 
 impl Solution {
     pub fn get_no_zero_integers(n: i32) -> Vec<i32> {
-        todo!()
+        println!("n: {n}");
+
+        let mut n = n;
+        let mut p = 0;
+        let mut r = vec![0; 2];
+
+        while n > 0 {
+            let mut v = n % 10;
+            if v < 2 && n >= 10 {
+                // borrow from next digit
+                v += 10;
+                n -= 10;
+            }
+
+            // split
+            r[0] += (v / 2) * 10_i32.pow(p);
+            r[1] += (v - v / 2) * 10_i32.pow(p);
+
+            n /= 10;
+            p += 1;
+        }
+
+        println!("r: {:?}", &r);
+
+        r
     }
 }
 
@@ -16,12 +40,18 @@ mod tests {
     #[test]
     fn test_get_no_zero_integers_1() {
         let n = 2;
-        assert_eq!([1, 1].to_vec(), Solution::get_no_zero_integers(n));
+        assert_eq!(n, Solution::get_no_zero_integers(n).iter().sum());
     }
 
     #[test]
     fn test_get_no_zero_integers_2() {
         let n = 11;
-        assert_eq!([2, 9].to_vec(), Solution::get_no_zero_integers(n));
+        assert_eq!(n, Solution::get_no_zero_integers(n).iter().sum());
+    }
+
+    #[test]
+    fn test_get_no_zero_integers_3() {
+        let n = 39;
+        assert_eq!(n, Solution::get_no_zero_integers(n).iter().sum());
     }
 }
