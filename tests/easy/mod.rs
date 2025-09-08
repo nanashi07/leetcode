@@ -32,6 +32,8 @@ mod longest_harmonious_subsequence;
 mod convert_binary_number_in_a_linked_list_to_integer;
 // # 1304. Find N Unique Integers Sum up to Zero
 mod find_n_unique_integers_sum_up_to_zero;
+// # 1317. Convert Integer to the Sum of Two No-Zero Integers
+mod convert_integer_to_the_sum_of_two_no_zero_integers;
 // # 1323. Maximum 69 Number
 mod maximum_69_number;
 // # 1394. Find Lucky Integer in an Array
