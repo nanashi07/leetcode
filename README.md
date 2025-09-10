@@ -75,6 +75,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1504. Count Submatrices With All Ones](https://leetcode.com/problems/count-submatrices-with-all-ones/)
 - [1695. Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)
 - [1717. Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/)
+- [1733. Minimum Number of People to Teach](https://leetcode.com/problems/minimum-number-of-people-to-teach/)
 - [1792. Maximum Average Pass Ratio](https://leetcode.com/problems/maximum-average-pass-ratio/)
 - [1865. Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/)
 - [2044. Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)

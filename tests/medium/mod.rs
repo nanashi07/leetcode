@@ -68,6 +68,8 @@ mod count_submatrices_with_all_ones;
 mod maximum_erasure_value;
 // # 1717. Maximum Score From Removing Substrings
 mod maximum_score_from_removing_substrings;
+// # 1733. Minimum Number of People to Teach
+mod minimum_number_of_people_to_teach;
 // # 1792. Maximum Average Pass Ratio
 mod maximum_average_pass_ratio;
 // # 1865. Finding Pairs With a Certain Sum
