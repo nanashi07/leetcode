@@ -88,6 +88,8 @@ mod longest_subarray_with_maximum_bitwise_and;
 mod range_product_queries_of_powers;
 // # 2749. Minimum Operations to Make the Integer Zero
 mod minimum_operations_to_make_the_integer_zero;
+// # 2785. Sort Vowels in a String
+mod sort_vowels_in_a_string;
 // # 2787. Ways to Express an Integer as Sum of Powers
 mod ways_to_express_an_integer_as_sum_of_powers;
 // # 3021. Alice and Bob Playing Flower Game
