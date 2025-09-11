@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn sort_vowels(s: String) -> String {
-        todo!()
+        let vowels = "aeiouAEIOU";
+
+        // Extract all vowels from the string
+        let mut extracted_vowels: Vec<char> = s.chars().filter(|&c| vowels.contains(c)).collect();
+
+        // Sort the vowels
+        extracted_vowels.sort();
+
+        // Replace vowels in original string with sorted vowels
+        let mut vowel_index = 0;
+        let result: String = s
+            .chars()
+            .map(|c| {
+                if vowels.contains(c) {
+                    let vowel = extracted_vowels[vowel_index];
+                    vowel_index += 1;
+                    vowel
+                } else {
+                    c
+                }
+            })
+            .collect();
+
+        result
     }
 }
 
