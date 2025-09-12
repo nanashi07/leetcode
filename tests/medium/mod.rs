@@ -102,6 +102,8 @@ mod find_the_minimum_area_to_cover_all_ones_i;
 mod find_the_maximum_length_of_valid_subsequence_i;
 // # 3202. Find the Maximum Length of Valid Subsequence II
 mod find_the_maximum_length_of_valid_subsequence_ii;
+// # 3227. Vowels Game in a String
+mod vowels_game_in_a_string;
 // # 3439. Reschedule Meetings for Maximum Free Time I
 mod reschedule_meetings_for_maximum_free_time_i;
 // # 3440. Reschedule Meetings for Maximum Free Time II
