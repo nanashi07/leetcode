@@ -5,7 +5,13 @@ struct Solution;
 
 impl Solution {
     pub fn does_alice_win(s: String) -> bool {
-        todo!()
+        // Alice wins if there's at least one vowel in the string
+        // If there are no vowels, Alice cannot make any move and loses
+        // If there are vowels, Alice can always make moves and win
+
+        let vowels = ['a', 'e', 'i', 'o', 'u'];
+
+        s.chars().any(|c| vowels.contains(&c.to_ascii_lowercase()))
     }
 }
 
