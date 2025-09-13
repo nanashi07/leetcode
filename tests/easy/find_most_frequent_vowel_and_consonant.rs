@@ -1,11 +1,36 @@
 // # 3541. Find Most Frequent Vowel and Consonant
 // https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/
 
+use std::collections::{HashMap, HashSet};
+
 struct Solution;
 
 impl Solution {
     pub fn max_freq_sum(s: String) -> i32 {
-        todo!()
+        println!("s: {}", &s);
+
+        let vowels = HashSet::from(['a', 'e', 'i', 'o', 'u']);
+        let mut c1 = 0;
+        let mut c2 = 0;
+
+        let counter = s.chars().into_iter().fold(HashMap::new(), |mut a, b| {
+            *a.entry(b).or_insert(0) += 1;
+            a
+        });
+
+        for (k, v) in counter {
+            if vowels.contains(&k) {
+                if c1 < v {
+                    c1 = v;
+                }
+            } else {
+                if c2 < v {
+                    c2 = v;
+                }
+            }
+        }
+
+        c1 + c2
     }
 }
 
