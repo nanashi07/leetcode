@@ -60,3 +60,5 @@ mod fruits_into_baskets_ii;
 mod maximum_unique_subarray_sum_after_deletion;
 // # 3516. Find Closest Person
 mod find_closest_person;
+// # 3541. Find Most Frequent Vowel and Consonant
+mod find_most_frequent_vowel_and_consonant;
