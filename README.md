@@ -37,6 +37,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3477. Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/)
 - [3487. Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/)
 - [3516. Find Closest Person](https://leetcode.com/problems/find-closest-person/)
+- [3541. Find Most Frequent Vowel and Consonant](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/)
 
 ### Medium Problems
 
