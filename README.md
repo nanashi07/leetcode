@@ -68,6 +68,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [898. Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/)
 - [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 - [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
+- [966. Vowel Spellchecker](https://leetcode.com/problems/vowel-spellchecker/)
 - [1233. Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/)
 - [1277. Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 - [1353. Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)

@@ -52,6 +52,8 @@ mod bitwise_ors_of_subarrays;
 mod fruit_into_baskets;
 // # 912. Sort an Array
 mod sort_an_array;
+// # 966. Vowel Spellchecker
+mod vowel_spellchecker;
 // # 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
 // # 1277. Count Square Submatrices with All Ones
