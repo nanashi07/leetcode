@@ -38,6 +38,8 @@ mod convert_integer_to_the_sum_of_two_no_zero_integers;
 mod maximum_69_number;
 // # 1394. Find Lucky Integer in an Array
 mod find_lucky_integer_in_an_array;
+// # 1935. Maximum Number of Words You Can Type
+mod maximum_number_of_words_you_can_type;
 // # 1957. Delete Characters to Make Fancy String
 mod delete_characters_to_make_fancy_string;
 // # 2099. Find Subsequence of Length K With the Largest Sum
