@@ -1,11 +1,18 @@
 // # 1935. Maximum Number of Words You Can Type
 // https://leetcode.com/problems/maximum-number-of-words-you-can-type/
 
+use std::collections::HashSet;
+
 struct Solution;
 
 impl Solution {
     pub fn can_be_typed_words(text: String, broken_letters: String) -> i32 {
-        todo!()
+        println!("text: {:?}, broken_letters: {:?}", &text, &broken_letters);
+
+        let letters = broken_letters.chars().into_iter().collect::<HashSet<_>>();
+        text.split(' ')
+            .filter(|&w| w.chars().filter(|c| letters.contains(c)).count() == 0)
+            .count() as i32
     }
 }
 
