@@ -4,7 +4,39 @@
 struct Solution;
 impl Solution {
     pub fn replace_non_coprimes(nums: Vec<i32>) -> Vec<i32> {
-        todo!()
+        let mut result = Vec::new();
+
+        for num in nums {
+            let mut current = num;
+
+            // Keep trying to merge current with the last element in result
+            while let Some(&last) = result.last() {
+                let g = Self::gcd(current, last);
+                if g == 1 {
+                    // They are coprime, can't merge
+                    break;
+                }
+                // They are not coprime, merge them
+                result.pop();
+                current = Self::lcm(current, last);
+            }
+
+            result.push(current);
+        }
+
+        result
+    }
+
+    fn gcd(a: i32, b: i32) -> i32 {
+        if b == 0 {
+            a
+        } else {
+            Self::gcd(b, a % b)
+        }
+    }
+
+    fn lcm(a: i32, b: i32) -> i32 {
+        (a as i64 * b as i64 / Self::gcd(a, b) as i64) as i32
     }
 }
 
