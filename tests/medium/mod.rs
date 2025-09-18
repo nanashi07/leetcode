@@ -80,6 +80,8 @@ mod count_number_of_maximum_bitwise_or_subsets;
 mod number_of_people_aware_of_a_secret;
 // # 2348. Number of Zero-Filled Subarrays
 mod number_of_zero_filled_subarrays;
+// # 2353. Design a Food Rating System
+mod design_a_food_rating_system;
 // # 2410. Maximum Matching of Players With Trainers
 mod maximum_matching_of_players_with_trainers;
 // # 2411. Smallest Subarrays With Maximum Bitwise OR
