@@ -3,14 +3,6 @@
 
 use std::cell::RefCell;
 use std::cmp::Ordering;
-/**
- * Your TaskManager object will be instantiated and called as such:
- * let obj = TaskManager::new(tasks);
- * obj.add(userId, taskId, priority);
- * obj.edit(taskId, newPriority);
- * obj.rmv(taskId);
- * let ret_4: i32 = obj.exec_top();
- */
 use std::collections::{BinaryHeap, HashMap};
 
 #[derive(Debug, Clone)]
@@ -45,6 +37,14 @@ impl Ord for Task {
     }
 }
 
+/**
+ * Your TaskManager object will be instantiated and called as such:
+ * let obj = TaskManager::new(tasks);
+ * obj.add(userId, taskId, priority);
+ * obj.edit(taskId, newPriority);
+ * obj.rmv(taskId);
+ * let ret_4: i32 = obj.exec_top();
+ */
 struct TaskManager {
     tasks: RefCell<HashMap<i32, Task>>,
     heap: RefCell<BinaryHeap<Task>>,
