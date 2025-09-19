@@ -102,6 +102,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3440. Reschedule Meetings for Maximum Free Time II](https://leetcode.com/problems/reschedule-meetings-for-maximum-free-time-ii/)
 - [3446. Sort Matrix by Diagonals](https://leetcode.com/problems/sort-matrix-by-diagonals/)
 - [3479. Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/)
+- [3484. Design Spreadsheet](https://leetcode.com/problems/design-spreadsheet/)
 
 ### Hard Problems
 
