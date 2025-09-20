@@ -118,3 +118,5 @@ mod reschedule_meetings_for_maximum_free_time_ii;
 mod sort_matrix_by_diagonals;
 // # 3479. Fruits Into Baskets III
 mod fruits_into_baskets_iii;
+// # 3484. Design Spreadsheet
+mod design_spreadsheet;
