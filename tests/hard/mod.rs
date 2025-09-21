@@ -20,6 +20,8 @@ mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
 mod maximum_number_of_events_that_can_be_attended_ii;
 // # 1900. The Earliest and Latest Rounds Where Players Compete
 mod the_earliest_and_latest_rounds_where_players_compete;
+// # 1912. Design Movie Rental System
+mod design_movie_rental_system;
 // # 1948. Delete Duplicate Folders in System
 mod delete_duplicate_folders_in_system;
 // # 2106. Maximum Fruits Harvested After at Most K Steps
