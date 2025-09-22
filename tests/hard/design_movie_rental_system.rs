@@ -1,5 +1,6 @@
 // # 1912. Design Movie Rental System
 // https://leetcode.com/problems/design-movie-rental-system/
+use std::collections::{BTreeSet, HashMap};
 
 /**
  * Your MovieRentingSystem object will be instantiated and called as such:
@@ -9,31 +10,91 @@
  * obj.drop(shop, movie);
  * let ret_4: Vec<Vec<i32>> = obj.report();
  */
-struct MovieRentingSystem {}
+struct MovieRentingSystem {
+    // For each movie, maintain a sorted set of (price, shop_id) for unrented copies
+    unrented: HashMap<i32, BTreeSet<(i32, i32)>>,
+    // Maintain a sorted set of (price, shop_id, movie_id) for rented movies
+    rented: BTreeSet<(i32, i32, i32)>,
+    // Store the price for each (shop, movie) pair
+    prices: HashMap<(i32, i32), i32>,
+}
 
 /**
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
 impl MovieRentingSystem {
-    fn new(n: i32, entries: Vec<Vec<i32>>) -> Self {
-        todo!()
+    fn new(_n: i32, entries: Vec<Vec<i32>>) -> Self {
+        let mut unrented: HashMap<i32, BTreeSet<(i32, i32)>> = HashMap::new();
+        let mut prices: HashMap<(i32, i32), i32> = HashMap::new();
+
+        // Initialize the data structures with the given entries
+        for entry in entries {
+            let shop = entry[0];
+            let movie = entry[1];
+            let price = entry[2];
+
+            // Store price for this shop-movie pair
+            prices.insert((shop, movie), price);
+
+            // Add to unrented movies (sorted by price, then by shop)
+            unrented
+                .entry(movie)
+                .or_insert_with(BTreeSet::new)
+                .insert((price, shop));
+        }
+
+        MovieRentingSystem {
+            unrented,
+            rented: BTreeSet::new(),
+            prices,
+        }
     }
 
     fn search(&self, movie: i32) -> Vec<i32> {
-        todo!()
+        // Return up to 5 cheapest unrented copies of the movie
+        if let Some(shops) = self.unrented.get(&movie) {
+            shops.iter().take(5).map(|(_, shop)| *shop).collect()
+        } else {
+            vec![]
+        }
     }
 
-    fn rent(&self, shop: i32, movie: i32) {
-        todo!()
+    fn rent(&mut self, shop: i32, movie: i32) {
+        let price = self.prices[&(shop, movie)];
+
+        // Remove from unrented
+        if let Some(shops) = self.unrented.get_mut(&movie) {
+            shops.remove(&(price, shop));
+            if shops.is_empty() {
+                self.unrented.remove(&movie);
+            }
+        }
+
+        // Add to rented
+        self.rented.insert((price, shop, movie));
     }
 
-    fn drop(&self, shop: i32, movie: i32) {
-        todo!()
+    fn drop(&mut self, shop: i32, movie: i32) {
+        let price = self.prices[&(shop, movie)];
+
+        // Remove from rented
+        self.rented.remove(&(price, shop, movie));
+
+        // Add back to unrented
+        self.unrented
+            .entry(movie)
+            .or_insert_with(BTreeSet::new)
+            .insert((price, shop));
     }
 
     fn report(&self) -> Vec<Vec<i32>> {
-        todo!()
+        // Return up to 5 cheapest rented movies
+        self.rented
+            .iter()
+            .take(5)
+            .map(|(_, shop, movie)| vec![*shop, *movie])
+            .collect()
     }
 }
 
@@ -43,7 +104,7 @@ mod tests {
 
     #[test]
     fn test_movie_renting_system_1() {
-        let movie_renting_system = MovieRentingSystem::new(
+        let mut movie_renting_system = MovieRentingSystem::new(
             3,
             vec![
                 vec![0, 1, 5],
