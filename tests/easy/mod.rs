@@ -50,6 +50,8 @@ mod count_hills_and_valleys_in_an_array;
 mod largest_3_same_digit_number_in_string;
 // # 3000. Maximum Area of Longest Diagonal Rectangle
 mod maximum_area_of_longest_diagonal_rectangle;
+// # 3005. Count Elements With Maximum Frequency
+mod count_elements_with_maximum_frequency;
 // # 3136. Valid Word
 mod valid_word;
 // # 3304. Find the K-th Character in String Game I
