@@ -1,11 +1,22 @@
 // # 3005. Count Elements With Maximum Frequency
 // https://leetcode.com/problems/count-elements-with-maximum-frequency/
 
+use std::collections::HashMap;
+
 struct Solution;
 
 impl Solution {
     pub fn max_frequency_elements(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {:?}", &nums);
+
+        let mut map: HashMap<i32, i32> = HashMap::new();
+        let mut max = 0;
+        for num in nums {
+            *map.entry(num).or_insert(0) += 1;
+            max = max.max(*map.get(&num).unwrap());
+        }
+
+        map.values().filter(|&v| v == &max).sum()
     }
 }
 
