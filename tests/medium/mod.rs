@@ -40,6 +40,8 @@ mod find_first_and_last_position_of_element_in_sorted_array;
 mod valid_sudoku;
 // # 165. Compare Version Numbers
 mod compare_version_numbers;
+// # 166. Fraction to Recurring Decimal
+mod fraction_to_recurring_decimal;
 // # 498. Diagonal Traverse
 mod diagonal_traverse;
 // # 808. Soup Servings
