@@ -63,6 +63,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [33. Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - [34. Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/)
 - [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
+- [120. Triangle](https://leetcode.com/problems/triangle/)
 - [165. Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
 - [166. Fraction to Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
