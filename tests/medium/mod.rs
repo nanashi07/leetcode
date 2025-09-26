@@ -38,6 +38,8 @@ mod search_in_rotated_sorted_array;
 mod find_first_and_last_position_of_element_in_sorted_array;
 // # 36. Valid Sudoku
 mod valid_sudoku;
+// # 120. Triangle
+mod triangle;
 // # 165. Compare Version Numbers
 mod compare_version_numbers;
 // # 166. Fraction to Recurring Decimal
