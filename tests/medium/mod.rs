@@ -46,6 +46,8 @@ mod compare_version_numbers;
 mod fraction_to_recurring_decimal;
 // # 498. Diagonal Traverse
 mod diagonal_traverse;
+// # 611. Valid Triangle Number
+mod valid_triangle_number;
 // # 808. Soup Servings
 mod soup_servings;
 // # 837. New 21 Game

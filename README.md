@@ -67,6 +67,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [165. Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
 - [166. Fraction to Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
+- [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
 - [808. Soup Servings](https://leetcode.com/problems/soup-servings/)
 - [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
 - [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
