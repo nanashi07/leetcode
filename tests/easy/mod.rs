@@ -28,6 +28,8 @@ mod power_of_three;
 mod power_of_four;
 // # 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
+// # 812. Largest Triangle Area
+mod largest_triangle_area;
 // # 1290. Convert Binary Number in a Linked List to Integer
 mod convert_binary_number_in_a_linked_list_to_integer;
 // # 1304. Find N Unique Integers Sum up to Zero
