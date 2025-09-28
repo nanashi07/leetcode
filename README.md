@@ -22,6 +22,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
+- [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
 - [1304. Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/)
 - [1317. Convert Integer to the Sum of Two No-Zero Integers](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/)
