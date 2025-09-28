@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn largest_perimeter(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {:?}", &nums);
+
+        let len = nums.len();
+        let mut nums = nums;
+        nums.sort_unstable();
+
+        // Check from the largest possible combinations first
+        // We need at least 3 elements, so start from index 2 and go backwards
+        for i in (2..len).rev() {
+            let a = nums[i - 2]; // smallest of the three
+            let b = nums[i - 1]; // middle
+            let c = nums[i]; // largest of the three
+
+            // Triangle inequality: sum of two smaller sides > largest side
+            if a + b > c {
+                return a + b + c; // Return the perimeter
+            }
+        }
+
+        0 // No valid triangle found
     }
 }
 
