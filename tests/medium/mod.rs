@@ -62,6 +62,8 @@ mod fruit_into_baskets;
 mod sort_an_array;
 // # 966. Vowel Spellchecker
 mod vowel_spellchecker;
+// # 1039. Minimum Score Triangulation of Polygon
+mod minimum_score_triangulation_of_polygon;
 // # 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
 // # 1277. Count Square Submatrices with All Ones
