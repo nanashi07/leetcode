@@ -86,6 +86,8 @@ mod maximum_average_pass_ratio;
 mod finding_pairs_with_a_certain_sum;
 // # 2044. Count Number of Maximum Bitwise-OR Subsets
 mod count_number_of_maximum_bitwise_or_subsets;
+// # 2221. Find Triangular Sum of an Array
+mod find_triangular_sum_of_an_array;
 // # 2327. Number of People Aware of a Secret
 mod number_of_people_aware_of_a_secret;
 // # 2348. Number of Zero-Filled Subarrays
