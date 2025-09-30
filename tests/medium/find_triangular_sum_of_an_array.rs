@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn triangular_sum(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {:?}", &nums);
+
+        let mut nums = nums;
+
+        while nums.len() > 1 {
+            let mut copy = vec![];
+            for i in 0..nums.len() - 1 {
+                copy.push((nums[i] + nums[i + 1]) % 10);
+            }
+            nums = copy;
+        }
+
+        nums[0]
     }
 }
 
