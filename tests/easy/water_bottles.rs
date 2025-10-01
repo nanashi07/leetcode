@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn num_water_bottles(num_bottles: i32, num_exchange: i32) -> i32 {
-        todo!()
+        println!("num_bottles: {num_bottles}, num_exchange: {num_exchange}");
+
+        let mut drink = 0;
+        let mut bottles = num_bottles;
+        let mut empty = 0;
+
+        while bottles + empty >= num_exchange {
+            drink += bottles;
+
+            let exchanged = (bottles + empty) / num_exchange;
+            let remained = (bottles + empty) % num_exchange;
+
+            bottles = exchanged;
+            empty = remained;
+        }
+
+        drink + bottles
     }
 }
 
