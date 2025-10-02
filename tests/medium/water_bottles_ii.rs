@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn max_bottles_drunk(num_bottles: i32, num_exchange: i32) -> i32 {
-        todo!()
+        let mut total_drunk = 0;
+        let mut empty_bottles = 0;
+        let mut full_bottles = num_bottles;
+        let mut exchange_cost = num_exchange;
+
+        loop {
+            // Drink all full bottles
+            total_drunk += full_bottles;
+            empty_bottles += full_bottles;
+            full_bottles = 0;
+
+            // Try to exchange empty bottles for full ones
+            if empty_bottles >= exchange_cost {
+                empty_bottles -= exchange_cost;
+                full_bottles = 1;
+                exchange_cost += 1;
+            } else {
+                // Can't exchange anymore, we're done
+                break;
+            }
+        }
+
+        total_drunk
     }
 }
 
