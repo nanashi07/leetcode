@@ -14,7 +14,6 @@ impl Solution {
             // Drink all full bottles
             total_drunk += full_bottles;
             empty_bottles += full_bottles;
-            full_bottles = 0;
 
             // Try to exchange empty bottles for full ones
             if empty_bottles >= exchange_cost {

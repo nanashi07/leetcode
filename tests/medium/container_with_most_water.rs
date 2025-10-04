@@ -1,7 +1,6 @@
-use std::time::Instant;
-
 // # 11. Container With Most Water
 // https://leetcode.com/problems/container-with-most-water/
+
 struct Solution;
 
 impl Solution {
@@ -25,32 +24,44 @@ impl Solution {
     }
 }
 
-#[test]
-fn test_max_area() {
-    let time = Instant::now();
-    let height = vec![1, 8, 6, 2, 5, 4, 8, 3, 7];
-    let result = Solution::max_area(height.clone());
-    println!("cost time: {:?}", time.elapsed());
-    assert_eq!(49, result, "height: {:?}", &height);
+#[cfg(test)]
+mod tests {
+    use crate::medium::container_with_most_water::Solution;
+    use std::time::Instant;
 
-    let time = Instant::now();
-    let height = vec![1, 1];
-    let result = Solution::max_area(height.clone());
-    println!("cost time: {:?}", time.elapsed());
-    assert_eq!(1, result, "height: {:?}", &height);
+    #[test]
+    fn test_max_area_1() {
+        let time = Instant::now();
+        let height = vec![1, 8, 6, 2, 5, 4, 8, 3, 7];
+        let result = Solution::max_area(height.clone());
+        println!("cost time: {:?}", time.elapsed());
+        assert_eq!(49, result, "height: {:?}", &height);
+    }
 
-    let time = Instant::now();
-    let height = read_case_01();
-    let result = Solution::max_area(height.clone());
-    println!("cost time: {:?}", time.elapsed());
-    assert_eq!(705634720, result);
-}
+    #[test]
+    fn test_max_area_2() {
+        let time = Instant::now();
+        let height = vec![1, 1];
+        let result = Solution::max_area(height.clone());
+        println!("cost time: {:?}", time.elapsed());
+        assert_eq!(1, result, "height: {:?}", &height);
+    }
 
-fn read_case_01() -> Vec<i32> {
-    let path = "testcase/medium/container_with_most_water/testcase01.txt";
-    let content = std::fs::read_to_string(path).unwrap();
-    content
-        .split(",")
-        .map(|s| s.parse::<i32>().unwrap())
-        .collect()
+    #[test]
+    fn test_max_area_3() {
+        let time = Instant::now();
+        let height = read_case_01();
+        let result = Solution::max_area(height.clone());
+        println!("cost time: {:?}", time.elapsed());
+        assert_eq!(705634720, result);
+    }
+
+    fn read_case_01() -> Vec<i32> {
+        let path = "testcase/medium/container_with_most_water/testcase01.txt";
+        let content = std::fs::read_to_string(path).unwrap();
+        content
+            .split(",")
+            .map(|s| s.parse::<i32>().unwrap())
+            .collect()
+    }
 }
