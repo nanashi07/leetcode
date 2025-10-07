@@ -16,6 +16,8 @@ mod sudoku_solver;
 mod trapping_rain_water_ii;
 // # 679. 24 Game
 mod twenty_four_game;
+// # 778. Swim in Rising Water
+mod swim_in_rising_water;
 // # 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
 mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
 // # 1751. Maximum Number of Events That Can Be Attended II
