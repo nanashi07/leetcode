@@ -92,6 +92,8 @@ mod finding_pairs_with_a_certain_sum;
 mod count_number_of_maximum_bitwise_or_subsets;
 // # 2221. Find Triangular Sum of an Array
 mod find_triangular_sum_of_an_array;
+// # 2300. Successful Pairs of Spells and Potions
+mod successful_pairs_of_spells_and_potions;
 // # 2327. Number of People Aware of a Secret
 mod number_of_people_aware_of_a_secret;
 // # 2348. Number of Zero-Filled Subarrays
