@@ -117,6 +117,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3446. Sort Matrix by Diagonals](https://leetcode.com/problems/sort-matrix-by-diagonals/)
 - [3479. Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/)
 - [3484. Design Spreadsheet](https://leetcode.com/problems/design-spreadsheet/)
+- [3494. Find the Minimum Amount of Time to Brew Potions](https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions/)
 - [3508. Implement Router](https://leetcode.com/problems/implement-router/)
 
 ### Hard Problems
