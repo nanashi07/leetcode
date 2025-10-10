@@ -120,6 +120,8 @@ mod alice_and_bob_playing_flower_game;
 mod find_the_number_of_ways_to_place_people_i;
 // # 3100. Water Bottles II
 mod water_bottles_ii;
+// # 3147. Taking Maximum Energy From the Mystic Dungeon
+mod taking_maximum_energy_from_the_mystic_dungeon;
 // # 3195. Find the Minimum Area to Cover All Ones I
 mod find_the_minimum_area_to_cover_all_ones_i;
 // # 3201. Find the Maximum Length of Valid Subsequence I
