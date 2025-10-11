@@ -122,6 +122,8 @@ mod find_the_number_of_ways_to_place_people_i;
 mod water_bottles_ii;
 // # 3147. Taking Maximum Energy From the Mystic Dungeon
 mod taking_maximum_energy_from_the_mystic_dungeon;
+// # 3186. Maximum Total Damage With Spell Casting
+mod maximum_total_damage_with_spell_casting;
 // # 3195. Find the Minimum Area to Cover All Ones I
 mod find_the_minimum_area_to_cover_all_ones_i;
 // # 3201. Find the Maximum Length of Valid Subsequence I
