@@ -54,6 +54,8 @@ mod find_subsequence_of_length_k_with_the_largest_sum;
 mod count_hills_and_valleys_in_an_array;
 // # 2264. Largest 3-Same-Digit Number in String
 mod largest_3_same_digit_number_in_string;
+// # 2273. Find Resultant Array After Removing Anagrams
+mod find_resultant_array_after_removing_anagrams;
 // # 3000. Maximum Area of Longest Diagonal Rectangle
 mod maximum_area_of_longest_diagonal_rectangle;
 // # 3005. Count Elements With Maximum Frequency
