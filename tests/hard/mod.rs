@@ -56,3 +56,5 @@ mod length_of_longest_v_shaped_diagonal_segment;
 mod maximize_subarrays_after_removing_one_conflicting_pair;
 // # 3495. Minimum Operations to Make Array Elements Zero
 mod minimum_operations_to_make_array_elements_zero;
+// # 3539. Find Sum of Array Product of Magical Sequences
+mod find_sum_of_array_product_of_magical_sequences;
