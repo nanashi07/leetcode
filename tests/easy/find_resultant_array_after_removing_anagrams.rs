@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn remove_anagrams(words: Vec<String>) -> Vec<String> {
-        todo!()
+        let mut result = Vec::new();
+        let mut prev_sorted = String::new();
+
+        for word in words {
+            let mut chars: Vec<char> = word.chars().collect();
+            chars.sort_unstable();
+            let sorted: String = chars.into_iter().collect();
+
+            if sorted != prev_sorted {
+                result.push(word);
+                prev_sorted = sorted;
+            }
+        }
+
+        result
     }
 }
 
