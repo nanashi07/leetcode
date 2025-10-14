@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn has_increasing_subarrays(nums: Vec<i32>, k: i32) -> bool {
-        todo!()
+        let k = k as usize;
+        let n = nums.len();
+
+        // We need at least 2*k elements
+        if n < 2 * k {
+            return false;
+        }
+
+        // Helper function to check if subarray starting at `start` with length `k` is strictly increasing
+        let is_increasing = |start: usize| -> bool {
+            for i in start..start + k - 1 {
+                if nums[i] >= nums[i + 1] {
+                    return false;
+                }
+            }
+            true
+        };
+
+        // Check all possible positions for the first subarray
+        for i in 0..=n - 2 * k {
+            if is_increasing(i) && is_increasing(i + k) {
+                return true;
+            }
+        }
+
+        false
     }
 }
 

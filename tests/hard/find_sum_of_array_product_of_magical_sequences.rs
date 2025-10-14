@@ -10,7 +10,7 @@ impl Solution {
         let k = k as usize;
         let mod_val = 1_000_000_007u64;
 
-        fn quickmul(mut x: u64, mut y: u64, mod_val: u64) -> u64 {
+        fn quickmul(x: u64, mut y: u64, mod_val: u64) -> u64 {
             let mut res = 1;
             let mut cur = x % mod_val;
             while y > 0 {
