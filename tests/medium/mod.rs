@@ -132,6 +132,8 @@ mod find_the_maximum_length_of_valid_subsequence_i;
 mod find_the_maximum_length_of_valid_subsequence_ii;
 // # 3227. Vowels Game in a String
 mod vowels_game_in_a_string;
+// # 3350. Adjacent Increasing Subarrays Detection II
+mod adjacent_increasing_subarrays_detection_ii;
 // # 3408. Design Task Manager
 mod design_task_manager;
 // # 3439. Reschedule Meetings for Maximum Free Time I
