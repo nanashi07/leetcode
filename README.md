@@ -103,6 +103,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2411. Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/)
 - [2419. Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/)
 - [2438. Range Product Queries of Powers](https://leetcode.com/problems/range-product-queries-of-powers/)
+- [2598. Smallest Missing Non-negative Integer After Operations](https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/)
 - [2749. Minimum Operations to Make the Integer Zero](https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/)
 - [2785. Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string/)
 - [2787. Ways to Express an Integer as Sum of Powers](https://leetcode.com/problems/ways-to-express-an-integer-as-sum-of-powers/)
