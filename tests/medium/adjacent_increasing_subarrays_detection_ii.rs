@@ -5,7 +5,24 @@ struct Solution;
 
 impl Solution {
     pub fn max_increasing_subarrays(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {:?}", &nums);
+        let n = nums.len();
+        let mut cnt = 1;
+        let mut precnt = 0;
+        let mut ans = 0;
+
+        for i in 1..n {
+            if nums[i] > nums[i - 1] {
+                cnt += 1;
+            } else {
+                precnt = cnt;
+                cnt = 1;
+            }
+            ans = ans.max(precnt.min(cnt));
+            ans = ans.max(cnt / 2);
+        }
+
+        ans
     }
 }
 
