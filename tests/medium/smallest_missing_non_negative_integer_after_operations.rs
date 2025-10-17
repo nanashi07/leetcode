@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn find_smallest_integer(nums: Vec<i32>, value: i32) -> i32 {
-        todo!()
+        println!("nums: {:?}, value: {}", &nums, &value);
+
+        // Count the frequency of each remainder (mod value)
+        let mut remainder_count = vec![0; value as usize];
+
+        for &num in &nums {
+            // Handle negative numbers correctly with Euclidean modulo
+            let remainder = ((num % value) + value) % value;
+            remainder_count[remainder as usize] += 1;
+        }
+
+        // Try to form 0, 1, 2, 3, ... in order
+        // For each number k, we need a number with remainder (k % value)
+        let mut k = 0;
+        loop {
+            let needed_remainder = (k % value) as usize;
+
+            if remainder_count[needed_remainder] == 0 {
+                // Can't form k
+                return k;
+            }
+
+            // Use one number with this remainder to form k
+            remainder_count[needed_remainder] -= 1;
+            k += 1;
+        }
     }
 }
 
