@@ -40,6 +40,8 @@ mod minimum_score_after_removals_on_a_tree;
 mod meeting_rooms_iii;
 // # 2561. Rearranging Fruits
 mod rearranging_fruits;
+// # 3003. Maximize the Number of Partitions After Operations
+mod maximize_the_number_of_partitions_after_operations;
 // # 3027. Find the Number of Ways to Place People II
 mod find_the_number_of_ways_to_place_people_ii;
 // # 3197. Find the Minimum Area to Cover All Ones II
