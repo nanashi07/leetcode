@@ -5,7 +5,31 @@ struct Solution;
 
 impl Solution {
     pub fn max_distinct_elements(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        println!("nums: {:?}, k: {}", &nums, &k);
+
+        let mut nums = nums;
+        nums.sort_unstable();
+
+        let mut distinct_count = 0;
+        let mut last_used = i32::MIN;
+
+        for num in nums {
+            // The range we can transform this number to is [num - k, num + k]
+            let min_val = num - k;
+            let max_val = num + k;
+
+            // We want to use the smallest value >= last_used + 1 that's in range
+            let target = (last_used + 1).max(min_val);
+
+            // Check if target is within the allowed range
+            if target <= max_val {
+                last_used = target;
+                distinct_count += 1;
+            }
+            // If target > max_val, we can't make this number distinct
+        }
+
+        distinct_count
     }
 }
 
