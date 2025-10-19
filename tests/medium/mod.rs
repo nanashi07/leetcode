@@ -80,6 +80,8 @@ mod longest_subarray_of_1s_after_deleting_one_element;
 mod number_of_subsequences_that_satisfy_the_given_sum_condition;
 // # 1504. Count Submatrices With All Ones
 mod count_submatrices_with_all_ones;
+// # 1625. Lexicographically Smallest String After Applying Operations
+mod lexicographically_smallest_string_after_applying_operations;
 // # 1695. Maximum Erasure Value
 mod maximum_erasure_value;
 // # 1717. Maximum Score From Removing Substrings
