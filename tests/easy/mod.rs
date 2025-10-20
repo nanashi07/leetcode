@@ -48,6 +48,8 @@ mod water_bottles;
 mod maximum_number_of_words_you_can_type;
 // # 1957. Delete Characters to Make Fancy String
 mod delete_characters_to_make_fancy_string;
+// # 2011. Final Value of Variable After Performing Operations
+mod final_value_of_variable_after_performing_operations;
 // # 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
 // # 2210. Count Hills and Valleys in an Array
