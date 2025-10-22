@@ -136,6 +136,8 @@ mod find_the_maximum_length_of_valid_subsequence_i;
 mod find_the_maximum_length_of_valid_subsequence_ii;
 // # 3227. Vowels Game in a String
 mod vowels_game_in_a_string;
+// # 3346. Maximum Frequency of an Element After Performing Operations I
+mod maximum_frequency_of_an_element_after_performing_operations_i;
 // # 3350. Adjacent Increasing Subarrays Detection II
 mod adjacent_increasing_subarrays_detection_ii;
 // # 3397. Maximum Number of Distinct Elements After Operations
