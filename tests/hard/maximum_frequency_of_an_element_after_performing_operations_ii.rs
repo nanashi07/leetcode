@@ -5,7 +5,56 @@ struct Solution;
 
 impl Solution {
     pub fn max_frequency(nums: Vec<i32>, k: i32, num_operations: i32) -> i32 {
-        todo!()
+        let mut sorted = nums.clone();
+        sorted.sort_unstable();
+
+        let mut max_freq = 0;
+
+        // Helper function to count elements in range [left, right]
+        let count_in_range = |left: i32, right: i32| -> i32 {
+            let left_idx = sorted.partition_point(|&x| x < left);
+            let right_idx = sorted.partition_point(|&x| x <= right);
+            (right_idx - left_idx) as i32
+        };
+
+        // Helper function to count elements exactly equal to target
+        let count_equal = |target: i32| -> i32 {
+            let left_idx = sorted.partition_point(|&x| x < target);
+            let right_idx = sorted.partition_point(|&x| x <= target);
+            (right_idx - left_idx) as i32
+        };
+
+        // Collect all candidate target values
+        let mut candidates = std::collections::HashSet::new();
+
+        // Add all original values
+        for &num in &sorted {
+            candidates.insert(num);
+        }
+
+        // Add boundary values: for each element, consider target-k and target+k
+        for &num in &sorted {
+            candidates.insert(num - k);
+            candidates.insert(num + k);
+        }
+
+        // Try each candidate target value
+        for &target in &candidates {
+            // Count elements already equal to target
+            let equal_count = count_equal(target);
+
+            // Count elements in range [target-k, target+k]
+            let in_range_count = count_in_range(target - k, target + k);
+
+            // Elements that can be changed to target (in range but not equal)
+            let changeable = in_range_count - equal_count;
+
+            // Maximum frequency for this target
+            let freq = equal_count + changeable.min(num_operations);
+            max_freq = max_freq.max(freq);
+        }
+
+        max_freq
     }
 }
 
