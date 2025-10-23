@@ -50,6 +50,8 @@ mod find_the_minimum_area_to_cover_all_ones_ii;
 mod find_the_k_th_character_in_string_game_ii;
 // # 3333. Find the Original Typed String II
 mod find_the_original_typed_string_ii;
+// # 3347. Maximum Frequency of an Element After Performing Operations II
+mod maximum_frequency_of_an_element_after_performing_operations_ii;
 // # 3363. Find the Maximum Number of Fruits Collected
 mod find_the_maximum_number_of_fruits_collected;
 // # 3459. Length of Longest V-Shaped Diagonal Segment
