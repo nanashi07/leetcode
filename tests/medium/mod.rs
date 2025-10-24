@@ -92,6 +92,8 @@ mod maximum_average_pass_ratio;
 mod finding_pairs_with_a_certain_sum;
 // # 2044. Count Number of Maximum Bitwise-OR Subsets
 mod count_number_of_maximum_bitwise_or_subsets;
+// # 2048. Next Greater Numerically Balanced Number
+mod next_greater_numerically_balanced_number;
 // # 2221. Find Triangular Sum of an Array
 mod find_triangular_sum_of_an_array;
 // # 2300. Successful Pairs of Spells and Potions
