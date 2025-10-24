@@ -70,6 +70,8 @@ mod find_the_k_th_character_in_string_game_i;
 mod find_the_original_typed_string_i;
 // # 3349. Adjacent Increasing Subarrays Detection I
 mod adjacent_increasing_subarrays_detection_i;
+// # 3461. Check If Digits Are Equal in String After Operations I
+mod check_if_digits_are_equal_in_string_after_operations_i;
 // # 3477. Fruits Into Baskets II
 mod fruits_into_baskets_ii;
 // # 3487. Maximum Unique Subarray Sum After Deletion
