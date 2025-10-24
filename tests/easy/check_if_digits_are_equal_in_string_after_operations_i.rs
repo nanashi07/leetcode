@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn has_same_digits(s: String) -> bool {
-        todo!()
+        println!("s: {}", &s);
+
+        let mut s = s;
+
+        while s.len() > 2 {
+            let mut sc = String::new();
+            let ci = s.as_str();
+            for i in 0..ci.len() - 1 {
+                let c = (ci[i..i + 1].parse::<i32>().unwrap()
+                    + ci[i + 1..i + 2].parse::<i32>().unwrap())
+                    % 10;
+                sc.push_str(&c.to_string())
+            }
+            s = sc;
+        }
+
+        s.as_str()[0..1] == s.as_str()[1..2]
     }
 }
 
