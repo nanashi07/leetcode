@@ -29,6 +29,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1323. Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)
 - [1394. Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/)
 - [1518. Water Bottles](https://leetcode.com/problems/water-bottles/)
+- [1716. Calculate Money in Leetcode Bank](https://leetcode.com/problems/calculate-money-in-leetcode-bank/)
 - [1935. Maximum Number of Words You Can Type](https://leetcode.com/problems/maximum-number-of-words-you-can-type/)
 - [1957. Delete Characters to Make Fancy String](https://leetcode.com/problems/delete-characters-to-make-fancy-string/)
 - [2011. Final Value of Variable After Performing Operations](https://leetcode.com/problems/final-value-of-variable-after-performing-operations/)

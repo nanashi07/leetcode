@@ -44,6 +44,8 @@ mod maximum_69_number;
 mod find_lucky_integer_in_an_array;
 // # 1518. Water Bottles
 mod water_bottles;
+// # 1716. Calculate Money in Leetcode Bank
+mod calculate_money_in_leetcode_bank;
 // # 1935. Maximum Number of Words You Can Type
 mod maximum_number_of_words_you_can_type;
 // # 1957. Delete Characters to Make Fancy String
