@@ -5,7 +5,16 @@ struct Solution;
 
 impl Solution {
     pub fn total_money(n: i32) -> i32 {
-        todo!()
+        println!("n: {n}");
+
+        let mut amount = 0;
+        for i in 0..n {
+            let week = i / 7;
+            let day = i % 7;
+            amount += week + day + 1;
+        }
+
+        amount
     }
 }
 
