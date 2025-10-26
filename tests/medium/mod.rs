@@ -90,6 +90,8 @@ mod maximum_score_from_removing_substrings;
 mod maximum_average_pass_ratio;
 // # 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
+// # 2043. Simple Bank System
+mod simple_bank_system;
 // # 2044. Count Number of Maximum Bitwise-OR Subsets
 mod count_number_of_maximum_bitwise_or_subsets;
 // # 2048. Next Greater Numerically Balanced Number
