@@ -96,6 +96,8 @@ mod simple_bank_system;
 mod count_number_of_maximum_bitwise_or_subsets;
 // # 2048. Next Greater Numerically Balanced Number
 mod next_greater_numerically_balanced_number;
+// # 2125. Number of Laser Beams in a Bank
+mod number_of_laser_beams_in_a_bank;
 // # 2221. Find Triangular Sum of an Array
 mod find_triangular_sum_of_an_array;
 // # 2300. Successful Pairs of Spells and Potions
