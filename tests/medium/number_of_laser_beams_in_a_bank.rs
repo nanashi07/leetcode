@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_beams(bank: Vec<String>) -> i32 {
-        todo!()
+        let mut total_beams = 0;
+        let mut prev_count = 0;
+
+        for row in bank {
+            // Count the number of devices (1's) in this row
+            let curr_count = row.chars().filter(|&c| c == '1').count() as i32;
+
+            // If current row has devices
+            if curr_count > 0 {
+                // Add beams between previous row and current row
+                total_beams += prev_count * curr_count;
+                // Update previous count for next iteration
+                prev_count = curr_count;
+            }
+        }
+
+        total_beams
     }
 }
 
