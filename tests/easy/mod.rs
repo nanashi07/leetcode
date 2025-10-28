@@ -72,6 +72,8 @@ mod find_the_k_th_character_in_string_game_i;
 mod find_the_original_typed_string_i;
 // # 3349. Adjacent Increasing Subarrays Detection I
 mod adjacent_increasing_subarrays_detection_i;
+// # 3354. Make Array Elements Equal to Zero
+mod make_array_elements_equal_to_zero;
 // # 3461. Check If Digits Are Equal in String After Operations I
 mod check_if_digits_are_equal_in_string_after_operations_i;
 // # 3477. Fruits Into Baskets II
