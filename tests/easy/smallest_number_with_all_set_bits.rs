@@ -5,7 +5,15 @@ struct Solution;
 
 impl Solution {
     pub fn smallest_number(n: i32) -> i32 {
-        todo!()
+        println!("n: {n}");
+
+        let mut x = 1;
+
+        while x < n {
+            x = 1 + (x << 1);
+        }
+
+        x
     }
 }
 
