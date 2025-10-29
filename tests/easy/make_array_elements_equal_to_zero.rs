@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn count_valid_selections(nums: Vec<i32>) -> i32 {
-        todo!()
+        let n = nums.len();
+        let total_sum: i32 = nums.iter().sum();
+        let mut count = 0;
+        let mut left_sum = 0;
+
+        for i in 0..n {
+            if nums[i] == 0 {
+                let right_sum = total_sum - left_sum;
+
+                // If left_sum == right_sum, both directions work
+                if left_sum == right_sum {
+                    count += 2;
+                }
+                // If difference is 1, one direction works
+                else if (left_sum - right_sum).abs() == 1 {
+                    count += 1;
+                }
+                // If difference > 1, neither direction works
+            }
+            left_sum += nums[i];
+        }
+
+        count
     }
 }
 
