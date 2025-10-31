@@ -66,6 +66,8 @@ mod maximum_area_of_longest_diagonal_rectangle;
 mod count_elements_with_maximum_frequency;
 // # 3136. Valid Word
 mod valid_word;
+// # 3289. The Two Sneaky Numbers of Digitville
+mod the_two_sneaky_numbers_of_digitville;
 // # 3304. Find the K-th Character in String Game I
 mod find_the_k_th_character_in_string_game_i;
 // # 3330. Find the Original Typed String I
