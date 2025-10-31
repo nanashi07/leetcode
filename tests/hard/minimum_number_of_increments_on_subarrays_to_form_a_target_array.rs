@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn min_number_operations(target: Vec<i32>) -> i32 {
-        todo!()
+        if target.is_empty() {
+            return 0;
+        }
+
+        // Start with the first element - we need that many operations to build it
+        let mut operations = target[0];
+
+        // For each subsequent element, if it's higher than previous,
+        // we need additional operations equal to the difference
+        for i in 1..target.len() {
+            if target[i] > target[i - 1] {
+                operations += target[i] - target[i - 1];
+            }
+            // If target[i] <= target[i-1], we can reuse previous operations
+        }
+
+        operations
     }
 }
 
