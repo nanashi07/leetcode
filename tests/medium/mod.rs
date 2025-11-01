@@ -140,6 +140,8 @@ mod find_the_minimum_area_to_cover_all_ones_i;
 mod find_the_maximum_length_of_valid_subsequence_i;
 // # 3202. Find the Maximum Length of Valid Subsequence II
 mod find_the_maximum_length_of_valid_subsequence_ii;
+// # 3217. Delete Nodes From Linked List Present in Array
+mod delete_nodes_from_linked_list_present_in_array;
 // # 3227. Vowels Game in a String
 mod vowels_game_in_a_string;
 // # 3346. Maximum Frequency of an Element After Performing Operations I
