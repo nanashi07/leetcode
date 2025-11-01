@@ -24,7 +24,37 @@ struct Solution;
 // }
 
 impl Solution {
+    // Output Limit Exceeded
     pub fn modified_list(nums: Vec<i32>, head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
+        // Convert nums to HashSet for O(1) lookup
+        let to_delete: HashSet<i32> = nums.into_iter().collect();
+
+        // Find the new head (skip all nodes at the beginning that should be deleted)
+        let mut head = head;
+        while head.is_some() && to_delete.contains(&head.as_ref().unwrap().val) {
+            head = head.unwrap().next;
+        }
+
+        // If all nodes were deleted
+        if head.is_none() {
+            return None;
+        }
+
+        // Traverse and delete nodes
+        let mut current = head.as_mut();
+        while let Some(node) = current {
+            // Look ahead at the next node
+            while node.next.is_some() && to_delete.contains(&node.next.as_ref().unwrap().val) {
+                // Skip the next node by pointing to its next
+                node.next = node.next.as_mut().unwrap().next.take();
+            }
+            current = node.next.as_mut();
+        }
+
+        head
+    }
+
+    pub fn _modified_list(nums: Vec<i32>, head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
         println!("nums: {:?}, head: {:?}", &nums, &head);
 
         if head.is_none() {
@@ -50,10 +80,8 @@ impl Solution {
         // continue fill
         while let Some(curr) = node {
             if !set.contains(&curr.val) {
-                if let Some(ref mut tail_value) = tail {
-                    tail_value.next = Some(Box::new(ListNode::new(curr.val)));
-                    tail = &mut tail_value.next;
-                }
+                tail.as_mut().unwrap().next = Some(Box::new(ListNode::new(curr.val)));
+                tail = &mut tail.as_mut().unwrap().next;
             }
             node = &curr.next;
         }
