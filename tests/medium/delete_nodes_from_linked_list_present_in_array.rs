@@ -2,6 +2,7 @@
 // https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
 
 use crate::shared::ListNode;
+use std::collections::HashSet;
 
 struct Solution;
 
@@ -21,9 +22,43 @@ struct Solution;
 //     }
 //   }
 // }
+
 impl Solution {
     pub fn modified_list(nums: Vec<i32>, head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        todo!()
+        println!("nums: {:?}, head: {:?}", &nums, &head);
+
+        if head.is_none() {
+            return head;
+        }
+
+        let set = nums.into_iter().collect::<HashSet<i32>>();
+
+        let mut node = &head;
+        let mut first: Option<Box<ListNode>> = None;
+
+        // find first one
+        while let Some(curr) = node {
+            if !set.contains(&curr.val) {
+                first = Some(Box::new(ListNode::new(curr.val)));
+                node = &curr.next;
+                break;
+            }
+            node = &curr.next;
+        }
+
+        let mut tail = &mut first;
+        // continue fill
+        while let Some(curr) = node {
+            if !set.contains(&curr.val) {
+                if let Some(ref mut tail_value) = tail {
+                    tail_value.next = Some(Box::new(ListNode::new(curr.val)));
+                    tail = &mut tail_value.next;
+                }
+            }
+            node = &curr.next;
+        }
+
+        first
     }
 }
 
