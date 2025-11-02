@@ -100,6 +100,8 @@ mod next_greater_numerically_balanced_number;
 mod number_of_laser_beams_in_a_bank;
 // # 2221. Find Triangular Sum of an Array
 mod find_triangular_sum_of_an_array;
+// # 2257. Count Unguarded Cells in the Grid
+mod count_unguarded_cells_in_the_grid;
 // # 2300. Successful Pairs of Spells and Potions
 mod successful_pairs_of_spells_and_potions;
 // # 2327. Number of People Aware of a Secret
