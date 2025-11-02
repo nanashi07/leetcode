@@ -1,4 +1,4 @@
-// # 3516. Find Closest Person
+// 3516. Find Closest Person
 // https://leetcode.com/problems/find-closest-person/
 
 struct Solution;

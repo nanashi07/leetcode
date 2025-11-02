@@ -1,4 +1,4 @@
-// # 2353. Design a Food Rating System
+// 2353. Design a Food Rating System
 // https://leetcode.com/problems/design-a-food-rating-system/
 
 use std::cell::RefCell;

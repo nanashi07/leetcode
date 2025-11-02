@@ -1,4 +1,4 @@
-// # 3005. Count Elements With Maximum Frequency
+// 3005. Count Elements With Maximum Frequency
 // https://leetcode.com/problems/count-elements-with-maximum-frequency/
 
 use std::collections::HashMap;

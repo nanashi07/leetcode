@@ -1,4 +1,4 @@
-// # 2561. Rearranging Fruits
+// 2561. Rearranging Fruits
 // https://leetcode.com/problems/rearranging-fruits/
 
 use std::collections::HashMap;

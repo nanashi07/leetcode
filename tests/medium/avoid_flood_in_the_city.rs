@@ -1,4 +1,4 @@
-// # 1488. Avoid Flood in The City
+// 1488. Avoid Flood in The City
 // https://leetcode.com/problems/avoid-flood-in-the-city/
 
 use std::collections::{BTreeSet, HashMap};

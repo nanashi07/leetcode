@@ -1,4 +1,4 @@
-// # 120. Triangle
+// 120. Triangle
 // https://leetcode.com/problems/triangle/
 
 struct Solution;

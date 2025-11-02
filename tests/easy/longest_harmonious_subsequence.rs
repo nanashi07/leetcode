@@ -1,4 +1,4 @@
-// # 594. Longest Harmonious Subsequence
+// 594. Longest Harmonious Subsequence
 // https://leetcode.com/problems/longest-harmonious-subsequence/
 
 struct Solution;

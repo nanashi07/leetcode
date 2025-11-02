@@ -1,4 +1,4 @@
-// # 3100. Water Bottles II
+// 3100. Water Bottles II
 // https://leetcode.com/problems/water-bottles-ii/
 
 struct Solution;

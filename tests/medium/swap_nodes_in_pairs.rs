@@ -1,4 +1,4 @@
-// # 24. Swap Nodes in Pairs
+// 24. Swap Nodes in Pairs
 // https://leetcode.com/problems/swap-nodes-in-pairs/
 use crate::shared::{create_node_list, ListNode};
 struct Solution;
