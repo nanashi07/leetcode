@@ -1,4 +1,4 @@
-// # 3446. Sort Matrix by Diagonals
+// 3446. Sort Matrix by Diagonals
 // https://leetcode.com/problems/sort-matrix-by-diagonals/
 
 struct Solution;

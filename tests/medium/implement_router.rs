@@ -1,4 +1,4 @@
-// # 3508. Implement Router
+// 3508. Implement Router
 // https://leetcode.com/problems/implement-router/
 use std::cell::RefCell;
 use std::collections::{HashMap, HashSet, VecDeque};

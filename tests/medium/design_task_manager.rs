@@ -1,4 +1,4 @@
-// # 3408. Design Task Manager
+// 3408. Design Task Manager
 // https://leetcode.com/problems/design-task-manager/
 
 use std::cell::RefCell;

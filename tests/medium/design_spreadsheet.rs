@@ -1,4 +1,4 @@
-// # 3484. Design Spreadsheet
+// 3484. Design Spreadsheet
 // https://leetcode.com/problems/design-spreadsheet/
 use std::cell::RefCell;
 use std::collections::HashMap;

@@ -1,4 +1,4 @@
-// # 342. Power of Four
+// 342. Power of Four
 // https://leetcode.com/problems/power-of-four/
 
 struct Solution;

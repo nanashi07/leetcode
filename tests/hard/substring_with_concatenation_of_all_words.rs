@@ -1,4 +1,4 @@
-// # 30. Substring with Concatenation of All Words
+// 30. Substring with Concatenation of All Words
 // https://leetcode.com/problems/substring-with-concatenation-of-all-words/
 use std::collections::HashMap;
 struct Solution;

@@ -1,4 +1,4 @@
-// # 31. Next Permutation
+// 31. Next Permutation
 // https://leetcode.com/problems/next-permutation/
 struct Solution;
 

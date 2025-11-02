@@ -1,4 +1,4 @@
-// # 2402. Meeting Rooms III
+// 2402. Meeting Rooms III
 // https://leetcode.com/problems/meeting-rooms-iii/
 
 use std::cmp::Reverse;

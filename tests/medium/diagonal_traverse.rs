@@ -1,4 +1,4 @@
-// # 498. Diagonal Traverse
+// 498. Diagonal Traverse
 // https://leetcode.com/problems/diagonal-traverse/
 
 struct Solution;
