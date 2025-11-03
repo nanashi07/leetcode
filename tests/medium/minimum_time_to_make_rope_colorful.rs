@@ -5,7 +5,33 @@ struct Solution;
 
 impl Solution {
     pub fn min_cost(colors: String, needed_time: Vec<i32>) -> i32 {
-        todo!()
+        println!("colors: {:?}, needed_time: {:?}", &colors, &needed_time);
+
+        let chars = colors.chars().collect::<Vec<_>>();
+        let len = chars.len();
+        let mut time = 0;
+        let mut i = 0;
+
+        while i < len {
+            let c = chars[i];
+            let mut sum_cost = needed_time[i];
+            let mut max_cost = needed_time[i];
+
+            // find same ballons
+            let mut j = i + 1;
+            while j < len && chars[j] == c {
+                sum_cost += needed_time[j];
+                max_cost = max_cost.max(needed_time[j]);
+                j += 1;
+            }
+
+            time += sum_cost - max_cost;
+
+            // skip to next
+            i = j;
+        }
+
+        time
     }
 }
 
