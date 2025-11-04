@@ -1,11 +1,44 @@
 // 3318. Find X-Sum of All K-Long Subarrays I
 // https://leetcode.com/problems/find-x-sum-of-all-k-long-subarrays-i/
 
+use std::cmp::Ordering;
+
 struct Solution;
 
 impl Solution {
     pub fn find_x_sum(nums: Vec<i32>, k: i32, x: i32) -> Vec<i32> {
-        todo!()
+        println!("nums: {:?}, k: {k}, x: {x}", &nums);
+
+        let k = k as usize;
+        let mut result = vec![];
+
+        for i in 0..nums.len() {
+            let end = i + k - 1;
+            if end < nums.len() {
+                result.push(Self::sum_x(&nums[i..=end], x));
+            }
+        }
+
+        result
+    }
+
+    fn sum_x(slice: &[i32], x: i32) -> i32 {
+        // println!("slice: {:?}", &slice);
+        let mut counter = vec![0; 1 + *slice.iter().max().unwrap() as usize];
+        for &n in slice {
+            counter[n as usize] += 1;
+        }
+        let mut list = counter.iter().enumerate().collect::<Vec<_>>();
+        list.sort_by(|(ai, an), (bi, bn)| match bn.cmp(an) {
+            Ordering::Equal => bi.cmp(ai),
+            _ => bn.cmp(an),
+        });
+
+        // println!("list: {:?}", &list);
+        list.iter()
+            .take(x as usize)
+            .map(|(i, n)| *i as i32 * **n)
+            .sum()
     }
 }
 
