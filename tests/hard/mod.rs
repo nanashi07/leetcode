@@ -50,6 +50,8 @@ mod find_the_number_of_ways_to_place_people_ii;
 mod find_the_minimum_area_to_cover_all_ones_ii;
 // 3307. Find the K-th Character in String Game II
 mod find_the_k_th_character_in_string_game_ii;
+// 3321. Find X-Sum of All K-Long Subarrays II
+mod find_x_sum_of_all_k_long_subarrays_ii;
 // 3333. Find the Original Typed String II
 mod find_the_original_typed_string_ii;
 // 3347. Maximum Frequency of an Element After Performing Operations II
