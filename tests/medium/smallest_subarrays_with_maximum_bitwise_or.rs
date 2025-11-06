@@ -74,7 +74,7 @@ impl Solution {
 }
 
 #[cfg(test)]
-mod test {
+mod tests {
     use crate::medium::smallest_subarrays_with_maximum_bitwise_or::Solution;
 
     #[test]
