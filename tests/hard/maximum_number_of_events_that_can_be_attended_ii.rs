@@ -94,7 +94,7 @@ impl Solution {
 }
 
 #[cfg(test)]
-mod test {
+mod tests {
     use crate::hard::maximum_number_of_events_that_can_be_attended_ii::Solution;
 
     #[test]

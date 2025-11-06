@@ -170,3 +170,5 @@ mod design_spreadsheet;
 mod find_the_minimum_amount_of_time_to_brew_potions;
 // 3508. Implement Router
 mod implement_router;
+// 3607. Power Grid Maintenance
+mod power_grid_maintenance;
