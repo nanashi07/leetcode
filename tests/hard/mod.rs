@@ -40,6 +40,8 @@ mod replace_non_coprime_numbers_in_array;
 mod minimum_score_after_removals_on_a_tree;
 // 2402. Meeting Rooms III
 mod meeting_rooms_iii;
+// 2528. Maximize the Minimum Powered City
+mod maximize_the_minimum_powered_city;
 // 2561. Rearranging Fruits
 mod rearranging_fruits;
 // 3003. Maximize the Number of Partitions After Operations
