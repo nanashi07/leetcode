@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_one_bit_operations(n: i32) -> i32 {
-        todo!()
+        if n == 0 {
+            return 0;
+        }
+
+        // The answer is the inverse Gray code of n
+        // We can compute this by XORing n with itself shifted right repeatedly
+        let mut result = n;
+        let mut shift = n;
+
+        while shift > 0 {
+            shift >>= 1;
+            result ^= shift;
+        }
+
+        result
     }
 }
 
