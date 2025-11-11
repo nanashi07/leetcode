@@ -80,6 +80,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [165. Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
 - [166. Fraction to Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
 - [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
+- [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 - [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
 - [808. Soup Servings](https://leetcode.com/problems/soup-servings/)

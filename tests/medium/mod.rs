@@ -46,6 +46,8 @@ mod compare_version_numbers;
 mod fraction_to_recurring_decimal;
 // 417. Pacific Atlantic Water Flow
 mod pacific_atlantic_water_flow;
+// 474. Ones and Zeroes
+mod ones_and_zeroes;
 // 498. Diagonal Traverse
 mod diagonal_traverse;
 // 611. Valid Triangle Number
