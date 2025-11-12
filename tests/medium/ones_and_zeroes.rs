@@ -23,34 +23,6 @@ impl Solution {
 
         dp[m][n]
     }
-
-    // Wrong Answer
-    pub fn _find_max_form(strs: Vec<String>, m: i32, n: i32) -> i32 {
-        println!("strs: {:?}, m: {m}, n: {n}", &strs);
-
-        let mut m = m;
-        let mut n = n;
-        // let mut strs = strs;
-        // strs.sort_by(|a, b| a.len().cmp(&b.len()));
-        let mut count = 0;
-        let cs = strs
-            .iter()
-            .map(|s| {
-                let mut zero = 0;
-                let mut one = 0;
-                for c in s.chars() {
-                    match c {
-                        '0' => zero += 1,
-                        '1' => one += 1,
-                        _ => {}
-                    }
-                }
-                (zero, one)
-            })
-            .collect::<Vec<_>>();
-
-        count
-    }
 }
 
 #[cfg(test)]
