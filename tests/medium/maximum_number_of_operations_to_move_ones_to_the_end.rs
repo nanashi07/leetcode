@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn max_operations(s: String) -> i32 {
-        todo!()
+        println!("s: {:?}", &s);
+
+        let chars: Vec<char> = s.chars().collect();
+        let n = chars.len();
+
+        let mut operations = 0;
+        let mut ones_count = 0;
+
+        for i in 0..n {
+            if chars[i] == '1' {
+                ones_count += 1;
+            } else {
+                // We found a '0'
+                // If there's a '1' before this '0', all those '1's need to move past it
+                // Only count if the previous character was '1' (to avoid counting consecutive 0s multiple times)
+                if i > 0 && chars[i - 1] == '1' {
+                    operations += ones_count;
+                }
+            }
+        }
+
+        operations
     }
 }
 
