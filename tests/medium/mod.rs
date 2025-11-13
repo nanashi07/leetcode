@@ -152,6 +152,8 @@ mod find_the_maximum_length_of_valid_subsequence_ii;
 mod delete_nodes_from_linked_list_present_in_array;
 // 3227. Vowels Game in a String
 mod vowels_game_in_a_string;
+// 3228. Maximum Number of Operations to Move Ones to the End
+mod maximum_number_of_operations_to_move_ones_to_the_end;
 // 3346. Maximum Frequency of an Element After Performing Operations I
 mod maximum_frequency_of_an_element_after_performing_operations_i;
 // 3350. Adjacent Increasing Subarrays Detection II
