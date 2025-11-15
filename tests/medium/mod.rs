@@ -156,6 +156,8 @@ mod delete_nodes_from_linked_list_present_in_array;
 mod vowels_game_in_a_string;
 // 3228. Maximum Number of Operations to Move Ones to the End
 mod maximum_number_of_operations_to_move_ones_to_the_end;
+// 3234. Count the Number of Substrings With Dominant Ones
+mod count_the_number_of_substrings_with_dominant_ones;
 // 3346. Maximum Frequency of an Element After Performing Operations I
 mod maximum_frequency_of_an_element_after_performing_operations_i;
 // 3350. Adjacent Increasing Subarrays Detection II
