@@ -42,6 +42,8 @@ mod convert_integer_to_the_sum_of_two_no_zero_integers;
 mod maximum_69_number;
 // 1394. Find Lucky Integer in an Array
 mod find_lucky_integer_in_an_array;
+// 1437. Check If All 1's Are at Least Length K Places Away
+mod check_if_all_1s_are_at_least_length_k_places_away;
 // 1518. Water Bottles
 mod water_bottles;
 // 1716. Calculate Money in Leetcode Bank
