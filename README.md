@@ -21,6 +21,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [326. Power of Three](https://leetcode.com/problems/power-of-three/)
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
+- [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
 - [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
