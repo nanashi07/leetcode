@@ -28,6 +28,8 @@ mod power_of_three;
 mod power_of_four;
 // 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
+// 717. 1-bit and 2-bit Characters
+mod one_bit_and_two_bit_characters;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
 // 976. Largest Perimeter Triangle
