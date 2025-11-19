@@ -58,6 +58,8 @@ mod delete_characters_to_make_fancy_string;
 mod final_value_of_variable_after_performing_operations;
 // 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
+// 2154. Keep Multiplying Found Values by Two
+mod keep_multiplying_found_values_by_two;
 // 2169. Count Operations to Obtain Zero
 mod count_operations_to_obtain_zero;
 // 2210. Count Hills and Valleys in an Array
