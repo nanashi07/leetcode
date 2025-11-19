@@ -25,7 +25,7 @@ impl Solution {
                 if &bits[len - 2..] == &[1, 1] && Self::extract(&bits[..len - 2]) {
                     return true;
                 }
-                return false;
+                false
             }
         }
     }
