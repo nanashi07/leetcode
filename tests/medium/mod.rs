@@ -96,6 +96,8 @@ mod maximum_score_from_removing_substrings;
 mod maximum_average_pass_ratio;
 // 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
+// 1930. Unique Length-3 Palindromic Subsequences
+mod unique_length_3_palindromic_subsequences;
 // 2043. Simple Bank System
 mod simple_bank_system;
 // 2044. Count Number of Maximum Bitwise-OR Subsets
