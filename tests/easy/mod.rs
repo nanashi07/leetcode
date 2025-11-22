@@ -74,6 +74,8 @@ mod maximum_area_of_longest_diagonal_rectangle;
 mod count_elements_with_maximum_frequency;
 // 3136. Valid Word
 mod valid_word;
+// 3190. Find Minimum Operations to Make All Elements Divisible by Three
+mod find_minimum_operations_to_make_all_elements_divisible_by_three;
 // 3289. The Two Sneaky Numbers of Digitville
 mod the_two_sneaky_numbers_of_digitville;
 // 3304. Find the K-th Character in String Game I
