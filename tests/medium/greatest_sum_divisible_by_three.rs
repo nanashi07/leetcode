@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn max_sum_div_three(nums: Vec<i32>) -> i32 {
-        todo!()
+        // dp[i] = maximum sum with remainder i when divided by 3
+        // dp[0] = sum divisible by 3
+        // dp[1] = sum with remainder 1
+        // dp[2] = sum with remainder 2
+        let mut dp = [0, i32::MIN, i32::MIN];
+
+        for num in nums {
+            let mut temp = dp;
+            let remainder = (num % 3) as usize;
+
+            // Try adding current number to each previous state
+            for i in 0..3 {
+                if dp[i] != i32::MIN {
+                    let new_remainder = (i + remainder) % 3;
+                    temp[new_remainder] = temp[new_remainder].max(dp[i] + num);
+                }
+            }
+
+            dp = temp;
+        }
+
+        dp[0]
     }
 }
 
