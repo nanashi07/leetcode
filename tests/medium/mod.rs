@@ -70,6 +70,8 @@ mod vowel_spellchecker;
 mod minimum_score_triangulation_of_polygon;
 // 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
+// 1262. Greatest Sum Divisible by Three
+mod greatest_sum_divisible_by_three;
 // 1277. Count Square Submatrices with All Ones
 mod count_square_submatrices_with_all_ones;
 // 1353. Maximum Number of Events That Can Be Attended
