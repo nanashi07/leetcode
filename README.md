@@ -96,6 +96,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [966. Vowel Spellchecker](https://leetcode.com/problems/vowel-spellchecker/)
 - [1039. Minimum Score Triangulation of Polygon](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/)
 - [1233. Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/)
+- [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
 - [1277. Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 - [1353. Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
 - [1488. Avoid Flood in The City](https://leetcode.com/problems/avoid-flood-in-the-city/)
