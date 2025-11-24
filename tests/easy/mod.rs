@@ -34,6 +34,8 @@ mod one_bit_and_two_bit_characters;
 mod largest_triangle_area;
 // 976. Largest Perimeter Triangle
 mod largest_perimeter_triangle;
+// 1018. Binary Prefix Divisible By 5
+mod binary_prefix_divisible_by_5;
 // 1290. Convert Binary Number in a Linked List to Integer
 mod convert_binary_number_in_a_linked_list_to_integer;
 // 1304. Find N Unique Integers Sum up to Zero
