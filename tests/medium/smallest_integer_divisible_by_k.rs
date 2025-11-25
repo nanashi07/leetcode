@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn smallest_repunit_div_by_k(k: i32) -> i32 {
-        todo!()
+        // If k is divisible by 2 or 5, no repunit can be divisible by k
+        // because repunits are of the form (10^n - 1)/9, and 10^n - 1 ends in 9
+        if k % 2 == 0 || k % 5 == 0 {
+            return -1;
+        }
+
+        let mut remainder = 0;
+
+        // Try building repunits: 1, 11, 111, 1111, ...
+        // Instead of building the actual number, we track remainder % k
+        // For each new digit: new_number = old_number * 10 + 1
+        // So: new_remainder = (old_remainder * 10 + 1) % k
+        for length in 1..=k {
+            remainder = (remainder * 10 + 1) % k;
+
+            if remainder == 0 {
+                return length;
+            }
+        }
+
+        // Should never reach here for valid inputs
+        -1
     }
 }
 
