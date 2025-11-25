@@ -95,6 +95,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 - [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
 - [966. Vowel Spellchecker](https://leetcode.com/problems/vowel-spellchecker/)
+- [1015. Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)
 - [1039. Minimum Score Triangulation of Polygon](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/)
 - [1233. Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/)
 - [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)

@@ -66,6 +66,8 @@ mod fruit_into_baskets;
 mod sort_an_array;
 // 966. Vowel Spellchecker
 mod vowel_spellchecker;
+// 1015. Smallest Integer Divisible by K
+mod smallest_integer_divisible_by_k;
 // 1039. Minimum Score Triangulation of Polygon
 mod minimum_score_triangulation_of_polygon;
 // 1233. Remove Sub-Folders from the Filesystem
