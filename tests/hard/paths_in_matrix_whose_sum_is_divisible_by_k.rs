@@ -5,7 +5,43 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_paths(grid: Vec<Vec<i32>>, k: i32) -> i32 {
-        todo!()
+        const MOD: i32 = 1_000_000_007;
+        let m = grid.len();
+        let n = grid[0].len();
+        let k = k as usize;
+
+        // dp[i][j][rem] = number of paths to (i,j) with sum % k == rem
+        let mut dp = vec![vec![vec![0i64; k]; n]; m];
+
+        // Initialize starting position
+        dp[0][0][(grid[0][0] as usize) % k] = 1;
+
+        // Fill the DP table
+        for i in 0..m {
+            for j in 0..n {
+                for rem in 0..k {
+                    if dp[i][j][rem] == 0 {
+                        continue;
+                    }
+
+                    // Move right
+                    if j + 1 < n {
+                        let new_rem = (rem + grid[i][j + 1] as usize) % k;
+                        dp[i][j + 1][new_rem] =
+                            (dp[i][j + 1][new_rem] + dp[i][j][rem]) % MOD as i64;
+                    }
+
+                    // Move down
+                    if i + 1 < m {
+                        let new_rem = (rem + grid[i + 1][j] as usize) % k;
+                        dp[i + 1][j][new_rem] =
+                            (dp[i + 1][j][new_rem] + dp[i][j][rem]) % MOD as i64;
+                    }
+                }
+            }
+        }
+
+        dp[m - 1][n - 1][0] as i32
     }
 }
 
