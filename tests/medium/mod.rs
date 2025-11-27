@@ -170,6 +170,8 @@ mod count_the_number_of_substrings_with_dominant_ones;
 mod maximum_frequency_of_an_element_after_performing_operations_i;
 // 3350. Adjacent Increasing Subarrays Detection II
 mod adjacent_increasing_subarrays_detection_ii;
+// 3381. Maximum Subarray Sum With Length Divisible by K
+mod maximum_subarray_sum_with_length_divisible_by_k;
 // 3397. Maximum Number of Distinct Elements After Operations
 mod maximum_number_of_distinct_elements_after_operations;
 // 3408. Design Task Manager
