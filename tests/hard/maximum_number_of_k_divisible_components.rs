@@ -10,7 +10,51 @@ impl Solution {
         values: Vec<i32>,
         k: i32,
     ) -> i32 {
-        todo!()
+        let n = n as usize;
+
+        // Build adjacency list
+        let mut graph = vec![vec![]; n];
+        for edge in edges.iter() {
+            let u = edge[0] as usize;
+            let v = edge[1] as usize;
+            graph[u].push(v);
+            graph[v].push(u);
+        }
+
+        let mut components = 0;
+
+        // DFS to calculate subtree sums and count valid components
+        fn dfs(
+            node: usize,
+            parent: Option<usize>,
+            graph: &Vec<Vec<usize>>,
+            values: &Vec<i32>,
+            k: i32,
+            components: &mut i32,
+        ) -> i64 {
+            let mut subtree_sum = values[node] as i64;
+
+            // Visit all children
+            for &child in &graph[node] {
+                if Some(child) != parent {
+                    let child_sum = dfs(child, Some(node), graph, values, k, components);
+                    subtree_sum += child_sum;
+                }
+            }
+
+            // If this subtree sum is divisible by k, we can split it off
+            // (except for the root which we'll count separately)
+            if subtree_sum % (k as i64) == 0 {
+                *components += 1;
+                return 0; // Reset sum as this subtree is now a separate component
+            }
+
+            subtree_sum
+        }
+
+        dfs(0, None, &graph, &values, k, &mut components);
+
+        components
     }
 }
 
