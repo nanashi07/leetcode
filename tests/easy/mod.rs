@@ -98,6 +98,8 @@ mod check_if_digits_are_equal_in_string_after_operations_i;
 mod fruits_into_baskets_ii;
 // 3487. Maximum Unique Subarray Sum After Deletion
 mod maximum_unique_subarray_sum_after_deletion;
+// 3512. Minimum Operations to Make Array Sum Divisible by K
+mod minimum_operations_to_make_array_sum_divisible_by_k;
 // 3516. Find Closest Person
 mod find_closest_person;
 // 3541. Find Most Frequent Vowel and Consonant
