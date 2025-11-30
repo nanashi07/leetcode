@@ -108,6 +108,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1504. Count Submatrices With All Ones](https://leetcode.com/problems/count-submatrices-with-all-ones/)
 - [1513. Number of Substrings With Only 1s](https://leetcode.com/problems/number-of-substrings-with-only-1s/)
 - [1578. Minimum Time to Make Rope Colorful](https://leetcode.com/problems/minimum-time-to-make-rope-colorful/)
+- [1590. Make Sum Divisible by P](https://leetcode.com/problems/make-sum-divisible-by-p/)
 - [1625. Lexicographically Smallest String After Applying Operations](https://leetcode.com/problems/lexicographically-smallest-string-after-applying-operations/)
 - [1695. Maximum Erasure Value](https://leetcode.com/problems/maximum-erasure-value/)
 - [1717. Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/)
