@@ -36,6 +36,8 @@ mod design_movie_rental_system;
 mod delete_duplicate_folders_in_system;
 // 2106. Maximum Fruits Harvested After at Most K Steps
 mod maximum_fruits_harvested_after_at_most_k_steps;
+// 2141. Maximum Running Time of N Computers
+mod maximum_running_time_of_n_computers;
 // 2163. Minimum Difference in Sums After Removal of Elements
 mod minimum_difference_in_sums_after_removal_of_elements;
 // 2197. Replace Non-Coprime Numbers in Array
