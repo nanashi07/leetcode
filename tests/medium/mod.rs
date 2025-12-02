@@ -196,3 +196,5 @@ mod implement_router;
 mod minimum_operations_to_convert_all_elements_to_zero;
 // 3607. Power Grid Maintenance
 mod power_grid_maintenance;
+// 3623. Count Number of Trapezoids I
+mod count_number_of_trapezoids_i;
