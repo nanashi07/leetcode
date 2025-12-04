@@ -112,6 +112,8 @@ mod count_number_of_maximum_bitwise_or_subsets;
 mod next_greater_numerically_balanced_number;
 // 2125. Number of Laser Beams in a Bank
 mod number_of_laser_beams_in_a_bank;
+// 2211. Count Collisions on a Road
+mod count_collisions_on_a_road;
 // 2221. Find Triangular Sum of an Array
 mod find_triangular_sum_of_an_array;
 // 2257. Count Unguarded Cells in the Grid
