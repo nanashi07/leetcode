@@ -5,7 +5,22 @@ struct Solution;
 
 impl Solution {
     pub fn count_partitions(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {:?}", &nums);
+
+        let sum = nums.iter().sum::<i32>();
+        let mut l = 0;
+        let mut c = 0;
+
+        for i in 0..nums.len() - 1 {
+            let n = nums[i];
+            l = l + n;
+            let r = sum - l;
+            if (r - l).abs() % 2 == 0 {
+                c += 1;
+            }
+        }
+
+        c
     }
 }
 
