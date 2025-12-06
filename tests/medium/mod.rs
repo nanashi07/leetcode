@@ -196,6 +196,8 @@ mod find_the_minimum_amount_of_time_to_brew_potions;
 mod implement_router;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
+// 3578. Count Partitions With Max-Min Difference at Most K
+mod count_partitions_with_max_min_difference_at_most_k;
 // 3607. Power Grid Maintenance
 mod power_grid_maintenance;
 // 3623. Count Number of Trapezoids I
