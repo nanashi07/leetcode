@@ -50,6 +50,8 @@ mod find_lucky_integer_in_an_array;
 mod check_if_all_1s_are_at_least_length_k_places_away;
 // 1518. Water Bottles
 mod water_bottles;
+// 1523. Count Odd Numbers in an Interval Range
+mod count_odd_numbers_in_an_interval_range;
 // 1716. Calculate Money in Leetcode Bank
 mod calculate_money_in_leetcode_bank;
 // 1935. Maximum Number of Words You Can Type
