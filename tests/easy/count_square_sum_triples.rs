@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn count_triples(n: i32) -> i32 {
-        todo!()
+        println!("n: {n}");
+
+        let mut count = 0;
+
+        for a in 1..n {
+            for b in 1..n {
+                let c = ((a * a + b * b) as f64).sqrt();
+                if c.floor() == c && c <= n as f64 {
+                    count += 1;
+                }
+            }
+        }
+
+        count
     }
 }
 
