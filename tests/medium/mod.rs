@@ -198,6 +198,8 @@ mod implement_router;
 mod minimum_operations_to_convert_all_elements_to_zero;
 // 3578. Count Partitions With Max-Min Difference at Most K
 mod count_partitions_with_max_min_difference_at_most_k;
+// 3583. Count Special Triplets
+mod count_special_triplets;
 // 3607. Power Grid Maintenance
 mod power_grid_maintenance;
 // 3623. Count Number of Trapezoids I

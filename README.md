@@ -165,6 +165,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3508. Implement Router](https://leetcode.com/problems/implement-router/)
 - [3542. Minimum Operations to Convert All Elements to Zero](https://leetcode.com/problems/minimum-operations-to-convert-all-elements-to-zero/)
 - [3578. Count Partitions With Max-Min Difference at Most K](https://leetcode.com/problems/count-partitions-with-max-min-difference-at-most-k/)
+- [3583. Count Special Triplets](https://leetcode.com/problems/count-special-triplets/)
 - [3607. Power Grid Maintenance](https://leetcode.com/problems/power-grid-maintenance/)
 - [3623. Count Number of Trapezoids I](https://leetcode.com/problems/count-number-of-trapezoids-i/)
 
