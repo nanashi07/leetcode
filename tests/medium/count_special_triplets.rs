@@ -1,11 +1,42 @@
 // 3583. Count Special Triplets
 // https://leetcode.com/problems/count-special-triplets/
 
+use std::collections::HashMap;
+
 struct Solution;
 
 impl Solution {
     pub fn special_triplets(nums: Vec<i32>) -> i32 {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+
+        let mut left: HashMap<i32, i64> = HashMap::new();
+        let mut right: HashMap<i32, i64> = HashMap::new();
+
+        // Initialize right map with all elements
+        for &num in &nums {
+            *right.entry(num).or_insert(0) += 1;
+        }
+
+        let mut ans: i64 = 0;
+
+        // Enumerate each position as the middle element j
+        for &x in &nums {
+            // Remove current element from right
+            *right.get_mut(&x).unwrap() -= 1;
+
+            // Count special triplets with x as middle element
+            // We need nums[i] = 2*x and nums[k] = 2*x
+            let target = x * 2;
+            let left_count = *left.get(&target).unwrap_or(&0);
+            let right_count = *right.get(&target).unwrap_or(&0);
+
+            ans = (ans + (left_count * right_count) % MOD) % MOD;
+
+            // Add current element to left
+            *left.entry(x).or_insert(0) += 1;
+        }
+
+        ans as i32
     }
 }
 
