@@ -196,6 +196,8 @@ mod find_the_minimum_amount_of_time_to_brew_potions;
 mod implement_router;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
+// 3577. Count the Number of Computer Unlocking Permutations
+mod count_the_number_of_computer_unlocking_permutations;
 // 3578. Count Partitions With Max-Min Difference at Most K
 mod count_partitions_with_max_min_difference_at_most_k;
 // 3583. Count Special Triplets
