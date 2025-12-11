@@ -163,6 +163,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3484. Design Spreadsheet](https://leetcode.com/problems/design-spreadsheet/)
 - [3494. Find the Minimum Amount of Time to Brew Potions](https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions/)
 - [3508. Implement Router](https://leetcode.com/problems/implement-router/)
+- [3531. Count Covered Buildings](https://leetcode.com/problems/count-covered-buildings/)
 - [3542. Minimum Operations to Convert All Elements to Zero](https://leetcode.com/problems/minimum-operations-to-convert-all-elements-to-zero/)
 - [3577. Count the Number of Computer Unlocking Permutations](https://leetcode.com/problems/count-the-number-of-computer-unlocking-permutations/)
 - [3578. Count Partitions With Max-Min Difference at Most K](https://leetcode.com/problems/count-partitions-with-max-min-difference-at-most-k/)

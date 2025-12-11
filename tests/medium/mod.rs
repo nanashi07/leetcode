@@ -194,6 +194,8 @@ mod design_spreadsheet;
 mod find_the_minimum_amount_of_time_to_brew_potions;
 // 3508. Implement Router
 mod implement_router;
+// 3531. Count Covered Buildings
+mod count_covered_buildings;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
 // 3577. Count the Number of Computer Unlocking Permutations
