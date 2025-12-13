@@ -110,3 +110,5 @@ mod minimum_operations_to_make_array_sum_divisible_by_k;
 mod find_closest_person;
 // 3541. Find Most Frequent Vowel and Consonant
 mod find_most_frequent_vowel_and_consonant;
+// 3606. Coupon Code Validator
+mod coupon_code_validator;
