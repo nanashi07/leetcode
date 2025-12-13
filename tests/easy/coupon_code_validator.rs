@@ -9,7 +9,43 @@ impl Solution {
         business_line: Vec<String>,
         is_active: Vec<bool>,
     ) -> Vec<String> {
-        todo!()
+        println!(
+            "code: {:?}, business_line: {:?}, is_active: {:?}",
+            &code, &business_line, &is_active
+        );
+
+        let valid_category = ["electronics", "grocery", "pharmacy", "restaurant"];
+        let mut valid_code = vec![];
+
+        for i in 0..is_active.len() {
+            if !is_active[i] {
+                continue;
+            }
+            if !valid_category.contains(&business_line[i].as_str()) {
+                continue;
+            }
+            let code = &code[i];
+            if !code.is_empty()
+                && code
+                    .chars()
+                    .filter(|c| !c.is_alphanumeric() && c != &'_')
+                    .count()
+                    == 0
+            {
+                valid_code.push((
+                    code,
+                    valid_category
+                        .binary_search(&business_line[i].as_str())
+                        .unwrap(),
+                ));
+            }
+        }
+
+        valid_code.sort_by(|(c1, i1), (c2, i2)| i1.cmp(i2).then_with(|| c1.cmp(c2)));
+        valid_code
+            .iter()
+            .map(|(c, _)| c.to_string())
+            .collect::<Vec<_>>()
     }
 }
 
