@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_ways(corridor: String) -> i32 {
-        todo!()
+        let s_indices: Vec<usize> = corridor
+            .bytes()
+            .enumerate()
+            .filter(|&(_, b)| b == b'S')
+            .map(|(i, _)| i)
+            .collect();
+
+        if s_indices.len() == 0 || s_indices.len() % 2 != 0 {
+            return 0;
+        }
+
+        let mut ans: i64 = 1;
+        let modulo: i64 = 1_000_000_007;
+
+        for i in (2..s_indices.len()).step_by(2) {
+            let prev_end = s_indices[i - 1];
+            let curr_start = s_indices[i];
+            let ways = (curr_start - prev_end) as i64;
+            ans = (ans * ways) % modulo;
+        }
+
+        ans as i32
     }
 }
 
