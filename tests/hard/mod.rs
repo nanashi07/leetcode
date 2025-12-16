@@ -76,5 +76,7 @@ mod maximize_subarrays_after_removing_one_conflicting_pair;
 mod minimum_operations_to_make_array_elements_zero;
 // 3539. Find Sum of Array Product of Magical Sequences
 mod find_sum_of_array_product_of_magical_sequences;
+// 3562. Maximum Profit from Trading Stocks with Discounts
+mod maximum_profit_from_trading_stocks_with_discounts;
 // 3625. Count Number of Trapezoids II
 mod count_number_of_trapezoids_ii;
