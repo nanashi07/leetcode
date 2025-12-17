@@ -202,6 +202,8 @@ mod implement_router;
 mod count_covered_buildings;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
+// 3573. Best Time to Buy and Sell Stock V
+mod best_time_to_buy_and_sell_stock_v;
 // 3577. Count the Number of Computer Unlocking Permutations
 mod count_the_number_of_computer_unlocking_permutations;
 // 3578. Count Partitions With Max-Min Difference at Most K
