@@ -174,6 +174,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3583. Count Special Triplets](https://leetcode.com/problems/count-special-triplets/)
 - [3607. Power Grid Maintenance](https://leetcode.com/problems/power-grid-maintenance/)
 - [3623. Count Number of Trapezoids I](https://leetcode.com/problems/count-number-of-trapezoids-i/)
+- [3652. Best Time to Buy and Sell Stock using Strategy](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy/)
 
 ### Hard Problems
 
