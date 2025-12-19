@@ -14,10 +14,11 @@ impl Solution {
             price_sum[i + 1] = price_sum[i] + prices[i] as i64;
         }
         let mut res = profit_sum[n];
-        for i in (k - 1) as usize..n {
-            let left_profit = profit_sum[i - (k as usize) + 1];
+        let k = k as usize;
+        for i in (k - 1)..n {
+            let left_profit = profit_sum[i + 1 - k];
             let right_profit = profit_sum[n] - profit_sum[i + 1];
-            let change_profit = price_sum[i + 1] - price_sum[i - (k as usize) / 2 + 1];
+            let change_profit = price_sum[i + 1] - price_sum[i + 1 - k / 2];
             res = res.max(left_profit + change_profit + right_profit);
         }
         res
