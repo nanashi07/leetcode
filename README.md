@@ -196,6 +196,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
 - [1912. Design Movie Rental System](https://leetcode.com/problems/design-movie-rental-system/)
 - [1948. Delete Duplicate Folders in System](https://leetcode.com/problems/delete-duplicate-folders-in-system/)
+- [2092. Find All People With Secret](https://leetcode.com/problems/find-all-people-with-secret/)
 - [2106. Maximum Fruits Harvested After at Most K Steps](https://leetcode.com/problems/maximum-fruits-harvested-after-at-most-k-steps/)
 - [2141. Maximum Running Time of N Computers](https://leetcode.com/problems/maximum-running-time-of-n-computers/)
 - [2163. Minimum Difference in Sums After Removal of Elements](https://leetcode.com/problems/minimum-difference-in-sums-after-removal-of-elements/)
