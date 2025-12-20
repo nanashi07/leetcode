@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn min_deletion_size(strs: Vec<String>) -> i32 {
-        todo!()
+        println!("strs: {:?}", &strs);
+
+        let mut del = 0;
+        let size = strs[0].len();
+
+        for j in 0..size {
+            let mut last_char = ' ';
+            for i in 0..strs.len() {
+                let str = &strs[i][..];
+                if let Some(curr_char) = str.chars().nth(j) {
+                    if curr_char < last_char {
+                        del += 1;
+                        break;
+                    }
+                    last_char = curr_char;
+                }
+            }
+        }
+
+        del
     }
 }
 
