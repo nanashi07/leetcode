@@ -32,6 +32,8 @@ mod longest_harmonious_subsequence;
 mod one_bit_and_two_bit_characters;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
+// 944. Delete Columns to Make Sorted
+mod delete_columns_to_make_sorted;
 // 976. Largest Perimeter Triangle
 mod largest_perimeter_triangle;
 // 1018. Binary Prefix Divisible By 5
