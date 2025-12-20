@@ -23,6 +23,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
 - [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
+- [944. Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/)
 - [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 - [1018. Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
