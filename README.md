@@ -100,6 +100,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [898. Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/)
 - [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 - [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
+- [955. Delete Columns to Make Sorted II](https://leetcode.com/problems/delete-columns-to-make-sorted-ii/)
 - [966. Vowel Spellchecker](https://leetcode.com/problems/vowel-spellchecker/)
 - [1015. Smallest Integer Divisible by K](https://leetcode.com/problems/smallest-integer-divisible-by-k/)
 - [1039. Minimum Score Triangulation of Polygon](https://leetcode.com/problems/minimum-score-triangulation-of-polygon/)

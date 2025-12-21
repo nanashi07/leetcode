@@ -64,6 +64,8 @@ mod bitwise_ors_of_subarrays;
 mod fruit_into_baskets;
 // 912. Sort an Array
 mod sort_an_array;
+// 955. Delete Columns to Make Sorted II
+mod delete_columns_to_make_sorted_ii;
 // 966. Vowel Spellchecker
 mod vowel_spellchecker;
 // 1015. Smallest Integer Divisible by K
