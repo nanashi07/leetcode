@@ -5,7 +5,43 @@ struct Solution;
 
 impl Solution {
     pub fn min_deletion_size(strs: Vec<String>) -> i32 {
-        todo!()
+        if strs.is_empty() || strs[0].is_empty() {
+            return 0;
+        }
+
+        let n = strs.len();
+        let m = strs[0].len();
+        let strs_bytes: Vec<Vec<u8>> = strs.iter().map(|s| s.as_bytes().to_vec()).collect();
+
+        // Track which rows are already sorted (lexicographically less than the next row)
+        let mut sorted = vec![false; n - 1];
+        let mut deletions = 0;
+
+        for col in 0..m {
+            // Check if deleting this column would break the sorted property
+            let mut would_break = false;
+
+            for row in 0..n - 1 {
+                if !sorted[row] && strs_bytes[row][col] > strs_bytes[row + 1][col] {
+                    // This column makes row[i] > row[i+1], must delete
+                    would_break = true;
+                    break;
+                }
+            }
+
+            if would_break {
+                deletions += 1;
+            } else {
+                // Keep this column, update sorted status
+                for row in 0..n - 1 {
+                    if !sorted[row] && strs_bytes[row][col] < strs_bytes[row + 1][col] {
+                        sorted[row] = true;
+                    }
+                }
+            }
+        }
+
+        deletions
     }
 }
 
