@@ -112,6 +112,8 @@ mod simple_bank_system;
 mod count_number_of_maximum_bitwise_or_subsets;
 // 2048. Next Greater Numerically Balanced Number
 mod next_greater_numerically_balanced_number;
+// 2054. Two Best Non-Overlapping Events
+mod two_best_non_overlapping_events;
 // 2110. Number of Smooth Descent Periods of a Stock
 mod number_of_smooth_descent_periods_of_a_stock;
 // 2125. Number of Laser Beams in a Bank
