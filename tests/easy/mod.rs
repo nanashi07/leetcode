@@ -80,6 +80,8 @@ mod find_resultant_array_after_removing_anagrams;
 mod maximum_area_of_longest_diagonal_rectangle;
 // 3005. Count Elements With Maximum Frequency
 mod count_elements_with_maximum_frequency;
+// 3074. Apple Redistribution into Boxes
+mod apple_redistribution_into_boxes;
 // 3136. Valid Word
 mod valid_word;
 // 3190. Find Minimum Operations to Make All Elements Divisible by Three
