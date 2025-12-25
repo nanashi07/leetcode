@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_happiness_sum(happiness: Vec<i32>, k: i32) -> i64 {
-        todo!()
+        let mut happiness = happiness;
+        // Sort in descending order to select the happiest children first
+        happiness.sort_by(|a, b| b.cmp(a));
+
+        let mut total_happiness = 0i64;
+
+        // Select k children
+        for i in 0..k as usize {
+            // Each child's happiness decreases by the number of previously selected children
+            let adjusted_happiness = happiness[i] - i as i32;
+            // Happiness cannot be negative
+            if adjusted_happiness > 0 {
+                total_happiness += adjusted_happiness as i64;
+            }
+        }
+
+        total_happiness
     }
 }
 
