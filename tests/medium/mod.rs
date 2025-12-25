@@ -156,6 +156,8 @@ mod ways_to_express_an_integer_as_sum_of_powers;
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
 mod find_the_number_of_ways_to_place_people_i;
+// 3075. Maximize Happiness of Selected Children
+mod maximize_happiness_of_selected_children;
 // 3100. Water Bottles II
 mod water_bottles_ii;
 // 3147. Taking Maximum Energy From the Mystic Dungeon
