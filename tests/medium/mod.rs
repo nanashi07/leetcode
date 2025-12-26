@@ -222,3 +222,4 @@ mod power_grid_maintenance;
 mod count_number_of_trapezoids_i;
 // 3652. Best Time to Buy and Sell Stock using Strategy
 mod best_time_to_buy_and_sell_stock_using_strategy;
+mod minimum_penalty_for_a_shop;
