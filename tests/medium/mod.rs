@@ -140,6 +140,8 @@ mod smallest_subarrays_with_maximum_bitwise_or;
 mod longest_subarray_with_maximum_bitwise_and;
 // 2438. Range Product Queries of Powers
 mod range_product_queries_of_powers;
+// 2483. Minimum Penalty for a Shop
+mod minimum_penalty_for_a_shop;
 // 2536. Increment Submatrices by One
 mod increment_submatrices_by_one;
 // 2598. Smallest Missing Non-negative Integer After Operations
@@ -222,4 +224,3 @@ mod power_grid_maintenance;
 mod count_number_of_trapezoids_i;
 // 3652. Best Time to Buy and Sell Stock using Strategy
 mod best_time_to_buy_and_sell_stock_using_strategy;
-mod minimum_penalty_for_a_shop;
