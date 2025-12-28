@@ -64,6 +64,8 @@ mod bitwise_ors_of_subarrays;
 mod fruit_into_baskets;
 // 912. Sort an Array
 mod sort_an_array;
+// 955. Delete Columns to Make Sorted II
+mod delete_columns_to_make_sorted_ii;
 // 966. Vowel Spellchecker
 mod vowel_spellchecker;
 // 1015. Smallest Integer Divisible by K
@@ -110,6 +112,10 @@ mod simple_bank_system;
 mod count_number_of_maximum_bitwise_or_subsets;
 // 2048. Next Greater Numerically Balanced Number
 mod next_greater_numerically_balanced_number;
+// 2054. Two Best Non-Overlapping Events
+mod two_best_non_overlapping_events;
+// 2110. Number of Smooth Descent Periods of a Stock
+mod number_of_smooth_descent_periods_of_a_stock;
 // 2125. Number of Laser Beams in a Bank
 mod number_of_laser_beams_in_a_bank;
 // 2211. Count Collisions on a Road
@@ -134,6 +140,8 @@ mod smallest_subarrays_with_maximum_bitwise_or;
 mod longest_subarray_with_maximum_bitwise_and;
 // 2438. Range Product Queries of Powers
 mod range_product_queries_of_powers;
+// 2483. Minimum Penalty for a Shop
+mod minimum_penalty_for_a_shop;
 // 2536. Increment Submatrices by One
 mod increment_submatrices_by_one;
 // 2598. Smallest Missing Non-negative Integer After Operations
@@ -150,6 +158,8 @@ mod ways_to_express_an_integer_as_sum_of_powers;
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
 mod find_the_number_of_ways_to_place_people_i;
+// 3075. Maximize Happiness of Selected Children
+mod maximize_happiness_of_selected_children;
 // 3100. Water Bottles II
 mod water_bottles_ii;
 // 3147. Taking Maximum Energy From the Mystic Dungeon
@@ -200,6 +210,8 @@ mod implement_router;
 mod count_covered_buildings;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
+// 3573. Best Time to Buy and Sell Stock V
+mod best_time_to_buy_and_sell_stock_v;
 // 3577. Count the Number of Computer Unlocking Permutations
 mod count_the_number_of_computer_unlocking_permutations;
 // 3578. Count Partitions With Max-Min Difference at Most K
@@ -210,3 +222,5 @@ mod count_special_triplets;
 mod power_grid_maintenance;
 // 3623. Count Number of Trapezoids I
 mod count_number_of_trapezoids_i;
+// 3652. Best Time to Buy and Sell Stock using Strategy
+mod best_time_to_buy_and_sell_stock_using_strategy;
