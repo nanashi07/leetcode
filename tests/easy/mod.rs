@@ -46,6 +46,8 @@ mod find_n_unique_integers_sum_up_to_zero;
 mod convert_integer_to_the_sum_of_two_no_zero_integers;
 // 1323. Maximum 69 Number
 mod maximum_69_number;
+// 1351. Count Negative Numbers in a Sorted Matrix
+mod count_negative_numbers_in_a_sorted_matrix;
 // 1394. Find Lucky Integer in an Array
 mod find_lucky_integer_in_an_array;
 // 1437. Check If All 1's Are at Least Length K Places Away
