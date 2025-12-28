@@ -42,6 +42,8 @@ mod find_all_people_with_secret;
 mod maximum_fruits_harvested_after_at_most_k_steps;
 // 2141. Maximum Running Time of N Computers
 mod maximum_running_time_of_n_computers;
+// 2147. Number of Ways to Divide a Long Corridor
+mod number_of_ways_to_divide_a_long_corridor;
 // 2163. Minimum Difference in Sums After Removal of Elements
 mod minimum_difference_in_sums_after_removal_of_elements;
 // 2197. Replace Non-Coprime Numbers in Array
