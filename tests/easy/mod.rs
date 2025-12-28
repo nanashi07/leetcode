@@ -32,6 +32,8 @@ mod longest_harmonious_subsequence;
 mod one_bit_and_two_bit_characters;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
+// 944. Delete Columns to Make Sorted
+mod delete_columns_to_make_sorted;
 // 976. Largest Perimeter Triangle
 mod largest_perimeter_triangle;
 // 1018. Binary Prefix Divisible By 5
@@ -50,8 +52,12 @@ mod find_lucky_integer_in_an_array;
 mod check_if_all_1s_are_at_least_length_k_places_away;
 // 1518. Water Bottles
 mod water_bottles;
+// 1523. Count Odd Numbers in an Interval Range
+mod count_odd_numbers_in_an_interval_range;
 // 1716. Calculate Money in Leetcode Bank
 mod calculate_money_in_leetcode_bank;
+// 1925. Count Square Sum Triples
+mod count_square_sum_triples;
 // 1935. Maximum Number of Words You Can Type
 mod maximum_number_of_words_you_can_type;
 // 1957. Delete Characters to Make Fancy String
@@ -74,6 +80,8 @@ mod find_resultant_array_after_removing_anagrams;
 mod maximum_area_of_longest_diagonal_rectangle;
 // 3005. Count Elements With Maximum Frequency
 mod count_elements_with_maximum_frequency;
+// 3074. Apple Redistribution into Boxes
+mod apple_redistribution_into_boxes;
 // 3136. Valid Word
 mod valid_word;
 // 3190. Find Minimum Operations to Make All Elements Divisible by Three
@@ -92,13 +100,19 @@ mod adjacent_increasing_subarrays_detection_i;
 mod make_array_elements_equal_to_zero;
 // 3370. Smallest Number With All Set Bits
 mod smallest_number_with_all_set_bits;
+// 3432. Count Partitions with Even Sum Difference
+mod count_partitions_with_even_sum_difference;
 // 3461. Check If Digits Are Equal in String After Operations I
 mod check_if_digits_are_equal_in_string_after_operations_i;
 // 3477. Fruits Into Baskets II
 mod fruits_into_baskets_ii;
 // 3487. Maximum Unique Subarray Sum After Deletion
 mod maximum_unique_subarray_sum_after_deletion;
+// 3512. Minimum Operations to Make Array Sum Divisible by K
+mod minimum_operations_to_make_array_sum_divisible_by_k;
 // 3516. Find Closest Person
 mod find_closest_person;
 // 3541. Find Most Frequent Vowel and Consonant
 mod find_most_frequent_vowel_and_consonant;
+// 3606. Coupon Code Validator
+mod coupon_code_validator;
