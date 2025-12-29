@@ -52,6 +52,8 @@ mod ones_and_zeroes;
 mod diagonal_traverse;
 // 611. Valid Triangle Number
 mod valid_triangle_number;
+// 756. Pyramid Transition Matrix
+mod pyramid_transition_matrix;
 // 808. Soup Servings
 mod soup_servings;
 // 837. New 21 Game
