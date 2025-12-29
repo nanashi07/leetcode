@@ -96,6 +96,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 - [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
+- [756. Pyramid Transition Matrix](https://leetcode.com/problems/pyramid-transition-matrix/)
 - [808. Soup Servings](https://leetcode.com/problems/soup-servings/)
 - [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
 - [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
