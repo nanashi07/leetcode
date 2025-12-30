@@ -58,6 +58,8 @@ mod pyramid_transition_matrix;
 mod soup_servings;
 // 837. New 21 Game
 mod new_21_game;
+// 840. Magic Squares In Grid
+mod magic_squares_in_grid;
 // 869. Reordered Power of 2
 mod reordered_power_of_2;
 // 898. Bitwise ORs of Subarrays
