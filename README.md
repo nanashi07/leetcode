@@ -99,6 +99,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [756. Pyramid Transition Matrix](https://leetcode.com/problems/pyramid-transition-matrix/)
 - [808. Soup Servings](https://leetcode.com/problems/soup-servings/)
 - [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
+- [840. Magic Squares In Grid](https://leetcode.com/problems/magic-squares-in-grid/)
 - [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
 - [898. Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/)
 - [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
