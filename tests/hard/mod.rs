@@ -36,6 +36,8 @@ mod the_earliest_and_latest_rounds_where_players_compete;
 mod design_movie_rental_system;
 // 1948. Delete Duplicate Folders in System
 mod delete_duplicate_folders_in_system;
+// 1970. Last Day Where You Can Still Cross
+mod last_day_where_you_can_still_cross;
 // 2092. Find All People With Secret
 mod find_all_people_with_secret;
 // 2106. Maximum Fruits Harvested After at Most K Steps
