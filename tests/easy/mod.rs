@@ -18,6 +18,8 @@ mod remove_element;
 mod implement_strstr;
 // 35. Search Insert Position
 mod search_insert_position;
+// 66. Plus One
+mod plus_one;
 // 118. Pascal's Triangle
 mod pascals_triangle;
 // 231. Power of Two
