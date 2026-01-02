@@ -25,6 +25,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
 - [944. Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/)
+- [961. N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
 - [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 - [1018. Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
