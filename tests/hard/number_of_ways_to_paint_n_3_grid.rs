@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn num_of_ways(n: i32) -> i32 {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+
+        // For the first row:
+        // Pattern ABA (two colors): 6 ways (e.g., RGR, RBR, GRG, GBG, BRB, BGB)
+        // Pattern ABC (three colors): 6 ways (e.g., RGB, RBG, GRB, GBR, BRG, BGR)
+        let mut aba: i64 = 6; // Number of ways ending with ABA pattern
+        let mut abc: i64 = 6; // Number of ways ending with ABC pattern
+
+        // For each subsequent row, calculate valid transitions
+        for _ in 1..n {
+            // From ABA pattern: can transition to 3 ABA patterns and 2 ABC patterns
+            // From ABC pattern: can transition to 2 ABA patterns and 2 ABC patterns
+            let new_aba = (aba * 3 + abc * 2) % MOD;
+            let new_abc = (aba * 2 + abc * 2) % MOD;
+
+            aba = new_aba;
+            abc = new_abc;
+        }
+
+        ((aba + abc) % MOD) as i32
     }
 }
 
