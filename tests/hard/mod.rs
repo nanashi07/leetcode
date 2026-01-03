@@ -22,6 +22,8 @@ mod set_intersection_size_at_least_two;
 mod swim_in_rising_water;
 // 960. Delete Columns to Make Sorted III
 mod delete_columns_to_make_sorted_iii;
+// 1411. Number of Ways to Paint N × 3 Grid
+mod number_of_ways_to_paint_n_3_grid;
 // 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
 mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
 // 1526. Minimum Number of Increments on Subarrays to Form a Target Array
