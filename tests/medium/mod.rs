@@ -84,6 +84,8 @@ mod greatest_sum_divisible_by_three;
 mod count_square_submatrices_with_all_ones;
 // 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
+// 1390. Four Divisors
+mod four_divisors;
 // 1488. Avoid Flood in The City
 mod avoid_flood_in_the_city;
 // 1493. Longest Subarray of 1's After Deleting One Element
