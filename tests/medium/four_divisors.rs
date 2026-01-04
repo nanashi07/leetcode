@@ -5,7 +5,34 @@ struct Solution;
 
 impl Solution {
     pub fn sum_four_divisors(nums: Vec<i32>) -> i32 {
-        todo!()
+        let mut total = 0;
+
+        for &num in &nums {
+            let mut divisors = Vec::new();
+            let sqrt = (num as f64).sqrt() as i32;
+
+            // Find all divisors
+            for i in 1..=sqrt {
+                if num % i == 0 {
+                    divisors.push(i);
+                    if i != num / i {
+                        divisors.push(num / i);
+                    }
+                }
+
+                // Early exit if more than 4 divisors
+                if divisors.len() > 4 {
+                    break;
+                }
+            }
+
+            // If exactly 4 divisors, add their sum
+            if divisors.len() == 4 {
+                total += divisors.iter().sum::<i32>();
+            }
+        }
+
+        total
     }
 }
 
