@@ -128,6 +128,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1792. Maximum Average Pass Ratio](https://leetcode.com/problems/maximum-average-pass-ratio/)
 - [1865. Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/)
 - [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/)
+- [1975. Maximum Matrix Sum](https://leetcode.com/problems/maximum-matrix-sum/)
 - [2043. Simple Bank System](https://leetcode.com/problems/simple-bank-system/)
 - [2044. Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)
 - [2048. Next Greater Numerically Balanced Number](https://leetcode.com/problems/next-greater-numerically-balanced-number/)
