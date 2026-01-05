@@ -112,6 +112,8 @@ mod maximum_average_pass_ratio;
 mod finding_pairs_with_a_certain_sum;
 // 1930. Unique Length-3 Palindromic Subsequences
 mod unique_length_3_palindromic_subsequences;
+// 1975. Maximum Matrix Sum
+mod maximum_matrix_sum;
 // 2043. Simple Bank System
 mod simple_bank_system;
 // 2044. Count Number of Maximum Bitwise-OR Subsets
