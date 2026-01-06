@@ -76,6 +76,8 @@ mod vowel_spellchecker;
 mod smallest_integer_divisible_by_k;
 // 1039. Minimum Score Triangulation of Polygon
 mod minimum_score_triangulation_of_polygon;
+// 1161. Maximum Level Sum of a Binary Tree
+mod maximum_level_sum_of_a_binary_tree;
 // 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
 // 1262. Greatest Sum Divisible by Three
