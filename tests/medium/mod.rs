@@ -84,6 +84,8 @@ mod remove_sub_folders_from_the_filesystem;
 mod greatest_sum_divisible_by_three;
 // 1277. Count Square Submatrices with All Ones
 mod count_square_submatrices_with_all_ones;
+// 1339. Maximum Product of Splitted Binary Tree
+mod maximum_product_of_splitted_binary_tree;
 // 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
 // 1390. Four Divisors
