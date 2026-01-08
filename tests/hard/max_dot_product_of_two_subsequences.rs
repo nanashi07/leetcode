@@ -5,7 +5,44 @@ struct Solution;
 
 impl Solution {
     pub fn max_dot_product(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {
-        todo!()
+        let n = nums1.len();
+        let m = nums2.len();
+
+        // dp[i][j] represents the maximum dot product using elements up to index i in nums1
+        // and up to index j in nums2
+        let mut dp = vec![vec![i32::MIN / 2; m]; n];
+
+        // Base case: first element
+        dp[0][0] = nums1[0] * nums2[0];
+
+        // Fill first row: only using nums1[0] with elements from nums2
+        for j in 1..m {
+            dp[0][j] = dp[0][j - 1].max(nums1[0] * nums2[j]);
+        }
+
+        // Fill first column: only using nums2[0] with elements from nums1
+        for i in 1..n {
+            dp[i][0] = dp[i - 1][0].max(nums1[i] * nums2[0]);
+        }
+
+        // Fill the rest of the dp table
+        for i in 1..n {
+            for j in 1..m {
+                let product = nums1[i] * nums2[j];
+
+                // Four options:
+                // 1. Don't include nums1[i] - use dp[i-1][j]
+                // 2. Don't include nums2[j] - use dp[i][j-1]
+                // 3. Include both nums1[i] and nums2[j] as a new subsequence start
+                // 4. Include both nums1[i] and nums2[j] extending previous subsequence
+                dp[i][j] = dp[i - 1][j]
+                    .max(dp[i][j - 1])
+                    .max(product)
+                    .max(dp[i - 1][j - 1] + product);
+            }
+        }
+
+        dp[n - 1][m - 1]
     }
 }
 
