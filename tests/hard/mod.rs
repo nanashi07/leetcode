@@ -26,6 +26,8 @@ mod delete_columns_to_make_sorted_iii;
 mod number_of_ways_to_paint_n_3_grid;
 // 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
 mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
+// 1458. Max Dot Product of Two Subsequences
+mod max_dot_product_of_two_subsequences;
 // 1526. Minimum Number of Increments on Subarrays to Form a Target Array
 mod minimum_number_of_increments_on_subarrays_to_form_a_target_array;
 // 1611. Minimum One Bit Operations to Make Integers Zero
