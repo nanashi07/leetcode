@@ -60,6 +60,8 @@ mod soup_servings;
 mod new_21_game;
 // 840. Magic Squares In Grid
 mod magic_squares_in_grid;
+// 865. Smallest Subtree with all the Deepest Nodes
+mod smallest_subtree_with_all_the_deepest_nodes;
 // 869. Reordered Power of 2
 mod reordered_power_of_2;
 // 898. Bitwise ORs of Subarrays
