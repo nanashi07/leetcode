@@ -98,6 +98,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 - [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
+- [712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)
 - [756. Pyramid Transition Matrix](https://leetcode.com/problems/pyramid-transition-matrix/)
 - [808. Soup Servings](https://leetcode.com/problems/soup-servings/)
 - [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
