@@ -52,6 +52,8 @@ mod ones_and_zeroes;
 mod diagonal_traverse;
 // 611. Valid Triangle Number
 mod valid_triangle_number;
+// 712. Minimum ASCII Delete Sum for Two Strings
+mod minimum_ascii_delete_sum_for_two_strings;
 // 756. Pyramid Transition Matrix
 mod pyramid_transition_matrix;
 // 808. Soup Servings
