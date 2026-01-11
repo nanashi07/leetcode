@@ -202,6 +202,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [30. Substring with Concatenation of All Words](https://leetcode.com/problems/substring-with-concatenation-of-all-words/)
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 - [37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
+- [85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
 - [407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)
 - [679. 24 Game](https://leetcode.com/problems/24-game/)
 - [757. Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/)
