@@ -5,7 +5,65 @@ struct Solution;
 
 impl Solution {
     pub fn maximal_rectangle(matrix: Vec<Vec<char>>) -> i32 {
-        todo!()
+        if matrix.is_empty() || matrix[0].is_empty() {
+            return 0;
+        }
+
+        let rows = matrix.len();
+        let cols = matrix[0].len();
+        let mut heights = vec![0; cols];
+        let mut max_area = 0;
+
+        for row in 0..rows {
+            // Update heights for current row
+            for col in 0..cols {
+                if matrix[row][col] == '1' {
+                    heights[col] += 1;
+                } else {
+                    heights[col] = 0;
+                }
+            }
+
+            // Find largest rectangle in histogram
+            max_area = max_area.max(Self::largest_rectangle_in_histogram(&heights));
+        }
+
+        max_area
+    }
+
+    fn largest_rectangle_in_histogram(heights: &[i32]) -> i32 {
+        let mut stack: Vec<usize> = Vec::new();
+        let mut max_area = 0;
+        let n = heights.len();
+
+        for i in 0..n {
+            // Pop from stack while current height is less than stack top height
+            while !stack.is_empty() && heights[i] < heights[*stack.last().unwrap()] {
+                let h_idx = stack.pop().unwrap();
+                let height = heights[h_idx];
+                let width = if stack.is_empty() {
+                    i as i32
+                } else {
+                    (i - stack.last().unwrap() - 1) as i32
+                };
+                max_area = max_area.max(height * width);
+            }
+            stack.push(i);
+        }
+
+        // Pop remaining elements from stack
+        while !stack.is_empty() {
+            let h_idx = stack.pop().unwrap();
+            let height = heights[h_idx];
+            let width = if stack.is_empty() {
+                n as i32
+            } else {
+                (n - stack.last().unwrap() - 1) as i32
+            };
+            max_area = max_area.max(height * width);
+        }
+
+        max_area
     }
 }
 
