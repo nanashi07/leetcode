@@ -42,6 +42,8 @@ mod n_repeated_element_in_size_2n_array;
 mod largest_perimeter_triangle;
 // 1018. Binary Prefix Divisible By 5
 mod binary_prefix_divisible_by_5;
+// 1266. Minimum Time Visiting All Points
+mod minimum_time_visiting_all_points;
 // 1290. Convert Binary Number in a Linked List to Integer
 mod convert_binary_number_in_a_linked_list_to_integer;
 // 1304. Find N Unique Integers Sum up to Zero
