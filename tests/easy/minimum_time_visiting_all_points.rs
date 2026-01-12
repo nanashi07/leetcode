@@ -5,7 +5,22 @@ struct Solution;
 
 impl Solution {
     pub fn min_time_to_visit_all_points(points: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        println!("points: {:?}", &points);
+
+        let mut seconds = 0;
+
+        for i in 0..points.len() - 1 {
+            let point = &points[i];
+            let x = point[0];
+            let y = point[1];
+
+            let next = &points[i + 1];
+            let nx = next[0];
+            let ny = next[1];
+            seconds += (x - nx).abs().max((y - ny).abs())
+        }
+
+        seconds
     }
 }
 
