@@ -214,6 +214,8 @@ mod reschedule_meetings_for_maximum_free_time_i;
 mod reschedule_meetings_for_maximum_free_time_ii;
 // 3446. Sort Matrix by Diagonals
 mod sort_matrix_by_diagonals;
+// 3453. Separate Squares I
+mod separate_squares_i;
 // 3479. Fruits Into Baskets III
 mod fruits_into_baskets_iii;
 // 3484. Design Spreadsheet
