@@ -84,6 +84,8 @@ mod find_the_original_typed_string_ii;
 mod maximum_frequency_of_an_element_after_performing_operations_ii;
 // 3363. Find the Maximum Number of Fruits Collected
 mod find_the_maximum_number_of_fruits_collected;
+// 3454. Separate Squares II
+mod separate_squares_ii;
 // 3459. Length of Longest V-Shaped Diagonal Segment
 mod length_of_longest_v_shaped_diagonal_segment;
 // 3480. Maximize Subarrays After Removing One Conflicting Pair
