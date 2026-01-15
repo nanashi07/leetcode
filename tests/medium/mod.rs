@@ -170,6 +170,8 @@ mod minimum_operations_to_make_the_integer_zero;
 mod sort_vowels_in_a_string;
 // 2787. Ways to Express an Integer as Sum of Powers
 mod ways_to_express_an_integer_as_sum_of_powers;
+// 2943. Maximize Area of Square Hole in Grid
+mod maximize_area_of_square_hole_in_grid;
 // 3021. Alice and Bob Playing Flower Game
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
