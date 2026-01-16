@@ -5,7 +5,51 @@ struct Solution;
 
 impl Solution {
     pub fn maximize_square_area(m: i32, n: i32, h_fences: Vec<i32>, v_fences: Vec<i32>) -> i32 {
-        todo!()
+        use std::collections::HashSet;
+
+        const MOD: i64 = 1_000_000_007;
+
+        // Add boundaries to fences
+        let mut h_positions = h_fences.clone();
+        h_positions.push(1);
+        h_positions.push(m);
+        h_positions.sort_unstable();
+
+        let mut v_positions = v_fences.clone();
+        v_positions.push(1);
+        v_positions.push(n);
+        v_positions.sort_unstable();
+
+        // Find all possible horizontal distances (heights)
+        let mut h_distances = HashSet::new();
+        for i in 0..h_positions.len() {
+            for j in i + 1..h_positions.len() {
+                h_distances.insert(h_positions[j] - h_positions[i]);
+            }
+        }
+
+        // Find all possible vertical distances (widths)
+        let mut v_distances = HashSet::new();
+        for i in 0..v_positions.len() {
+            for j in i + 1..v_positions.len() {
+                v_distances.insert(v_positions[j] - v_positions[i]);
+            }
+        }
+
+        // Find the maximum common distance (side length for square)
+        let mut max_side = -1;
+        for &dist in &h_distances {
+            if v_distances.contains(&dist) {
+                max_side = max_side.max(dist);
+            }
+        }
+
+        if max_side == -1 {
+            -1
+        } else {
+            let area = (max_side as i64 * max_side as i64) % MOD;
+            area as i32
+        }
     }
 }
 
