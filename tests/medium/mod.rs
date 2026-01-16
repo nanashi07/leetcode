@@ -172,6 +172,8 @@ mod sort_vowels_in_a_string;
 mod ways_to_express_an_integer_as_sum_of_powers;
 // 2943. Maximize Area of Square Hole in Grid
 mod maximize_area_of_square_hole_in_grid;
+// 2975. Maximum Square Area by Removing Fences From a Field
+mod maximum_square_area_by_removing_fences_from_a_field;
 // 3021. Alice and Bob Playing Flower Game
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
