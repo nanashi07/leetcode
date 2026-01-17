@@ -178,6 +178,8 @@ mod maximum_square_area_by_removing_fences_from_a_field;
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
 mod find_the_number_of_ways_to_place_people_i;
+// 3047. Find the Largest Area of Square Inside Two Rectangles
+mod find_the_largest_area_of_square_inside_two_rectangles;
 // 3075. Maximize Happiness of Selected Children
 mod maximize_happiness_of_selected_children;
 // 3100. Water Bottles II
