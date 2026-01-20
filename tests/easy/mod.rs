@@ -98,6 +98,8 @@ mod find_minimum_operations_to_make_all_elements_divisible_by_three;
 mod the_two_sneaky_numbers_of_digitville;
 // 3304. Find the K-th Character in String Game I
 mod find_the_k_th_character_in_string_game_i;
+// 3314. Construct the Minimum Bitwise Array I
+mod construct_the_minimum_bitwise_array_i;
 // 3318. Find X-Sum of All K-Long Subarrays I
 mod find_x_sum_of_all_k_long_subarrays_i;
 // 3330. Find the Original Typed String I
