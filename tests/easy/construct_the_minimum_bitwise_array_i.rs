@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn min_bitwise_array(nums: Vec<i32>) -> Vec<i32> {
-        todo!()
+        println!("nums: {nums:?}");
+
+        let mut ans = vec![-1; nums.len()];
+
+        for i in 0..nums.len() {
+            let n = nums[i];
+            for a in 1..n {
+                if a | (a + 1) == n {
+                    ans[i] = a;
+                    break;
+                }
+            }
+        }
+
+        ans
     }
 }
 
