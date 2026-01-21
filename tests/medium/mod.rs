@@ -206,6 +206,8 @@ mod vowels_game_in_a_string;
 mod maximum_number_of_operations_to_move_ones_to_the_end;
 // 3234. Count the Number of Substrings With Dominant Ones
 mod count_the_number_of_substrings_with_dominant_ones;
+// 3315. Construct the Minimum Bitwise Array II
+mod construct_the_minimum_bitwise_array_ii;
 // 3346. Maximum Frequency of an Element After Performing Operations I
 mod maximum_frequency_of_an_element_after_performing_operations_i;
 // 3350. Adjacent Increasing Subarrays Detection II
