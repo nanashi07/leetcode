@@ -66,6 +66,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3461. Check If Digits Are Equal in String After Operations I](https://leetcode.com/problems/check-if-digits-are-equal-in-string-after-operations-i/)
 - [3477. Fruits Into Baskets II](https://leetcode.com/problems/fruits-into-baskets-ii/)
 - [3487. Maximum Unique Subarray Sum After Deletion](https://leetcode.com/problems/maximum-unique-subarray-sum-after-deletion/)
+- [3507. Minimum Pair Removal to Sort Array I](https://leetcode.com/problems/minimum-pair-removal-to-sort-array-i/)
 - [3512. Minimum Operations to Make Array Sum Divisible by K](https://leetcode.com/problems/minimum-operations-to-make-array-sum-divisible-by-k/)
 - [3516. Find Closest Person](https://leetcode.com/problems/find-closest-person/)
 - [3541. Find Most Frequent Vowel and Consonant](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/)
