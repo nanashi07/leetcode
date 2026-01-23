@@ -20,7 +20,6 @@ impl Solution {
             let min = sums.iter().min().unwrap();
             for i in 0..sums.len() {
                 if *min == sums[i] {
-                    let c = nums.clone();
                     nums.remove(i + 1);
                     nums[i] = *min;
                     count += 1;
