@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn min_pair_sum(nums: Vec<i32>) -> i32 {
-        todo!()
+        // Sort the array
+        let mut nums = nums;
+        nums.sort_unstable();
+
+        let n = nums.len();
+        let mut max_sum = 0;
+
+        // Pair smallest with largest, second smallest with second largest, etc.
+        for i in 0..n / 2 {
+            let pair_sum = nums[i] + nums[n - 1 - i];
+            max_sum = max_sum.max(pair_sum);
+        }
+
+        max_sum
     }
 }
 
