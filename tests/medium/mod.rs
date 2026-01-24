@@ -120,6 +120,8 @@ mod maximum_score_from_removing_substrings;
 mod maximum_average_pass_ratio;
 // 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
+// 1877. Minimize Maximum Pair Sum in Array
+mod minimize_maximum_pair_sum_in_array;
 // 1895. Largest Magic Square
 mod largest_magic_square;
 // 1930. Unique Length-3 Palindromic Subsequences
