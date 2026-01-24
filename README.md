@@ -135,6 +135,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1717. Maximum Score From Removing Substrings](https://leetcode.com/problems/maximum-score-from-removing-substrings/)
 - [1792. Maximum Average Pass Ratio](https://leetcode.com/problems/maximum-average-pass-ratio/)
 - [1865. Finding Pairs With a Certain Sum](https://leetcode.com/problems/finding-pairs-with-a-certain-sum/)
+- [1877. Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/)
 - [1895. Largest Magic Square](https://leetcode.com/problems/largest-magic-square/)
 - [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/)
 - [1975. Maximum Matrix Sum](https://leetcode.com/problems/maximum-matrix-sum/)
