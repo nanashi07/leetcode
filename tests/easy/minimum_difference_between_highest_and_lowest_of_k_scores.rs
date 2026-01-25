@@ -5,7 +5,22 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_difference(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        print!("nums: {nums:?}, k: {k}");
+
+        let k = k as usize;
+        let mut nums = nums;
+        nums.sort_unstable();
+
+        if nums.len() <= k {
+            return nums[nums.len() - 1] - nums[0];
+        }
+
+        nums.iter()
+            .take(nums.len() - k + 1)
+            .enumerate()
+            .map(|(i, n)| nums[i + k - 1] - *n)
+            .min()
+            .unwrap()
     }
 }
 
