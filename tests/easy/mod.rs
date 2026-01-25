@@ -70,6 +70,8 @@ mod count_square_sum_triples;
 mod maximum_number_of_words_you_can_type;
 // 1957. Delete Characters to Make Fancy String
 mod delete_characters_to_make_fancy_string;
+// 1984. Minimum Difference Between Highest and Lowest of K Scores
+mod minimum_difference_between_highest_and_lowest_of_k_scores;
 // 2011. Final Value of Variable After Performing Operations
 mod final_value_of_variable_after_performing_operations;
 // 2099. Find Subsequence of Length K With the Largest Sum
