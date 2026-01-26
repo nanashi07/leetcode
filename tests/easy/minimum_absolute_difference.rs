@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_abs_difference(arr: Vec<i32>) -> Vec<Vec<i32>> {
-        todo!()
+        println!("arr: {arr:?}");
+
+        let mut arr = arr;
+        arr.sort_unstable();
+
+        let diff_vec = arr
+            .iter()
+            .take(arr.len() - 1)
+            .enumerate()
+            .map(|(i, n)| (arr[i + 1] - *n).abs())
+            .collect::<Vec<_>>();
+
+        let min = *diff_vec.iter().min().unwrap();
+
+        let mut pairs = vec![];
+
+        for i in 0..diff_vec.len() {
+            let n = diff_vec[i];
+            if n == min {
+                pairs.push(vec![arr[i], arr[i + 1]]);
+            }
+        }
+
+        pairs
     }
 }
 
