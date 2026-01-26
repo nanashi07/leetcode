@@ -42,6 +42,8 @@ mod n_repeated_element_in_size_2n_array;
 mod largest_perimeter_triangle;
 // 1018. Binary Prefix Divisible By 5
 mod binary_prefix_divisible_by_5;
+// 1200. Minimum Absolute Difference
+mod minimum_absolute_difference;
 // 1266. Minimum Time Visiting All Points
 mod minimum_time_visiting_all_points;
 // 1290. Convert Binary Number in a Linked List to Integer
