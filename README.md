@@ -204,6 +204,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3583. Count Special Triplets](https://leetcode.com/problems/count-special-triplets/)
 - [3607. Power Grid Maintenance](https://leetcode.com/problems/power-grid-maintenance/)
 - [3623. Count Number of Trapezoids I](https://leetcode.com/problems/count-number-of-trapezoids-i/)
+- [3650. Minimum Cost Path with Edge Reversals](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/)
 - [3652. Best Time to Buy and Sell Stock using Strategy](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy/)
 
 ### Hard Problems
@@ -259,7 +260,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3539. Find Sum of Array Product of Magical Sequences](https://leetcode.com/problems/find-sum-of-array-product-of-magical-sequences/)
 - [3562. Maximum Profit from Trading Stocks with Discounts](https://leetcode.com/problems/maximum-profit-from-trading-stocks-with-discounts/)
 - [3625. Count Number of Trapezoids II](https://leetcode.com/problems/count-number-of-trapezoids-ii/)
-- [3650. Minimum Cost Path with Edge Reversals](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/)
+- [3651. Minimum Cost Path with Teleportations](https://leetcode.com/problems/minimum-cost-path-with-teleportations/)
 
 ## How to Run
 

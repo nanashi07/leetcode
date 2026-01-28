@@ -254,7 +254,7 @@ mod count_special_triplets;
 mod power_grid_maintenance;
 // 3623. Count Number of Trapezoids I
 mod count_number_of_trapezoids_i;
-// 3652. Best Time to Buy and Sell Stock using Strategy
-mod best_time_to_buy_and_sell_stock_using_strategy;
 // 3650. Minimum Cost Path with Edge Reversals
 mod minimum_cost_path_with_edge_reversals;
+// 3652. Best Time to Buy and Sell Stock using Strategy
+mod best_time_to_buy_and_sell_stock_using_strategy;
