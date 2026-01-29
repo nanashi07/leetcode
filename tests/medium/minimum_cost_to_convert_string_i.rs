@@ -11,7 +11,53 @@ impl Solution {
         changed: Vec<char>,
         cost: Vec<i32>,
     ) -> i64 {
-        todo!()
+        // Initialize distance matrix with infinity
+        // We'll use indices 0-25 for 'a'-'z'
+        const INF: i64 = i64::MAX / 2;
+        let mut dist = vec![vec![INF; 26]; 26];
+
+        // Distance from a character to itself is 0
+        for i in 0..26 {
+            dist[i][i] = 0;
+        }
+
+        // Build the graph with given edges
+        for i in 0..original.len() {
+            let from = (original[i] as usize) - ('a' as usize);
+            let to = (changed[i] as usize) - ('a' as usize);
+            let c = cost[i] as i64;
+            // Keep minimum cost if there are multiple edges between same pair
+            dist[from][to] = dist[from][to].min(c);
+        }
+
+        // Floyd-Warshall algorithm to find shortest paths between all pairs
+        for k in 0..26 {
+            for i in 0..26 {
+                for j in 0..26 {
+                    if dist[i][k] != INF && dist[k][j] != INF {
+                        dist[i][j] = dist[i][j].min(dist[i][k] + dist[k][j]);
+                    }
+                }
+            }
+        }
+
+        // Calculate total cost to transform source to target
+        let mut total_cost: i64 = 0;
+        let source_chars: Vec<char> = source.chars().collect();
+        let target_chars: Vec<char> = target.chars().collect();
+
+        for i in 0..source_chars.len() {
+            let from = (source_chars[i] as usize) - ('a' as usize);
+            let to = (target_chars[i] as usize) - ('a' as usize);
+
+            if dist[from][to] == INF {
+                return -1; // Impossible to convert
+            }
+
+            total_cost += dist[from][to];
+        }
+
+        total_cost
     }
 }
 
