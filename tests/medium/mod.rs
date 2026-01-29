@@ -180,6 +180,8 @@ mod ways_to_express_an_integer_as_sum_of_powers;
 mod maximize_area_of_square_hole_in_grid;
 // 2975. Maximum Square Area by Removing Fences From a Field
 mod maximum_square_area_by_removing_fences_from_a_field;
+// 2976. Minimum Cost to Convert String I
+mod minimum_cost_to_convert_string_i;
 // 3021. Alice and Bob Playing Flower Game
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
