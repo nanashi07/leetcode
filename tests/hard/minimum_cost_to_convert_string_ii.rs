@@ -110,6 +110,131 @@ impl Solution {
 
         f[n - 1]
     }
+
+    // Time exceed
+    pub fn _minimum_cost(
+        source: String,
+        target: String,
+        original: Vec<String>,
+        changed: Vec<String>,
+        cost: Vec<i32>,
+    ) -> i64 {
+        use std::collections::HashMap;
+
+        let n = source.len();
+        if n == 0 {
+            return 0;
+        }
+
+        // Build string to id mapping
+        let mut string_to_id: HashMap<&str, usize> = HashMap::new();
+        let mut id = 0;
+
+        for s in original.iter().chain(changed.iter()) {
+            if !string_to_id.contains_key(s.as_str()) {
+                string_to_id.insert(s.as_str(), id);
+                id += 1;
+            }
+        }
+
+        // Find max substring length and collect unique lengths for optimization
+        let max_len = original
+            .iter()
+            .chain(changed.iter())
+            .map(|s| s.len())
+            .max()
+            .unwrap_or(0)
+            .min(n);
+
+        // Floyd-Warshall algorithm to compute shortest paths
+        const INF: i64 = i64::MAX / 2;
+        let mut dist = vec![vec![INF; id]; id];
+        for i in 0..id {
+            dist[i][i] = 0;
+        }
+
+        for i in 0..original.len() {
+            let from = string_to_id[original[i].as_str()];
+            let to = string_to_id[changed[i].as_str()];
+            dist[from][to] = dist[from][to].min(cost[i] as i64);
+        }
+
+        for k in 0..id {
+            for i in 0..id {
+                for j in 0..id {
+                    if dist[i][k] != INF && dist[k][j] != INF {
+                        dist[i][j] = dist[i][j].min(dist[i][k] + dist[k][j]);
+                    }
+                }
+            }
+        }
+
+        // DP: dp[i] represents minimum cost to convert source[0..i]
+        let mut dp = vec![INF; n + 1];
+        dp[0] = 0;
+
+        let source_bytes = source.as_bytes();
+        let target_bytes = target.as_bytes();
+
+        for i in 0..n {
+            if dp[i] == INF {
+                continue;
+            }
+
+            // Try replacing substrings of different lengths, limited by max_len
+            let max_search_len = (n - i).min(max_len);
+
+            for len in 1..=max_search_len {
+                let end = i + len;
+
+                // Quick check for single character equality
+                if len == 1 && source_bytes[i] == target_bytes[i] {
+                    dp[end] = dp[end].min(dp[i]);
+                    continue;
+                }
+
+                // For small strings, check equality inline
+                if len <= 10 {
+                    let mut equal = true;
+                    for j in 0..len {
+                        if source_bytes[i + j] != target_bytes[i + j] {
+                            equal = false;
+                            break;
+                        }
+                    }
+                    if equal {
+                        dp[end] = dp[end].min(dp[i]);
+                        continue;
+                    }
+                }
+
+                let source_sub = &source[i..end];
+                let target_sub = &target[i..end];
+
+                if len > 10 && source_sub == target_sub {
+                    // No conversion needed for longer strings
+                    dp[end] = dp[end].min(dp[i]);
+                    continue;
+                }
+
+                // Look up both substrings at once
+                if let Some(&from_id) = string_to_id.get(source_sub) {
+                    if let Some(&to_id) = string_to_id.get(target_sub) {
+                        let conversion_cost = dist[from_id][to_id];
+                        if conversion_cost < INF {
+                            dp[end] = dp[end].min(dp[i] + conversion_cost);
+                        }
+                    }
+                }
+            }
+        }
+
+        if dp[n] >= INF {
+            -1
+        } else {
+            dp[n]
+        }
+    }
 }
 
 #[cfg(test)]
