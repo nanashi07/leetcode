@@ -68,6 +68,8 @@ mod maximize_the_minimum_powered_city;
 mod rearranging_fruits;
 // 2872. Maximum Number of K-Divisible Components
 mod maximum_number_of_k_divisible_components;
+// 2977. Minimum Cost to Convert String II
+mod minimum_cost_to_convert_string_ii;
 // 3003. Maximize the Number of Partitions After Operations
 mod maximize_the_number_of_partitions_after_operations;
 // 3027. Find the Number of Ways to Place People II
