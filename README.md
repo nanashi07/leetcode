@@ -23,6 +23,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
 - [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
+- [744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
 - [944. Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/)
 - [961. N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
