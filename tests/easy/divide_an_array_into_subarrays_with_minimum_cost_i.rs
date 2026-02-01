@@ -5,7 +5,12 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_cost(nums: Vec<i32>) -> i32 {
-        todo!()
+        println!("nums: {nums:?}");
+
+        let first = nums[0];
+        let mut sub = nums.into_iter().skip(1).collect::<Vec<_>>();
+        sub.sort_unstable();
+        first + sub.iter().take(2).sum::<i32>()
     }
 }
 
