@@ -5,7 +5,15 @@ struct Solution;
 
 impl Solution {
     pub fn next_greatest_letter(letters: Vec<char>, target: char) -> char {
-        todo!()
+        println!("letters: {letters:?}, target: {target}");
+
+        for c in &letters {
+            if *c > target {
+                return *c;
+            }
+        }
+
+        letters[0]
     }
 }
 
