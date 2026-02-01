@@ -32,6 +32,8 @@ mod power_of_four;
 mod longest_harmonious_subsequence;
 // 717. 1-bit and 2-bit Characters
 mod one_bit_and_two_bit_characters;
+// 744. Find Smallest Letter Greater Than Target
+mod find_smallest_letter_greater_than_target;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
 // 944. Delete Columns to Make Sorted
