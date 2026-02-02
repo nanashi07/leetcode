@@ -72,6 +72,8 @@ mod maximum_number_of_k_divisible_components;
 mod minimum_cost_to_convert_string_ii;
 // 3003. Maximize the Number of Partitions After Operations
 mod maximize_the_number_of_partitions_after_operations;
+// 3013. Divide an Array Into Subarrays With Minimum Cost II
+mod divide_an_array_into_subarrays_with_minimum_cost_ii;
 // 3027. Find the Number of Ways to Place People II
 mod find_the_number_of_ways_to_place_people_ii;
 // 3197. Find the Minimum Area to Cover All Ones II
