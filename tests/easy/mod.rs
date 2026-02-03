@@ -136,3 +136,5 @@ mod find_closest_person;
 mod find_most_frequent_vowel_and_consonant;
 // 3606. Coupon Code Validator
 mod coupon_code_validator;
+// 3637. Trionic Array I
+mod trionic_array_i;
