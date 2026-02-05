@@ -118,6 +118,8 @@ mod adjacent_increasing_subarrays_detection_i;
 mod make_array_elements_equal_to_zero;
 // 3370. Smallest Number With All Set Bits
 mod smallest_number_with_all_set_bits;
+// 3379. Transformed Array
+mod transformed_array;
 // 3432. Count Partitions with Even Sum Difference
 mod count_partitions_with_even_sum_difference;
 // 3461. Check If Digits Are Equal in String After Operations I
