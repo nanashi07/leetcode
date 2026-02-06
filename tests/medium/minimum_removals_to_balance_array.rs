@@ -10,18 +10,42 @@ impl Solution {
             return 0;
         }
 
-        // Count elements with each remainder when divided by k
-        let mut remainder_count = std::collections::HashMap::new();
+        // Group elements by their remainder when divided by k
+        let mut remainder_groups: std::collections::HashMap<i32, Vec<i32>> =
+            std::collections::HashMap::new();
+
         for &num in &nums {
             let remainder = num % k;
-            *remainder_count.entry(remainder).or_insert(0) += 1;
+            remainder_groups
+                .entry(remainder)
+                .or_insert_with(Vec::new)
+                .push(num);
         }
 
-        // Find the remainder with maximum count
-        let max_count = remainder_count.values().max().unwrap_or(&0);
+        let threshold = 3 * k;
+        let mut max_len = 0;
 
-        // Minimum removals = total elements - max count of same remainder
-        (n - max_count) as i32
+        // For each remainder group, find the longest subarray where max - min <= 3*k
+        for (_, mut group) in remainder_groups {
+            if group.is_empty() {
+                continue;
+            }
+
+            // Sort the group
+            group.sort();
+
+            // Apply sliding window on this group
+            let mut left = 0;
+            for right in 0..group.len() {
+                while group[right] - group[left] > threshold {
+                    left += 1;
+                }
+                max_len = max_len.max(right - left + 1);
+            }
+        }
+
+        // Minimum removals = total elements - max valid subarray length
+        (n - max_len) as i32
     }
 }
 
@@ -55,5 +79,12 @@ mod tests {
         let nums = [12, 18].to_vec();
         let k = 2;
         assert_eq!(0, Solution::min_removal(nums, k));
+    }
+
+    #[test]
+    fn test_min_removal_5() {
+        let nums = [2, 12].to_vec();
+        let k = 2;
+        assert_eq!(1, Solution::min_removal(nums, k));
     }
 }
