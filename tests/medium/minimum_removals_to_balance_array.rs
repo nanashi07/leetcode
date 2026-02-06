@@ -4,73 +4,23 @@
 struct Solution;
 
 impl Solution {
+    // https://leetcode.com/problems/minimum-removals-to-balance-array/editorial/
     pub fn min_removal(nums: Vec<i32>, k: i32) -> i32 {
         let n = nums.len();
-        if n <= 1 {
-            return 0;
-        }
+        let mut nums = nums;
+        nums.sort();
 
-        let threshold = if k == 1 { k } else { 3 * k };
+        let mut ans = n as i32;
+        let mut right = 0;
 
-        // Find the range of the array
-        let min_val = *nums.iter().min().unwrap();
-        let max_val = *nums.iter().max().unwrap();
-        let range = max_val - min_val;
-
-        // If k is larger than the range, skip remainder grouping
-        // and just use sliding window on sorted array
-        if k > range {
-            let mut sorted_nums = nums.clone();
-            sorted_nums.sort();
-
-            let mut max_len = 0;
-            let mut left = 0;
-
-            for right in 0..n {
-                while sorted_nums[right] - sorted_nums[left] > threshold {
-                    left += 1;
-                }
-                max_len = max_len.max(right - left + 1);
+        for left in 0..n {
+            while right < n && (nums[right] as i64) <= (nums[left] as i64) * (k as i64) {
+                right += 1;
             }
-
-            return (n - max_len) as i32;
+            ans = ans.min(n as i32 - (right - left) as i32);
         }
 
-        // Group elements by their remainder when divided by k
-        let mut remainder_groups: std::collections::HashMap<i32, Vec<i32>> =
-            std::collections::HashMap::new();
-
-        for &num in &nums {
-            let remainder = num % k;
-            remainder_groups
-                .entry(remainder)
-                .or_insert_with(Vec::new)
-                .push(num);
-        }
-
-        let mut max_len = 0;
-
-        // For each remainder group, find the longest subarray where max - min <= threshold
-        for (_, mut group) in remainder_groups {
-            if group.is_empty() {
-                continue;
-            }
-
-            // Sort the group
-            group.sort();
-
-            // Apply sliding window on this group
-            let mut left = 0;
-            for right in 0..group.len() {
-                while group[right] - group[left] > threshold {
-                    left += 1;
-                }
-                max_len = max_len.max(right - left + 1);
-            }
-        }
-
-        // Minimum removals = total elements - max valid subarray length
-        (n - max_len) as i32
+        ans
     }
 }
 
@@ -125,5 +75,12 @@ mod tests {
         let nums = [11, 16].to_vec();
         let k = 16156;
         assert_eq!(0, Solution::min_removal(nums, k));
+    }
+
+    #[test]
+    fn test_min_removal_8() {
+        let nums = [7, 1].to_vec();
+        let k = 2;
+        assert_eq!(1, Solution::min_removal(nums, k));
     }
 }
