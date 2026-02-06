@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn min_removal(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        let n = nums.len();
+        if n <= 1 {
+            return 0;
+        }
+
+        // Sort the array
+        let mut sorted_nums = nums.clone();
+        sorted_nums.sort();
+
+        // Find the longest subarray where max - min <= k
+        let mut max_len = 0;
+        let mut left = 0;
+
+        for right in 0..n {
+            // While the difference exceeds k, shrink the window from left
+            while sorted_nums[right] - sorted_nums[left] > k {
+                left += 1;
+            }
+            // Update the maximum length
+            max_len = max_len.max(right - left + 1);
+        }
+
+        // Minimum removals = total elements - max valid subarray length
+        (n - max_len) as i32
     }
 }
 
