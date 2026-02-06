@@ -10,25 +10,18 @@ impl Solution {
             return 0;
         }
 
-        // Sort the array
-        let mut sorted_nums = nums.clone();
-        sorted_nums.sort();
-
-        // Find the longest subarray where max - min <= k
-        let mut max_len = 0;
-        let mut left = 0;
-
-        for right in 0..n {
-            // While the difference exceeds k, shrink the window from left
-            while sorted_nums[right] - sorted_nums[left] > k {
-                left += 1;
-            }
-            // Update the maximum length
-            max_len = max_len.max(right - left + 1);
+        // Count elements with each remainder when divided by k
+        let mut remainder_count = std::collections::HashMap::new();
+        for &num in &nums {
+            let remainder = num % k;
+            *remainder_count.entry(remainder).or_insert(0) += 1;
         }
 
-        // Minimum removals = total elements - max valid subarray length
-        (n - max_len) as i32
+        // Find the remainder with maximum count
+        let max_count = remainder_count.values().max().unwrap_or(&0);
+
+        // Minimum removals = total elements - max count of same remainder
+        (n - max_count) as i32
     }
 }
 
@@ -53,6 +46,13 @@ mod tests {
     #[test]
     fn test_min_removal_3() {
         let nums = [4, 6].to_vec();
+        let k = 2;
+        assert_eq!(0, Solution::min_removal(nums, k));
+    }
+
+    #[test]
+    fn test_min_removal_4() {
+        let nums = [12, 18].to_vec();
         let k = 2;
         assert_eq!(0, Solution::min_removal(nums, k));
     }
