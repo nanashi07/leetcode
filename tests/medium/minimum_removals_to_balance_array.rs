@@ -10,6 +10,32 @@ impl Solution {
             return 0;
         }
 
+        let threshold = if k == 1 { k } else { 3 * k };
+
+        // Find the range of the array
+        let min_val = *nums.iter().min().unwrap();
+        let max_val = *nums.iter().max().unwrap();
+        let range = max_val - min_val;
+
+        // If k is larger than the range, skip remainder grouping
+        // and just use sliding window on sorted array
+        if k > range {
+            let mut sorted_nums = nums.clone();
+            sorted_nums.sort();
+
+            let mut max_len = 0;
+            let mut left = 0;
+
+            for right in 0..n {
+                while sorted_nums[right] - sorted_nums[left] > threshold {
+                    left += 1;
+                }
+                max_len = max_len.max(right - left + 1);
+            }
+
+            return (n - max_len) as i32;
+        }
+
         // Group elements by their remainder when divided by k
         let mut remainder_groups: std::collections::HashMap<i32, Vec<i32>> =
             std::collections::HashMap::new();
@@ -22,10 +48,9 @@ impl Solution {
                 .push(num);
         }
 
-        let threshold = 3 * k;
         let mut max_len = 0;
 
-        // For each remainder group, find the longest subarray where max - min <= 3*k
+        // For each remainder group, find the longest subarray where max - min <= threshold
         for (_, mut group) in remainder_groups {
             if group.is_empty() {
                 continue;
@@ -86,5 +111,19 @@ mod tests {
         let nums = [2, 12].to_vec();
         let k = 2;
         assert_eq!(1, Solution::min_removal(nums, k));
+    }
+
+    #[test]
+    fn test_min_removal_6() {
+        let nums = [16, 18].to_vec();
+        let k = 1;
+        assert_eq!(1, Solution::min_removal(nums, k));
+    }
+
+    #[test]
+    fn test_min_removal_7() {
+        let nums = [11, 16].to_vec();
+        let k = 16156;
+        assert_eq!(0, Solution::min_removal(nums, k));
     }
 }
