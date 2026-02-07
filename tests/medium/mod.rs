@@ -112,6 +112,8 @@ mod minimum_time_to_make_rope_colorful;
 mod make_sum_divisible_by_p;
 // 1625. Lexicographically Smallest String After Applying Operations
 mod lexicographically_smallest_string_after_applying_operations;
+// 1653. Minimum Deletions to Make String Balanced
+mod minimum_deletions_to_make_string_balanced;
 // 1695. Maximum Erasure Value
 mod maximum_erasure_value;
 // 1717. Maximum Score From Removing Substrings
