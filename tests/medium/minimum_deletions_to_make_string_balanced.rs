@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_deletions(s: String) -> i32 {
-        todo!()
+        // A balanced string has all 'a's before all 'b's
+        // We track:
+        // - b_count: number of 'b's seen so far
+        // - deletions: minimum deletions needed to make the string balanced up to current position
+
+        let mut b_count = 0;
+        let mut deletions = 0;
+
+        for ch in s.chars() {
+            if ch == 'b' {
+                b_count += 1;
+            } else {
+                // ch == 'a'
+                // We have two choices:
+                // 1. Delete this 'a' (cost: deletions + 1)
+                // 2. Delete all previous 'b's (cost: b_count)
+                // We choose the minimum
+                deletions = (deletions + 1).min(b_count);
+            }
+        }
+
+        deletions
     }
 }
 
