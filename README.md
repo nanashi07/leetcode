@@ -17,6 +17,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [28. Implement strStr()](https://leetcode.com/problems/implement-strstr/)
 - [35. Search Insert Position](https://leetcode.com/problems/search-insert-position/)
 - [66. Plus One](https://leetcode.com/problems/plus-one/)
+- [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 - [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
 - [231. Power of Two](https://leetcode.com/problems/power-of-two/)
 - [326. Power of Three](https://leetcode.com/problems/power-of-three/)

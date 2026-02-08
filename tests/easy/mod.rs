@@ -20,6 +20,8 @@ mod implement_strstr;
 mod search_insert_position;
 // 66. Plus One
 mod plus_one;
+// 110. Balanced Binary Tree
+mod balanced_binary_tree;
 // 118. Pascal's Triangle
 mod pascals_triangle;
 // 231. Power of Two
