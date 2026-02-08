@@ -9,7 +9,31 @@ use std::rc::Rc;
 
 impl Solution {
     pub fn is_balanced(root: Option<Rc<RefCell<TreeNode>>>) -> bool {
-        todo!();
+        Self::check_height(&root).is_some()
+    }
+
+    // Returns None if tree is unbalanced, otherwise returns the height
+    fn check_height(node: &Option<Rc<RefCell<TreeNode>>>) -> Option<i32> {
+        match node {
+            None => Some(0),
+            Some(n) => {
+                let borrowed = n.borrow();
+
+                // Check left subtree
+                let left_height = Self::check_height(&borrowed.left)?;
+
+                // Check right subtree
+                let right_height = Self::check_height(&borrowed.right)?;
+
+                // Check if current node is balanced
+                if (left_height - right_height).abs() > 1 {
+                    return None;
+                }
+
+                // Return height of current subtree
+                Some(1 + left_height.max(right_height))
+            }
+        }
     }
 }
 
