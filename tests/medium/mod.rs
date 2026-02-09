@@ -94,6 +94,8 @@ mod maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold;
 mod maximum_product_of_splitted_binary_tree;
 // 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
+// 1382. Balance a Binary Search Tree
+mod balance_a_binary_search_tree;
 // 1390. Four Divisors
 mod four_divisors;
 // 1488. Avoid Flood in The City
