@@ -30,10 +30,10 @@ impl Solution {
                         max_length = max_length.max(length);
                     }
                 }
-                // For length > 2, all values in range must be present
-                else if length > 2 && unique_count == range_size {
-                    if length == unique_count {
-                        // No duplicates - check all consecutive differences are odd
+                // For length > 2
+                else if length > 2 {
+                    if length == unique_count && unique_count == range_size {
+                        // No duplicates, all values in range present - check all consecutive differences are odd
                         let subarray = &nums[i..=j];
                         let mut all_diffs_odd = true;
                         for k in 1..subarray.len() {
@@ -56,7 +56,10 @@ impl Solution {
                             }
                         }
                         if has_consecutive_dup {
-                            max_length = max_length.max(length);
+                            // Valid if all values present OR range is even
+                            if unique_count == range_size || range_size % 2 == 0 {
+                                max_length = max_length.max(length);
+                            }
                         }
                     }
                 }
@@ -111,5 +114,11 @@ mod tests {
     fn test_longest_balanced_7() {
         let nums = [1, 3, 2].to_vec();
         assert_eq!(2, Solution::longest_balanced(nums));
+    }
+
+    #[test]
+    fn test_longest_balanced_8() {
+        let nums = [2, 7, 7].to_vec();
+        assert_eq!(3, Solution::longest_balanced(nums));
     }
 }
