@@ -3,73 +3,35 @@
 
 struct Solution;
 
+use std::collections::HashMap;
+
 impl Solution {
+    // https://leetcode.com/problems/longest-balanced-subarray-i/editorial/
     pub fn longest_balanced(nums: Vec<i32>) -> i32 {
-        use std::collections::HashSet;
-        let n = nums.len();
-        let mut max_length = 0;
+        let mut max_len = 0;
 
-        for i in 0..n {
-            let mut min_val = nums[i];
-            let mut max_val = nums[i];
-            let mut unique = HashSet::new();
-            unique.insert(nums[i]);
+        for i in 0..nums.len() {
+            let mut odd = HashMap::new();
+            let mut even = HashMap::new();
 
-            for j in i..n {
-                min_val = min_val.min(nums[j]);
-                max_val = max_val.max(nums[j]);
-                unique.insert(nums[j]);
+            for j in i..nums.len() {
+                let map = if nums[j] & 1 == 1 {
+                    &mut odd
+                } else {
+                    &mut even
+                };
 
-                let length = (j - i + 1) as i32;
-                let unique_count = unique.len() as i32;
-                let range_size = max_val - min_val + 1;
+                *map.entry(nums[j]).or_insert(0) += 1;
 
-                if length == 2 {
-                    // For length 2, the difference must be odd
-                    if (max_val - min_val) % 2 == 1 {
-                        max_length = max_length.max(length);
-                    }
-                }
-                // For length > 2
-                else if length > 2 {
-                    if length == unique_count && unique_count == range_size {
-                        // No duplicates, all values in range present - check all consecutive differences are odd
-                        let subarray = &nums[i..=j];
-                        let mut all_diffs_odd = true;
-                        for k in 1..subarray.len() {
-                            if (subarray[k] - subarray[k - 1]).abs() % 2 == 0 {
-                                all_diffs_odd = false;
-                                break;
-                            }
-                        }
-                        if all_diffs_odd {
-                            max_length = max_length.max(length);
-                        }
-                    } else if length == unique_count + 1 {
-                        // Exactly one duplicate - check if consecutive
-                        let subarray = &nums[i..=j];
-                        let mut has_consecutive_dup = false;
-                        for k in 1..subarray.len() {
-                            if subarray[k] == subarray[k - 1] {
-                                has_consecutive_dup = true;
-                                break;
-                            }
-                        }
-                        if has_consecutive_dup {
-                            // Valid if all values present OR range is even
-                            if unique_count == range_size || range_size % 2 == 0 {
-                                max_length = max_length.max(length);
-                            }
-                        }
-                    }
+                if odd.len() == even.len() {
+                    max_len = max_len.max((j - i + 1) as i32);
                 }
             }
         }
 
-        max_length
+        max_len
     }
 }
-
 #[cfg(test)]
 mod tests {
     use crate::medium::longest_balanced_subarray_i::Solution;
