@@ -24,8 +24,12 @@ impl Solution {
                 let unique_count = unique.len() as i32;
                 let range_size = max_val - min_val + 1;
 
+                // Subarrays of length <= 2 are always balanced
+                if length <= 2 {
+                    max_length = max_length.max(length);
+                }
                 // All values in range must be present
-                if unique_count == range_size {
+                else if unique_count == range_size {
                     if length == unique_count {
                         // No duplicates
                         max_length = max_length.max(length);
@@ -71,5 +75,11 @@ mod tests {
     fn test_longest_balanced_3() {
         let nums = [1, 2, 3, 2].to_vec();
         assert_eq!(3, Solution::longest_balanced(nums));
+    }
+
+    #[test]
+    fn test_longest_balanced_4() {
+        let nums = [8, 5].to_vec();
+        assert_eq!(2, Solution::longest_balanced(nums));
     }
 }
