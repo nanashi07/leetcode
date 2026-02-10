@@ -215,6 +215,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3634. Minimum Removals to Balance Array](https://leetcode.com/problems/minimum-removals-to-balance-array/)
 - [3650. Minimum Cost Path with Edge Reversals](https://leetcode.com/problems/minimum-cost-path-with-edge-reversals/)
 - [3652. Best Time to Buy and Sell Stock using Strategy](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy/)
+- [3719. Longest Balanced Subarray I](https://leetcode.com/problems/longest-balanced-subarray-i/)
 
 ### Hard Problems
 
