@@ -25,8 +25,8 @@ impl Solution {
                 let range_size = max_val - min_val + 1;
 
                 if length == 2 {
-                    // For length 2, we can miss at most 2 values in the range
-                    if range_size - unique_count <= 2 {
+                    // For length 2, the difference must be odd
+                    if (max_val - min_val) % 2 == 1 {
                         max_length = max_length.max(length);
                     }
                 }
@@ -88,6 +88,12 @@ mod tests {
     #[test]
     fn test_longest_balanced_5() {
         let nums = [6, 2].to_vec();
+        assert_eq!(0, Solution::longest_balanced(nums));
+    }
+
+    #[test]
+    fn test_longest_balanced_6() {
+        let nums = [5, 3].to_vec();
         assert_eq!(0, Solution::longest_balanced(nums));
     }
 }
