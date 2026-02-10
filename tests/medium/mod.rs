@@ -266,3 +266,5 @@ mod minimum_removals_to_balance_array;
 mod minimum_cost_path_with_edge_reversals;
 // 3652. Best Time to Buy and Sell Stock using Strategy
 mod best_time_to_buy_and_sell_stock_using_strategy;
+// 3719. Longest Balanced Subarray I
+mod longest_balanced_subarray_i;
