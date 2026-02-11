@@ -108,3 +108,5 @@ mod count_number_of_trapezoids_ii;
 mod trionic_array_ii;
 // 3651. Minimum Cost Path with Teleportations
 mod minimum_cost_path_with_teleportations;
+// 3721. Longest Balanced Subarray II
+mod longest_balanced_subarray_ii;
