@@ -9,21 +9,23 @@ impl Solution {
         let n = s.len();
         let mut max_len = 0;
 
-        // Try all possible substrings
+        // Use Vec on heap instead of large array on stack
+        let mut freq_dist = vec![0i32; n + 1];
+
         for i in 0..n {
             let mut freq = [0i32; 26];
-            let mut freq_dist = [0i32; 20001]; // freq_dist[f] = how many chars have frequency f
-            let mut unique_chars = 0;
+            let mut unique_chars = 0i32;
+
+            // Reset only the elements we'll use
+            let mut max_freq_seen = 0usize;
 
             for j in i..n {
                 let idx = (s[j] - b'a') as usize;
 
-                // Update frequency distribution
-                if freq[idx] > 0 {
-                    freq_dist[freq[idx] as usize] -= 1;
-                }
-
-                if freq[idx] == 0 {
+                let old_freq = freq[idx] as usize;
+                if old_freq > 0 {
+                    freq_dist[old_freq] -= 1;
+                } else {
                     unique_chars += 1;
                 }
 
@@ -31,10 +33,18 @@ impl Solution {
                 let new_freq = freq[idx] as usize;
                 freq_dist[new_freq] += 1;
 
-                // Balanced if all unique_chars have the same frequency
+                if new_freq > max_freq_seen {
+                    max_freq_seen = new_freq;
+                }
+
                 if freq_dist[new_freq] == unique_chars {
                     max_len = max_len.max(j - i + 1);
                 }
+            }
+
+            // Reset freq_dist for next iteration - only reset used elements
+            for f in 1..=max_freq_seen {
+                freq_dist[f] = 0;
             }
         }
 
