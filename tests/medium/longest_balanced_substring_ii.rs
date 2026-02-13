@@ -12,30 +12,28 @@ impl Solution {
         // Try all possible substrings
         for i in 0..n {
             let mut freq = [0i32; 26];
-            let mut freq_count = [0i32; 20001]; // freq_count[f] = how many chars have frequency f
+            let mut freq_dist = [0i32; 20001]; // freq_dist[f] = how many chars have frequency f
             let mut unique_chars = 0;
 
             for j in i..n {
                 let idx = (s[j] - b'a') as usize;
 
-                let old_freq = freq[idx];
-                if old_freq > 0 {
-                    freq_count[old_freq as usize] -= 1;
+                // Update frequency distribution
+                if freq[idx] > 0 {
+                    freq_dist[freq[idx] as usize] -= 1;
                 }
 
-                freq[idx] += 1;
-                let new_freq = freq[idx];
-                freq_count[new_freq as usize] += 1;
-
-                if old_freq == 0 {
+                if freq[idx] == 0 {
                     unique_chars += 1;
                 }
 
+                freq[idx] += 1;
+                let new_freq = freq[idx] as usize;
+                freq_dist[new_freq] += 1;
+
                 // Balanced if all unique_chars have the same frequency
-                // This means freq_count[some_f] == unique_chars for exactly one f
-                if freq_count[new_freq as usize] == unique_chars {
-                    let len = j - i + 1;
-                    max_len = max_len.max(len);
+                if freq_dist[new_freq] == unique_chars {
+                    max_len = max_len.max(j - i + 1);
                 }
             }
         }
