@@ -268,5 +268,7 @@ mod minimum_cost_path_with_edge_reversals;
 mod best_time_to_buy_and_sell_stock_using_strategy;
 // 3713. Longest Balanced Substring I
 mod longest_balanced_substring_i;
+// 3714. Longest Balanced Substring II
+mod longest_balanced_substring_ii;
 // 3719. Longest Balanced Subarray I
 mod longest_balanced_subarray_i;
