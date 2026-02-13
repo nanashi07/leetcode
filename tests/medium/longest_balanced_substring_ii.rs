@@ -3,52 +3,105 @@
 
 struct Solution;
 
+use std::collections::HashMap;
+
 impl Solution {
-    pub fn longest_balanced(s: String) -> i32 {
-        let s = s.as_bytes();
-        let n = s.len();
-        let mut max_len = 0;
+    pub fn longest_pair_balanced(s: &str, x: char, _y: char, z: char) -> i32 {
+        let mut ans = 0;
+        let mut x_count = 0;
+        let mut y_count = 0;
+        let mut mp: HashMap<i32, usize> = HashMap::new();
+        mp.insert(0, 0); // initial position for diff = 0
 
-        // Use Vec on heap instead of large array on stack
-        let mut freq_dist = vec![0i32; n + 1];
+        let chars: Vec<char> = s.chars().collect();
 
-        for i in 0..n {
-            let mut freq = [0i32; 26];
-            let mut unique_chars = 0i32;
-
-            // Reset only the elements we'll use
-            let mut max_freq_seen = 0usize;
-
-            for j in i..n {
-                let idx = (s[j] - b'a') as usize;
-
-                let old_freq = freq[idx] as usize;
-                if old_freq > 0 {
-                    freq_dist[old_freq] -= 1;
-                } else {
-                    unique_chars += 1;
-                }
-
-                freq[idx] += 1;
-                let new_freq = freq[idx] as usize;
-                freq_dist[new_freq] += 1;
-
-                if new_freq > max_freq_seen {
-                    max_freq_seen = new_freq;
-                }
-
-                if freq_dist[new_freq] == unique_chars {
-                    max_len = max_len.max(j - i + 1);
-                }
+        for i in 0..chars.len() {
+            if chars[i] == z {
+                // when encountering the third character
+                mp.clear();
+                mp.insert(0, i + 1); // reset the starting point
+                x_count = 0;
+                y_count = 0;
+                continue;
+            } else if chars[i] == x {
+                x_count += 1;
+            } else {
+                y_count += 1;
             }
 
-            // Reset freq_dist for next iteration - only reset used elements
-            for f in 1..=max_freq_seen {
-                freq_dist[f] = 0;
+            let diff = x_count - y_count;
+            if let Some(&pos) = mp.get(&diff) {
+                ans = ans.max((i - pos + 1) as i32); // found a substring with equal counts of x and y
+            } else {
+                mp.insert(diff, i + 1); // record the first occurrence of this diff
+            }
+        }
+        ans
+    }
+
+    pub fn longest_balanced(s: String) -> i32 {
+        let n = s.len();
+        let mut ans = 0;
+        let mut fre = 0;
+        let mut a = vec![0; n + 1];
+        let mut b = vec![0; n + 1];
+        let mut c = vec![0; n + 1];
+
+        let chars: Vec<char> = s.chars().collect();
+
+        for i in 0..n {
+            a[i + 1] = a[i];
+            b[i + 1] = b[i];
+            c[i + 1] = c[i];
+            if chars[i] == 'a' {
+                a[i + 1] += 1;
+            } else if chars[i] == 'b' {
+                b[i + 1] += 1;
+            } else if chars[i] == 'c' {
+                c[i + 1] += 1;
             }
         }
 
-        max_len as i32
+        // CASE1: one letter
+        let mut letter = '-';
+        for &ch in &chars {
+            if ch != letter {
+                fre = 1;
+                letter = ch;
+            } else {
+                fre += 1;
+            }
+            ans = ans.max(fre);
+        }
+
+        if ans == s.len() as i32 {
+            return ans;
+        }
+
+        // CASE2: two letter
+        ans = ans.max(Solution::longest_pair_balanced(&s, 'a', 'b', 'c'));
+        ans = ans.max(Solution::longest_pair_balanced(&s, 'a', 'c', 'b'));
+        ans = ans.max(Solution::longest_pair_balanced(&s, 'c', 'b', 'a'));
+
+        // CASE3: three letter
+        let mut mp: HashMap<i32, Vec<usize>> = HashMap::new();
+        mp.insert(0, vec![0]);
+
+        for i in 0..s.len() {
+            let diff = 2 * a[i + 1] - b[i + 1] - c[i + 1];
+            if let Some(indices) = mp.get(&diff) {
+                for &idx in indices {
+                    if (a[i + 1] - a[idx] == c[i + 1] - c[idx])
+                        && (a[i + 1] - a[idx] == b[i + 1] - b[idx])
+                    {
+                        ans = ans.max((i - idx + 1) as i32); // later indices won't produce a longer substring, so break early
+                        break;
+                    }
+                }
+            }
+            mp.entry(diff).or_insert_with(Vec::new).push(i + 1);
+        }
+        ans
     }
 }
 
