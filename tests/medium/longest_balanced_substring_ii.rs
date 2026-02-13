@@ -5,7 +5,41 @@ struct Solution;
 
 impl Solution {
     pub fn longest_balanced(s: String) -> i32 {
-        todo!()
+        let s = s.as_bytes();
+        let n = s.len();
+        let mut max_len = 0;
+
+        // Try all possible substrings
+        for i in 0..n {
+            let mut freq = [0; 26];
+
+            for j in i..n {
+                let idx = (s[j] - b'a') as usize;
+                freq[idx] += 1;
+
+                // Check if all characters have the same frequency
+                let mut target_freq = 0;
+                let mut is_balanced = true;
+
+                for k in 0..26 {
+                    if freq[k] > 0 {
+                        if target_freq == 0 {
+                            target_freq = freq[k];
+                        } else if freq[k] != target_freq {
+                            is_balanced = false;
+                            break;
+                        }
+                    }
+                }
+
+                if is_balanced {
+                    let len = j - i + 1;
+                    max_len = max_len.max(len);
+                }
+            }
+        }
+
+        max_len as i32
     }
 }
 
