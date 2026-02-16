@@ -5,7 +5,16 @@ struct Solution;
 
 impl Solution {
     pub fn reverse_bits(n: i32) -> i32 {
-        todo!()
+        println!("n: {n}");
+
+        let mut n = n;
+        let mut v = 0;
+        for _ in 0..32 {
+            v = (v << 1) + n % 2;
+            n = n >> 1;
+        }
+
+        v
     }
 }
 
