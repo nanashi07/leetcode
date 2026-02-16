@@ -26,6 +26,8 @@ mod add_binary;
 mod balanced_binary_tree;
 // 118. Pascal's Triangle
 mod pascals_triangle;
+// 190. Reverse Bits
+mod reverse_bits;
 // 231. Power of Two
 mod power_of_two;
 // 326. Power of Three
