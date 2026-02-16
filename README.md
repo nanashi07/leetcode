@@ -20,6 +20,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [67. Add Binary](https://leetcode.com/problems/add-binary/)
 - [110. Balanced Binary Tree](https://leetcode.com/problems/balanced-binary-tree/)
 - [118. Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/)
+- [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/)
 - [231. Power of Two](https://leetcode.com/problems/power-of-two/)
 - [326. Power of Three](https://leetcode.com/problems/power-of-three/)
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/)
