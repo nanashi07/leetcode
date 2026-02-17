@@ -34,6 +34,8 @@ mod power_of_two;
 mod power_of_three;
 // 342. Power of Four
 mod power_of_four;
+// 401. Binary Watch
+mod binary_watch;
 // 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
 // 717. 1-bit and 2-bit Characters
