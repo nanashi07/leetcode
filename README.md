@@ -26,6 +26,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/)
 - [401. Binary Watch](https://leetcode.com/problems/binary-watch/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
+- [693. Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/)
 - [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
 - [744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
