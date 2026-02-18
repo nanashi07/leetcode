@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn has_alternating_bits(n: i32) -> bool {
-        todo!()
+        println!("n: {n}");
+
+        let mut last = n % 2;
+        let mut n = n;
+        while n > 0 {
+            n = n >> 1;
+            if n % 2 == last {
+                return false;
+            }
+            last = n % 2;
+        }
+        true
     }
 }
 
