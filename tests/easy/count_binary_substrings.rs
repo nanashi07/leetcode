@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn count_binary_substrings(s: String) -> i32 {
-        todo!()
+        println!("s: {s}");
+
+        let mut p = &s[0..1];
+        let mut c = 0;
+        for i in 1..s.len() {
+            if p != &s[i..=i] {
+                // find pair
+                c += 1;
+                for l in 0..(i.min(s.len() - 1 - i)) {
+                    if i >= 2 + l
+                        && i + 1 + l < s.len()
+                        && &s[i + l..=i + l] == &s[i + 1 + l..=i + 1 + l]
+                        && &s[i - 2 - l..=i - 2 - l] == &s[i - 1 - l..=i - 1 - l]
+                    {
+                        c += 1;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            p = &s[i..=i];
+        }
+
+        c
     }
 }
 
