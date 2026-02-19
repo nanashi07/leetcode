@@ -40,6 +40,8 @@ mod binary_watch;
 mod longest_harmonious_subsequence;
 // 693. Binary Number with Alternating Bits
 mod binary_number_with_alternating_bits;
+// 696. Count Binary Substrings
+mod count_binary_substrings;
 // 717. 1-bit and 2-bit Characters
 mod one_bit_and_two_bit_characters;
 // 744. Find Smallest Letter Greater Than Target
