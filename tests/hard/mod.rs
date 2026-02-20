@@ -20,6 +20,8 @@ mod trapping_rain_water_ii;
 mod twenty_four_game;
 // 757. Set Intersection Size At Least Two
 mod set_intersection_size_at_least_two;
+// 761. Special Binary String
+mod special_binary_string;
 // 778. Swim in Rising Water
 mod swim_in_rising_water;
 // 960. Delete Columns to Make Sorted III

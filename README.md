@@ -238,6 +238,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)
 - [679. 24 Game](https://leetcode.com/problems/24-game/)
 - [757. Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/)
+- [761. Special Binary String](https://leetcode.com/problems/special-binary-string/)
 - [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 - [960. Delete Columns to Make Sorted III](https://leetcode.com/problems/delete-columns-to-make-sorted-iii/)
 - [1411. Number of Ways to Paint N × 3 Grid](https://leetcode.com/problems/number-of-ways-to-paint-n-3-grid/)
