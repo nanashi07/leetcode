@@ -5,7 +5,25 @@ struct Solution;
 
 impl Solution {
     pub fn count_prime_set_bits(left: i32, right: i32) -> i32 {
-        todo!()
+        println!("left: {left}, right: {right}");
+
+        let mut count = 0;
+        for i in left..=right {
+            let mut n = i;
+            let mut bits = 0;
+            while n > 0 {
+                if n % 2 == 1 {
+                    bits += 1;
+                }
+                n = n >> 1;
+            }
+            match bits {
+                2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 => count += 1,
+                _ => {}
+            }
+        }
+
+        count
     }
 }
 
