@@ -50,6 +50,8 @@ mod find_smallest_letter_greater_than_target;
 mod prime_number_of_set_bits_in_binary_representation;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
+// 868. Binary Gap
+mod binary_gap;
 // 944. Delete Columns to Make Sorted
 mod delete_columns_to_make_sorted;
 // 961. N-Repeated Element in Size 2N Array
