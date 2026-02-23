@@ -100,6 +100,8 @@ mod maximum_number_of_events_that_can_be_attended;
 mod balance_a_binary_search_tree;
 // 1390. Four Divisors
 mod four_divisors;
+// 1461. Check If a String Contains All Binary Codes of Size K
+mod check_if_a_string_contains_all_binary_codes_of_size_k;
 // 1488. Avoid Flood in The City
 mod avoid_flood_in_the_city;
 // 1493. Longest Subarray of 1's After Deleting One Element
