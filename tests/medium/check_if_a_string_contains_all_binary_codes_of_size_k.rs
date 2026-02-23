@@ -5,7 +5,33 @@ struct Solution;
 
 impl Solution {
     pub fn has_all_codes(s: String, k: i32) -> bool {
-        todo!()
+        use std::collections::HashSet;
+
+        let k = k as usize;
+        let s_bytes = s.as_bytes();
+
+        // Early return if string is too short
+        if s_bytes.len() < k {
+            return false;
+        }
+
+        // We need 2^k different codes
+        let required_count = 1 << k; // 2^k
+
+        // Collect all unique substrings of length k
+        let mut seen = HashSet::new();
+
+        for i in 0..=s_bytes.len() - k {
+            let substring = &s_bytes[i..i + k];
+            seen.insert(substring);
+
+            // Early exit if we've found all codes
+            if seen.len() == required_count {
+                return true;
+            }
+        }
+
+        seen.len() == required_count
     }
 }
 
