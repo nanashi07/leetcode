@@ -1,6 +1,6 @@
 // 23. Merge k Sorted Lists
 // https://leetcode.com/problems/merge-k-sorted-lists/
-use crate::shared::{create_node_list, ListNode};
+use crate::shared::list_node_box::{create_node_list, ListNode};
 struct Solution;
 
 // Definition for singly-linked list.

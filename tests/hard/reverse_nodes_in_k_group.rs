@@ -1,6 +1,6 @@
 // 25. Reverse Nodes in k-Group
 // https://leetcode.com/problems/reverse-nodes-in-k-group/
-use crate::shared::{create_node_list, ListNode};
+use crate::shared::list_node_box::{create_node_list, ListNode};
 struct Solution;
 
 // Definition for singly-linked list.

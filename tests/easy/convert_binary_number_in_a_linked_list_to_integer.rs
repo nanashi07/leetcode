@@ -1,7 +1,7 @@
 // 1290. Convert Binary Number in a Linked List to Integer
 // https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/
 
-use crate::shared::ListNode;
+use crate::shared::list_node_box::ListNode;
 
 struct Solution;
 
@@ -37,7 +37,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::convert_binary_number_in_a_linked_list_to_integer::Solution;
-    use crate::shared::create_node_list;
+    use crate::shared::list_node_box::create_node_list;
 
     #[test]
     fn test_get_decimal_value_1() {

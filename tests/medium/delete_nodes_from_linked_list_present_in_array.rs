@@ -1,7 +1,7 @@
 // 3217. Delete Nodes From Linked List Present in Array
 // https://leetcode.com/problems/delete-nodes-from-linked-list-present-in-array/
 
-use crate::shared::ListNode;
+use crate::shared::list_node_box::ListNode;
 use std::collections::HashSet;
 
 struct Solution;
@@ -93,7 +93,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::delete_nodes_from_linked_list_present_in_array::Solution;
-    use crate::shared::create_node_list;
+    use crate::shared::list_node_box::create_node_list;
 
     #[test]
     fn test_modified_list_1() {

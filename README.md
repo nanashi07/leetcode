@@ -37,6 +37,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [961. N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
 - [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 - [1018. Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/)
+- [1022. Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/)
 - [1200. Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/)
 - [1266. Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
