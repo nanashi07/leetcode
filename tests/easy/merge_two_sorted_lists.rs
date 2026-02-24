@@ -1,6 +1,6 @@
 // 21. Merge Two Sorted Lists
 // https://leetcode.com/problems/merge-two-sorted-lists/
-use crate::shared::{create_node_list, ListNode};
+use crate::shared::list_node_box::{create_node_list, ListNode};
 struct Solution;
 
 // Definition for singly-linked list.

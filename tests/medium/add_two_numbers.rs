@@ -1,6 +1,6 @@
 // 2. Add Two Numbers
 // https://leetcode.com/problems/add-two-numbers/
-use crate::shared::{create_node_list, ListNode};
+use crate::shared::list_node_box::{create_node_list, ListNode};
 struct Solution;
 
 // Definition for singly-linked list.

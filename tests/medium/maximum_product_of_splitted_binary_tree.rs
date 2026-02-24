@@ -3,7 +3,7 @@
 
 struct Solution;
 
-use crate::shared::TreeNode;
+use crate::shared::tree_node::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -57,7 +57,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::maximum_product_of_splitted_binary_tree::Solution;
-    use crate::shared::create_tree;
+    use crate::shared::tree_node::create_tree;
 
     #[test]
     fn test_max_product_1() {

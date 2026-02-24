@@ -60,6 +60,8 @@ mod n_repeated_element_in_size_2n_array;
 mod largest_perimeter_triangle;
 // 1018. Binary Prefix Divisible By 5
 mod binary_prefix_divisible_by_5;
+// 1022. Sum of Root To Leaf Binary Numbers
+mod sum_of_root_to_leaf_binary_numbers;
 // 1200. Minimum Absolute Difference
 mod minimum_absolute_difference;
 // 1266. Minimum Time Visiting All Points

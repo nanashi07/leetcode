@@ -1,6 +1,6 @@
 // 24. Swap Nodes in Pairs
 // https://leetcode.com/problems/swap-nodes-in-pairs/
-use crate::shared::{create_node_list, ListNode};
+use crate::shared::list_node_box::{create_node_list, ListNode};
 struct Solution;
 
 // Definition for singly-linked list.

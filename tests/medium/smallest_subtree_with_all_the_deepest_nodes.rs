@@ -3,7 +3,7 @@
 
 struct Solution;
 
-use crate::shared::TreeNode;
+use crate::shared::tree_node::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -41,7 +41,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use super::Solution;
-    use crate::shared::create_tree;
+    use crate::shared::tree_node::create_tree;
 
     #[test]
     fn test_subtree_with_all_deepest_1() {

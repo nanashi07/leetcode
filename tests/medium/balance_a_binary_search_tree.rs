@@ -3,7 +3,7 @@
 
 struct Solution;
 
-use crate::shared::TreeNode;
+use crate::shared::tree_node::TreeNode;
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -47,7 +47,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::balance_a_binary_search_tree::Solution;
-    use crate::shared::create_tree;
+    use crate::shared::tree_node::create_tree;
 
     #[test]
     fn test_balance_bst_1() {
