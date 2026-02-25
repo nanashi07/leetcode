@@ -5,7 +5,15 @@ struct Solution;
 
 impl Solution {
     pub fn sort_by_bits(arr: Vec<i32>) -> Vec<i32> {
-        todo!()
+        println!("arr: {arr:?}");
+
+        let mut list = arr
+            .iter()
+            .map(|n| (n, format!("{n:b}").replace("0", "").len()))
+            .collect::<Vec<_>>();
+        list.sort_by(|(n1, c1), (n2, c2)| c1.cmp(c2).then(n1.cmp(n2)));
+
+        list.iter().map(|(n, _)| **n).collect::<Vec<_>>()
     }
 }
 
