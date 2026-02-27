@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn min_operations(s: String, k: i32) -> i32 {
-        todo!()
+        let n = s.len() as i32;
+        let z = s.bytes().filter(|&c| c == b'0').count() as i32;
+        let o = n - z;
+        if z == 0 {
+            return 0;
+        }
+        for i in 1..=n {
+            let p = i * k;
+            if p % 2 != z % 2 {
+                continue;
+            }
+            let max_p = if i % 2 == 1 { i * n - o } else { i * n - z };
+            if p >= z && p <= max_p {
+                return i;
+            }
+        }
+        -1
     }
 }
 
