@@ -5,7 +5,13 @@ struct Solution;
 
 impl Solution {
     pub fn concatenated_binary(n: i32) -> i32 {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+        let mut result: i64 = 0;
+        for i in 1..=n as i64 {
+            let bit_len = 64 - i.leading_zeros() as i64;
+            result = ((result << bit_len) | i) % MOD;
+        }
+        result as i32
     }
 }
 
@@ -27,7 +33,7 @@ mod tests {
 
     #[test]
     fn test_concatenated_binary_12() {
-        let n = 112;
+        let n = 12;
         assert_eq!(505379714, Solution::concatenated_binary(n));
     }
 }
