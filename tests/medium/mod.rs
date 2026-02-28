@@ -122,6 +122,8 @@ mod make_sum_divisible_by_p;
 mod lexicographically_smallest_string_after_applying_operations;
 // 1653. Minimum Deletions to Make String Balanced
 mod minimum_deletions_to_make_string_balanced;
+// 1680. Concatenation of Consecutive Binary Numbers
+pub mod concatenation_of_consecutive_binary_numbers;
 // 1695. Maximum Erasure Value
 mod maximum_erasure_value;
 // 1717. Maximum Score From Removing Substrings
