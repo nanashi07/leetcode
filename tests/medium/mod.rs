@@ -124,6 +124,8 @@ mod lexicographically_smallest_string_after_applying_operations;
 mod minimum_deletions_to_make_string_balanced;
 // 1680. Concatenation of Consecutive Binary Numbers
 pub mod concatenation_of_consecutive_binary_numbers;
+// 1689. Partitioning Into Minimum Number Of Deci-Binary Numbers
+pub mod partitioning_into_minimum_number_of_deci_binary_numbers;
 // 1695. Maximum Erasure Value
 mod maximum_erasure_value;
 // 1717. Maximum Score From Removing Substrings
