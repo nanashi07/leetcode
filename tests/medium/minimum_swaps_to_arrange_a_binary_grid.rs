@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn min_swaps(grid: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let n = grid.len();
+        // Compute trailing zeros for each row
+        let mut trailing: Vec<usize> = grid
+            .iter()
+            .map(|row| row.iter().rev().take_while(|&&x| x == 0).count())
+            .collect();
+
+        let mut swaps = 0;
+        for i in 0..n {
+            let need = n - 1 - i;
+            // Find the first row at or after i with enough trailing zeros
+            let pos = (i..n).find(|&j| trailing[j] >= need);
+            match pos {
+                None => return -1,
+                Some(j) => {
+                    // Bubble row j up to position i
+                    for k in (i + 1..=j).rev() {
+                        trailing.swap(k, k - 1);
+                    }
+                    swaps += (j - i) as i32;
+                }
+            }
+        }
+        swaps
     }
 }
 
