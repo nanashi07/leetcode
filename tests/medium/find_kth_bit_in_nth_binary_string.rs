@@ -5,7 +5,22 @@ struct Solution;
 
 impl Solution {
     pub fn find_kth_bit(n: i32, k: i32) -> char {
-        todo!()
+        if n == 1 {
+            return '0';
+        }
+        let mid = 1 << (n - 1); // 2^(n-1), the middle index (1-based)
+        if k == mid {
+            '1'
+        } else if k < mid {
+            Self::find_kth_bit(n - 1, k)
+        } else {
+            // k is in the reversed+inverted second half
+            let mirrored = mid * 2 - k; // mirror position in S(n-1)
+            match Self::find_kth_bit(n - 1, mirrored) {
+                '0' => '1',
+                _ => '0',
+            }
+        }
     }
 }
 
