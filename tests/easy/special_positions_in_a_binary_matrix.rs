@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn num_special(mat: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let mut n = 0;
+        for i in 0..mat.len() {
+            let mut col = 0;
+            let mut c = 0;
+            for j in 0..mat[i].len() {
+                if mat[i][j] > 0 {
+                    col += mat[i][j];
+                    c = j;
+                }
+            }
+
+            if col == 1 {
+                let mut row = 0;
+                for i2 in 0..mat.len() {
+                    row += mat[i2][c];
+                }
+
+                if row == 1 {
+                    n += 1;
+                }
+            }
+        }
+
+        n
     }
 }
 
