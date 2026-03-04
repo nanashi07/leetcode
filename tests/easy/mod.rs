@@ -86,6 +86,8 @@ mod check_if_all_1s_are_at_least_length_k_places_away;
 mod water_bottles;
 // 1523. Count Odd Numbers in an Interval Range
 mod count_odd_numbers_in_an_interval_range;
+// 1582. Special Positions in a Binary Matrix
+pub mod special_positions_in_a_binary_matrix;
 // 1716. Calculate Money in Leetcode Bank
 mod calculate_money_in_leetcode_bank;
 // 1925. Count Square Sum Triples
