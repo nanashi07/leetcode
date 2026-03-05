@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn min_operations(s: String) -> i32 {
-        todo!()
+        let mut zero_start = 0;
+        let mut one_start = 0;
+
+        for (i, c) in s.chars().enumerate() {
+            if i % 2 == 0 {
+                if c == '0' {
+                    one_start += 1;
+                } else {
+                    zero_start += 1;
+                }
+            } else {
+                if c == '0' {
+                    zero_start += 1;
+                } else {
+                    one_start += 1;
+                }
+            }
+        }
+
+        zero_start.min(one_start)
     }
 }
 
