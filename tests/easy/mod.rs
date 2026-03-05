@@ -90,6 +90,8 @@ mod count_odd_numbers_in_an_interval_range;
 pub mod special_positions_in_a_binary_matrix;
 // 1716. Calculate Money in Leetcode Bank
 mod calculate_money_in_leetcode_bank;
+// 1758. Minimum Changes To Make Alternating Binary String
+pub mod minimum_changes_to_make_alternating_binary_string;
 // 1925. Count Square Sum Triples
 mod count_square_sum_triples;
 // 1935. Maximum Number of Words You Can Type
