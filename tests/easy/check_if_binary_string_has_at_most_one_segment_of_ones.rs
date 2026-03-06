@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn check_ones_segment(s: String) -> bool {
-        todo!()
+        print!("s: {s}");
+
+        for i in 1..s.len() {
+            let cc = &s[i..=i];
+            let pc = &s[i - 1..i];
+
+            if cc != pc && cc == "1" {
+                return false;
+            }
+        }
+
+        true
     }
 }
 
