@@ -92,6 +92,8 @@ pub mod special_positions_in_a_binary_matrix;
 mod calculate_money_in_leetcode_bank;
 // 1758. Minimum Changes To Make Alternating Binary String
 pub mod minimum_changes_to_make_alternating_binary_string;
+// 1784. Check if Binary String Has at Most One Segment of Ones
+pub mod check_if_binary_string_has_at_most_one_segment_of_ones;
 // 1925. Count Square Sum Triples
 mod count_square_sum_triples;
 // 1935. Maximum Number of Words You Can Type
