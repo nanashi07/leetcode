@@ -5,7 +5,39 @@ struct Solution;
 
 impl Solution {
     pub fn min_flips(s: String) -> i32 {
-        todo!()
+        let n = s.len();
+        let bytes = s.as_bytes();
+
+        // diff0: mismatches vs pattern starting with '0' ("010101...")
+        // diff1: mismatches vs pattern starting with '1' ("101010...")
+        let mut diff0 = 0i32;
+        let mut diff1 = 0i32;
+
+        for i in 0..n {
+            let c = bytes[i];
+            if (c == b'0') != (i % 2 == 0) { diff0 += 1; }
+            if (c == b'1') != (i % 2 == 0) { diff1 += 1; }
+        }
+
+        let mut result = diff0.min(diff1);
+
+        // Slide window over doubled string (s+s), window size n
+        for i in 0..n {
+            // Remove position i (absolute)
+            let c_out = bytes[i];
+            if (c_out == b'0') != (i % 2 == 0) { diff0 -= 1; }
+            if (c_out == b'1') != (i % 2 == 0) { diff1 -= 1; }
+
+            // Add position i+n (in s+s, index i+n maps to bytes[i])
+            let c_in = bytes[i];
+            let abs_pos = i + n;
+            if (c_in == b'0') != (abs_pos % 2 == 0) { diff0 += 1; }
+            if (c_in == b'1') != (abs_pos % 2 == 0) { diff1 += 1; }
+
+            result = result.min(diff0).min(diff1);
+        }
+
+        result
     }
 }
 
