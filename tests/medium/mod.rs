@@ -140,6 +140,8 @@ mod maximum_average_pass_ratio;
 mod finding_pairs_with_a_certain_sum;
 // 1877. Minimize Maximum Pair Sum in Array
 mod minimize_maximum_pair_sum_in_array;
+// 1888. Minimum Number of Flips to Make the Binary String Alternating
+pub mod minimum_number_of_flips_to_make_the_binary_string_alternating;
 // 1895. Largest Magic Square
 mod largest_magic_square;
 // 1930. Unique Length-3 Palindromic Subsequences
