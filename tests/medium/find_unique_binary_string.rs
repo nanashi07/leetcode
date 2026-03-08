@@ -5,7 +5,22 @@ struct Solution;
 
 impl Solution {
     pub fn find_different_binary_string(nums: Vec<String>) -> String {
-        todo!()
+        let n = nums[0].len();
+        let mut refs: Vec<&str> = nums.iter().map(|s| s.as_str()).collect();
+        let mut result = String::with_capacity(n);
+
+        for depth in 0..n {
+            let (zeros, ones): (Vec<&str>, Vec<&str>) =
+                refs.iter().partition(|s| s.as_bytes()[depth] == b'0');
+            if zeros.len() < ones.len() {
+                result.push('0');
+                refs = zeros;
+            } else {
+                result.push('1');
+                refs = ones;
+            }
+        }
+        result
     }
 }
 
