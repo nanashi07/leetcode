@@ -148,6 +148,8 @@ mod largest_magic_square;
 mod unique_length_3_palindromic_subsequences;
 // 1975. Maximum Matrix Sum
 mod maximum_matrix_sum;
+// 1980. Find Unique Binary String
+pub mod find_unique_binary_string;
 // 2043. Simple Bank System
 mod simple_bank_system;
 // 2044. Count Number of Maximum Bitwise-OR Subsets
