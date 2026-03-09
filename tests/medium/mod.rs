@@ -214,6 +214,8 @@ mod find_the_largest_area_of_square_inside_two_rectangles;
 mod maximize_happiness_of_selected_children;
 // 3100. Water Bottles II
 mod water_bottles_ii;
+// 3129. Find All Possible Stable Binary Arrays I
+pub mod find_all_possible_stable_binary_arrays_i;
 // 3147. Taking Maximum Energy From the Mystic Dungeon
 mod taking_maximum_energy_from_the_mystic_dungeon;
 // 3186. Maximum Total Damage With Spell Casting
