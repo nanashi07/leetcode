@@ -78,6 +78,8 @@ mod maximize_the_number_of_partitions_after_operations;
 mod divide_an_array_into_subarrays_with_minimum_cost_ii;
 // 3027. Find the Number of Ways to Place People II
 mod find_the_number_of_ways_to_place_people_ii;
+// 3130. Find All Possible Stable Binary Arrays II
+pub mod find_all_possible_stable_binary_arrays_ii;
 // 3197. Find the Minimum Area to Cover All Ones II
 mod find_the_minimum_area_to_cover_all_ones_ii;
 // 3307. Find the K-th Character in String Game II
