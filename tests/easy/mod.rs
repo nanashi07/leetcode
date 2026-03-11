@@ -58,6 +58,8 @@ mod delete_columns_to_make_sorted;
 mod n_repeated_element_in_size_2n_array;
 // 976. Largest Perimeter Triangle
 mod largest_perimeter_triangle;
+// 1009. Complement of Base 10 Integer
+pub mod complement_of_base_10_integer;
 // 1018. Binary Prefix Divisible By 5
 mod binary_prefix_divisible_by_5;
 // 1022. Sum of Root To Leaf Binary Numbers
