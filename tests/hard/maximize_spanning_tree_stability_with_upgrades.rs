@@ -179,4 +179,21 @@ mod tests {
         let k = 0;
         assert_eq!(-1, Solution::max_stability(n, edges, k));
     }
+
+    #[test]
+    fn test_max_stability_4() {
+        let n = 5;
+        let edges = [
+            [2, 0, 68643, 1],
+            [1, 0, 31681, 1],
+            [4, 2, 44760, 1],
+            [3, 4, 19034, 1],
+            [1, 4, 24247, 0],
+        ]
+        .iter()
+        .map(|l| l.to_vec())
+        .collect::<Vec<_>>();
+        let k = 2;
+        assert_eq!(19034, Solution::max_stability(n, edges, k));
+    }
 }
