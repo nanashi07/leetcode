@@ -34,44 +34,17 @@ impl Solution {
             true
         }
 
-        // Step 1: check if a spanning tree is reachable at all (ignoring weights).
-        // Cost to use an edge = flag (0 for stable, 1 for unstable/needs activation).
-        {
-            let mut edge_list: Vec<(i64, usize, usize)> = edges
-                .iter()
-                .map(|e| (e[3] as i64, e[0] as usize, e[1] as usize))
-                .collect();
-            edge_list.sort_unstable();
-
-            let mut parent: Vec<usize> = (0..n).collect();
-            let mut rank = vec![0u8; n];
-            let mut total_cost = 0i64;
-            let mut used = 0usize;
-
-            for (cost, u, v) in &edge_list {
-                if union(&mut parent, &mut rank, *u, *v) {
-                    total_cost += cost;
-                    used += 1;
-                    if used == n - 1 {
-                        break;
-                    }
-                }
-            }
-
-            if used < n - 1 || total_cost > k {
-                return -1;
-            }
-        }
-
-        // Step 2: binary search on the stability value `mid`.
-        // For a given `mid`, compute the minimum upgrade cost to build a spanning tree
-        // where every edge has effective weight >= mid:
-        //   flag=0, w >= mid        -> cost 0 (no upgrade needed)
-        //   flag=0, 2w >= mid > w   -> cost 1 (boost: double weight)
-        //   flag=1, w >= mid        -> cost 1 (activate)
-        //   flag=1, 2w >= mid > w   -> cost 2 (activate + boost)
-        //   otherwise               -> edge unusable for this mid
-        let can_achieve = |mid: i64| -> bool {
+        // Checks whether a spanning tree with every edge having effective weight >= mid
+        // can be built within the given boost_budget.
+        //
+        // Two modes controlled by `include_flag1`:
+        //   false (Case 1, k=0 scenario):
+        //     Only flag=0 edges are available; they can be boosted (×2) at cost 1 each.
+        //   true  (Case 2, k≥1 scenario):
+        //     flag=1 edges are available at their original weight w (NOT boostable).
+        //     flag=0 edges are available and can be boosted at cost 1.
+        //     The "unlock" of all flag=1 edges has already been accounted for (budget = k-1).
+        let check = |mid: i64, include_flag1: bool, boost_budget: i64| -> bool {
             let mut edge_costs: Vec<(i64, usize, usize)> = Vec::new();
 
             for e in &edges {
@@ -85,18 +58,20 @@ impl Solution {
                         continue;
                     }
                 } else {
-                    if w >= mid {
-                        1
-                    } else if 2 * w >= mid {
-                        2
-                    } else {
+                    // flag == 1: usable only when include_flag1; cannot be boosted
+                    if !include_flag1 {
                         continue;
+                    }
+                    if w >= mid {
+                        0
+                    } else {
+                        continue; // w < mid and can't boost
                     }
                 };
                 edge_costs.push((cost, u, v));
             }
 
-            // Minimum-cost spanning tree (Kruskal's by upgrade cost)
+            // Minimum-cost spanning tree (Kruskal's, sorting by boost cost)
             edge_costs.sort_unstable();
 
             let mut parent: Vec<usize> = (0..n).collect();
@@ -107,7 +82,7 @@ impl Solution {
             for (cost, u, v) in &edge_costs {
                 if union(&mut parent, &mut rank, *u, *v) {
                     total_cost += cost;
-                    if total_cost > k {
+                    if total_cost > boost_budget {
                         return false;
                     }
                     used += 1;
@@ -116,22 +91,49 @@ impl Solution {
                     }
                 }
             }
-
             false
         };
 
         let max_w = edges.iter().map(|e| e[2] as i64).max().unwrap_or(0);
-        let mut lo = 1i64;
-        let mut hi = 2 * max_w;
+        let max_flag0_w = edges
+            .iter()
+            .filter(|e| e[3] == 0)
+            .map(|e| e[2] as i64)
+            .max()
+            .unwrap_or(0);
+
         let mut ans = 0i64;
 
-        while lo <= hi {
-            let mid = lo + (hi - lo) / 2;
-            if can_achieve(mid) {
-                ans = mid;
-                lo = mid + 1;
-            } else {
-                hi = mid - 1;
+        // Case 1: only flag=0 edges, full boost budget k.
+        // Maximum achievable stability = 2 * max_flag0_w.
+        {
+            let mut lo = 1i64;
+            let mut hi = 2 * max_flag0_w;
+            while lo <= hi {
+                let mid = lo + (hi - lo) / 2;
+                if check(mid, false, k) {
+                    ans = ans.max(mid);
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+        }
+
+        // Case 2 (only when k ≥ 1): all edges available; 1 upgrade spent globally to unlock
+        // all flag=1 edges, leaving k-1 upgrades for boosting flag=0 edges.
+        // flag=1 edges cannot be boosted, so max achievable = max(max_w, 2*max_flag0_w).
+        if k >= 1 {
+            let mut lo = 1i64;
+            let mut hi = max_w.max(2 * max_flag0_w);
+            while lo <= hi {
+                let mid = lo + (hi - lo) / 2;
+                if check(mid, true, k - 1) {
+                    ans = ans.max(mid);
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
             }
         }
 
