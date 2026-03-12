@@ -6,9 +6,8 @@ struct Solution;
 impl Solution {
     pub fn max_stability(n: i32, edges: Vec<Vec<i32>>, k: i32) -> i32 {
         let n = n as usize;
-        let k = k as i64;
+        let k = k as i32;
 
-        // Union-Find helpers (iterative path-halving)
         fn find(parent: &mut Vec<usize>, mut x: usize) -> usize {
             while parent[x] != x {
                 parent[x] = parent[parent[x]];
@@ -17,130 +16,103 @@ impl Solution {
             x
         }
 
-        fn union(parent: &mut Vec<usize>, rank: &mut Vec<u8>, x: usize, y: usize) -> bool {
+        fn union(parent: &mut Vec<usize>, size: &mut Vec<usize>, x: usize, y: usize) -> bool {
             let px = find(parent, x);
             let py = find(parent, y);
             if px == py {
                 return false;
             }
-            if rank[px] < rank[py] {
-                parent[px] = py;
-            } else if rank[px] > rank[py] {
+            if size[px] >= size[py] {
                 parent[py] = px;
+                size[px] += size[py];
             } else {
-                parent[py] = px;
-                rank[px] += 1;
+                parent[px] = py;
+                size[py] += size[px];
             }
             true
         }
 
-        // Checks whether a spanning tree with every edge having effective weight >= mid
-        // can be built within the given boost_budget.
-        //
-        // Two modes controlled by `include_flag1`:
-        //   false (Case 1, k=0 scenario):
-        //     Only flag=0 edges are available; they can be boosted (×2) at cost 1 each.
-        //   true  (Case 2, k≥1 scenario):
-        //     flag=1 edges are available at their original weight w (NOT boostable).
-        //     flag=0 edges are available and can be boosted at cost 1.
-        //     The "unlock" of all flag=1 edges has already been accounted for (budget = k-1).
-        let check = |mid: i64, include_flag1: bool, boost_budget: i64| -> bool {
-            let mut edge_costs: Vec<(i64, usize, usize)> = Vec::new();
+        // Step 1: Add all must=1 edges. Detect cycles (cycle → invalid spanning tree → -1).
+        // Compute mn = minimum strength among must=1 edges.
+        let mut parent: Vec<usize> = (0..n).collect();
+        let mut size = vec![1usize; n];
+        let mut mn = i64::MAX;
+        for e in &edges {
+            if e[3] == 1 {
+                let (u, v, s) = (e[0] as usize, e[1] as usize, e[2] as i64);
+                mn = mn.min(s);
+                if !union(&mut parent, &mut size, u, v) {
+                    return -1; // must=1 edges form a cycle
+                }
+            }
+        }
+
+        // Step 2: Check that all nodes can be connected using all edges.
+        let mut parent2: Vec<usize> = (0..n).collect();
+        let mut size2 = vec![1usize; n];
+        for e in &edges {
+            union(&mut parent2, &mut size2, e[0] as usize, e[1] as usize);
+        }
+        let root = find(&mut parent2, 0);
+        if (1..n).any(|i| find(&mut parent2, i) != root) {
+            return -1; // graph is disconnected
+        }
+
+        // If no must=1 edges exist, the upper bound is 2 * max edge strength.
+        if mn == i64::MAX {
+            mn = 2 * edges.iter().map(|e| e[2] as i64).max().unwrap_or(0);
+        }
+
+        // check(lim): can we form a spanning tree with all edge strengths >= lim?
+        //   - Free tier: edges with s >= lim (both must and optional)
+        //   - Upgrade tier: edges with 2*s >= lim (optional only), costs 1 upgrade each, up to k
+        let check = |lim: i64| -> bool {
+            let mut parent: Vec<usize> = (0..n).collect();
+            let mut size = vec![1usize; n];
+            let mut cnt = n;
 
             for e in &edges {
-                let (u, v, w, flag) = (e[0] as usize, e[1] as usize, e[2] as i64, e[3] as i64);
-                let cost = if flag == 0 {
-                    if w >= mid {
-                        0
-                    } else if 2 * w >= mid {
-                        1
-                    } else {
-                        continue;
-                    }
-                } else {
-                    // flag == 1: usable only when include_flag1; cannot be boosted
-                    if !include_flag1 {
-                        continue;
-                    }
-                    if w >= mid {
-                        0
-                    } else {
-                        continue; // w < mid and can't boost
-                    }
-                };
-                edge_costs.push((cost, u, v));
+                let (u, v, s) = (e[0] as usize, e[1] as usize, e[2] as i64);
+                if s >= lim && union(&mut parent, &mut size, u, v) {
+                    cnt -= 1;
+                }
             }
-
-            // Minimum-cost spanning tree (Kruskal's, sorting by boost cost)
-            edge_costs.sort_unstable();
-
-            let mut parent: Vec<usize> = (0..n).collect();
-            let mut rank = vec![0u8; n];
-            let mut total_cost = 0i64;
-            let mut used = 0usize;
-
-            for (cost, u, v) in &edge_costs {
-                if union(&mut parent, &mut rank, *u, *v) {
-                    total_cost += cost;
-                    if total_cost > boost_budget {
-                        return false;
-                    }
-                    used += 1;
-                    if used == n - 1 {
+            if cnt == 1 {
+                return true;
+            }
+            let mut rem = k;
+            for e in &edges {
+                if rem == 0 {
+                    break;
+                }
+                let (u, v, s) = (e[0] as usize, e[1] as usize, e[2] as i64);
+                if 2 * s >= lim && union(&mut parent, &mut size, u, v) {
+                    cnt -= 1;
+                    rem -= 1;
+                    if cnt == 1 {
                         return true;
                     }
                 }
             }
-            false
+            cnt == 1
         };
 
-        let max_w = edges.iter().map(|e| e[2] as i64).max().unwrap_or(0);
-        let max_flag0_w = edges
-            .iter()
-            .filter(|e| e[3] == 0)
-            .map(|e| e[2] as i64)
-            .max()
-            .unwrap_or(0);
-
-        let mut ans = 0i64;
-
-        // Case 1: only flag=0 edges, full boost budget k.
-        // Maximum achievable stability = 2 * max_flag0_w.
-        {
-            let mut lo = 1i64;
-            let mut hi = 2 * max_flag0_w;
-            while lo <= hi {
-                let mid = lo + (hi - lo) / 2;
-                if check(mid, false, k) {
-                    ans = ans.max(mid);
-                    lo = mid + 1;
-                } else {
-                    hi = mid - 1;
-                }
+        // Binary search for the maximum feasible stability in [1, mn].
+        let mut lo = 1i64;
+        let mut hi = mn;
+        while lo < hi {
+            let mid = lo + (hi - lo + 1) / 2;
+            if check(mid) {
+                lo = mid;
+            } else {
+                hi = mid - 1;
             }
         }
 
-        // Case 2 (only when k ≥ 1): all edges available; 1 upgrade spent globally to unlock
-        // all flag=1 edges, leaving k-1 upgrades for boosting flag=0 edges.
-        // flag=1 edges cannot be boosted, so max achievable = max(max_w, 2*max_flag0_w).
-        if k >= 1 {
-            let mut lo = 1i64;
-            let mut hi = max_w.max(2 * max_flag0_w);
-            while lo <= hi {
-                let mid = lo + (hi - lo) / 2;
-                if check(mid, true, k - 1) {
-                    ans = ans.max(mid);
-                    lo = mid + 1;
-                } else {
-                    hi = mid - 1;
-                }
-            }
-        }
-
-        if ans == 0 {
-            -1
+        if check(lo) {
+            lo as i32
         } else {
-            ans as i32
+            -1
         }
     }
 }
