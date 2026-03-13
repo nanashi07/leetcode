@@ -5,7 +5,52 @@ struct Solution;
 
 impl Solution {
     pub fn min_number_of_seconds(mountain_height: i32, worker_times: Vec<i32>) -> i64 {
-        todo!()
+        let target = mountain_height as i64;
+        let fastest_worker = *worker_times.iter().min().unwrap() as i64;
+        let mut left = 0_i64;
+        let mut right = fastest_worker * target * (target + 1) / 2;
+
+        while left < right {
+            let mid = left + (right - left) / 2;
+            if Self::can_finish(target, &worker_times, mid) {
+                right = mid;
+            } else {
+                left = mid + 1;
+            }
+        }
+
+        left
+    }
+
+    fn can_finish(target: i64, worker_times: &[i32], seconds: i64) -> bool {
+        let mut removed = 0_i64;
+
+        for &worker_time in worker_times {
+            removed += Self::max_height_removed(worker_time as i64, seconds, target - removed);
+            if removed >= target {
+                return true;
+            }
+        }
+
+        false
+    }
+
+    fn max_height_removed(worker_time: i64, seconds: i64, upper_bound: i64) -> i64 {
+        let mut left = 0_i64;
+        let mut right = upper_bound;
+
+        while left < right {
+            let mid = left + (right - left + 1) / 2;
+            let cost = worker_time as i128 * mid as i128 * (mid + 1) as i128 / 2;
+
+            if cost <= seconds as i128 {
+                left = mid;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        left
     }
 }
 
