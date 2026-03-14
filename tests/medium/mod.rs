@@ -102,6 +102,8 @@ mod balance_a_binary_search_tree;
 mod four_divisors;
 // 1404. Number of Steps to Reduce a Number in Binary Representation to One
 pub mod number_of_steps_to_reduce_a_number_in_binary_representation_to_one;
+// 1415. The k-th Lexicographical String of All Happy Strings of Length n
+pub mod the_k_th_lexicographical_string_of_all_happy_strings_of_length_n;
 // 1461. Check If a String Contains All Binary Codes of Size K
 mod check_if_a_string_contains_all_binary_codes_of_size_k;
 // 1488. Avoid Flood in The City
