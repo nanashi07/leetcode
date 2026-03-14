@@ -5,7 +5,47 @@ struct Solution;
 
 impl Solution {
     pub fn get_happy_string(n: i32, k: i32) -> String {
-        todo!()
+        if n <= 0 || k <= 0 {
+            return String::new();
+        }
+
+        let n = n as usize;
+        let mut k = k as u64 - 1;
+        let total = 3_u64 << (n - 1);
+
+        if k >= total {
+            return String::new();
+        }
+
+        let letters = [b'a', b'b', b'c'];
+        let mut result = String::with_capacity(n);
+        let mut prev = None;
+
+        for pos in 0..n {
+            let block_size = if pos + 1 == n {
+                1
+            } else {
+                1_u64 << (n - pos - 1)
+            };
+
+            let mut choices = [0_u8; 3];
+            let mut count = 0;
+
+            for &letter in &letters {
+                if Some(letter) != prev {
+                    choices[count] = letter;
+                    count += 1;
+                }
+            }
+
+            let choice_index = (k / block_size) as usize;
+            let chosen = choices[choice_index];
+            result.push(chosen as char);
+            prev = Some(chosen);
+            k %= block_size;
+        }
+
+        result
     }
 }
 
