@@ -36,6 +36,8 @@ mod max_dot_product_of_two_subsequences;
 mod minimum_number_of_increments_on_subarrays_to_form_a_target_array;
 // 1611. Minimum One Bit Operations to Make Integers Zero
 mod minimum_one_bit_operations_to_make_integers_zero;
+// 1622. Fancy Sequence
+pub mod fancy_sequence;
 // 1751. Maximum Number of Events That Can Be Attended II
 mod maximum_number_of_events_that_can_be_attended_ii;
 // 1900. The Earliest and Latest Rounds Where Players Compete
