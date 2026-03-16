@@ -142,6 +142,8 @@ mod maximum_average_pass_ratio;
 mod finding_pairs_with_a_certain_sum;
 // 1877. Minimize Maximum Pair Sum in Array
 mod minimize_maximum_pair_sum_in_array;
+// 1878. Get Biggest Three Rhombus Sums in a Grid
+pub mod get_biggest_three_rhombus_sums_in_a_grid;
 // 1888. Minimum Number of Flips to Make the Binary String Alternating
 pub mod minimum_number_of_flips_to_make_the_binary_string_alternating;
 // 1895. Largest Magic Square
