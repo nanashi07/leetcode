@@ -53,7 +53,7 @@ mod tests {
     #[test]
     fn test_number_of_stable_arrays_2() {
         let zero = 1;
-        let one = 1;
+        let one = 2;
         let limit = 1;
         assert_eq!(1, Solution::number_of_stable_arrays(zero, one, limit));
     }
