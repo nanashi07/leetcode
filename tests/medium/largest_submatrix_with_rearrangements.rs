@@ -5,7 +5,25 @@ struct Solution;
 
 impl Solution {
     pub fn largest_submatrix(matrix: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let m = matrix.len();
+        let n = matrix[0].len();
+        let mut heights = vec![0i32; n];
+        let mut ans = 0;
+
+        for i in 0..m {
+            // Update column heights
+            for j in 0..n {
+                heights[j] = if matrix[i][j] == 1 { heights[j] + 1 } else { 0 };
+            }
+            // Sort descending; for each width k+1, area = heights[k] * (k+1)
+            let mut sorted = heights.clone();
+            sorted.sort_unstable_by(|a, b| b.cmp(a));
+            for (k, &h) in sorted.iter().enumerate() {
+                if h == 0 { break; }
+                ans = ans.max(h * (k as i32 + 1));
+            }
+        }
+        ans
     }
 }
 
