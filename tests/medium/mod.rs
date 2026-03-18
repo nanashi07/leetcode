@@ -216,6 +216,8 @@ mod alice_and_bob_playing_flower_game;
 mod find_the_number_of_ways_to_place_people_i;
 // 3047. Find the Largest Area of Square Inside Two Rectangles
 mod find_the_largest_area_of_square_inside_two_rectangles;
+// 3070. Count Submatrices with Top-Left Element and Sum Less Than k
+pub mod count_submatrices_with_top_left_element_and_sum_less_than_k;
 // 3075. Maximize Happiness of Selected Children
 mod maximize_happiness_of_selected_children;
 // 3100. Water Bottles II
