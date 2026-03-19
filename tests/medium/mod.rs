@@ -234,6 +234,8 @@ mod find_the_minimum_area_to_cover_all_ones_i;
 mod find_the_maximum_length_of_valid_subsequence_i;
 // 3202. Find the Maximum Length of Valid Subsequence II
 mod find_the_maximum_length_of_valid_subsequence_ii;
+// 3212. Count Submatrices With Equal Frequency of X and Y
+pub mod count_submatrices_with_equal_frequency_of_x_and_y;
 // 3217. Delete Nodes From Linked List Present in Array
 mod delete_nodes_from_linked_list_present_in_array;
 // 3227. Vowels Game in a String
