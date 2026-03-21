@@ -168,3 +168,5 @@ mod find_most_frequent_vowel_and_consonant;
 mod coupon_code_validator;
 // 3637. Trionic Array I
 mod trionic_array_i;
+// 3643. Flip Square Submatrix Vertically
+pub mod flip_square_submatrix_vertically;

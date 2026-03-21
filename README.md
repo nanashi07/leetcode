@@ -91,6 +91,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3541. Find Most Frequent Vowel and Consonant](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/)
 - [3606. Coupon Code Validator](https://leetcode.com/problems/coupon-code-validator/)
 - [3637. Trionic Array I](https://leetcode.com/problems/trionic-array-i/)
+- [3643. Flip Square Submatrix Vertically](https://leetcode.com/problems/flip-square-submatrix-vertically/)
 
 ### Medium Problems
 
