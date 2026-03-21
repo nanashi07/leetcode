@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn reverse_submatrix(grid: Vec<Vec<i32>>, x: i32, y: i32, k: i32) -> Vec<Vec<i32>> {
-        todo!()
+        let mut grid = grid;
+
+        for b in y..y + k {
+            for a in x..(x + k / 2) {
+                let before = grid[a as usize][b as usize];
+                let after = grid[(x + k - 1 - (a - x)) as usize][b as usize];
+                grid[a as usize][b as usize] = after;
+                grid[(x + k - 1 - (a - x)) as usize][b as usize] = before;
+            }
+        }
+
+        grid
     }
 }
 
