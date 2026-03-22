@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn find_rotation(mat: Vec<Vec<i32>>, target: Vec<Vec<i32>>) -> bool {
-        todo!()
+        let n = mat.len();
+        // Track which rotations (0°, 90°, 180°, 270° clockwise) still match
+        let mut ok = [true; 4];
+        for i in 0..n {
+            for j in 0..n {
+                let v = mat[i][j];
+                if ok[0] && target[i][j] != v { ok[0] = false; }
+                if ok[1] && target[j][n - 1 - i] != v { ok[1] = false; }
+                if ok[2] && target[n - 1 - i][n - 1 - j] != v { ok[2] = false; }
+                if ok[3] && target[n - 1 - j][i] != v { ok[3] = false; }
+            }
+        }
+        ok.iter().any(|&x| x)
     }
 }
 
