@@ -96,6 +96,8 @@ mod calculate_money_in_leetcode_bank;
 pub mod minimum_changes_to_make_alternating_binary_string;
 // 1784. Check if Binary String Has at Most One Segment of Ones
 pub mod check_if_binary_string_has_at_most_one_segment_of_ones;
+// 1886. Determine Whether Matrix Can Be Obtained By Rotation
+pub mod determine_whether_matrix_can_be_obtained_by_rotation;
 // 1925. Count Square Sum Triples
 mod count_square_sum_triples;
 // 1935. Maximum Number of Words You Can Type
