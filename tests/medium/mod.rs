@@ -206,6 +206,8 @@ mod minimum_operations_to_make_the_integer_zero;
 mod sort_vowels_in_a_string;
 // 2787. Ways to Express an Integer as Sum of Powers
 mod ways_to_express_an_integer_as_sum_of_powers;
+// 2906. Construct Product Matrix
+pub mod construct_product_matrix;
 // 2943. Maximize Area of Square Hole in Grid
 mod maximize_area_of_square_hole_in_grid;
 // 2975. Maximum Square Area by Removing Fences From a Field
