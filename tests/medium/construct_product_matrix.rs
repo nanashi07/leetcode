@@ -5,7 +5,38 @@ struct Solution;
 
 impl Solution {
     pub fn construct_product_matrix(grid: Vec<Vec<i32>>) -> Vec<Vec<i32>> {
-        todo!()
+        const MOD: i64 = 12345;
+        let n = grid.len();
+        let m = grid[0].len();
+        let total = n * m;
+
+        let flat: Vec<i64> = grid
+            .iter()
+            .flat_map(|row| row.iter().map(|&x| x as i64 % MOD))
+            .collect();
+
+        // prefix[i] = product of flat[0..i] mod MOD
+        let mut prefix = vec![1i64; total + 1];
+        for i in 0..total {
+            prefix[i + 1] = prefix[i] * flat[i] % MOD;
+        }
+
+        // suffix[i] = product of flat[i..total] mod MOD
+        let mut suffix = vec![1i64; total + 1];
+        for i in (0..total).rev() {
+            suffix[i] = suffix[i + 1] * flat[i] % MOD;
+        }
+
+        (0..n)
+            .map(|i| {
+                (0..m)
+                    .map(|j| {
+                        let idx = i * m + j;
+                        (prefix[idx] * suffix[idx + 1] % MOD) as i32
+                    })
+                    .collect()
+            })
+            .collect()
     }
 }
 
