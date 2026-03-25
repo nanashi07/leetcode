@@ -37,22 +37,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::find_the_minimum_area_to_cover_all_ones_i::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_minimum_area_1() {
-        let grid = [[0, 1, 0], [1, 0, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[0, 1, 0], [1, 0, 1]]);
         assert_eq!(6, Solution::minimum_area(grid));
     }
 
     #[test]
     fn test_minimum_area_2() {
-        let grid = [[1, 0], [0, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[1, 0], [0, 0]]);
         assert_eq!(1, Solution::minimum_area(grid));
     }
 }

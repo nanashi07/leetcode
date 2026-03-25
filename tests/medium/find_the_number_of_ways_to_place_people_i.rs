@@ -98,40 +98,29 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::find_the_number_of_ways_to_place_people_i::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_number_of_pairs_1() {
-        let points = [[1, 1], [2, 2], [3, 3]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let points = to_vec2d([[1, 1], [2, 2], [3, 3]]);
         assert_eq!(0, Solution::number_of_pairs(points));
     }
 
     #[test]
     fn test_number_of_pairs_2() {
-        let points = [[6, 2], [4, 4], [2, 6]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let points = to_vec2d([[6, 2], [4, 4], [2, 6]]);
         assert_eq!(2, Solution::number_of_pairs(points));
     }
 
     #[test]
     fn test_number_of_pairs_3() {
-        let points = [[3, 1], [1, 3], [1, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let points = to_vec2d([[3, 1], [1, 3], [1, 1]]);
         assert_eq!(2, Solution::number_of_pairs(points));
     }
 
     #[test]
     fn test_number_of_pairs_4() {
-        let points = [[0, 0], [0, 3]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let points = to_vec2d([[0, 0], [0, 3]]);
         assert_eq!(1, Solution::number_of_pairs(points));
     }
 }

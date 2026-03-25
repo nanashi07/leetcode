@@ -78,64 +78,47 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::minimum_operations_to_make_array_elements_zero::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_min_operations_1() {
-        let queries = [[1, 2], [2, 4]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[1, 2], [2, 4]]);
         assert_eq!(3, Solution::min_operations(queries));
     }
 
     #[test]
     fn test_min_operations_2() {
-        let queries = [[2, 6]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[2, 6]]);
         assert_eq!(4, Solution::min_operations(queries));
     }
 
     #[test]
     fn test_min_operations_3() {
-        let queries = [[1, 8]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[1, 8]]);
         assert_eq!(7, Solution::min_operations(queries));
     }
 
     #[test]
     fn test_min_operations_4() {
-        let queries = [[5, 8]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[5, 8]]);
         assert_eq!(4, Solution::min_operations(queries));
     }
 
     #[test]
     fn test_min_operations_5() {
-        let queries = [[3, 7], [3, 7]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[3, 7], [3, 7]]);
         assert_eq!(10, Solution::min_operations(queries));
     }
 
     #[test]
     fn test_min_operations_6() {
-        let queries = [[11, 22], [1, 16]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[11, 22], [1, 16]]);
         assert_eq!(31, Solution::min_operations(queries));
     }
 
     #[test]
     fn test_min_operations_7() {
-        let queries = [
+        let queries = to_vec2d([
             [855407150, 876255590],
             [967587865, 990508908],
             [730921172, 766957042],
@@ -1411,10 +1394,7 @@ mod tests {
             [28401389, 426505532],
             [627330719, 750614749],
             [810012866, 871770996],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         assert_eq!(2272204859907, Solution::min_operations(queries));
     }
 }

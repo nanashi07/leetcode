@@ -60,34 +60,26 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::range_product_queries_of_powers::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_product_queries_1() {
         let n = 15;
-        let queries = [[0, 1], [2, 2], [0, 3]]
-            .iter()
-            .map(|&l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[0, 1], [2, 2], [0, 3]]);
         assert_eq!(vec![2, 4, 64], Solution::product_queries(n, queries));
     }
 
     #[test]
     fn test_product_queries_2() {
         let n = 2;
-        let queries = [[0, 0]]
-            .iter()
-            .map(|&l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[0, 0]]);
         assert_eq!(vec![2], Solution::product_queries(n, queries));
     }
 
     #[test]
     fn test_product_queries_3() {
         let n = 13;
-        let queries = [[1, 2], [1, 1]]
-            .iter()
-            .map(|&l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let queries = to_vec2d([[1, 2], [1, 1]]);
         assert_eq!(vec![32, 4], Solution::product_queries(n, queries));
     }
 }

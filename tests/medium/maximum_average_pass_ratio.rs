@@ -126,13 +126,11 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::maximum_average_pass_ratio::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_max_average_ratio_1() {
-        let classes = [[1, 2], [3, 5], [2, 2]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let classes = to_vec2d([[1, 2], [3, 5], [2, 2]]);
         let extra_students = 2;
         assert_eq!(
             0.78333,
@@ -142,10 +140,7 @@ mod tests {
 
     #[test]
     fn test_max_average_ratio_2() {
-        let classes = [[2, 4], [3, 9], [4, 5], [2, 10]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let classes = to_vec2d([[2, 4], [3, 9], [4, 5], [2, 10]]);
         let extra_students = 4;
         assert_eq!(
             0.53485,
@@ -155,7 +150,7 @@ mod tests {
 
     #[test]
     fn test_max_average_ratio_3() {
-        let classes = [
+        let classes = to_vec2d([
             [222, 993],
             [433, 744],
             [30, 541],
@@ -166,10 +161,7 @@ mod tests {
             [237, 694],
             [225, 780],
             [471, 976],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         let extra_students = 7;
         assert_eq!(
             0.43146,
@@ -179,7 +171,7 @@ mod tests {
 
     #[test]
     fn test_max_average_ratio_4() {
-        let classes = [
+        let classes = to_vec2d([
             [684, 883],
             [254, 259],
             [66, 797],
@@ -275,10 +267,7 @@ mod tests {
             [130, 638],
             [500, 931],
             [218, 983],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         let extra_students = 5976;
         assert_eq!(
             0.58664,
