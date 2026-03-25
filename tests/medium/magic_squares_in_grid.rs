@@ -79,19 +79,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::magic_squares_in_grid::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_num_magic_squares_inside_1() {
-        let grid = [[4, 3, 8, 4], [9, 5, 1, 9], [2, 7, 6, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[4, 3, 8, 4], [9, 5, 1, 9], [2, 7, 6, 2]]);
         assert_eq!(1, Solution::num_magic_squares_inside(grid));
     }
 
     #[test]
     fn test_num_magic_squares_inside_2() {
-        let grid = [[8]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let grid = to_vec2d([[8]]);
         assert_eq!(0, Solution::num_magic_squares_inside(grid));
     }
 }

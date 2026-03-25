@@ -55,31 +55,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::two_best_non_overlapping_events::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_max_two_events_1() {
-        let events = [[1, 3, 2], [4, 5, 2], [2, 4, 3]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let events = to_vec2d([[1, 3, 2], [4, 5, 2], [2, 4, 3]]);
         assert_eq!(4, Solution::max_two_events(events));
     }
 
     #[test]
     fn test_max_two_events_2() {
-        let events = [[1, 3, 2], [4, 5, 2], [1, 5, 5]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let events = to_vec2d([[1, 3, 2], [4, 5, 2], [1, 5, 5]]);
         assert_eq!(5, Solution::max_two_events(events));
     }
 
     #[test]
     fn test_max_two_events_3() {
-        let events = [[1, 5, 3], [1, 5, 1], [6, 6, 5]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let events = to_vec2d([[1, 5, 3], [1, 5, 1], [6, 6, 5]]);
         assert_eq!(8, Solution::max_two_events(events));
     }
 }

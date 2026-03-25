@@ -27,23 +27,18 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::count_submatrices_with_top_left_element_and_sum_less_than_k::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_count_submatrices_1() {
-        let grid = [[7, 6, 3], [6, 6, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[7, 6, 3], [6, 6, 1]]);
         let k = 18;
         assert_eq!(4, Solution::count_submatrices(grid, k));
     }
 
     #[test]
     fn test_count_submatrices_2() {
-        let grid = [[7, 2, 9], [1, 5, 0], [2, 6, 6]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[7, 2, 9], [1, 5, 0], [2, 6, 6]]);
         let k = 20;
         assert_eq!(6, Solution::count_submatrices(grid, k));
     }

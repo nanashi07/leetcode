@@ -182,40 +182,32 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_kth_smallest_1() {
-        let mat = [[1, 3, 11], [2, 4, 6]]
-            .iter()
-            .map(|e| e.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[1, 3, 11], [2, 4, 6]]);
         let k = 5;
         assert_eq!(7, Solution::kth_smallest(mat, k));
     }
 
     #[test]
     fn test_kth_smallest_2() {
-        let mat = [[1, 3, 11], [2, 4, 6]]
-            .iter()
-            .map(|e| e.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[1, 3, 11], [2, 4, 6]]);
         let k = 9;
         assert_eq!(17, Solution::kth_smallest(mat, k));
     }
 
     #[test]
     fn test_kth_smallest_3() {
-        let mat = [[1, 10, 10], [1, 4, 5], [2, 3, 6]]
-            .iter()
-            .map(|e| e.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[1, 10, 10], [1, 4, 5], [2, 3, 6]]);
         let k = 7;
         assert_eq!(9, Solution::kth_smallest(mat, k));
     }
 
     #[test]
     fn test_kth_smallest_4() {
-        let mat = [
+        let mat = to_vec2d([
             [21, 33, 38, 41, 42, 44, 48, 54, 62],
             [8, 51, 56, 60, 80, 81, 83, 88, 92],
             [2, 40, 54, 56, 68, 92, 93, 94, 98],
@@ -224,30 +216,21 @@ mod tests {
             [1, 11, 14, 35, 35, 55, 59, 66, 66],
             [5, 9, 13, 29, 47, 49, 60, 73, 74],
             [19, 29, 32, 36, 59, 64, 66, 98, 100],
-        ]
-        .iter()
-        .map(|e| e.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         let k = 29;
         assert_eq!(106, Solution::kth_smallest(mat, k));
     }
 
     #[test]
     fn test_kth_smallest_5() {
-        let mat = [[1, 10, 10], [1, 4, 5], [2, 3, 6]]
-            .iter()
-            .map(|e| e.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[1, 10, 10], [1, 4, 5], [2, 3, 6]]);
         let k = 14;
         assert_eq!(16, Solution::kth_smallest(mat, k));
     }
 
     #[test]
     fn test_kth_smallest_6() {
-        let mat = [[2, 5, 6], [1, 5, 8], [2, 3, 7]]
-            .iter()
-            .map(|e| e.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[2, 5, 6], [1, 5, 8], [2, 3, 7]]);
         let k = 4;
         assert_eq!(9, Solution::kth_smallest(mat, k));
     }

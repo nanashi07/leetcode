@@ -43,30 +43,19 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::construct_product_matrix::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_construct_product_matrix_1() {
-        let grid = [[1, 2], [3, 4]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let output = [[24, 12], [8, 6]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[1, 2], [3, 4]]);
+        let output = to_vec2d([[24, 12], [8, 6]]);
         assert_eq!(output, Solution::construct_product_matrix(grid));
     }
 
     #[test]
     fn test_construct_product_matrix_2() {
-        let grid = [[12345], [2], [1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let output = [[2], [0], [0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[12345], [2], [1]]);
+        let output = to_vec2d([[2], [0], [0]]);
         assert_eq!(output, Solution::construct_product_matrix(grid));
     }
 }

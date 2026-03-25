@@ -100,28 +100,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::trapping_rain_water_ii::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_trap_rain_water_1() {
-        let height_map = [[1, 4, 3, 1, 3, 2], [3, 2, 1, 3, 2, 4], [2, 3, 3, 2, 3, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let height_map = to_vec2d([[1, 4, 3, 1, 3, 2], [3, 2, 1, 3, 2, 4], [2, 3, 3, 2, 3, 1]]);
         assert_eq!(4, Solution::trap_rain_water(height_map));
     }
 
     #[test]
     fn test_trap_rain_water_2() {
-        let height_map = [
+        let height_map = to_vec2d([
             [3, 3, 3, 3, 3],
             [3, 2, 2, 2, 3],
             [3, 2, 1, 2, 3],
             [3, 2, 2, 2, 3],
             [3, 3, 3, 3, 3],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(10, Solution::trap_rain_water(height_map));
     }
 }

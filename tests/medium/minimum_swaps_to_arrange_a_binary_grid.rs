@@ -35,31 +35,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::minimum_swaps_to_arrange_a_binary_grid::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_min_swaps_1() {
-        let grid = [[0, 0, 1], [1, 1, 0], [1, 0, 0]]
-            .iter()
-            .map(|v| v.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[0, 0, 1], [1, 1, 0], [1, 0, 0]]);
         assert_eq!(3, Solution::min_swaps(grid));
     }
 
     #[test]
     fn test_min_swaps_2() {
-        let grid = [[0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0]]
-            .iter()
-            .map(|v| v.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0], [0, 1, 1, 0]]);
         assert_eq!(-1, Solution::min_swaps(grid));
     }
 
     #[test]
     fn test_min_swaps_3() {
-        let grid = [[1, 0, 0], [1, 1, 0], [1, 1, 1]]
-            .iter()
-            .map(|v| v.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[1, 0, 0], [1, 1, 0], [1, 1, 1]]);
         assert_eq!(0, Solution::min_swaps(grid));
     }
 }

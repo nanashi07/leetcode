@@ -163,13 +163,14 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::maximum_profit_from_trading_stocks_with_discounts::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_max_profit_1() {
         let n = 2;
         let present = [1, 2].to_vec();
         let future = [4, 3].to_vec();
-        let hierarchy = [[1, 2]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let hierarchy = to_vec2d([[1, 2]]);
         let budget = 3;
         assert_eq!(
             5,
@@ -182,7 +183,7 @@ mod tests {
         let n = 2;
         let present = [3, 4].to_vec();
         let future = [5, 8].to_vec();
-        let hierarchy = [[1, 2]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let hierarchy = to_vec2d([[1, 2]]);
         let budget = 4;
         assert_eq!(
             4,
@@ -195,10 +196,7 @@ mod tests {
         let n = 3;
         let present = [4, 6, 8].to_vec();
         let future = [7, 9, 11].to_vec();
-        let hierarchy = [[1, 2], [1, 3]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let hierarchy = to_vec2d([[1, 2], [1, 3]]);
         let budget = 10;
         assert_eq!(
             10,
@@ -211,10 +209,7 @@ mod tests {
         let n = 3;
         let present = [5, 2, 3].to_vec();
         let future = [8, 5, 6].to_vec();
-        let hierarchy = [[1, 2], [2, 3]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let hierarchy = to_vec2d([[1, 2], [2, 3]]);
         let budget = 7;
         assert_eq!(
             12,
@@ -245,7 +240,7 @@ mod tests {
             50, 50, 50, 50, 50, 50,
         ]
         .to_vec();
-        let hierarchy = [
+        let hierarchy = to_vec2d([
             [1, 2],
             [2, 3],
             [3, 4],
@@ -405,10 +400,7 @@ mod tests {
             [157, 158],
             [158, 159],
             [159, 160],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         let budget = 160;
         assert_eq!(
             7999,

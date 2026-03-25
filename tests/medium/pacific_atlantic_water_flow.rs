@@ -82,30 +82,25 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::pacific_atlantic_water_flow::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_pacific_atlantic_1() {
-        let heights = [
+        let heights = to_vec2d([
             [1, 2, 2, 3, 5],
             [3, 2, 3, 4, 4],
             [2, 4, 5, 3, 1],
             [6, 7, 1, 4, 5],
             [5, 1, 1, 2, 4],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
-        let output = [[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        ]);
+        let output = to_vec2d([[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]);
         assert_eq!(output, Solution::pacific_atlantic(heights));
     }
 
     #[test]
     fn test_pacific_atlantic_2() {
-        let heights = [[1]].into_iter().map(|l| l.to_vec()).collect::<Vec<_>>();
-        let output = [[0, 0]].into_iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let heights = to_vec2d([[1]]);
+        let output = to_vec2d([[0, 0]]);
         assert_eq!(output, Solution::pacific_atlantic(heights));
     }
 }

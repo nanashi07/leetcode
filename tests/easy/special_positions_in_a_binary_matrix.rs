@@ -35,22 +35,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::special_positions_in_a_binary_matrix::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_num_special_1() {
-        let mat = [[1, 0, 0], [0, 0, 1], [1, 0, 0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[1, 0, 0], [0, 0, 1], [1, 0, 0]]);
         assert_eq!(1, Solution::num_special(mat));
     }
 
     #[test]
     fn test_num_special_2() {
-        let mat = [[1, 0, 0], [0, 1, 0], [0, 0, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[1, 0, 0], [0, 1, 0], [0, 0, 1]]);
         assert_eq!(3, Solution::num_special(mat));
     }
 }

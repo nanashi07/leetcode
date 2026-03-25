@@ -53,24 +53,19 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::minimum_cost_path_with_edge_reversals::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_min_cost_1() {
         let n = 4;
-        let edges = [[0, 1, 3], [3, 1, 1], [2, 3, 4], [0, 2, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let edges = to_vec2d([[0, 1, 3], [3, 1, 1], [2, 3, 4], [0, 2, 2]]);
         assert_eq!(5, Solution::min_cost(n, edges));
     }
 
     #[test]
     fn test_min_cost_2() {
         let n = 4;
-        let edges = [[0, 2, 1], [2, 1, 1], [1, 3, 1], [2, 3, 3]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let edges = to_vec2d([[0, 2, 1], [2, 1, 1], [1, 3, 1], [2, 3, 3]]);
         assert_eq!(3, Solution::min_cost(n, edges));
     }
 }

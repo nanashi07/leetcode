@@ -42,56 +42,33 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::find_the_largest_area_of_square_inside_two_rectangles::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_largest_square_area_1() {
-        let bottom_left = [[1, 1], [2, 2], [3, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let top_right = [[3, 3], [4, 4], [6, 6]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let bottom_left = to_vec2d([[1, 1], [2, 2], [3, 1]]);
+        let top_right = to_vec2d([[3, 3], [4, 4], [6, 6]]);
         assert_eq!(1, Solution::largest_square_area(bottom_left, top_right));
     }
 
     #[test]
     fn test_largest_square_area_2() {
-        let bottom_left = [[1, 1], [1, 3], [1, 5]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let top_right = [[5, 5], [5, 7], [5, 9]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let bottom_left = to_vec2d([[1, 1], [1, 3], [1, 5]]);
+        let top_right = to_vec2d([[5, 5], [5, 7], [5, 9]]);
         assert_eq!(4, Solution::largest_square_area(bottom_left, top_right));
     }
 
     #[test]
     fn test_largest_square_area_3() {
-        let bottom_left = [[1, 1], [2, 2], [1, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let top_right = [[3, 3], [4, 4], [3, 4]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let bottom_left = to_vec2d([[1, 1], [2, 2], [1, 2]]);
+        let top_right = to_vec2d([[3, 3], [4, 4], [3, 4]]);
         assert_eq!(1, Solution::largest_square_area(bottom_left, top_right));
     }
 
     #[test]
     fn test_largest_square_area_4() {
-        let bottom_left = [[1, 1], [3, 3], [3, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let top_right = [[2, 2], [4, 4], [4, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let bottom_left = to_vec2d([[1, 1], [3, 3], [3, 1]]);
+        let top_right = to_vec2d([[2, 2], [4, 4], [4, 2]]);
         assert_eq!(0, Solution::largest_square_area(bottom_left, top_right));
     }
 }
