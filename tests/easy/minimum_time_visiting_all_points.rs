@@ -27,22 +27,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::minimum_time_visiting_all_points::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_min_time_to_visit_all_points_1() {
-        let points = [[1, 1], [3, 4], [-1, 0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let points = to_vec2d([[1, 1], [3, 4], [-1, 0]]);
         assert_eq!(7, Solution::min_time_to_visit_all_points(points));
     }
 
     #[test]
     fn test_min_time_to_visit_all_points_2() {
-        let points = [[3, 2], [-2, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let points = to_vec2d([[3, 2], [-2, 2]]);
         assert_eq!(5, Solution::min_time_to_visit_all_points(points));
     }
 }

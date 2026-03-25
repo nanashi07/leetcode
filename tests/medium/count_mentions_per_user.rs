@@ -77,18 +77,16 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::count_mentions_per_user::Solution;
+    use crate::shared::vec2d::to_string_vec2d;
 
     #[test]
     fn test_count_mentions_1() {
         let number_of_users = 2;
-        let events = [
+        let events = to_string_vec2d([
             ["MESSAGE", "10", "id1 id0"],
             ["OFFLINE", "11", "0"],
             ["MESSAGE", "71", "HERE"],
-        ]
-        .iter()
-        .map(|l| l.iter().map(|s| s.to_string()).collect::<Vec<_>>())
-        .collect::<Vec<_>>();
+        ]);
         let output = [2, 2].to_vec();
         assert_eq!(output, Solution::count_mentions(number_of_users, events));
     }
@@ -96,14 +94,11 @@ mod tests {
     #[test]
     fn test_count_mentions_2() {
         let number_of_users = 2;
-        let events = [
+        let events = to_string_vec2d([
             ["MESSAGE", "10", "id1 id0"],
             ["OFFLINE", "11", "0"],
             ["MESSAGE", "12", "ALL"],
-        ]
-        .iter()
-        .map(|l| l.iter().map(|s| s.to_string()).collect::<Vec<_>>())
-        .collect::<Vec<_>>();
+        ]);
         let output = [2, 2].to_vec();
         assert_eq!(output, Solution::count_mentions(number_of_users, events));
     }
@@ -111,10 +106,7 @@ mod tests {
     #[test]
     fn test_count_mentions_3() {
         let number_of_users = 2;
-        let events = [["OFFLINE", "10", "0"], ["MESSAGE", "12", "HERE"]]
-            .iter()
-            .map(|l| l.iter().map(|s| s.to_string()).collect::<Vec<_>>())
-            .collect::<Vec<_>>();
+        let events = to_string_vec2d([["OFFLINE", "10", "0"], ["MESSAGE", "12", "HERE"]]);
         let output = [0, 1].to_vec();
         assert_eq!(output, Solution::count_mentions(number_of_users, events));
     }
@@ -122,15 +114,12 @@ mod tests {
     #[test]
     fn test_count_mentions_4() {
         let number_of_users = 3;
-        let events = [
+        let events = to_string_vec2d([
             ["MESSAGE", "2", "HERE"],
             ["OFFLINE", "2", "1"],
             ["OFFLINE", "1", "0"],
             ["MESSAGE", "61", "HERE"],
-        ]
-        .iter()
-        .map(|l| l.iter().map(|s| s.to_string()).collect::<Vec<_>>())
-        .collect::<Vec<_>>();
+        ]);
         let output = [1, 0, 2].to_vec();
         assert_eq!(output, Solution::count_mentions(number_of_users, events));
     }
@@ -138,7 +127,7 @@ mod tests {
     #[test]
     fn test_count_mentions_5() {
         let number_of_users = 5;
-        let events = [
+        let events = to_string_vec2d([
             ["OFFLINE", "28", "1"],
             ["OFFLINE", "14", "2"],
             ["MESSAGE", "2", "ALL"],
@@ -147,10 +136,7 @@ mod tests {
             ["MESSAGE", "34", "id2"],
             ["MESSAGE", "83", "HERE"],
             ["MESSAGE", "40", "id3 id3 id2 id4 id4"],
-        ]
-        .iter()
-        .map(|l| l.iter().map(|s| s.to_string()).collect::<Vec<_>>())
-        .collect::<Vec<_>>();
+        ]);
         let output = [2, 1, 4, 5, 5].to_vec();
         assert_eq!(output, Solution::count_mentions(number_of_users, events));
     }

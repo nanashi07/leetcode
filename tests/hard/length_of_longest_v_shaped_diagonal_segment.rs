@@ -182,64 +182,53 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::length_of_longest_v_shaped_diagonal_segment::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_len_of_v_diagonal_1() {
-        let grid = [
+        let grid = to_vec2d([
             [2, 2, 1, 2, 2],
             [2, 0, 2, 2, 0],
             [2, 0, 1, 1, 0],
             [1, 0, 2, 2, 2],
             [2, 0, 0, 2, 2],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         assert_eq!(5, Solution::len_of_v_diagonal(grid));
     }
 
     #[test]
     fn test_len_of_v_diagonal_2() {
-        let grid = [
+        let grid = to_vec2d([
             [2, 2, 2, 2, 2],
             [2, 0, 2, 2, 0],
             [2, 0, 1, 1, 0],
             [1, 0, 2, 2, 2],
             [2, 0, 0, 2, 2],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         assert_eq!(4, Solution::len_of_v_diagonal(grid));
     }
 
     #[test]
     fn test_len_of_v_diagonal_3() {
-        let grid = [
+        let grid = to_vec2d([
             [1, 2, 2, 2, 2],
             [2, 2, 2, 2, 0],
             [2, 0, 0, 0, 0],
             [0, 0, 2, 2, 2],
             [2, 0, 0, 2, 0],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         assert_eq!(5, Solution::len_of_v_diagonal(grid));
     }
 
     #[test]
     fn test_len_of_v_diagonal_4() {
-        let grid = [[1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[1]]);
         assert_eq!(1, Solution::len_of_v_diagonal(grid));
     }
 
     #[test]
     fn test_len_of_v_diagonal_5() {
-        let grid = [
+        let grid = to_vec2d([
             [
                 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0,
                 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 1, 2, 2, 2, 0, 2, 0, 0, 0, 0, 0, 2, 0,
@@ -435,10 +424,7 @@ mod tests {
                 2, 0, 2, 1, 2, 0, 2, 0, 1, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0, 2, 0,
                 1,
             ],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         assert_eq!(52, Solution::len_of_v_diagonal(grid));
     }
 }

@@ -24,43 +24,26 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::determine_whether_matrix_can_be_obtained_by_rotation::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_find_rotation_1() {
-        let mat = [[0, 1], [1, 0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let target = [[1, 0], [0, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[0, 1], [1, 0]]);
+        let target = to_vec2d([[1, 0], [0, 1]]);
         assert_eq!(true, Solution::find_rotation(mat, target));
     }
 
     #[test]
     fn test_find_rotation_2() {
-        let mat = [[0, 1], [1, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let target = [[1, 0], [0, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[0, 1], [1, 1]]);
+        let target = to_vec2d([[1, 0], [0, 1]]);
         assert_eq!(false, Solution::find_rotation(mat, target));
     }
 
     #[test]
     fn test_find_rotation_3() {
-        let mat = [[0, 0, 0], [0, 1, 0], [1, 1, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let target = [[1, 1, 1], [0, 1, 0], [0, 0, 0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let mat = to_vec2d([[0, 0, 0], [0, 1, 0], [1, 1, 1]]);
+        let target = to_vec2d([[1, 1, 1], [0, 1, 0], [0, 0, 0]]);
         assert_eq!(true, Solution::find_rotation(mat, target));
     }
 }

@@ -133,13 +133,11 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::separate_squares_ii::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_separate_squares_1() {
-        let squares = [[0, 0, 1], [2, 2, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let squares = to_vec2d([[0, 0, 1], [2, 2, 1]]);
         assert_eq!(
             1.00000,
             (100000.0 * Solution::separate_squares(squares)).floor() / 100000.0
@@ -148,10 +146,7 @@ mod tests {
 
     #[test]
     fn test_separate_squares_2() {
-        let squares = [[0, 0, 2], [1, 1, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let squares = to_vec2d([[0, 0, 2], [1, 1, 1]]);
         assert_eq!(
             1.00000,
             (100000.0 * Solution::separate_squares(squares)).floor() / 100000.0
@@ -160,10 +155,7 @@ mod tests {
 
     #[test]
     fn test_separate_squares_3() {
-        let squares = [[15, 21, 2], [19, 21, 3]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let squares = to_vec2d([[15, 21, 2], [19, 21, 3]]);
         assert_eq!(
             22.30000,
             (100000.0 * Solution::separate_squares(squares)).floor() / 100000.0

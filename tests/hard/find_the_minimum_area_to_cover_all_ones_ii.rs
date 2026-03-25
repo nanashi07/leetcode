@@ -156,22 +156,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::find_the_minimum_area_to_cover_all_ones_ii::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_minimum_sum_1() {
-        let grid = [[1, 0, 1], [1, 1, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[1, 0, 1], [1, 1, 1]]);
         assert_eq!(5, Solution::minimum_sum(grid));
     }
 
     #[test]
     fn test_minimum_sum_2() {
-        let grid = [[1, 0, 1, 0], [0, 1, 0, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[1, 0, 1, 0], [0, 1, 0, 1]]);
         assert_eq!(5, Solution::minimum_sum(grid));
     }
 }

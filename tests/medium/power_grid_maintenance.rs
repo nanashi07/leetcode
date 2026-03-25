@@ -158,18 +158,13 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::power_grid_maintenance::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_process_queries_1() {
         let c = 5;
-        let connections = [[1, 2], [2, 3], [3, 4], [4, 5]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let queries = [[1, 3], [2, 1], [1, 1], [2, 2], [1, 2]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let connections = to_vec2d([[1, 2], [2, 3], [3, 4], [4, 5]]);
+        let queries = to_vec2d([[1, 3], [2, 1], [1, 1], [2, 2], [1, 2]]);
         let expected = [3, 2, 3].to_vec();
         assert_eq!(expected, Solution::process_queries(c, connections, queries));
     }
@@ -178,10 +173,7 @@ mod tests {
     fn test_process_queries_2() {
         let c = 3;
         let connections: Vec<Vec<i32>> = vec![];
-        let queries = [[1, 1], [2, 1], [1, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let queries = to_vec2d([[1, 1], [2, 1], [1, 1]]);
         let expected = [1, -1].to_vec();
         assert_eq!(expected, Solution::process_queries(c, connections, queries));
     }
@@ -190,10 +182,7 @@ mod tests {
     fn test_process_queries_3() {
         let c = 1;
         let connections: Vec<Vec<i32>> = vec![];
-        let queries = [[1, 1], [2, 1], [2, 1], [2, 1], [2, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let queries = to_vec2d([[1, 1], [2, 1], [2, 1], [2, 1], [2, 1]]);
         let expected = [1].to_vec();
         assert_eq!(expected, Solution::process_queries(c, connections, queries));
     }
@@ -201,11 +190,8 @@ mod tests {
     #[test]
     fn test_process_queries_4() {
         let c = 4;
-        let connections = [[4, 3], [3, 1], [4, 2], [3, 2], [4, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
-        let queries = [
+        let connections = to_vec2d([[4, 3], [3, 1], [4, 2], [3, 2], [4, 1]]);
+        let queries = to_vec2d([
             [2, 3],
             [1, 2],
             [2, 4],
@@ -221,10 +207,7 @@ mod tests {
             [2, 4],
             [1, 2],
             [1, 1],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         let expected = [2, 1, 1, 1, 1, 1, 1].to_vec();
         assert_eq!(expected, Solution::process_queries(c, connections, queries));
     }

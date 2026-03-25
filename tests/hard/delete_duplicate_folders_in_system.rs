@@ -75,24 +75,19 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::delete_duplicate_folders_in_system::Solution;
+    use crate::shared::vec2d::to_string_vec2d;
 
     #[test]
     fn test_delete_duplicate_folder_1() {
-        let paths = [
-            vec!["a"],
-            vec!["c"],
-            vec!["d"],
-            vec!["a", "b"],
-            vec!["c", "b"],
-            vec!["d", "a"],
-        ]
-        .iter()
-        .map(|l| l.iter().map(|&s| s.to_owned()).collect::<Vec<String>>())
-        .collect::<Vec<Vec<String>>>();
-        let mut output = [vec!["d"], vec!["d", "a"]]
-            .iter()
-            .map(|l| l.iter().map(|&s| s.to_owned()).collect::<Vec<String>>())
-            .collect::<Vec<Vec<String>>>();
+        let paths = to_string_vec2d([
+            &["a"] as &[_],
+            &["c"],
+            &["d"],
+            &["a", "b"],
+            &["c", "b"],
+            &["d", "a"],
+        ]);
+        let mut output = to_string_vec2d([&["d"] as &[_], &["d", "a"]]);
         output.sort_unstable();
         let mut result = Solution::delete_duplicate_folder(paths);
         result.sort_unstable();
@@ -101,23 +96,17 @@ mod tests {
 
     #[test]
     fn test_delete_duplicate_folder_2() {
-        let paths = [
-            vec!["a"],
-            vec!["c"],
-            vec!["a", "b"],
-            vec!["c", "b"],
-            vec!["a", "b", "x"],
-            vec!["a", "b", "x", "y"],
-            vec!["w"],
-            vec!["w", "y"],
-        ]
-        .iter()
-        .map(|l| l.iter().map(|&s| s.to_owned()).collect::<Vec<String>>())
-        .collect::<Vec<Vec<String>>>();
-        let mut output = [vec!["c"], vec!["c", "b"], vec!["a"], vec!["a", "b"]]
-            .iter()
-            .map(|l| l.iter().map(|&s| s.to_owned()).collect::<Vec<String>>())
-            .collect::<Vec<Vec<String>>>();
+        let paths = to_string_vec2d([
+            &["a"] as &[_],
+            &["c"],
+            &["a", "b"],
+            &["c", "b"],
+            &["a", "b", "x"],
+            &["a", "b", "x", "y"],
+            &["w"],
+            &["w", "y"],
+        ]);
+        let mut output = to_string_vec2d([&["c"] as &[_], &["c", "b"], &["a"], &["a", "b"]]);
         output.sort_unstable();
         let mut result = Solution::delete_duplicate_folder(paths);
         result.sort_unstable();
@@ -126,14 +115,8 @@ mod tests {
 
     #[test]
     fn test_delete_duplicate_folder_3() {
-        let paths = [vec!["a", "b"], vec!["c", "d"], vec!["c"], vec!["a"]]
-            .iter()
-            .map(|l| l.iter().map(|&s| s.to_owned()).collect::<Vec<String>>())
-            .collect::<Vec<Vec<String>>>();
-        let mut output = [vec!["c"], vec!["c", "d"], vec!["a"], vec!["a", "b"]]
-            .iter()
-            .map(|l| l.iter().map(|&s| s.to_owned()).collect::<Vec<String>>())
-            .collect::<Vec<Vec<String>>>();
+        let paths = to_string_vec2d([&["a", "b"] as &[_], &["c", "d"], &["c"], &["a"]]);
+        let mut output = to_string_vec2d([&["c"] as &[_], &["c", "d"], &["a"], &["a", "b"]]);
         output.sort_unstable();
         let mut result = Solution::delete_duplicate_folder(paths);
         result.sort_unstable();

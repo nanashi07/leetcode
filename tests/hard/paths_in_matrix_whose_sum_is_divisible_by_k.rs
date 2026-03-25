@@ -48,30 +48,25 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::paths_in_matrix_whose_sum_is_divisible_by_k::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_number_of_paths_1() {
-        let grid = [[5, 2, 4], [3, 0, 5], [0, 7, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[5, 2, 4], [3, 0, 5], [0, 7, 2]]);
         let k = 3;
         assert_eq!(2, Solution::number_of_paths(grid, k));
     }
 
     #[test]
     fn test_number_of_paths_2() {
-        let grid = [[0, 0]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let grid = to_vec2d([[0, 0]]);
         let k = 5;
         assert_eq!(1, Solution::number_of_paths(grid, k));
     }
 
     #[test]
     fn test_number_of_paths_3() {
-        let grid = [[7, 3, 4, 9], [2, 3, 6, 2], [2, 3, 7, 0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[7, 3, 4, 9], [2, 3, 6, 2], [2, 3, 7, 0]]);
         let k = 1;
         assert_eq!(10, Solution::number_of_paths(grid, k));
     }

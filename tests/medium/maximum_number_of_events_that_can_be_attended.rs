@@ -49,49 +49,35 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::maximum_number_of_events_that_can_be_attended::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_max_events_1() {
-        let events = [[1, 2], [2, 3], [3, 4]]
-            .iter()
-            .map(|&e| e.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let events = to_vec2d([[1, 2], [2, 3], [3, 4]]);
         assert_eq!(3, Solution::max_events(events));
     }
 
     #[test]
     fn test_max_events_2() {
-        let events = [[1, 2], [2, 3], [3, 4], [1, 2]]
-            .iter()
-            .map(|&e| e.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let events = to_vec2d([[1, 2], [2, 3], [3, 4], [1, 2]]);
         assert_eq!(4, Solution::max_events(events));
     }
 
     #[test]
     fn test_max_events_3() {
-        let events = [[1, 2], [1, 2], [3, 3], [1, 5], [1, 5]]
-            .iter()
-            .map(|&e| e.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let events = to_vec2d([[1, 2], [1, 2], [3, 3], [1, 5], [1, 5]]);
         assert_eq!(5, Solution::max_events(events));
     }
 
     #[test]
     fn test_max_events_4() {
-        let events = [[1, 5], [1, 5], [1, 5], [2, 3], [2, 3]]
-            .iter()
-            .map(|&e| e.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let events = to_vec2d([[1, 5], [1, 5], [1, 5], [2, 3], [2, 3]]);
         assert_eq!(5, Solution::max_events(events));
     }
 
     #[test]
     fn test_max_events_5() {
-        let events = [[1, 4], [4, 4], [2, 2], [3, 4], [1, 1]]
-            .iter()
-            .map(|&e| e.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let events = to_vec2d([[1, 4], [4, 4], [2, 2], [3, 4], [1, 1]]);
         assert_eq!(4, Solution::max_events(events));
     }
 }

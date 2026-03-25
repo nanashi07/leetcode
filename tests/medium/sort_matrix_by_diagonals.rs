@@ -52,56 +52,33 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::sort_matrix_by_diagonals::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_sort_matrix_1() {
-        let grid = [[1, 7, 3], [9, 8, 2], [4, 5, 6]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
-        let output = [[8, 2, 3], [9, 6, 7], [4, 5, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[1, 7, 3], [9, 8, 2], [4, 5, 6]]);
+        let output = to_vec2d([[8, 2, 3], [9, 6, 7], [4, 5, 1]]);
         assert_eq!(output, Solution::sort_matrix(grid));
     }
 
     #[test]
     fn test_sort_matrix_2() {
-        let grid = [[0, 1], [1, 2]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
-        let output = [[2, 1], [1, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[0, 1], [1, 2]]);
+        let output = to_vec2d([[2, 1], [1, 0]]);
         assert_eq!(output, Solution::sort_matrix(grid));
     }
 
     #[test]
     fn test_sort_matrix_3() {
-        let grid = [[1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
-        let output = [[1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[1]]);
+        let output = to_vec2d([[1]]);
         assert_eq!(output, Solution::sort_matrix(grid));
     }
 
     #[test]
     fn test_sort_matrix_4() {
-        let grid = [[-1, -2, -3], [-3, -3, -2], [-4, -4, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
-        let output = [[0, -2, -3], [-3, -1, -2], [-4, -4, -3]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let grid = to_vec2d([[-1, -2, -3], [-3, -3, -2], [-4, -4, 0]]);
+        let output = to_vec2d([[0, -2, -3], [-3, -1, -2], [-4, -4, -3]]);
         assert_eq!(output, Solution::sort_matrix(grid));
     }
 }

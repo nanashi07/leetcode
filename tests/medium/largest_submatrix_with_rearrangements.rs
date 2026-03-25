@@ -30,31 +30,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::largest_submatrix_with_rearrangements::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_largest_submatrix_1() {
-        let matrix = [[0, 0, 1], [1, 1, 1], [1, 0, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let matrix = to_vec2d([[0, 0, 1], [1, 1, 1], [1, 0, 1]]);
         assert_eq!(4, Solution::largest_submatrix(matrix));
     }
 
     #[test]
     fn test_largest_submatrix_2() {
-        let matrix = [[1, 0, 1, 0, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let matrix = to_vec2d([[1, 0, 1, 0, 1]]);
         assert_eq!(3, Solution::largest_submatrix(matrix));
     }
 
     #[test]
     fn test_largest_submatrix_3() {
-        let matrix = [[1, 1, 0], [1, 0, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let matrix = to_vec2d([[1, 1, 0], [1, 0, 1]]);
         assert_eq!(2, Solution::largest_submatrix(matrix));
     }
 }

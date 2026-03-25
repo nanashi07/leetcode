@@ -284,6 +284,8 @@ mod implement_router;
 mod count_covered_buildings;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
+// 3546. Equal Sum Grid Partition I
+pub mod equal_sum_grid_partition_i;
 // 3567. Minimum Absolute Difference in Sliding Submatrix
 pub mod minimum_absolute_difference_in_sliding_submatrix;
 // 3573. Best Time to Buy and Sell Stock V

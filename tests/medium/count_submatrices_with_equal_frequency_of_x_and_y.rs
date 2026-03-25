@@ -29,43 +29,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::count_submatrices_with_equal_frequency_of_x_and_y::Solution;
+    use crate::shared::vec2d::to_char_vec2d;
 
     #[test]
     fn test_number_of_submatrices_1() {
-        let grid = [["X", "Y", "."], ["Y", ".", "."]]
-            .iter()
-            .map(|l| {
-                l.iter()
-                    .map(|s| s.chars().next().unwrap())
-                    .collect::<Vec<_>>()
-            })
-            .collect::<Vec<_>>();
+        let grid = to_char_vec2d([["X", "Y", "."], ["Y", ".", "."]]);
         assert_eq!(3, Solution::number_of_submatrices(grid));
     }
 
     #[test]
     fn test_number_of_submatrices_2() {
-        let grid = [["X", "X"], ["X", "Y"]]
-            .iter()
-            .map(|l| {
-                l.iter()
-                    .map(|s| s.chars().next().unwrap())
-                    .collect::<Vec<_>>()
-            })
-            .collect::<Vec<_>>();
+        let grid = to_char_vec2d([["X", "X"], ["X", "Y"]]);
         assert_eq!(0, Solution::number_of_submatrices(grid));
     }
 
     #[test]
     fn test_number_of_submatrices_3() {
-        let grid = [[".", "."], [".", "."]]
-            .iter()
-            .map(|l| {
-                l.iter()
-                    .map(|s| s.chars().next().unwrap())
-                    .collect::<Vec<_>>()
-            })
-            .collect::<Vec<_>>();
+        let grid = to_char_vec2d([[".", "."], [".", "."]]);
         assert_eq!(0, Solution::number_of_submatrices(grid));
     }
 }

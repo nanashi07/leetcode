@@ -45,33 +45,28 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_max_side_length_1() {
-        let mat = [
+        let mat = to_vec2d([
             [1, 1, 3, 2, 4, 3, 2],
             [1, 1, 3, 2, 4, 3, 2],
             [1, 1, 3, 2, 4, 3, 2],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         let threshold = 4;
         assert_eq!(2, Solution::max_side_length(mat, threshold));
     }
 
     #[test]
     fn test_max_side_length_2() {
-        let mat = [
+        let mat = to_vec2d([
             [2, 2, 2, 2, 2],
             [2, 2, 2, 2, 2],
             [2, 2, 2, 2, 2],
             [2, 2, 2, 2, 2],
             [2, 2, 2, 2, 2],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         let threshold = 1;
         assert_eq!(0, Solution::max_side_length(mat, threshold));
     }

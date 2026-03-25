@@ -60,22 +60,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::count_number_of_trapezoids_i::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_count_trapezoids_1() {
-        let points = [[1, 0], [2, 0], [3, 0], [2, 2], [3, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let points = to_vec2d([[1, 0], [2, 0], [3, 0], [2, 2], [3, 2]]);
         assert_eq!(3, Solution::count_trapezoids(points));
     }
 
     #[test]
     fn test_count_trapezoids_2() {
-        let points = [[0, 0], [1, 0], [0, 1], [2, 1]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let points = to_vec2d([[0, 0], [1, 0], [0, 1], [2, 1]]);
         assert_eq!(1, Solution::count_trapezoids(points));
     }
 }

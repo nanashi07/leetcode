@@ -82,15 +82,13 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::last_day_where_you_can_still_cross::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_latest_day_to_cross_1() {
         let row = 2;
         let col = 2;
-        let cells = [[1, 1], [2, 1], [1, 2], [2, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let cells = to_vec2d([[1, 1], [2, 1], [1, 2], [2, 2]]);
         assert_eq!(2, Solution::latest_day_to_cross(row, col, cells));
     }
 
@@ -98,10 +96,7 @@ mod tests {
     fn test_latest_day_to_cross_2() {
         let row = 2;
         let col = 2;
-        let cells = [[1, 1], [1, 2], [2, 1], [2, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let cells = to_vec2d([[1, 1], [1, 2], [2, 1], [2, 2]]);
         assert_eq!(1, Solution::latest_day_to_cross(row, col, cells));
     }
 
@@ -109,7 +104,7 @@ mod tests {
     fn test_latest_day_to_cross_3() {
         let row = 3;
         let col = 3;
-        let cells = [
+        let cells = to_vec2d([
             [1, 2],
             [2, 1],
             [3, 3],
@@ -119,10 +114,7 @@ mod tests {
             [2, 3],
             [3, 2],
             [3, 1],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(3, Solution::latest_day_to_cross(row, col, cells));
     }
 }

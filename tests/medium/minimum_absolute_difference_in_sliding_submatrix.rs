@@ -72,34 +72,29 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::minimum_absolute_difference_in_sliding_submatrix::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_min_abs_diff_1() {
-        let grid = [[1, 8], [3, -2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[1, 8], [3, -2]]);
         let k = 2;
-        let output = [[2]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let output = to_vec2d([[2]]);
         assert_eq!(output, Solution::min_abs_diff(grid, k));
     }
 
     #[test]
     fn test_min_abs_diff_2() {
-        let grid = [[3, -1]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let grid = to_vec2d([[3, -1]]);
         let k = 1;
-        let output = [[0, 0]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let output = to_vec2d([[0, 0]]);
         assert_eq!(output, Solution::min_abs_diff(grid, k));
     }
 
     #[test]
     fn test_min_abs_diff_3() {
-        let grid = [[1, -2, 3], [2, 3, 5]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[1, -2, 3], [2, 3, 5]]);
         let k = 2;
-        let output = [[1, 2]].iter().map(|l| l.to_vec()).collect::<Vec<_>>();
+        let output = to_vec2d([[1, 2]]);
         assert_eq!(output, Solution::min_abs_diff(grid, k));
     }
 }

@@ -97,13 +97,11 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::diagonal_traverse::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_find_diagonal_order_1() {
-        let mat = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let mat = to_vec2d([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
         assert_eq!(
             [1, 2, 4, 7, 5, 3, 6, 8, 9].to_vec(),
             Solution::find_diagonal_order(mat)
@@ -112,28 +110,19 @@ mod tests {
 
     #[test]
     fn test_find_diagonal_order_2() {
-        let mat = [[1, 2], [3, 4]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let mat = to_vec2d([[1, 2], [3, 4]]);
         assert_eq!([1, 2, 3, 4].to_vec(), Solution::find_diagonal_order(mat));
     }
 
     #[test]
     fn test_find_diagonal_order_3() {
-        let mat = [[6, 9, 7]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let mat = to_vec2d([[6, 9, 7]]);
         assert_eq!([6, 9, 7].to_vec(), Solution::find_diagonal_order(mat));
     }
 
     #[test]
     fn test_find_diagonal_order_4() {
-        let mat = [[2, 5, 8], [4, 0, -1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let mat = to_vec2d([[2, 5, 8], [4, 0, -1]]);
         assert_eq!(
             [2, 5, 4, 0, 8, -1].to_vec(),
             Solution::find_diagonal_order(mat)

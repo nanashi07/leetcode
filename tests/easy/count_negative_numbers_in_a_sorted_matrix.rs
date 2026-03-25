@@ -25,27 +25,22 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::count_negative_numbers_in_a_sorted_matrix::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_count_negatives_1() {
-        let grid = [
+        let grid = to_vec2d([
             [4, 3, 2, -1],
             [3, 2, 1, -1],
             [1, 1, -1, -2],
             [-1, -1, -2, -3],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(8, Solution::count_negatives(grid));
     }
 
     #[test]
     fn test_count_negatives_2() {
-        let grid = [[3, 2], [1, 0]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[3, 2], [1, 0]]);
         assert_eq!(0, Solution::count_negatives(grid));
     }
 }

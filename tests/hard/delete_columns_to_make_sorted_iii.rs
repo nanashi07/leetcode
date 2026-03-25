@@ -53,28 +53,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::delete_columns_to_make_sorted_iii::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_min_deletion_size_1() {
-        let strs = ["babca", "bbazb"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let strs = to_string_vec(["babca", "bbazb"]);
         assert_eq!(3, Solution::min_deletion_size(strs));
     }
 
     #[test]
     fn test_min_deletion_size_2() {
-        let strs = ["edcba"].iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        let strs = to_string_vec(["edcba"]);
         assert_eq!(4, Solution::min_deletion_size(strs));
     }
 
     #[test]
     fn test_min_deletion_size_3() {
-        let strs = ["ghi", "def", "abc"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let strs = to_string_vec(["ghi", "def", "abc"]);
         assert_eq!(0, Solution::min_deletion_size(strs));
     }
 }

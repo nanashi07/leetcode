@@ -20,33 +20,25 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::find_smallest_letter_greater_than_target::Solution;
+    use crate::shared::vec2d::to_char_vec;
 
     #[test]
     fn test_next_greatest_letter_1() {
-        let letters = ["c", "f", "j"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
+        let letters = to_char_vec(["c", "f", "j"]);
         let target = 'a';
         assert_eq!('c', Solution::next_greatest_letter(letters, target));
     }
 
     #[test]
     fn test_next_greatest_letter_2() {
-        let letters = ["c", "f", "j"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
+        let letters = to_char_vec(["c", "f", "j"]);
         let target = 'c';
         assert_eq!('f', Solution::next_greatest_letter(letters, target));
     }
 
     #[test]
     fn test_next_greatest_letter_3() {
-        let letters = ["x", "x", "y", "y"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
+        let letters = to_char_vec(["x", "x", "y", "y"]);
         let target = 'z';
         assert_eq!('x', Solution::next_greatest_letter(letters, target));
     }

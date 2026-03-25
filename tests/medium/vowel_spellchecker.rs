@@ -62,48 +62,31 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::vowel_spellchecker::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_spellchecker_1() {
-        let wordlist = ["KiTe", "kite", "hare", "Hare"]
-            .into_iter()
-            .map(|s| s.to_owned())
-            .collect::<Vec<String>>();
-        let queries = [
+        let wordlist = to_string_vec(["KiTe", "kite", "hare", "Hare"]);
+        let queries = to_string_vec([
             "kite", "Kite", "KiTe", "Hare", "HARE", "Hear", "hear", "keti", "keet", "keto",
-        ]
-        .into_iter()
-        .map(|s| s.to_owned())
-        .collect::<Vec<String>>();
-        let output = [
+        ]);
+        let output = to_string_vec([
             "kite", "KiTe", "KiTe", "Hare", "hare", "", "", "KiTe", "", "KiTe",
-        ]
-        .into_iter()
-        .map(|s| s.to_owned())
-        .collect::<Vec<String>>();
+        ]);
         assert_eq!(output, Solution::spellchecker(wordlist, queries));
     }
 
     #[test]
     fn test_spellchecker_2() {
-        let wordlist = ["yellow"]
-            .into_iter()
-            .map(|s| s.to_owned())
-            .collect::<Vec<String>>();
-        let queries = ["YellOw"]
-            .into_iter()
-            .map(|s| s.to_owned())
-            .collect::<Vec<String>>();
-        let output = ["yellow"]
-            .into_iter()
-            .map(|s| s.to_owned())
-            .collect::<Vec<String>>();
+        let wordlist = to_string_vec(["yellow"]);
+        let queries = to_string_vec(["YellOw"]);
+        let output = to_string_vec(["yellow"]);
         assert_eq!(output, Solution::spellchecker(wordlist, queries));
     }
 
     #[test]
     fn test_spellchecker_3() {
-        let wordlist = [
+        let wordlist = to_string_vec([
             "kkk", "hrt", "fze", "awj", "dfn", "kec", "zss", "dkp", "pdx", "pgm", "ozl", "dhj",
             "uqm", "eks", "opv", "cxo", "okq", "wym", "fjp", "yyo", "awz", "lsp", "quk", "hhe",
             "sth", "mpo", "mbg", "smj", "cpm", "dno", "miq", "fld", "zxa", "fdu", "ige", "lmt",
@@ -146,11 +129,8 @@ mod tests {
             "rvp", "fqt", "hhx", "mhe", "cga", "gtd", "yat", "zac", "lbt", "gke", "tuh", "obz",
             "vuv", "gmq", "dki", "skv", "qbm", "nbb", "ugv", "hxt", "uxn", "uaq", "qqa", "koe",
             "fxc", "sgj", "hvx", "nae", "wtp", "njm", "mnb", "rge",
-        ]
-        .into_iter()
-        .map(|s| s.to_owned())
-        .collect::<Vec<String>>();
-        let queries = [
+        ]);
+        let queries = to_string_vec([
             "pue", "kZp", "hjs", "HBu", "rsp", "epp", "wsz", "AuC", "gsi", "yfz", "ohi", "huu",
             "xbu", "Xih", "bfg", "gap", "bvu", "okq", "ote", "jlp", "nij", "awz", "Zys", "nvf",
             "hdr", "ndo", "lkg", "zaq", "iyy", "xjk", "iik", "fom", "evp", "pEB", "arx", "jpd",
@@ -193,11 +173,8 @@ mod tests {
             "tnp", "afu", "zuv", "rbq", "qdr", "rvp", "hrt", "vzv", "MXN", "xcl", "wic", "wqm",
             "gir", "wfd", "JXo", "zss", "wnf", "opv", "rvk", "pdd", "uvh", "GmQ", "FUm", "gyc",
             "veu", "pjj", "dnb", "ipp", "pla", "dci", "ldr", "eyi",
-        ]
-        .into_iter()
-        .map(|s| s.to_owned())
-        .collect::<Vec<String>>();
-        let output = [
+        ]);
+        let output = to_string_vec([
             "paa", "kzp", "", "hbu", "", "", "", "auc", "gsi", "", "", "hua", "", "", "bfg", "gip",
             "bvu", "okq", "ata", "", "nej", "awz", "zys", "", "", "", "", "", "", "", "iik", "",
             "", "", "orx", "", "rqc", "", "", "awj", "", "qla", "", "", "", "dzw", "tko", "", "",
@@ -230,10 +207,7 @@ mod tests {
             "zsw", "", "xui", "kxs", "", "", "fjp", "", "tnp", "ifa", "", "", "", "rvp", "hrt",
             "vzv", "", "", "", "", "", "", "jxo", "zss", "", "opv", "", "pdd", "ivh", "gmq", "",
             "", "", "", "dnb", "", "", "dci", "", "uya",
-        ]
-        .into_iter()
-        .map(|s| s.to_owned())
-        .collect::<Vec<String>>();
+        ]);
         assert_eq!(output, Solution::spellchecker(wordlist, queries));
     }
 }

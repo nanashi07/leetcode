@@ -26,30 +26,19 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::find_resultant_array_after_removing_anagrams::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_remove_anagrams_1() {
-        let words = ["abba", "baba", "bbaa", "cd", "cd"]
-            .into_iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<String>>();
-        let output = ["abba", "cd"]
-            .into_iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<String>>();
+        let words = to_string_vec(["abba", "baba", "bbaa", "cd", "cd"]);
+        let output = to_string_vec(["abba", "cd"]);
         assert_eq!(output, Solution::remove_anagrams(words));
     }
 
     #[test]
     fn test_remove_anagrams_2() {
-        let words = ["a", "b", "c", "d", "e"]
-            .into_iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<String>>();
-        let output = ["a", "b", "c", "d", "e"]
-            .into_iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<String>>();
+        let words = to_string_vec(["a", "b", "c", "d", "e"]);
+        let output = to_string_vec(["a", "b", "c", "d", "e"]);
         assert_eq!(output, Solution::remove_anagrams(words));
     }
 }

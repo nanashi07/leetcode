@@ -56,46 +56,35 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::swim_in_rising_water::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_swim_in_water_1() {
-        let grid = [[0, 2], [1, 3]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[0, 2], [1, 3]]);
         assert_eq!(3, Solution::swim_in_water(grid));
     }
 
     #[test]
     fn test_swim_in_water_2() {
-        let grid = [
+        let grid = to_vec2d([
             [0, 1, 2, 3, 4],
             [24, 23, 22, 21, 5],
             [12, 13, 14, 15, 16],
             [11, 17, 18, 19, 20],
             [10, 9, 8, 7, 6],
-        ]
-        .into_iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(16, Solution::swim_in_water(grid));
     }
 
     #[test]
     fn test_swim_in_water_3() {
-        let grid = [[0, 3], [1, 2]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[0, 3], [1, 2]]);
         assert_eq!(2, Solution::swim_in_water(grid));
     }
 
     #[test]
     fn test_swim_in_water_4() {
-        let grid = [[10, 12, 4, 6], [9, 11, 3, 5], [1, 7, 13, 8], [2, 0, 15, 14]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[10, 12, 4, 6], [9, 11, 3, 5], [1, 7, 13, 8], [2, 0, 15, 14]]);
         assert_eq!(14, Solution::swim_in_water(grid));
     }
 }

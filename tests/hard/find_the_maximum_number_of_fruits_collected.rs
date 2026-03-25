@@ -46,27 +46,22 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::find_the_maximum_number_of_fruits_collected::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_max_collected_fruits_1() {
-        let fruits = [
+        let fruits = to_vec2d([
             [1, 2, 3, 4],
             [5, 6, 8, 7],
             [9, 10, 11, 12],
             [13, 14, 15, 16],
-        ]
-        .iter()
-        .map(|&l| l.to_vec())
-        .collect::<Vec<Vec<i32>>>();
+        ]);
         assert_eq!(100, Solution::max_collected_fruits(fruits));
     }
 
     #[test]
     fn test_max_collected_fruits_2() {
-        let fruits = [[1, 1], [1, 1]]
-            .iter()
-            .map(|&l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let fruits = to_vec2d([[1, 1], [1, 1]]);
         assert_eq!(4, Solution::max_collected_fruits(fruits));
     }
 }

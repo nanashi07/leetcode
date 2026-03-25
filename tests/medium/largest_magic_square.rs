@@ -86,27 +86,22 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::largest_magic_square::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_largest_magic_square_1() {
-        let grid = [
+        let grid = to_vec2d([
             [7, 1, 4, 5, 6],
             [2, 5, 1, 6, 4],
             [1, 5, 4, 3, 2],
             [1, 2, 7, 3, 4],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(3, Solution::largest_magic_square(grid));
     }
 
     #[test]
     fn test_largest_magic_square_2() {
-        let grid = [[5, 1, 3, 1], [9, 3, 3, 1], [1, 3, 3, 8]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[5, 1, 3, 1], [9, 3, 3, 1], [1, 3, 3, 8]]);
         assert_eq!(2, Solution::largest_magic_square(grid));
     }
 }

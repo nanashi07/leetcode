@@ -55,22 +55,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::count_submatrices_with_all_ones::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_num_submat_1() {
-        let mat = [[1, 0, 1], [1, 1, 0], [1, 1, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let mat = to_vec2d([[1, 0, 1], [1, 1, 0], [1, 1, 0]]);
         assert_eq!(13, Solution::num_submat(mat));
     }
 
     #[test]
     fn test_num_submat_2() {
-        let mat = [[0, 1, 1, 0], [0, 1, 1, 1], [1, 1, 1, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let mat = to_vec2d([[0, 1, 1, 0], [0, 1, 1, 1], [1, 1, 1, 0]]);
         assert_eq!(24, Solution::num_submat(mat));
     }
 }

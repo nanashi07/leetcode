@@ -37,22 +37,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::count_square_submatrices_with_all_ones::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_count_squares_1() {
-        let matrix = [[0, 1, 1, 1], [1, 1, 1, 1], [0, 1, 1, 1]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let matrix = to_vec2d([[0, 1, 1, 1], [1, 1, 1, 1], [0, 1, 1, 1]]);
         assert_eq!(15, Solution::count_squares(matrix));
     }
 
     #[test]
     fn test_count_squares_2() {
-        let matrix = [[1, 0, 1], [1, 1, 0], [1, 1, 0]]
-            .into_iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<Vec<i32>>>();
+        let matrix = to_vec2d([[1, 0, 1], [1, 1, 0], [1, 1, 0]]);
         assert_eq!(7, Solution::count_squares(matrix));
     }
 }

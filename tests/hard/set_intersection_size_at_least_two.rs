@@ -60,31 +60,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::set_intersection_size_at_least_two::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_intersection_size_two_1() {
-        let intervals = [[1, 3], [3, 7], [8, 9]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let intervals = to_vec2d([[1, 3], [3, 7], [8, 9]]);
         assert_eq!(5, Solution::intersection_size_two(intervals));
     }
 
     #[test]
     fn test_intersection_size_two_2() {
-        let intervals = [[1, 3], [1, 4], [2, 5], [3, 5]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let intervals = to_vec2d([[1, 3], [1, 4], [2, 5], [3, 5]]);
         assert_eq!(3, Solution::intersection_size_two(intervals));
     }
 
     #[test]
     fn test_intersection_size_two_3() {
-        let intervals = [[1, 2], [2, 3], [2, 4], [4, 5]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let intervals = to_vec2d([[1, 2], [2, 3], [2, 4], [4, 5]]);
         assert_eq!(5, Solution::intersection_size_two(intervals));
     }
 }

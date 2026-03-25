@@ -23,46 +23,35 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::flip_square_submatrix_vertically::Solution;
+    use crate::shared::vec2d::to_vec2d;
 
     #[test]
     fn test_reverse_submatrix_1() {
-        let grid = [
+        let grid = to_vec2d([
             [1, 2, 3, 4],
             [5, 6, 7, 8],
             [9, 10, 11, 12],
             [13, 14, 15, 16],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         let x = 1;
         let y = 0;
         let k = 3;
-        let output = [
+        let output = to_vec2d([
             [1, 2, 3, 4],
             [13, 14, 15, 8],
             [9, 10, 11, 12],
             [5, 6, 7, 16],
-        ]
-        .iter()
-        .map(|l| l.to_vec())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(output, Solution::reverse_submatrix(grid, x, y, k));
     }
 
     #[test]
     fn test_reverse_submatrix_2() {
-        let grid = [[3, 4, 2, 3], [2, 3, 4, 2]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let grid = to_vec2d([[3, 4, 2, 3], [2, 3, 4, 2]]);
         let x = 0;
         let y = 2;
         let k = 2;
-        let output = [[3, 4, 4, 2], [2, 3, 2, 3]]
-            .iter()
-            .map(|l| l.to_vec())
-            .collect::<Vec<_>>();
+        let output = to_vec2d([[3, 4, 4, 2], [2, 3, 2, 3]]);
         assert_eq!(output, Solution::reverse_submatrix(grid, x, y, k));
     }
 }

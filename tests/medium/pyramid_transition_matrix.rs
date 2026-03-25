@@ -67,24 +67,19 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::pyramid_transition_matrix::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_pyramid_transition_1() {
         let bottom = "BCD".to_string();
-        let allowed = ["BCC", "CDE", "CEA", "FFF"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let allowed = to_string_vec(["BCC", "CDE", "CEA", "FFF"]);
         assert_eq!(true, Solution::pyramid_transition(bottom, allowed));
     }
 
     #[test]
     fn test_pyramid_transition_2() {
         let bottom = "AAAA".to_string();
-        let allowed = ["AAB", "AAC", "BCD", "BBE", "DEF"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let allowed = to_string_vec(["AAB", "AAC", "BCD", "BBE", "DEF"]);
         assert_eq!(false, Solution::pyramid_transition(bottom, allowed));
     }
 }
