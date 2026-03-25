@@ -135,10 +135,11 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::sudoku_solver::Solution;
+    use crate::shared::vec2d::to_char_vec2d;
 
     #[test]
     fn test_solve_sudoku_1() {
-        let mut board = [
+        let mut board = to_char_vec2d([
             ["5", "3", ".", ".", "7", ".", ".", ".", "."],
             ["6", ".", ".", "1", "9", "5", ".", ".", "."],
             [".", "9", "8", ".", ".", ".", ".", "6", "."],
@@ -148,11 +149,8 @@ mod tests {
             [".", "6", ".", ".", ".", ".", "2", "8", "."],
             [".", ".", ".", "4", "1", "9", ".", ".", "5"],
             [".", ".", ".", ".", "8", ".", ".", "7", "9"],
-        ]
-        .into_iter()
-        .map(|l| l.map(|c| c.chars().next().unwrap()).to_vec())
-        .collect::<Vec<Vec<char>>>();
-        let output = [
+        ]);
+        let output = to_char_vec2d([
             ["5", "3", "4", "6", "7", "8", "9", "1", "2"],
             ["6", "7", "2", "1", "9", "5", "3", "4", "8"],
             ["1", "9", "8", "3", "4", "2", "5", "6", "7"],
@@ -162,10 +160,7 @@ mod tests {
             ["9", "6", "1", "5", "3", "7", "2", "8", "4"],
             ["2", "8", "7", "4", "1", "9", "6", "3", "5"],
             ["3", "4", "5", "2", "8", "6", "1", "7", "9"],
-        ]
-        .into_iter()
-        .map(|l| l.map(|c| c.chars().next().unwrap()).to_vec())
-        .collect::<Vec<Vec<char>>>();
+        ]);
         Solution::solve_sudoku(&mut board);
         assert_eq!(output, board);
     }
