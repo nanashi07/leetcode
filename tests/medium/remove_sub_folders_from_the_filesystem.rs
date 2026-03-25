@@ -22,43 +22,26 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::remove_sub_folders_from_the_filesystem::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_remove_subfolders_1() {
-        let folder = ["/a", "/a/b", "/c/d", "/c/d/e", "/c/f"]
-            .iter()
-            .map(|&s| s.to_owned())
-            .collect::<Vec<String>>();
-        let output = ["/a", "/c/d", "/c/f"]
-            .iter()
-            .map(|&s| s.to_owned())
-            .collect::<Vec<String>>();
+        let folder = to_string_vec(["/a", "/a/b", "/c/d", "/c/d/e", "/c/f"]);
+        let output = to_string_vec(["/a", "/c/d", "/c/f"]);
         assert_eq!(output, Solution::remove_subfolders(folder))
     }
 
     #[test]
     fn test_remove_subfolders_2() {
-        let folder = ["/a", "/a/b/c", "/a/b/d"]
-            .iter()
-            .map(|&s| s.to_owned())
-            .collect::<Vec<String>>();
-        let output = ["/a"]
-            .iter()
-            .map(|&s| s.to_owned())
-            .collect::<Vec<String>>();
+        let folder = to_string_vec(["/a", "/a/b/c", "/a/b/d"]);
+        let output = to_string_vec(["/a"]);
         assert_eq!(output, Solution::remove_subfolders(folder))
     }
 
     #[test]
     fn test_remove_subfolders_3() {
-        let folder = ["/a/b/c", "/a/b/ca", "/a/b/d"]
-            .iter()
-            .map(|&s| s.to_owned())
-            .collect::<Vec<String>>();
-        let output = ["/a/b/c", "/a/b/ca", "/a/b/d"]
-            .iter()
-            .map(|&s| s.to_owned())
-            .collect::<Vec<String>>();
+        let folder = to_string_vec(["/a/b/c", "/a/b/ca", "/a/b/d"]);
+        let output = to_string_vec(["/a/b/c", "/a/b/ca", "/a/b/d"]);
         assert_eq!(output, Solution::remove_subfolders(folder))
     }
 }

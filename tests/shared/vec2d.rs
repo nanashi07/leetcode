@@ -14,12 +14,16 @@ pub fn to_char_vec2d<'a, const N: usize>(
     data.into_iter().map(|row| to_char_vec(row)).collect()
 }
 
-pub fn to_string_vec<'a>(data: impl IntoIterator<Item = &'a str>) -> Vec<String> {
-    data.into_iter().map(|s| s.to_string()).collect()
+pub fn to_string_vec<S: AsRef<str>>(data: impl IntoIterator<Item = S>) -> Vec<String> {
+    data.into_iter().map(|s| s.as_ref().to_string()).collect()
 }
 
-pub fn to_string_vec2d<'a, const N: usize>(
-    data: impl IntoIterator<Item = [&'a str; N]>,
-) -> Vec<Vec<String>> {
-    data.into_iter().map(|row| to_string_vec(row)).collect()
+pub fn to_string_vec2d<S, II>(data: impl IntoIterator<Item = II>) -> Vec<Vec<String>>
+where
+    S: AsRef<str>,
+    II: IntoIterator<Item = S>,
+{
+    data.into_iter()
+        .map(|row| row.into_iter().map(|s| s.as_ref().to_string()).collect())
+        .collect()
 }
