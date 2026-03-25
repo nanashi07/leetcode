@@ -31,28 +31,23 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::delete_columns_to_make_sorted::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_min_deletion_size_1() {
-        let strs = ["cba", "daf", "ghi"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let strs = to_string_vec(["cba", "daf", "ghi"]);
         assert_eq!(1, Solution::min_deletion_size(strs));
     }
 
     #[test]
     fn test_min_deletion_size_2() {
-        let strs = ["a", "b"].iter().map(|s| s.to_string()).collect::<Vec<_>>();
+        let strs = to_string_vec(["a", "b"]);
         assert_eq!(0, Solution::min_deletion_size(strs));
     }
 
     #[test]
     fn test_min_deletion_size_3() {
-        let strs = ["zyx", "wvu", "tsr"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let strs = to_string_vec(["zyx", "wvu", "tsr"]);
         assert_eq!(3, Solution::min_deletion_size(strs));
     }
 }

@@ -8,6 +8,18 @@ pub fn to_char_vec<'a>(data: impl IntoIterator<Item = &'a str>) -> Vec<char> {
         .collect()
 }
 
+pub fn to_char_vec2d<'a, const N: usize>(
+    data: impl IntoIterator<Item = [&'a str; N]>,
+) -> Vec<Vec<char>> {
+    data.into_iter().map(|row| to_char_vec(row)).collect()
+}
+
 pub fn to_string_vec<'a>(data: impl IntoIterator<Item = &'a str>) -> Vec<String> {
     data.into_iter().map(|s| s.to_string()).collect()
+}
+
+pub fn to_string_vec2d<'a, const N: usize>(
+    data: impl IntoIterator<Item = [&'a str; N]>,
+) -> Vec<Vec<String>> {
+    data.into_iter().map(|row| to_string_vec(row)).collect()
 }

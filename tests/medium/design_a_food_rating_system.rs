@@ -85,19 +85,14 @@ impl FoodRatings {
 #[cfg(test)]
 mod tests {
     use crate::medium::design_a_food_rating_system::FoodRatings;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_food_ratings_1() {
-        let foods = ["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"]
-            .into_iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
-        let cuisines = [
+        let foods = to_string_vec(["kimchi", "miso", "sushi", "moussaka", "ramen", "bulgogi"]);
+        let cuisines = to_string_vec([
             "korean", "japanese", "japanese", "greek", "japanese", "korean",
-        ]
-        .into_iter()
-        .map(|s| s.to_string())
-        .collect::<Vec<_>>();
+        ]);
         let ratings = [9, 12, 8, 15, 14, 7].to_vec();
         let obj = FoodRatings::new(foods, cuisines, ratings);
 

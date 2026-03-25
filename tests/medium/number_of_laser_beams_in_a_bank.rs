@@ -28,22 +28,17 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::number_of_laser_beams_in_a_bank::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_number_of_beams_1() {
-        let bank = ["011001", "000000", "010100", "001000"]
-            .iter()
-            .map(|&s| s.to_string())
-            .collect::<Vec<_>>();
+        let bank = to_string_vec(["011001", "000000", "010100", "001000"]);
         assert_eq!(8, Solution::number_of_beams(bank));
     }
 
     #[test]
     fn test_number_of_beams_2() {
-        let bank = ["000", "111", "000"]
-            .iter()
-            .map(|&s| s.to_string())
-            .collect::<Vec<_>>();
+        let bank = to_string_vec(["000", "111", "000"]);
         assert_eq!(0, Solution::number_of_beams(bank));
     }
 }

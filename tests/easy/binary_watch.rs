@@ -27,16 +27,14 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::binary_watch::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_read_binary_watch_1() {
         let turned_on = 1;
-        let output = [
+        let output = to_string_vec([
             "0:01", "0:02", "0:04", "0:08", "0:16", "0:32", "1:00", "2:00", "4:00", "8:00",
-        ]
-        .iter()
-        .map(|s| s.to_string())
-        .collect::<Vec<_>>();
+        ]);
         assert_eq!(output, Solution::read_binary_watch(turned_on));
     }
 

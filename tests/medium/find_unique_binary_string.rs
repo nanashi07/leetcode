@@ -27,13 +27,11 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::find_unique_binary_string::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_find_different_binary_string_1() {
-        let nums = ["01", "10"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let nums = to_string_vec(["01", "10"]);
         assert_eq!(
             "11".to_string(),
             Solution::find_different_binary_string(nums)
@@ -42,10 +40,7 @@ mod tests {
 
     #[test]
     fn test_find_different_binary_string_2() {
-        let nums = ["00", "01"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let nums = to_string_vec(["00", "01"]);
         assert_eq!(
             "11".to_string(),
             Solution::find_different_binary_string(nums)
@@ -54,10 +49,7 @@ mod tests {
 
     #[test]
     fn test_find_different_binary_string_3() {
-        let nums = ["111", "011", "001"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let nums = to_string_vec(["111", "011", "001"]);
         assert_eq!(
             "101".to_string(),
             Solution::find_different_binary_string(nums)

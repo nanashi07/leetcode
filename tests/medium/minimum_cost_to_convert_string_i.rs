@@ -64,19 +64,14 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::minimum_cost_to_convert_string_i::Solution;
+    use crate::shared::vec2d::to_char_vec;
 
     #[test]
     fn test_minimum_cost_1() {
         let source = "abcd".to_string();
         let target = "acbe".to_string();
-        let original = ["a", "b", "c", "c", "e", "d"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
-        let changed = ["b", "c", "b", "e", "b", "e"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
+        let original = to_char_vec(["a", "b", "c", "c", "e", "d"]);
+        let changed = to_char_vec(["b", "c", "b", "e", "b", "e"]);
         let cost = [2, 5, 5, 1, 2, 20].to_vec();
         assert_eq!(
             28,
@@ -88,14 +83,8 @@ mod tests {
     fn test_minimum_cost_2() {
         let source = "aaaa".to_string();
         let target = "bbbb".to_string();
-        let original = ["a", "c"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
-        let changed = ["c", "b"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
+        let original = to_char_vec(["a", "c"]);
+        let changed = to_char_vec(["c", "b"]);
         let cost = [1, 2].to_vec();
         assert_eq!(
             12,
@@ -107,14 +96,8 @@ mod tests {
     fn test_minimum_cost_3() {
         let source = "abcd".to_string();
         let target = "abce".to_string();
-        let original = ["a"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
-        let changed = ["e"]
-            .iter()
-            .map(|c| c.chars().next().unwrap())
-            .collect::<Vec<_>>();
+        let original = to_char_vec(["a"]);
+        let changed = to_char_vec(["e"]);
         let cost = [10000].to_vec();
         assert_eq!(
             -1,

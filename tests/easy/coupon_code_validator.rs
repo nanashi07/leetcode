@@ -52,22 +52,14 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::easy::coupon_code_validator::Solution;
+    use crate::shared::vec2d::to_string_vec;
 
     #[test]
     fn test_validate_coupons_1() {
-        let code = ["SAVE20", "", "PHARMA5", "SAVE@20"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
-        let business_line = ["restaurant", "grocery", "pharmacy", "restaurant"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let code = to_string_vec(["SAVE20", "", "PHARMA5", "SAVE@20"]);
+        let business_line = to_string_vec(["restaurant", "grocery", "pharmacy", "restaurant"]);
         let is_active = [true, true, true, true].to_vec();
-        let output = ["PHARMA5", "SAVE20"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let output = to_string_vec(["PHARMA5", "SAVE20"]);
         assert_eq!(
             output,
             Solution::validate_coupons(code, business_line, is_active)
@@ -76,19 +68,10 @@ mod tests {
 
     #[test]
     fn test_validate_coupons_2() {
-        let code = ["GROCERY15", "ELECTRONICS_50", "DISCOUNT10"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
-        let business_line = ["grocery", "electronics", "invalid"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let code = to_string_vec(["GROCERY15", "ELECTRONICS_50", "DISCOUNT10"]);
+        let business_line = to_string_vec(["grocery", "electronics", "invalid"]);
         let is_active = [false, true, true].to_vec();
-        let output = ["ELECTRONICS_50"]
-            .iter()
-            .map(|s| s.to_string())
-            .collect::<Vec<_>>();
+        let output = to_string_vec(["ELECTRONICS_50"]);
         assert_eq!(
             output,
             Solution::validate_coupons(code, business_line, is_active)
