@@ -106,6 +106,8 @@ mod minimum_operations_to_make_array_elements_zero;
 mod minimum_pair_removal_to_sort_array_ii;
 // 3539. Find Sum of Array Product of Magical Sequences
 mod find_sum_of_array_product_of_magical_sequences;
+// 3548. Equal Sum Grid Partition II
+pub mod equal_sum_grid_partition_ii;
 // 3562. Maximum Profit from Trading Stocks with Discounts
 mod maximum_profit_from_trading_stocks_with_discounts;
 // 3600. Maximize Spanning Tree Stability with Upgrades
