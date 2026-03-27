@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn are_similar(mat: Vec<Vec<i32>>, k: i32) -> bool {
-        todo!()
+        for i in 0..mat.len() {
+            let l = mat[i].len() as i32;
+            let k = k % l;
+            for j in 0..mat[i].len() {
+                let j2 = if i % 2 == 0 {
+                    let j = j as i32 - k;
+                    if j < 0 {
+                        j + l
+                    } else {
+                        j
+                    }
+                } else {
+                    let j = j as i32 + k;
+                    if j < l {
+                        j
+                    } else {
+                        j - l
+                    }
+                };
+                if mat[i][j] != mat[i][j2 as usize] {
+                    return false;
+                }
+            }
+        }
+
+        true
     }
 }
 
