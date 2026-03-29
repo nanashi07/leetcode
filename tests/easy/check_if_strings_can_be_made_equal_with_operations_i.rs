@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn can_be_equal(s1: String, s2: String) -> bool {
-        todo!()
+        let mut s1 = s1;
+
+        for i in 0..s1.len() - 2 {
+            let j = i + 2;
+            if &s1[i..=i] != &s2[i..=i] {
+                if &s1[i..=i] != &s2[j..=j] {
+                    return false;
+                }
+                let p1 = s1[i..=i].to_string();
+                s1.replace_range(i..=i, &s2[j..=j]);
+                s1.replace_range(j..=j, &p1);
+            }
+        }
+
+        true
     }
 }
 
