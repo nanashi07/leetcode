@@ -5,7 +5,50 @@ struct Solution;
 
 impl Solution {
     pub fn find_the_string(lcp: Vec<Vec<i32>>) -> String {
-        todo!();
+        let n = lcp.len();
+        let mut chars = vec![0u8; n]; // 0 = unassigned, 1..=26 maps to 'a'..'z'
+        let mut next_char = 1u8;
+
+        // Greedy assignment: lcp[i][j] > 0 implies s[i] == s[j]
+        for i in 0..n {
+            for j in 0..i {
+                if lcp[i][j] > 0 {
+                    if chars[i] == 0 {
+                        chars[i] = chars[j];
+                    } else if chars[i] != chars[j] {
+                        return String::new();
+                    }
+                }
+            }
+            if chars[i] == 0 {
+                if next_char > 26 {
+                    return String::new();
+                }
+                chars[i] = next_char;
+                next_char += 1;
+            }
+        }
+
+        // Validate: compute the true LCP from the constructed string (O(n²) DP)
+        // computed[i][j] = lcp of suffix starting at i and j
+        let mut computed = vec![vec![0i32; n]; n];
+        for i in (0..n).rev() {
+            for j in (0..n).rev() {
+                if chars[i] == chars[j] {
+                    computed[i][j] = if i + 1 < n && j + 1 < n {
+                        computed[i + 1][j + 1] + 1
+                    } else {
+                        1
+                    };
+                }
+            }
+        }
+
+        if computed != lcp {
+            return String::new();
+        }
+
+        chars.iter().map(|&c| (b'a' + c - 1) as char).collect()
     }
 }
 
