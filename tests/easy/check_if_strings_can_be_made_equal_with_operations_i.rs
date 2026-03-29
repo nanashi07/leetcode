@@ -9,17 +9,18 @@ impl Solution {
 
         for i in 0..s1.len() - 2 {
             let j = i + 2;
-            if &s1[i..=i] != &s2[i..=i] {
-                if &s1[i..=i] != &s2[j..=j] {
+            let p1 = s1[i..=i].to_string();
+            let p2 = s1[j..=j].to_string();
+            if &p1 != &s2[i..=i] {
+                if &p1 != &s2[j..=j] {
                     return false;
                 }
-                let p1 = s1[i..=i].to_string();
-                s1.replace_range(i..=i, &s2[j..=j]);
+                s1.replace_range(i..=i, &p2);
                 s1.replace_range(j..=j, &p1);
             }
         }
 
-        true
+        s1 == s2
     }
 }
 
@@ -38,6 +39,13 @@ mod tests {
     fn test_can_be_equal_2() {
         let s1 = "abcd".to_string();
         let s2 = "dacb".to_string();
+        assert_eq!(false, Solution::can_be_equal(s1, s2));
+    }
+
+    #[test]
+    fn test_can_be_equal_3() {
+        let s1 = "cmpr".to_string();
+        let s2 = "rmcp".to_string();
         assert_eq!(false, Solution::can_be_equal(s1, s2));
     }
 }
