@@ -293,6 +293,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2435. Paths in Matrix Whose Sum Is Divisible by K](https://leetcode.com/problems/paths-in-matrix-whose-sum-is-divisible-by-k/)
 - [2528. Maximize the Minimum Powered City](https://leetcode.com/problems/maximize-the-minimum-powered-city/)
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)
+- [2573. Find the String with LCP](https://leetcode.com/problems/find-the-string-with-lcp/)
 - [2872. Maximum Number of K-Divisible Components](https://leetcode.com/problems/maximum-number-of-k-divisible-components/)
 - [2977. Minimum Cost to Convert String II](https://leetcode.com/problems/minimum-cost-to-convert-string-ii/)
 - [3003. Maximize the Number of Partitions After Operations](https://leetcode.com/problems/maximize-the-number-of-partitions-after-operations/)
