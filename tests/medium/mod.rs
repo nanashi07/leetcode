@@ -206,6 +206,8 @@ mod minimum_operations_to_make_the_integer_zero;
 mod sort_vowels_in_a_string;
 // 2787. Ways to Express an Integer as Sum of Powers
 mod ways_to_express_an_integer_as_sum_of_powers;
+// 2840. Check if Strings Can be Made Equal With Operations II
+pub mod check_if_strings_can_be_made_equal_with_operations_ii;
 // 2906. Construct Product Matrix
 pub mod construct_product_matrix;
 // 2943. Maximize Area of Square Hole in Grid
