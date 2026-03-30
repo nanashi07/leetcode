@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn check_strings(s1: String, s2: String) -> bool {
-        todo!()
+        let mut even = [0i32; 26];
+        let mut odd = [0i32; 26];
+        for (i, (a, b)) in s1.bytes().zip(s2.bytes()).enumerate() {
+            let (a, b) = ((a - b'a') as usize, (b - b'a') as usize);
+            if i % 2 == 0 {
+                even[a] += 1;
+                even[b] -= 1;
+            } else {
+                odd[a] += 1;
+                odd[b] -= 1;
+            }
+        }
+        even.iter().all(|&x| x == 0) && odd.iter().all(|&x| x == 0)
     }
 }
 
