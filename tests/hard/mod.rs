@@ -100,6 +100,8 @@ mod find_the_maximum_number_of_fruits_collected;
 mod separate_squares_ii;
 // 3459. Length of Longest V-Shaped Diagonal Segment
 mod length_of_longest_v_shaped_diagonal_segment;
+// 3474. Lexicographically Smallest Generated String
+pub mod lexicographically_smallest_generated_string;
 // 3480. Maximize Subarrays After Removing One Conflicting Pair
 mod maximize_subarrays_after_removing_one_conflicting_pair;
 // 3495. Minimum Operations to Make Array Elements Zero
