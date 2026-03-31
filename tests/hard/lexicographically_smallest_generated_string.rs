@@ -5,7 +5,47 @@ struct Solution;
 
 impl Solution {
     pub fn generate_string(str1: String, str2: String) -> String {
-        todo!()
+        let n1 = str1.len();
+        let n2 = str2.len();
+        let n = n1 + n2 - 1;
+
+        let s1: Vec<u8> = str1.bytes().collect();
+        let s2: Vec<u8> = str2.bytes().collect();
+
+        let mut result: Vec<u8> = vec![b'a'; n];
+        let mut constrained = vec![false; n];
+
+        // Apply T constraints: force result[i..i+n2] == str2
+        for i in 0..n1 {
+            if s1[i] == b'T' {
+                for j in 0..n2 {
+                    let pos = i + j;
+                    if constrained[pos] && result[pos] != s2[j] {
+                        return String::new(); // Conflict between two T windows
+                    }
+                    result[pos] = s2[j];
+                    constrained[pos] = true;
+                }
+            }
+        }
+
+        // Fix F constraints left-to-right: result[i..i+n2] must != str2
+        for i in 0..n1 {
+            if s1[i] == b'F' {
+                // Check if current window equals str2
+                let window_matches = (0..n2).all(|j| result[i + j] == s2[j]);
+                if window_matches {
+                    // Find the rightmost unconstrained position in [i, i+n2)
+                    // (unconstrained positions have str2[j-i]='a', so fix is always 'b')
+                    match (0..n2).rev().find(|&j| !constrained[i + j]) {
+                        None => return String::new(), // All constrained, impossible to fix
+                        Some(j) => result[i + j] = b'b',
+                    }
+                }
+            }
+        }
+
+        String::from_utf8(result).unwrap()
     }
 }
 
