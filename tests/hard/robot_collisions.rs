@@ -9,7 +9,56 @@ impl Solution {
         healths: Vec<i32>,
         directions: String,
     ) -> Vec<i32> {
-        todo!()
+        let n = positions.len();
+        let dirs: Vec<u8> = directions.into_bytes();
+        // sort indices by position
+        let mut order: Vec<usize> = (0..n).collect();
+        order.sort_unstable_by_key(|&i| positions[i]);
+
+        let mut healths = healths;
+        // stack holds indices (in position order) of rightward robots still alive
+        let mut stack: Vec<usize> = Vec::with_capacity(n);
+
+        for &i in &order {
+            if dirs[i] == b'R' {
+                stack.push(i);
+            } else {
+                // moving left: collide with rightward robots on stack
+                let mut alive = true;
+                while let Some(&top) = stack.last() {
+                    if dirs[top] == b'L' {
+                        break;
+                    }
+                    // top is moving R, current (i) is moving L
+                    match healths[top].cmp(&healths[i]) {
+                        std::cmp::Ordering::Greater => {
+                            healths[top] -= 1;
+                            healths[i] = 0;
+                            alive = false;
+                            break;
+                        }
+                        std::cmp::Ordering::Less => {
+                            healths[top] = 0;
+                            healths[i] -= 1;
+                            stack.pop();
+                        }
+                        std::cmp::Ordering::Equal => {
+                            healths[top] = 0;
+                            healths[i] = 0;
+                            stack.pop();
+                            alive = false;
+                            break;
+                        }
+                    }
+                }
+                if alive {
+                    stack.push(i);
+                }
+            }
+        }
+
+        // collect survivors in original index order
+        (0..n).filter_map(|i| if healths[i] > 0 { Some(healths[i]) } else { None }).collect()
     }
 }
 
