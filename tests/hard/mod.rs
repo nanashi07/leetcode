@@ -72,6 +72,8 @@ mod maximize_the_minimum_powered_city;
 mod rearranging_fruits;
 // 2573. Find the String with LCP
 pub mod find_the_string_with_lcp;
+// 2751. Robot Collisions
+pub mod robot_collisions;
 // 2872. Maximum Number of K-Divisible Components
 mod maximum_number_of_k_divisible_components;
 // 2977. Minimum Cost to Convert String II
