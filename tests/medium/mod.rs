@@ -264,6 +264,8 @@ mod maximum_subarray_sum_with_length_divisible_by_k;
 mod maximum_number_of_distinct_elements_after_operations;
 // 3408. Design Task Manager
 mod design_task_manager;
+// 3418. Maximum Amount of Money Robot Can Earn
+pub mod maximum_amount_of_money_robot_can_earn;
 // 3433. Count Mentions Per User
 mod count_mentions_per_user;
 // 3439. Reschedule Meetings for Maximum Free Time I
