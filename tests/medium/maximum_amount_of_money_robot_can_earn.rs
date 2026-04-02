@@ -5,7 +5,56 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_amount(coins: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let m = coins.len();
+        let n = coins[0].len();
+        const NEG_INF: i32 = i32::MIN / 2;
+
+        // dp[i][j][k] = max coins collectible at cell (i,j) having used k neutralizations
+        let mut dp = vec![vec![[NEG_INF; 3]; n]; m];
+
+        let apply = |dp: &mut Vec<Vec<[i32; 3]>>, i: usize, j: usize, prev: i32, k: usize| {
+            let v = coins[i][j];
+            dp[i][j][k] = dp[i][j][k].max(prev + v);
+            if v < 0 && k < 2 {
+                dp[i][j][k + 1] = dp[i][j][k + 1].max(prev);
+            }
+        };
+
+        dp[0][0][0] = coins[0][0];
+        if coins[0][0] < 0 {
+            dp[0][0][1] = 0;
+        }
+
+        for j in 1..n {
+            for k in 0..3 {
+                let prev = dp[0][j - 1][k];
+                if prev != NEG_INF {
+                    apply(&mut dp, 0, j, prev, k);
+                }
+            }
+        }
+
+        for i in 1..m {
+            for k in 0..3 {
+                let prev = dp[i - 1][0][k];
+                if prev != NEG_INF {
+                    apply(&mut dp, i, 0, prev, k);
+                }
+            }
+        }
+
+        for i in 1..m {
+            for j in 1..n {
+                for k in 0..3 {
+                    let best = dp[i - 1][j][k].max(dp[i][j - 1][k]);
+                    if best != NEG_INF {
+                        apply(&mut dp, i, j, best, k);
+                    }
+                }
+            }
+        }
+
+        *dp[m - 1][n - 1].iter().max().unwrap()
     }
 }
 
