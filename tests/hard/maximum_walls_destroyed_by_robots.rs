@@ -5,7 +5,34 @@ struct Solution;
 
 impl Solution {
     pub fn max_walls(robots: Vec<i32>, distance: Vec<i32>, walls: Vec<i32>) -> i32 {
-        todo!()
+        let n = robots.len();
+        let mut robots_dist: Vec<(i64, i64)> = robots
+            .iter()
+            .zip(distance.iter())
+            .map(|(&r, &d)| (r as i64, d as i64))
+            .collect();
+        robots_dist.sort_unstable_by_key(|&(r, _)| r);
+
+        // suffix_min[i] = min(robots_dist[j].0 - robots_dist[j].1) for j in [i, n)
+        // A robot at position r with distance d covers walls in [r-d, r]
+        // A wall w is reachable if there exists a robot with pos >= w and pos-dist <= w
+        let mut suffix_min = vec![i64::MAX; n + 1];
+        for i in (0..n).rev() {
+            let (r, d) = robots_dist[i];
+            suffix_min[i] = suffix_min[i + 1].min(r - d);
+        }
+
+        let mut count = 0i32;
+        for &w in &walls {
+            let w = w as i64;
+            // Find first robot index with position >= w
+            let j = robots_dist.partition_point(|&(r, _)| r < w);
+            // Check if any robot from index j onward can reach w (pos-dist <= w)
+            if suffix_min[j] <= w {
+                count += 1;
+            }
+        }
+        count
     }
 }
 
