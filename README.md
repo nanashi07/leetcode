@@ -323,6 +323,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3625. Count Number of Trapezoids II](https://leetcode.com/problems/count-number-of-trapezoids-ii/)
 - [3640. Trionic Array II](https://leetcode.com/problems/trionic-array-ii/)
 - [3651. Minimum Cost Path with Teleportations](https://leetcode.com/problems/minimum-cost-path-with-teleportations/)
+- [3661. Maximum Walls Destroyed by Robots](https://leetcode.com/problems/maximum-walls-destroyed-by-robots/)
 - [3666. Minimum Operations to Equalize Binary String](https://leetcode.com/problems/minimum-operations-to-equalize-binary-string/)
 - [3721. Longest Balanced Subarray II](https://leetcode.com/problems/longest-balanced-subarray-ii/)
 
