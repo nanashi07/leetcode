@@ -5,7 +5,27 @@ struct Solution;
 
 impl Solution {
     pub fn decode_ciphertext(encoded_text: String, rows: i32) -> String {
-        todo!()
+        let rows = rows as usize;
+        let n = encoded_text.len();
+        let cols = n / rows;
+        let bytes = encoded_text.as_bytes();
+
+        let mut result = Vec::with_capacity(n);
+
+        for d in 0..(rows + cols - 1) {
+            let (mut r, mut c) = if d < cols { (0, d) } else { (d - cols + 1, 0) };
+            while r < rows && c < cols {
+                result.push(bytes[r * cols + c]);
+                r += 1;
+                c += 1;
+            }
+        }
+
+        while result.last() == Some(&b' ') {
+            result.pop();
+        }
+
+        String::from_utf8(result).unwrap()
     }
 }
 
