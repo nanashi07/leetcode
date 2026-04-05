@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn judge_circle(moves: String) -> bool {
-        todo!()
+        println!("moves: {moves}");
+
+        let mut h = 0;
+        let mut v = 0;
+        for c in moves.chars() {
+            match c {
+                'L' => h -= 1,
+                'R' => h += 1,
+                'U' => v += 1,
+                'D' => v -= 1,
+                _ => {}
+            }
+        }
+        h == 0 && v == 0
     }
 }
 
