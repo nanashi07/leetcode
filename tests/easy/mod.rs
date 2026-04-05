@@ -38,6 +38,8 @@ mod power_of_four;
 mod binary_watch;
 // 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
+// 657. Robot Return to Origin
+pub mod robot_return_to_origin;
 // 693. Binary Number with Alternating Bits
 mod binary_number_with_alternating_bits;
 // 696. Count Binary Substrings
