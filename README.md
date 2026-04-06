@@ -134,6 +134,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [840. Magic Squares In Grid](https://leetcode.com/problems/magic-squares-in-grid/)
 - [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 - [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
+- [874. Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/)
 - [898. Bitwise ORs of Subarrays](https://leetcode.com/problems/bitwise-ors-of-subarrays/)
 - [904. Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/)
 - [912. Sort an Array](https://leetcode.com/problems/sort-an-array/)
