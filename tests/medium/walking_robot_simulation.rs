@@ -1,11 +1,45 @@
 // 874. Walking Robot Simulation
 // https://leetcode.com/problems/walking-robot-simulation/
 
+use std::collections::HashSet;
+
 struct Solution;
 
 impl Solution {
     pub fn robot_sim(commands: Vec<i32>, obstacles: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let obstacle_set: HashSet<(i32, i32)> = obstacles
+            .iter()
+            .map(|o| (o[0], o[1]))
+            .collect();
+
+        // Directions: N, E, S, W
+        let dirs: [(i32, i32); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];
+        let mut dir = 0usize;
+        let (mut x, mut y) = (0i32, 0i32);
+        let mut max_dist = 0i32;
+
+        for cmd in commands {
+            match cmd {
+                -2 => dir = (dir + 3) % 4, // turn left
+                -1 => dir = (dir + 1) % 4, // turn right
+                steps => {
+                    let (dx, dy) = dirs[dir];
+                    for _ in 0..steps {
+                        let nx = x + dx;
+                        let ny = y + dy;
+                        if !obstacle_set.contains(&(nx, ny)) {
+                            x = nx;
+                            y = ny;
+                            max_dist = max_dist.max(x * x + y * y);
+                        } else {
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
+        max_dist
     }
 }
 
