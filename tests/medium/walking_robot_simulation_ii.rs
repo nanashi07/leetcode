@@ -1,27 +1,64 @@
 // 2069. Walking Robot Simulation II
 // https://leetcode.com/problems/walking-robot-simulation-ii/
 
-struct Robot {}
+use std::cell::Cell;
 
-/**
- * `&self` means the method takes an immutable reference.
- * If you need a mutable reference, change it to `&mut self` instead.
- */
+struct Robot {
+    width: i32,
+    height: i32,
+    perimeter: i32,
+    offset: Cell<i32>,
+    moved: Cell<bool>,
+}
+
 impl Robot {
     fn new(width: i32, height: i32) -> Self {
-        todo!()
+        Robot {
+            width,
+            height,
+            perimeter: 2 * (width - 1) + 2 * (height - 1),
+            offset: Cell::new(0),
+            moved: Cell::new(false),
+        }
     }
 
     fn step(&self, num: i32) {
-        todo!()
+        self.offset.set((self.offset.get() + num) % self.perimeter);
+        self.moved.set(true);
     }
 
     fn get_pos(&self) -> Vec<i32> {
-        todo!()
+        let off = self.offset.get();
+        let w = self.width;
+        let h = self.height;
+        if off <= w - 1 {
+            vec![off, 0]
+        } else if off <= w - 1 + h - 1 {
+            vec![w - 1, off - (w - 1)]
+        } else if off <= 2 * (w - 1) + h - 1 {
+            vec![w - 1 - (off - (w - 1) - (h - 1)), h - 1]
+        } else {
+            vec![0, h - 1 - (off - 2 * (w - 1) - (h - 1))]
+        }
     }
 
     fn get_dir(&self) -> String {
-        todo!()
+        if !self.moved.get() {
+            return "East".to_string();
+        }
+        let off = self.offset.get();
+        let w = self.width;
+        let h = self.height;
+        if off > 0 && off <= w - 1 {
+            "East"
+        } else if off > w - 1 && off <= w - 1 + h - 1 {
+            "North"
+        } else if off > w - 1 + h - 1 && off <= 2 * (w - 1) + h - 1 {
+            "West"
+        } else {
+            "South"
+        }
+        .to_string()
     }
 }
 
