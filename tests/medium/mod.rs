@@ -316,6 +316,8 @@ mod minimum_removals_to_balance_array;
 mod minimum_cost_path_with_edge_reversals;
 // 3652. Best Time to Buy and Sell Stock using Strategy
 mod best_time_to_buy_and_sell_stock_using_strategy;
+// 3653. XOR After Range Multiplication Queries I
+pub mod xor_after_range_multiplication_queries_i;
 // 3713. Longest Balanced Substring I
 mod longest_balanced_substring_i;
 // 3714. Longest Balanced Substring II
