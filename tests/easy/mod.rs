@@ -178,3 +178,5 @@ mod coupon_code_validator;
 mod trionic_array_i;
 // 3643. Flip Square Submatrix Vertically
 pub mod flip_square_submatrix_vertically;
+// 3740. Minimum Distance Between Three Equal Elements I
+pub mod minimum_distance_between_three_equal_elements_i;
