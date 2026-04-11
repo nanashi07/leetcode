@@ -324,3 +324,5 @@ mod longest_balanced_substring_i;
 mod longest_balanced_substring_ii;
 // 3719. Longest Balanced Subarray I
 mod longest_balanced_subarray_i;
+// 3741. Minimum Distance Between Three Equal Elements II
+pub mod minimum_distance_between_three_equal_elements_ii;

@@ -263,6 +263,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3713. Longest Balanced Substring I](https://leetcode.com/problems/longest-balanced-substring-i/)
 - [3714. Longest Balanced Substring II](https://leetcode.com/problems/longest-balanced-substring-ii/)
 - [3719. Longest Balanced Subarray I](https://leetcode.com/problems/longest-balanced-subarray-i/)
+- [3741. Minimum Distance Between Three Equal Elements II](https://leetcode.com/problems/minimum-distance-between-three-equal-elements-ii/)
 
 ### Hard Problems
 
