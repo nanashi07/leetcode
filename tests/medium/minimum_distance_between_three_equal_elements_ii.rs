@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_distance(nums: Vec<i32>) -> i32 {
-        todo!()
+        use std::collections::HashMap;
+        let mut map: HashMap<i32, Vec<usize>> = HashMap::new();
+        for (i, &v) in nums.iter().enumerate() {
+            map.entry(v).or_default().push(i);
+        }
+        let mut ans = i32::MAX;
+        for indices in map.values() {
+            if indices.len() >= 3 {
+                for w in indices.windows(3) {
+                    ans = ans.min(2 * (w[2] - w[0]) as i32);
+                }
+            }
+        }
+        if ans == i32::MAX { -1 } else { ans }
     }
 }
 
