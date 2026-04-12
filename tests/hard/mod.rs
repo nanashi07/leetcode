@@ -26,6 +26,8 @@ mod special_binary_string;
 mod swim_in_rising_water;
 // 960. Delete Columns to Make Sorted III
 mod delete_columns_to_make_sorted_iii;
+// 1320. Minimum Distance to Type a Word Using Two Fingers
+pub mod minimum_distance_to_type_a_word_using_two_fingers;
 // 1411. Number of Ways to Paint N × 3 Grid
 mod number_of_ways_to_paint_n_3_grid;
 // 1439. Find the Kth Smallest Sum of a Matrix With Sorted Rows
