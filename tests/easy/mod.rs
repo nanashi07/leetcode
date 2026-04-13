@@ -98,6 +98,8 @@ mod calculate_money_in_leetcode_bank;
 pub mod minimum_changes_to_make_alternating_binary_string;
 // 1784. Check if Binary String Has at Most One Segment of Ones
 pub mod check_if_binary_string_has_at_most_one_segment_of_ones;
+// 1848. Minimum Distance to the Target Element
+pub mod minimum_distance_to_the_target_element;
 // 1886. Determine Whether Matrix Can Be Obtained By Rotation
 pub mod determine_whether_matrix_can_be_obtained_by_rotation;
 // 1925. Count Square Sum Triples
