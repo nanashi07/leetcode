@@ -68,6 +68,8 @@ mod minimum_score_after_removals_on_a_tree;
 mod meeting_rooms_iii;
 // 2435. Paths in Matrix Whose Sum Is Divisible by K
 mod paths_in_matrix_whose_sum_is_divisible_by_k;
+// 2463. Minimum Total Distance Traveled
+pub mod minimum_total_distance_traveled;
 // 2528. Maximize the Minimum Powered City
 mod maximize_the_minimum_powered_city;
 // 2561. Rearranging Fruits
