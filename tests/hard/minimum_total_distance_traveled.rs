@@ -4,8 +4,39 @@
 struct Solution;
 
 impl Solution {
-    pub fn minimum_total_distance(robot: Vec<i32>, factory: Vec<Vec<i32>>) -> i64 {
-        todo!()
+    pub fn minimum_total_distance(mut robot: Vec<i32>, mut factory: Vec<Vec<i32>>) -> i64 {
+        robot.sort();
+        factory.sort();
+
+        // Flatten factories: each factory position repeated by its limit
+        let facts: Vec<i64> = factory
+            .iter()
+            .flat_map(|f| std::iter::repeat(f[0] as i64).take(f[1] as usize))
+            .collect();
+
+        let n = robot.len();
+        let m = facts.len();
+
+        // dp[j] = min cost to assign robots[0..i] using flattened factories[0..j]
+        let mut dp = vec![i64::MAX; m + 1];
+        dp[0] = 0; // 0 robots assigned, 0 factories used
+
+        for i in 1..=n {
+            // Traverse j from right to left so we don't overwrite values we still need
+            let mut new_dp = vec![i64::MAX; m + 1];
+            for j in i..=m {
+                // Option 1: skip factory j (don't assign robot i to factory j)
+                new_dp[j] = new_dp[j - 1];
+                // Option 2: assign robot i to factory j
+                if dp[j - 1] != i64::MAX {
+                    let cost = dp[j - 1] + (robot[i - 1] as i64 - facts[j - 1]).abs();
+                    new_dp[j] = new_dp[j].min(cost);
+                }
+            }
+            dp = new_dp;
+        }
+
+        dp[m]
     }
 }
 
