@@ -303,6 +303,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2322. Minimum Score After Removals on a Tree](https://leetcode.com/problems/minimum-score-after-removals-on-a-tree/)
 - [2402. Meeting Rooms III](https://leetcode.com/problems/meeting-rooms-iii/)
 - [2435. Paths in Matrix Whose Sum Is Divisible by K](https://leetcode.com/problems/paths-in-matrix-whose-sum-is-divisible-by-k/)
+- [2463. Minimum Total Distance Traveled](https://leetcode.com/problems/minimum-total-distance-traveled/)
 - [2528. Maximize the Minimum Powered City](https://leetcode.com/problems/maximize-the-minimum-powered-city/)
 - [2561. Rearranging Fruits](https://leetcode.com/problems/rearranging-fruits/)
 - [2573. Find the String with LCP](https://leetcode.com/problems/find-the-string-with-lcp/)
