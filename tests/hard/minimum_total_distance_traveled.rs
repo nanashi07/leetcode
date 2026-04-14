@@ -18,8 +18,8 @@ impl Solution {
         let m = facts.len();
 
         // dp[j] = min cost to assign robots[0..i] using flattened factories[0..j]
-        let mut dp = vec![i64::MAX; m + 1];
-        dp[0] = 0; // 0 robots assigned, 0 factories used
+        // 0 robots assigned using any number of factory slots costs 0
+        let mut dp = vec![0i64; m + 1];
 
         for i in 1..=n {
             // Traverse j from right to left so we don't overwrite values we still need
@@ -57,5 +57,22 @@ mod tests {
         let robot = [1, -1].to_vec();
         let factory = to_vec2d([[-2, 1], [2, 1]]);
         assert_eq!(2, Solution::minimum_total_distance(robot, factory));
+    }
+
+    #[test]
+    fn test_minimum_total_distance_3() {
+        let robot = [726554621, -235727278, -199823369].to_vec();
+        let factory = to_vec2d([
+            [612684362, 1],
+            [519972143, 1],
+            [759430060, 2],
+            [-76130291, 1],
+            [547454631, 2],
+            [47263647, 2],
+            [-79806151, 2],
+            [-329855292, 0],
+            [-954058831, 3],
+        ]);
+        assert_eq!(308813784, Solution::minimum_total_distance(robot, factory));
     }
 }
