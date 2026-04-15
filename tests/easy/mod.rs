@@ -124,6 +124,8 @@ mod count_hills_and_valleys_in_an_array;
 mod largest_3_same_digit_number_in_string;
 // 2273. Find Resultant Array After Removing Anagrams
 mod find_resultant_array_after_removing_anagrams;
+// 2515. Shortest Distance to Target String in a Circular Array
+pub mod shortest_distance_to_target_string_in_a_circular_array;
 // 2839. Check if Strings Can be Made Equal With Operations I
 pub mod check_if_strings_can_be_made_equal_with_operations_i;
 // 2946. Matrix Similarity After Cyclic Shifts
