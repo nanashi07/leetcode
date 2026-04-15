@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn closest_target(words: Vec<String>, target: String, start_index: i32) -> i32 {
-        todo!()
+        let len = words.len() as i32;
+        let mut move_left = -1;
+        let mut move_right = -1;
+        for i in 0..len as i32 {
+            let index_left = (start_index - i + len) % len;
+            let index_right = (start_index + i) % len;
+            if move_left < 0 && target == words[index_left as usize] {
+                move_left = i;
+            }
+            if move_right < 0 && target == words[index_right as usize] {
+                move_right = i;
+            }
+        }
+
+        move_left.min(move_right)
     }
 }
 
