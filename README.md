@@ -246,6 +246,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3453. Separate Squares I](https://leetcode.com/problems/separate-squares-i/)
 - [3479. Fruits Into Baskets III](https://leetcode.com/problems/fruits-into-baskets-iii/)
 - [3484. Design Spreadsheet](https://leetcode.com/problems/design-spreadsheet/)
+- [3488. Closest Equal Element Queries](https://leetcode.com/problems/closest-equal-element-queries/)
 - [3494. Find the Minimum Amount of Time to Brew Potions](https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions/)
 - [3508. Implement Router](https://leetcode.com/problems/implement-router/)
 - [3531. Count Covered Buildings](https://leetcode.com/problems/count-covered-buildings/)
