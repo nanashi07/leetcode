@@ -5,7 +5,39 @@ struct Solution;
 
 impl Solution {
     pub fn solve_queries(nums: Vec<i32>, queries: Vec<i32>) -> Vec<i32> {
-        todo!()
+        use std::collections::HashMap;
+
+        let n = nums.len();
+        // Group indices by value
+        let mut indices: HashMap<i32, Vec<usize>> = HashMap::new();
+        for (i, &v) in nums.iter().enumerate() {
+            indices.entry(v).or_default().push(i);
+        }
+
+        queries
+            .iter()
+            .map(|&q| {
+                let q = q as usize;
+                let val = nums[q];
+                let idx_list = &indices[&val];
+                if idx_list.len() < 2 {
+                    return -1;
+                }
+                // Binary search for q in the sorted index list
+                let pos = idx_list.partition_point(|&x| x < q);
+                let len = idx_list.len();
+                // pos should point to q; check circular prev and next
+                let prev = idx_list[(pos + len - 1) % len];
+                let next = idx_list[(pos + 1) % len];
+                let mut min_dist = i32::MAX;
+                for &neighbor in &[prev, next] {
+                    let diff = (q as i32 - neighbor as i32).unsigned_abs() as usize;
+                    let circ = diff.min(n - diff);
+                    min_dist = min_dist.min(circ as i32);
+                }
+                min_dist
+            })
+            .collect()
     }
 }
 
