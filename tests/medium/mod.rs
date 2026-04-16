@@ -286,6 +286,8 @@ mod separate_squares_i;
 mod fruits_into_baskets_iii;
 // 3484. Design Spreadsheet
 mod design_spreadsheet;
+// 3488. Closest Equal Element Queries
+pub mod closest_equal_element_queries;
 // 3494. Find the Minimum Amount of Time to Brew Potions
 mod find_the_minimum_amount_of_time_to_brew_potions;
 // 3508. Implement Router
