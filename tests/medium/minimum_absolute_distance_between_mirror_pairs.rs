@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn min_mirror_pair_distance(nums: Vec<i32>) -> i32 {
-        todo!()
+        use std::collections::HashMap;
+
+        fn reverse(mut n: i32) -> i32 {
+            let mut rev = 0;
+            while n > 0 {
+                rev = rev * 10 + n % 10;
+                n /= 10;
+            }
+            rev
+        }
+
+        // Map from reverse-value to the latest index where it was seen
+        let mut map: HashMap<i32, usize> = HashMap::new();
+        let mut min_dist = i32::MAX;
+
+        for (j, &num) in nums.iter().enumerate() {
+            if let Some(&i) = map.get(&num) {
+                min_dist = min_dist.min((j - i) as i32);
+            }
+            map.insert(reverse(num), j);
+        }
+
+        if min_dist == i32::MAX { -1 } else { min_dist }
     }
 }
 
