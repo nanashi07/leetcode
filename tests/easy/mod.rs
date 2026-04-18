@@ -184,3 +184,5 @@ mod trionic_array_i;
 pub mod flip_square_submatrix_vertically;
 // 3740. Minimum Distance Between Three Equal Elements I
 pub mod minimum_distance_between_three_equal_elements_i;
+// 3783. Mirror Distance of an Integer
+pub mod mirror_distance_of_an_integer;

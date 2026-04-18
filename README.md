@@ -99,6 +99,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3637. Trionic Array I](https://leetcode.com/problems/trionic-array-i/)
 - [3643. Flip Square Submatrix Vertically](https://leetcode.com/problems/flip-square-submatrix-vertically/)
 - [3740. Minimum Distance Between Three Equal Elements I](https://leetcode.com/problems/minimum-distance-between-three-equal-elements-i/)
+- [3783. Mirror Distance of an Integer](https://leetcode.com/problems/mirror-distance-of-an-integer/)
 
 ### Medium Problems
 
