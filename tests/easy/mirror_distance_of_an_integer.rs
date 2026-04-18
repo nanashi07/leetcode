@@ -5,7 +5,17 @@ struct Solution;
 
 impl Solution {
     pub fn mirror_distance(n: i32) -> i32 {
-        todo!()
+        let n = n.to_string().chars().collect::<Vec<_>>();
+        let len = n.len();
+
+        let mut v = 0;
+        for i in 0..len {
+            let c1 = n[i] as i32;
+            let c2 = n[len - 1 - i] as i32;
+            v += (c1 - c2) * 10i32.pow(len as u32 - i as u32 - 1);
+        }
+
+        v.abs()
     }
 }
 
