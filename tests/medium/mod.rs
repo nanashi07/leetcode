@@ -144,6 +144,8 @@ mod maximum_score_from_removing_substrings;
 pub mod largest_submatrix_with_rearrangements;
 // 1792. Maximum Average Pass Ratio
 mod maximum_average_pass_ratio;
+// 1855. Maximum Distance Between a Pair of Values
+pub mod maximum_distance_between_a_pair_of_values;
 // 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
 // 1877. Minimize Maximum Pair Sum in Array
