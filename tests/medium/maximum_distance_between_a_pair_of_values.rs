@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn max_distance(nums1: Vec<i32>, nums2: Vec<i32>) -> i32 {
-        todo!()
+        let mut result = 0;
+        let (mut i, mut j) = (0, 0);
+        while i < nums1.len() && j < nums2.len() {
+            if nums1[i] <= nums2[j] {
+                result = result.max(j - i);
+                j += 1;
+            } else {
+                i += 1;
+                if j < i {
+                    j = i;
+                }
+            }
+        }
+        result as i32
     }
 }
 
