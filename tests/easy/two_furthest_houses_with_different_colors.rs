@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn max_distance(colors: Vec<i32>) -> i32 {
-        todo!()
+        let len = colors.len();
+        let mut start = 0;
+        let mut max = 0;
+
+        let next = |start| {
+            for i in start + 1..len {
+                if colors[start] != colors[i] {
+                    return i;
+                }
+            }
+            len
+        };
+
+        while start < len {
+            for i in 0..len {
+                let left_color = colors[start];
+                if left_color != colors[len - 1 - i] {
+                    max = max.max(len as i32 - 1 - i as i32 - start as i32);
+                }
+            }
+
+            start = next(start);
+        }
+        max
     }
 }
 
