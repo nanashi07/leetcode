@@ -112,6 +112,8 @@ mod delete_characters_to_make_fancy_string;
 mod minimum_difference_between_highest_and_lowest_of_k_scores;
 // 2011. Final Value of Variable After Performing Operations
 mod final_value_of_variable_after_performing_operations;
+// 2078. Two Furthest Houses With Different Colors
+pub mod two_furthest_houses_with_different_colors;
 // 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
 // 2154. Keep Multiplying Found Values by Two
