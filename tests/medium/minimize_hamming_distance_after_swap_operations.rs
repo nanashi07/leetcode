@@ -9,7 +9,58 @@ impl Solution {
         target: Vec<i32>,
         allowed_swaps: Vec<Vec<i32>>,
     ) -> i32 {
-        todo!()
+        use std::collections::HashMap;
+
+        let n = source.len();
+        let mut parent: Vec<usize> = (0..n).collect();
+        let mut rank = vec![0u32; n];
+
+        fn find(parent: &mut Vec<usize>, x: usize) -> usize {
+            if parent[x] != x {
+                parent[x] = find(parent, parent[x]);
+            }
+            parent[x]
+        }
+
+        fn union(parent: &mut Vec<usize>, rank: &mut Vec<u32>, a: usize, b: usize) {
+            let ra = find(parent, a);
+            let rb = find(parent, b);
+            if ra == rb { return; }
+            if rank[ra] < rank[rb] {
+                parent[ra] = rb;
+            } else if rank[ra] > rank[rb] {
+                parent[rb] = ra;
+            } else {
+                parent[rb] = ra;
+                rank[ra] += 1;
+            }
+        }
+
+        for swap in &allowed_swaps {
+            union(&mut parent, &mut rank, swap[0] as usize, swap[1] as usize);
+        }
+
+        // Group source values by root
+        let mut groups: HashMap<usize, HashMap<i32, i32>> = HashMap::new();
+        for i in 0..n {
+            let root = find(&mut parent, i);
+            *groups.entry(root).or_default().entry(source[i]).or_insert(0) += 1;
+        }
+
+        let mut dist = 0;
+        for i in 0..n {
+            let root = find(&mut parent, i);
+            let counts = groups.get_mut(&root).unwrap();
+            if let Some(c) = counts.get_mut(&target[i]) {
+                if *c > 0 {
+                    *c -= 1;
+                    continue;
+                }
+            }
+            dist += 1;
+        }
+
+        dist
     }
 }
 
