@@ -140,6 +140,8 @@ pub mod partitioning_into_minimum_number_of_deci_binary_numbers;
 mod maximum_erasure_value;
 // 1717. Maximum Score From Removing Substrings
 mod maximum_score_from_removing_substrings;
+// 1722. Minimize Hamming Distance After Swap Operations
+pub mod minimize_hamming_distance_after_swap_operations;
 // 1727. Largest Submatrix With Rearrangements
 pub mod largest_submatrix_with_rearrangements;
 // 1792. Maximum Average Pass Ratio
