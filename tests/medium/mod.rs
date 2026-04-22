@@ -202,6 +202,8 @@ mod smallest_subarrays_with_maximum_bitwise_or;
 mod longest_subarray_with_maximum_bitwise_and;
 // 2438. Range Product Queries of Powers
 mod range_product_queries_of_powers;
+// 2452. Words Within Two Edits of Dictionary
+pub mod words_within_two_edits_of_dictionary;
 // 2483. Minimum Penalty for a Shop
 mod minimum_penalty_for_a_shop;
 // 2536. Increment Submatrices by One

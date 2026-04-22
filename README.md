@@ -206,6 +206,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2411. Smallest Subarrays With Maximum Bitwise OR](https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/)
 - [2419. Longest Subarray With Maximum Bitwise AND](https://leetcode.com/problems/longest-subarray-with-maximum-bitwise-and/)
 - [2438. Range Product Queries of Powers](https://leetcode.com/problems/range-product-queries-of-powers/)
+- [2452. Words Within Two Edits of Dictionary](https://leetcode.com/problems/words-within-two-edits-of-dictionary/)
 - [2483. Minimum Penalty for a Shop](https://leetcode.com/problems/minimum-penalty-for-a-shop/)
 - [2536. Increment Submatrices by One](https://leetcode.com/problems/increment-submatrices-by-one/)
 - [2598. Smallest Missing Non-negative Integer After Operations](https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/)
