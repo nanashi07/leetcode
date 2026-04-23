@@ -210,6 +210,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2483. Minimum Penalty for a Shop](https://leetcode.com/problems/minimum-penalty-for-a-shop/)
 - [2536. Increment Submatrices by One](https://leetcode.com/problems/increment-submatrices-by-one/)
 - [2598. Smallest Missing Non-negative Integer After Operations](https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/)
+- [2615. Sum of Distances](https://leetcode.com/problems/sum-of-distances/)
 - [2654. Minimum Number of Operations to Make All Array Elements Equal to 1](https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/)
 - [2749. Minimum Operations to Make the Integer Zero](https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/)
 - [2785. Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string/)
