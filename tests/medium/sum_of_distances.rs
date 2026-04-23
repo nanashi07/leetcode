@@ -5,7 +5,27 @@ struct Solution;
 
 impl Solution {
     pub fn distance(nums: Vec<i32>) -> Vec<i64> {
-        todo!()
+        use std::collections::HashMap;
+        let n = nums.len();
+        let mut result = vec![0i64; n];
+        let mut groups: HashMap<i32, Vec<usize>> = HashMap::new();
+        for (i, &v) in nums.iter().enumerate() {
+            groups.entry(v).or_default().push(i);
+        }
+        for indices in groups.values() {
+            let m = indices.len();
+            // prefix sum of indices
+            let mut prefix = vec![0i64; m + 1];
+            for i in 0..m {
+                prefix[i + 1] = prefix[i] + indices[i] as i64;
+            }
+            for (k, &idx) in indices.iter().enumerate() {
+                let left = idx as i64 * k as i64 - prefix[k];
+                let right = (prefix[m] - prefix[k + 1]) - idx as i64 * (m - k - 1) as i64;
+                result[idx] = left + right;
+            }
+        }
+        result
     }
 }
 
