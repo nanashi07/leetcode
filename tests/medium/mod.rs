@@ -210,6 +210,8 @@ mod minimum_penalty_for_a_shop;
 mod increment_submatrices_by_one;
 // 2598. Smallest Missing Non-negative Integer After Operations
 mod smallest_missing_non_negative_integer_after_operations;
+// 2615. Sum of Distances
+pub mod sum_of_distances;
 // 2654. Minimum Number of Operations to Make All Array Elements Equal to 1
 mod minimum_number_of_operations_to_make_all_array_elements_equal_to_1;
 // 2749. Minimum Operations to Make the Integer Zero
