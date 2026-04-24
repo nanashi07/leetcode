@@ -5,7 +5,13 @@ struct Solution;
 
 impl Solution {
     pub fn furthest_distance_from_origin(moves: String) -> i32 {
-        todo!()
+        let l = moves.chars().filter(|c| *c == 'L').count();
+        let r = moves.chars().filter(|c| *c == 'R').count();
+        let any = moves.chars().filter(|c| *c == '_').count();
+
+        let d = if l < r { any + r - l } else { any + l - r };
+
+        d as i32
     }
 }
 
