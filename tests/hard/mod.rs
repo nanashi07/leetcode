@@ -106,6 +106,8 @@ mod find_the_maximum_number_of_fruits_collected;
 mod separate_squares_ii;
 // 3459. Length of Longest V-Shaped Diagonal Segment
 mod length_of_longest_v_shaped_diagonal_segment;
+// 3464. Maximize the Distance Between Points on a Square
+pub mod maximize_the_distance_between_points_on_a_square;
 // 3474. Lexicographically Smallest Generated String
 pub mod lexicographically_smallest_generated_string;
 // 3480. Maximize Subarrays After Removing One Conflicting Pair
