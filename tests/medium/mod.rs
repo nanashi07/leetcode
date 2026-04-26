@@ -122,6 +122,8 @@ mod number_of_substrings_with_only_1s;
 pub mod minimum_swaps_to_arrange_a_binary_grid;
 // 1545. Find Kth Bit in Nth Binary String
 pub mod find_kth_bit_in_nth_binary_string;
+// 1559. Detect Cycles in 2D Grid
+pub mod detect_cycles_in_2d_grid;
 // 1578. Minimum Time to Make Rope Colorful
 mod minimum_time_to_make_rope_colorful;
 // 1590. Make Sum Divisible by P
