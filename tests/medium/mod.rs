@@ -102,6 +102,8 @@ mod maximum_number_of_events_that_can_be_attended;
 mod balance_a_binary_search_tree;
 // 1390. Four Divisors
 mod four_divisors;
+// 1391. Check if There is a Valid Path in a Grid
+pub mod check_if_there_is_a_valid_path_in_a_grid;
 // 1404. Number of Steps to Reduce a Number in Binary Representation to One
 pub mod number_of_steps_to_reduce_a_number_in_binary_representation_to_one;
 // 1415. The k-th Lexicographical String of All Happy Strings of Length n
