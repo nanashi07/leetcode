@@ -5,7 +5,14 @@ struct Solution;
 
 impl Solution {
     pub fn min_operations(grid: Vec<Vec<i32>>, x: i32) -> i32 {
-        todo!()
+        let mut vals: Vec<i32> = grid.into_iter().flatten().collect();
+        let r = vals[0] % x;
+        if vals.iter().any(|&v| v % x != r) {
+            return -1;
+        }
+        vals.sort_unstable();
+        let median = vals[vals.len() / 2];
+        vals.iter().map(|&v| (v - median).abs() / x).sum()
     }
 }
 
