@@ -190,6 +190,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/)
 - [1975. Maximum Matrix Sum](https://leetcode.com/problems/maximum-matrix-sum/)
 - [1980. Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/)
+- [2033. Minimum Operations to Make a Uni-Value Grid](https://leetcode.com/problems/minimum-operations-to-make-a-uni-value-grid/)
 - [2043. Simple Bank System](https://leetcode.com/problems/simple-bank-system/)
 - [2044. Count Number of Maximum Bitwise OR Subsets](https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/)
 - [2048. Next Greater Numerically Balanced Number](https://leetcode.com/problems/next-greater-numerically-balanced-number/)
