@@ -92,6 +92,8 @@ mod find_the_number_of_ways_to_place_people_ii;
 pub mod find_all_possible_stable_binary_arrays_ii;
 // 3197. Find the Minimum Area to Cover All Ones II
 mod find_the_minimum_area_to_cover_all_ones_ii;
+// 3225. Maximum Score From Grid Operations
+pub mod maximum_score_from_grid_operations;
 // 3307. Find the K-th Character in String Game II
 mod find_the_k_th_character_in_string_game_ii;
 // 3321. Find X-Sum of All K-Long Subarrays II
