@@ -342,5 +342,7 @@ mod longest_balanced_substring_ii;
 mod longest_balanced_subarray_i;
 // 3741. Minimum Distance Between Three Equal Elements II
 pub mod minimum_distance_between_three_equal_elements_ii;
+// 3742. Maximum Path Score in a Grid
+pub mod maximum_path_score_in_a_grid;
 // 3761. Minimum Absolute Distance Between Mirror Pairs
 pub mod minimum_absolute_distance_between_mirror_pairs;
