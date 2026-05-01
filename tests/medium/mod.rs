@@ -44,6 +44,8 @@ mod triangle;
 mod compare_version_numbers;
 // 166. Fraction to Recurring Decimal
 mod fraction_to_recurring_decimal;
+// 396. Rotate Function
+mod rotate_function;
 // 417. Pacific Atlantic Water Flow
 mod pacific_atlantic_water_flow;
 // 474. Ones and Zeroes
