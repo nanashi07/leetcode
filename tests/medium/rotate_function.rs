@@ -5,7 +5,15 @@ struct Solution;
 
 impl Solution {
     pub fn max_rotate_function(nums: Vec<i32>) -> i32 {
-        todo!()
+        let n = nums.len() as i32;
+        let total: i32 = nums.iter().sum();
+        let mut f: i32 = nums.iter().enumerate().map(|(i, &v)| i as i32 * v).sum();
+        let mut max = f;
+        for i in 1..n {
+            f = f + total - n * nums[(n - i) as usize];
+            max = max.max(f);
+        }
+        max
     }
 }
 
