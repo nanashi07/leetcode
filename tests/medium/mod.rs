@@ -58,6 +58,8 @@ mod valid_triangle_number;
 mod minimum_ascii_delete_sum_for_two_strings;
 // 756. Pyramid Transition Matrix
 mod pyramid_transition_matrix;
+// 788. Rotated Digits
+pub mod rotated_digits;
 // 799. Champagne Tower
 mod champagne_tower;
 // 808. Soup Servings
