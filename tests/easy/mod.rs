@@ -50,6 +50,8 @@ mod one_bit_and_two_bit_characters;
 mod find_smallest_letter_greater_than_target;
 // 762. Prime Number of Set Bits in Binary Representation
 mod prime_number_of_set_bits_in_binary_representation;
+// 796. Rotate String
+pub mod rotate_string;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
 // 868. Binary Gap

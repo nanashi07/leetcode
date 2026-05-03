@@ -32,6 +32,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [717. 1-bit and 2-bit Characters](https://leetcode.com/problems/1-bit-and-2-bit-characters/)
 - [744. Find Smallest Letter Greater Than Target](https://leetcode.com/problems/find-smallest-letter-greater-than-target/)
 - [762. Prime Number of Set Bits in Binary Representation](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/)
+- [796. Rotate String](https://leetcode.com/problems/rotate-string/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
 - [868. Binary Gap](https://leetcode.com/problems/binary-gap/)
 - [944. Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/)
