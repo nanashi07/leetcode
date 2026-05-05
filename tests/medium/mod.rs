@@ -40,6 +40,8 @@ mod find_first_and_last_position_of_element_in_sorted_array;
 mod valid_sudoku;
 // 48. Rotate Image
 pub mod rotate_image;
+// 61. Rotate List
+pub mod rotate_list;
 // 120. Triangle
 mod triangle;
 // 165. Compare Version Numbers
