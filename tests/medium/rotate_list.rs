@@ -23,7 +23,35 @@ struct Solution;
 // }
 impl Solution {
     pub fn rotate_right(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
-        todo!()
+        if head.is_none() || k == 0 {
+            return head;
+        }
+
+        // Collect values into a vec for O(n) rotation
+        let mut vals = Vec::new();
+        let mut cur = &head;
+        while let Some(node) = cur {
+            vals.push(node.val);
+            cur = &node.next;
+        }
+
+        let len = vals.len();
+        let k = (k as usize) % len;
+        if k == 0 {
+            return head;
+        }
+
+        // Rotate: last k elements move to front
+        vals.rotate_right(k);
+
+        // Rebuild list
+        let mut result = None;
+        for &val in vals.iter().rev() {
+            let mut node = ListNode::new(val);
+            node.next = result;
+            result = Some(Box::new(node));
+        }
+        result
     }
 }
 
