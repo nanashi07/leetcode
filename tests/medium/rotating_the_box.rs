@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn rotate_the_box(box_grid: Vec<Vec<char>>) -> Vec<Vec<char>> {
-        todo!()
+        let m = box_grid.len();
+        let n = box_grid[0].len();
+        // Rotated grid: n rows, m cols (90° clockwise)
+        let mut result = vec![vec!['.'; m]; n];
+
+        for i in 0..m {
+            // Simulate gravity: stones fall to the right before rotation
+            let mut empty = n as i32 - 1; // rightmost available position
+            for j in (0..n).rev() {
+                match box_grid[i][j] {
+                    '*' => {
+                        // Place obstacle and reset empty pointer
+                        result[j][m - 1 - i] = '*';
+                        empty = j as i32 - 1;
+                    }
+                    '#' => {
+                        // Drop stone to the rightmost empty slot
+                        result[empty as usize][m - 1 - i] = '#';
+                        empty -= 1;
+                    }
+                    _ => {}
+                }
+            }
+        }
+
+        result
     }
 }
 
