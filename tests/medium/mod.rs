@@ -344,6 +344,8 @@ mod minimum_cost_path_with_edge_reversals;
 mod best_time_to_buy_and_sell_stock_using_strategy;
 // 3653. XOR After Range Multiplication Queries I
 pub mod xor_after_range_multiplication_queries_i;
+// 3660. Jump Game IX
+pub mod jump_game_ix;
 // 3713. Longest Balanced Substring I
 mod longest_balanced_substring_i;
 // 3714. Longest Balanced Substring II
