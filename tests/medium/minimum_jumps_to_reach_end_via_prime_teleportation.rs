@@ -12,28 +12,22 @@ impl Solution {
             return 0;
         }
 
-        // Collect all prime values that appear in nums
-        let prime_values: HashSet<i32> = nums
-            .iter()
-            .copied()
-            .filter(|&x| Self::is_prime(x))
-            .collect();
+        let max_val = nums.iter().copied().max().unwrap_or(0).max(0) as usize;
+        let spf = Self::smallest_prime_factors(max_val);
 
-        // For each prime p appearing as a value, group all indices j where p | nums[j]
-        // Also track which groups each index belongs to
+        // Prime values that appear in nums are valid teleport "keys".
+        let prime_values: HashSet<i32> = nums.iter().copied().filter(|&x| Self::is_prime(x)).collect();
+
+        // For each prime p in nums, store all indices j where p divides nums[j].
         let mut groups: HashMap<i32, Vec<usize>> = HashMap::new();
-        let mut index_groups: Vec<Vec<i32>> = vec![vec![]; n];
-
         for (j, &val) in nums.iter().enumerate() {
-            for p in Self::prime_factors(val) {
+            for p in Self::prime_factors(val, &spf) {
                 if prime_values.contains(&p) {
                     groups.entry(p).or_default().push(j);
-                    index_groups[j].push(p);
                 }
             }
         }
 
-        // BFS (Jump Game IV style with group clearing optimization)
         let mut visited = vec![false; n];
         let mut used_groups: HashSet<i32> = HashSet::new();
         let mut queue = VecDeque::new();
@@ -51,12 +45,10 @@ impl Solution {
                     queue.push_back((ni, jumps + 1));
                 }
             }
-            // Teleport via prime groups
-            for &p in &index_groups[i] {
-                if used_groups.contains(&p) {
-                    continue;
-                }
-                used_groups.insert(p);
+
+            // Teleport is allowed only when current value itself is prime.
+            let p = nums[i];
+            if Self::is_prime(p) && used_groups.insert(p) {
                 if let Some(group) = groups.get(&p) {
                     for &j in group {
                         if !visited[j] {
@@ -94,23 +86,36 @@ impl Solution {
         true
     }
 
-    fn prime_factors(mut n: i32) -> Vec<i32> {
+    fn smallest_prime_factors(limit: usize) -> Vec<usize> {
+        let mut spf = vec![0usize; limit + 1];
+        for i in 2..=limit {
+            if spf[i] == 0 {
+                spf[i] = i;
+                if i <= limit / i {
+                    let mut j = i * i;
+                    while j <= limit {
+                        if spf[j] == 0 {
+                            spf[j] = i;
+                        }
+                        j += i;
+                    }
+                }
+            }
+        }
+        spf
+    }
+
+    fn prime_factors(mut n: i32, spf: &[usize]) -> Vec<i32> {
         let mut factors = vec![];
         if n <= 1 {
             return factors;
         }
-        let mut d = 2;
-        while d * d <= n {
-            if n % d == 0 {
-                factors.push(d);
-                while n % d == 0 {
-                    n /= d;
-                }
+        while n > 1 {
+            let p = spf[n as usize] as i32;
+            factors.push(p);
+            while n % p == 0 {
+                n /= p;
             }
-            d += 1;
-        }
-        if n > 1 {
-            factors.push(n);
         }
         factors
     }
@@ -141,6 +146,12 @@ mod tests {
     #[test]
     fn test_min_jumps_4() {
         let nums = [2, 7, 7].to_vec();
+        assert_eq!(2, Solution::min_jumps(nums));
+    }
+
+    #[test]
+    fn test_min_jumps_5() {
+        let nums = [4, 5, 2].to_vec();
         assert_eq!(2, Solution::min_jumps(nums));
     }
 }
