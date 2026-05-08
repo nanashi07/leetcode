@@ -336,6 +336,8 @@ mod count_special_triplets;
 mod power_grid_maintenance;
 // 3623. Count Number of Trapezoids I
 mod count_number_of_trapezoids_i;
+// 3629. Minimum Jumps to Reach End via Prime Teleportation
+pub mod minimum_jumps_to_reach_end_via_prime_teleportation;
 // 3634. Minimum Removals to Balance Array
 mod minimum_removals_to_balance_array;
 // 3650. Minimum Cost Path with Edge Reversals
