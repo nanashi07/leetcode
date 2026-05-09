@@ -172,6 +172,8 @@ pub mod get_biggest_three_rhombus_sums_in_a_grid;
 pub mod minimum_number_of_flips_to_make_the_binary_string_alternating;
 // 1895. Largest Magic Square
 mod largest_magic_square;
+// 1914. Cyclically Rotating a Grid
+mod cyclically_rotating_a_grid;
 // 1930. Unique Length-3 Palindromic Subsequences
 mod unique_length_3_palindromic_subsequences;
 // 1975. Maximum Matrix Sum
