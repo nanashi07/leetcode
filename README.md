@@ -193,6 +193,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1878. Get Biggest Three Rhombus Sums in a Grid](https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid/)
 - [1888. Minimum Number of Flips to Make the Binary String Alternating](https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/)
 - [1895. Largest Magic Square](https://leetcode.com/problems/largest-magic-square/)
+- [1914. Cyclically Rotating a Grid](https://leetcode.com/problems/cyclically-rotating-a-grid/)
 - [1930. Unique Length-3 Palindromic Subsequences](https://leetcode.com/problems/unique-length-3-palindromic-subsequences/)
 - [1975. Maximum Matrix Sum](https://leetcode.com/problems/maximum-matrix-sum/)
 - [1980. Find Unique Binary String](https://leetcode.com/problems/find-unique-binary-string/)
