@@ -5,7 +5,45 @@ struct Solution;
 
 impl Solution {
     pub fn rotate_grid(grid: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
-        todo!()
+        let rows = grid.len();
+        let cols = grid[0].len();
+        let mut grid = grid;
+
+        let layers = rows.min(cols) / 2;
+        for layer in 0..layers {
+            let top = layer;
+            let bottom = rows - 1 - layer;
+            let left = layer;
+            let right = cols - 1 - layer;
+
+            let mut coords = Vec::with_capacity(2 * (bottom - top + right - left));
+
+            for c in left..right {
+                coords.push((top, c));
+            }
+            for r in top..bottom {
+                coords.push((r, right));
+            }
+            for c in (left + 1..=right).rev() {
+                coords.push((bottom, c));
+            }
+            for r in (top + 1..=bottom).rev() {
+                coords.push((r, left));
+            }
+
+            let len = coords.len();
+            let shift = (k as usize) % len;
+            if shift == 0 {
+                continue;
+            }
+
+            let vals: Vec<i32> = coords.iter().map(|&(r, c)| grid[r][c]).collect();
+            for (i, &(r, c)) in coords.iter().enumerate() {
+                grid[r][c] = vals[(i + shift) % len];
+            }
+        }
+
+        grid
     }
 }
 
