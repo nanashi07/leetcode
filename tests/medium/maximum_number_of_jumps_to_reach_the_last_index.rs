@@ -53,11 +53,11 @@ impl Solution {
         update(&mut seg, 1, 0, m - 1, start_pos, 0);
 
         for i in 1..n {
-            let lo = nums[i] - target;
-            let hi = nums[i] + target;
+            let lo = nums[i] as i64 - target as i64;
+            let hi = nums[i] as i64 + target as i64;
 
-            let left = vals.partition_point(|&v| v < lo);
-            let right_exclusive = vals.partition_point(|&v| v <= hi);
+            let left = vals.partition_point(|&v| (v as i64) < lo);
+            let right_exclusive = vals.partition_point(|&v| (v as i64) <= hi);
 
             if left < right_exclusive {
                 let best = query(&seg, 1, 0, m - 1, left, right_exclusive - 1);
