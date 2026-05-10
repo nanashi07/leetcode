@@ -14,8 +14,8 @@ mod merge_two_sorted_lists;
 mod remove_duplicates_from_sorted_array;
 // 27. Remove Element
 mod remove_element;
-// 28. Implement strStr()
-mod implement_strstr;
+// 28. Find the Index of the First Occurrence in a String
+mod find_the_index_of_the_first_occurrence_in_a_string;
 // 35. Search Insert Position
 mod search_insert_position;
 // 66. Plus One
