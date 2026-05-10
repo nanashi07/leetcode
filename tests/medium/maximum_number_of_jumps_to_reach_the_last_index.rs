@@ -104,4 +104,14 @@ mod tests {
         let target = 0;
         assert_eq!(-1, Solution::maximum_jumps(nums, target));
     }
+
+    #[test]
+    fn test_maximum_jumps_4() {
+        let nums = [
+            758043978, 79060681, 785252849, 287889790, -983845055, 224430896, -477101480,
+        ]
+        .to_vec();
+        let target = 1769097904;
+        assert_eq!(6, Solution::maximum_jumps(nums, target));
+    }
 }
