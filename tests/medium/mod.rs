@@ -234,6 +234,8 @@ pub mod sum_of_distances;
 mod minimum_number_of_operations_to_make_all_array_elements_equal_to_1;
 // 2749. Minimum Operations to Make the Integer Zero
 mod minimum_operations_to_make_the_integer_zero;
+// 2770. Maximum Number of Jumps to Reach the Last Index
+pub mod maximum_number_of_jumps_to_reach_the_last_index;
 // 2785. Sort Vowels in a String
 mod sort_vowels_in_a_string;
 // 2787. Ways to Express an Integer as Sum of Powers
