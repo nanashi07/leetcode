@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn separate_digits(nums: Vec<i32>) -> Vec<i32> {
-        todo!()
+        let mut r = vec![];
+
+        for n in nums {
+            let mut s = n;
+            let mut t = vec![];
+
+            while s > 0 {
+                t.insert(0, s % 10);
+                s = s / 10;
+            }
+
+            for s in t {
+                r.push(s);
+            }
+        }
+
+        r
     }
 }
 
