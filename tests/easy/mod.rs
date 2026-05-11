@@ -130,6 +130,8 @@ mod largest_3_same_digit_number_in_string;
 mod find_resultant_array_after_removing_anagrams;
 // 2515. Shortest Distance to Target String in a Circular Array
 pub mod shortest_distance_to_target_string_in_a_circular_array;
+// 2553. Separate the Digits in an Array
+pub mod separate_the_digits_in_an_array;
 // 2833. Furthest Point From Origin
 pub mod furthest_point_from_origin;
 // 2839. Check if Strings Can be Made Equal With Operations I
