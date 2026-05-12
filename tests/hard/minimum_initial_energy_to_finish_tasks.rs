@@ -4,8 +4,21 @@
 struct Solution;
 
 impl Solution {
-    pub fn minimum_effort(tasks: Vec<Vec<i32>>) -> i32 {
-        todo!()
+    pub fn minimum_effort(mut tasks: Vec<Vec<i32>>) -> i32 {
+        // Sort by (minimum - actual) descending so we handle the biggest "threshold gap" first
+        tasks.sort_unstable_by(|a, b| (b[1] - b[0]).cmp(&(a[1] - a[0])));
+        let mut energy = 0i32;
+        let mut cur = 0i32;
+        for t in &tasks {
+            let actual = t[0];
+            let minimum = t[1];
+            if cur < minimum {
+                energy += minimum - cur;
+                cur = minimum;
+            }
+            cur -= actual;
+        }
+        energy
     }
 }
 
