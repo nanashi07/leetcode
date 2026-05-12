@@ -40,6 +40,8 @@ mod minimum_number_of_increments_on_subarrays_to_form_a_target_array;
 mod minimum_one_bit_operations_to_make_integers_zero;
 // 1622. Fancy Sequence
 pub mod fancy_sequence;
+// 1665. Minimum Initial Energy to Finish Tasks
+pub mod minimum_initial_energy_to_finish_tasks;
 // 1751. Maximum Number of Events That Can Be Attended II
 mod maximum_number_of_events_that_can_be_attended_ii;
 // 1900. The Earliest and Latest Rounds Where Players Compete
