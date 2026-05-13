@@ -144,6 +144,8 @@ pub mod maximum_non_negative_product_in_a_matrix;
 mod lexicographically_smallest_string_after_applying_operations;
 // 1653. Minimum Deletions to Make String Balanced
 mod minimum_deletions_to_make_string_balanced;
+// 1674. Minimum Moves to Make Array Complementary
+pub mod minimum_moves_to_make_array_complementary;
 // 1680. Concatenation of Consecutive Binary Numbers
 pub mod concatenation_of_consecutive_binary_numbers;
 // 1689. Partitioning Into Minimum Number Of Deci-Binary Numbers
