@@ -5,7 +5,34 @@ struct Solution;
 
 impl Solution {
     pub fn min_moves(nums: Vec<i32>, limit: i32) -> i32 {
-        todo!()
+        let n = nums.len();
+        let pair_count = n / 2;
+        let max_sum = (2 * limit) as usize;
+        let mut diff = vec![0; max_sum + 2];
+
+        for i in 0..pair_count {
+            let a = nums[i];
+            let b = nums[n - 1 - i];
+            let low = (a.min(b) + 1) as usize;
+            let high = (a.max(b) + limit) as usize;
+            let sum = (a + b) as usize;
+
+            diff[2] += 2;
+            diff[low] -= 1;
+            diff[sum] -= 1;
+            diff[sum + 1] += 1;
+            diff[high + 1] += 1;
+        }
+
+        let mut best = i32::MAX;
+        let mut current = 0;
+
+        for s in 2..=max_sum {
+            current += diff[s];
+            best = best.min(current);
+        }
+
+        best
     }
 }
 
