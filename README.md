@@ -73,6 +73,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
 - [2515. Shortest Distance to Target String in a Circular Array](https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/)
 - [2553. Separate the Digits in an Array](https://leetcode.com/problems/separate-the-digits-in-an-array/)
+- [2784. Check if Array is Good](https://leetcode.com/problems/check-if-array-is-good/)
 - [2833. Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin/)
 - [2839. Check if Strings Can be Made Equal With Operations I](https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/)
 - [2946. Matrix Similarity After Cyclic Shifts](https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts/)
