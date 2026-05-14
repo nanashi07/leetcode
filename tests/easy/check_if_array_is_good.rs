@@ -5,7 +5,24 @@ struct Solution;
 
 impl Solution {
     pub fn is_good(nums: Vec<i32>) -> bool {
-        todo!()
+        print!("{:?}", &nums);
+        let mut s = vec![0; nums.len() - 1];
+        for n in &nums {
+            let i = *n as usize - 1;
+            if i >= s.len() {
+                return false;
+            }
+            if s[i] == 0 {
+                s[i] = *n;
+            } else {
+                if *n == s.len() as i32 && s[i] == *n {
+                    s[i] = 2 * *n;
+                } else {
+                    return false;
+                }
+            }
+        }
+        s.binary_search(&0).is_err()
     }
 }
 
