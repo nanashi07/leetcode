@@ -131,6 +131,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
 - [61. Rotate List](https://leetcode.com/problems/rotate-list/)
 - [120. Triangle](https://leetcode.com/problems/triangle/)
+- [153. Find Minimum in Rotated Sorted Array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)
 - [165. Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/)
 - [166. Fraction to Recurring Decimal](https://leetcode.com/problems/fraction-to-recurring-decimal/)
 - [396. Rotate Function](https://leetcode.com/problems/rotate-function/)
