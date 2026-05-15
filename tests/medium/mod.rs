@@ -44,6 +44,8 @@ pub mod rotate_image;
 pub mod rotate_list;
 // 120. Triangle
 mod triangle;
+// 153. Find Minimum in Rotated Sorted Array
+pub mod find_minimum_in_rotated_sorted_array;
 // 165. Compare Version Numbers
 mod compare_version_numbers;
 // 166. Fraction to Recurring Decimal
