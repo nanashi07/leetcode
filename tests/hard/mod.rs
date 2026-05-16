@@ -14,6 +14,8 @@ mod longest_valid_parentheses;
 mod sudoku_solver;
 // 85. Maximal Rectangle
 mod maximal_rectangle;
+// 154. Find Minimum in Rotated Sorted Array II
+pub mod find_minimum_in_rotated_sorted_array_ii;
 // 407. Trapping Rain Water II
 mod trapping_rain_water_ii;
 // 679. 24 Game
