@@ -4,8 +4,30 @@
 struct Solution;
 
 impl Solution {
-    pub fn can_reach(arr: Vec<i32>, start: i32) -> bool {
-        todo!()
+    pub fn can_reach(mut arr: Vec<i32>, start: i32) -> bool {
+        let n = arr.len();
+        let mut stack = vec![start as usize];
+
+        while let Some(curr) = stack.pop() {
+            if arr[curr] == 0 {
+                return true;
+            }
+            if arr[curr] < 0 {
+                continue;
+            }
+
+            let jump = arr[curr];
+            arr[curr] = -1; // mark as visited
+
+            if curr as i32 + jump < n as i32 {
+                stack.push((curr as i32 + jump) as usize);
+            }
+            if curr as i32 - jump >= 0 {
+                stack.push((curr as i32 - jump) as usize);
+            }
+        }
+
+        false
     }
 }
 
