@@ -5,7 +5,50 @@ struct Solution;
 
 impl Solution {
     pub fn min_jumps(arr: Vec<i32>) -> i32 {
-        todo!()
+        use std::collections::{HashMap, VecDeque};
+
+        let n = arr.len();
+        if n <= 1 {
+            return 0;
+        }
+
+        let mut indices_by_value: HashMap<i32, Vec<usize>> = HashMap::new();
+        for (i, &v) in arr.iter().enumerate() {
+            indices_by_value.entry(v).or_default().push(i);
+        }
+
+        let mut visited = vec![false; n];
+        visited[0] = true;
+
+        let mut queue: VecDeque<(usize, i32)> = VecDeque::new();
+        queue.push_back((0, 0));
+
+        while let Some((idx, steps)) = queue.pop_front() {
+            if idx == n - 1 {
+                return steps;
+            }
+
+            if idx + 1 < n && !visited[idx + 1] {
+                visited[idx + 1] = true;
+                queue.push_back((idx + 1, steps + 1));
+            }
+
+            if idx > 0 && !visited[idx - 1] {
+                visited[idx - 1] = true;
+                queue.push_back((idx - 1, steps + 1));
+            }
+
+            if let Some(same_value_indices) = indices_by_value.remove(&arr[idx]) {
+                for next in same_value_indices {
+                    if !visited[next] {
+                        visited[next] = true;
+                        queue.push_back((next, steps + 1));
+                    }
+                }
+            }
+        }
+
+        -1
     }
 }
 
