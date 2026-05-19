@@ -72,6 +72,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2264. Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/)
 - [2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
 - [2515. Shortest Distance to Target String in a Circular Array](https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/)
+- [2540. Minimum Common Value](https://leetcode.com/problems/minimum-common-value/)
 - [2553. Separate the Digits in an Array](https://leetcode.com/problems/separate-the-digits-in-an-array/)
 - [2784. Check if Array is Good](https://leetcode.com/problems/check-if-array-is-good/)
 - [2833. Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin/)
