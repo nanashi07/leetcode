@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn find_the_prefix_common_array(a: Vec<i32>, b: Vec<i32>) -> Vec<i32> {
-        todo!()
+        let n = a.len();
+        let mut seen_a = vec![false; n + 1];
+        let mut seen_b = vec![false; n + 1];
+        let mut common = 0;
+        let mut result = Vec::with_capacity(n);
+
+        for i in 0..n {
+            let x = a[i] as usize;
+            let y = b[i] as usize;
+
+            if seen_b[x] {
+                common += 1;
+            }
+            seen_a[x] = true;
+
+            if seen_a[y] {
+                common += 1;
+            }
+            seen_b[y] = true;
+
+            result.push(common);
+        }
+
+        result
     }
 }
 
