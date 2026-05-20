@@ -229,6 +229,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2598. Smallest Missing Non-negative Integer After Operations](https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/)
 - [2615. Sum of Distances](https://leetcode.com/problems/sum-of-distances/)
 - [2654. Minimum Number of Operations to Make All Array Elements Equal to 1](https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/)
+- [2657. Find the Prefix Common Array of Two Arrays](https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/)
 - [2749. Minimum Operations to Make the Integer Zero](https://leetcode.com/problems/minimum-operations-to-make-the-integer-zero/)
 - [2770. Maximum Number of Jumps to Reach the Last Index](https://leetcode.com/problems/maximum-number-of-jumps-to-reach-the-last-index/)
 - [2785. Sort Vowels in a String](https://leetcode.com/problems/sort-vowels-in-a-string/)

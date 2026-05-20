@@ -238,6 +238,8 @@ mod smallest_missing_non_negative_integer_after_operations;
 pub mod sum_of_distances;
 // 2654. Minimum Number of Operations to Make All Array Elements Equal to 1
 mod minimum_number_of_operations_to_make_all_array_elements_equal_to_1;
+// 2657. Find the Prefix Common Array of Two Arrays
+pub mod find_the_prefix_common_array_of_two_arrays;
 // 2749. Minimum Operations to Make the Integer Zero
 mod minimum_operations_to_make_the_integer_zero;
 // 2770. Maximum Number of Jumps to Reach the Last Index
