@@ -262,6 +262,8 @@ mod minimum_cost_to_convert_string_i;
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I
 mod find_the_number_of_ways_to_place_people_i;
+// 3043. Find the Length of the Longest Common Prefix
+pub mod find_the_length_of_the_longest_common_prefix;
 // 3047. Find the Largest Area of Square Inside Two Rectangles
 mod find_the_largest_area_of_square_inside_two_rectangles;
 // 3070. Count Submatrices with Top-Left Element and Sum Less Than k
