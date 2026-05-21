@@ -5,7 +5,58 @@ struct Solution;
 
 impl Solution {
     pub fn longest_common_prefix(arr1: Vec<i32>, arr2: Vec<i32>) -> i32 {
-        todo!()
+        use std::collections::HashSet;
+
+        fn digits_count(mut n: i32) -> i32 {
+            if n == 0 {
+                return 1;
+            }
+
+            let mut count = 0;
+            while n > 0 {
+                count += 1;
+                n /= 10;
+            }
+            count
+        }
+
+        let mut prefixes = HashSet::new();
+
+        for mut n in arr1 {
+            if n == 0 {
+                prefixes.insert(0);
+                continue;
+            }
+
+            while n > 0 {
+                prefixes.insert(n);
+                n /= 10;
+            }
+        }
+
+        let mut best = 0;
+
+        for n in arr2 {
+            if n == 0 {
+                if prefixes.contains(&0) {
+                    best = best.max(1);
+                }
+                continue;
+            }
+
+            let mut cur = n;
+            let mut len = digits_count(n);
+            while cur > 0 {
+                if prefixes.contains(&cur) {
+                    best = best.max(len);
+                    break;
+                }
+                cur /= 10;
+                len -= 1;
+            }
+        }
+
+        best
     }
 }
 
