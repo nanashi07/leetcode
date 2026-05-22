@@ -3,46 +3,32 @@
 struct Solution;
 
 impl Solution {
-    // https://leetcode.com/problems/search-in-rotated-sorted-array/discuss/14425/Concise-O(log-N)-Binary-search-solution
     pub fn search(nums: Vec<i32>, target: i32) -> i32 {
-        if nums.len() == 0 {
-            return -1;
-        }
-        let mut l: i32 = 0;
-        let mut r: i32 = nums.len() as i32 - 1;
-        let mut m: i32;
-        // find out the index of the smallest element.
-        while l < r {
-            m = (l + r) / 2;
-            if nums[m as usize] > nums[r as usize] {
-                l = m + 1;
+        let mut left = 0usize;
+        let mut right = nums.len();
+
+        while left < right {
+            let mid = left + (right - left) / 2;
+            let value = nums[mid];
+
+            if value == target {
+                return mid as i32;
+            }
+
+            if nums[left] <= value {
+                if nums[left] <= target && target < value {
+                    right = mid;
+                } else {
+                    left = mid + 1;
+                }
+            } else if value < target && target <= nums[right - 1] {
+                left = mid + 1;
             } else {
-                r = m;
+                right = mid;
             }
         }
 
-        // since we now know the start, find out if the target is to left or right of start in the array.
-        let s = l;
-        l = 0;
-        r = nums.len() as i32 - 1;
-        if target >= nums[s as usize] && target <= nums[r as usize] {
-            l = s;
-        } else {
-            r = s;
-        }
-        // the regular search.
-        while l <= r {
-            m = (l + r) / 2;
-            if nums[m as usize] == target {
-                return m as i32;
-            } else if nums[m as usize] > target {
-                r = m - 1;
-            } else {
-                l = m + 1;
-            }
-        }
-
-        return -1;
+        -1
     }
 }
 
