@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn check(nums: Vec<i32>) -> bool {
-        todo!()
+        let n = nums.len();
+        let mut drops = 0;
+
+        for i in 0..n {
+            if nums[i] > nums[(i + 1) % n] {
+                drops += 1;
+                if drops > 1 {
+                    return false;
+                }
+            }
+        }
+
+        true
     }
 }
 
