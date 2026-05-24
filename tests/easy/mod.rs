@@ -96,6 +96,8 @@ mod count_odd_numbers_in_an_interval_range;
 pub mod special_positions_in_a_binary_matrix;
 // 1716. Calculate Money in Leetcode Bank
 mod calculate_money_in_leetcode_bank;
+// 1752. Check if Array Is Sorted and Rotated
+pub mod check_if_array_is_sorted_and_rotated;
 // 1758. Minimum Changes To Make Alternating Binary String
 pub mod minimum_changes_to_make_alternating_binary_string;
 // 1784. Check if Binary String Has at Most One Segment of Ones
