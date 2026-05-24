@@ -30,6 +30,8 @@ mod swim_in_rising_water;
 mod delete_columns_to_make_sorted_iii;
 // 1320. Minimum Distance to Type a Word Using Two Fingers
 pub mod minimum_distance_to_type_a_word_using_two_fingers;
+// 1340. Jump Game V
+pub mod jump_game_v;
 // 1345. Jump Game IV
 pub mod jump_game_iv;
 // 1411. Number of Ways to Paint N × 3 Grid
