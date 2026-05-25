@@ -170,6 +170,8 @@ pub mod maximum_distance_between_a_pair_of_values;
 pub mod rotating_the_box;
 // 1865. Finding Pairs With a Certain Sum
 mod finding_pairs_with_a_certain_sum;
+// 1871. Jump Game VII
+pub mod jump_game_vii;
 // 1877. Minimize Maximum Pair Sum in Array
 mod minimize_maximum_pair_sum_in_array;
 // 1878. Get Biggest Three Rhombus Sums in a Grid
