@@ -1,11 +1,28 @@
 // 3120. Count the Number of Special Characters I
 // https://leetcode.com/problems/count-the-number-of-special-characters-i/
 
+use std::collections::HashMap;
+
 struct Solution;
 
 impl Solution {
     pub fn number_of_special_chars(word: String) -> i32 {
-        todo!()
+        let upper_end = 'Z' as i32;
+        let diff = 'a' as i32 - 'A' as i32;
+        let mut lowers = word
+            .chars()
+            .map(|c| c as i32)
+            .filter(|c| *c > upper_end)
+            .map(|c| (c, false))
+            .collect::<HashMap<i32, bool>>();
+        for c in word.chars() {
+            let c = c as i32;
+            if c <= upper_end && lowers.contains_key(&(c + diff)) {
+                lowers.insert(c + diff, true);
+            }
+        }
+
+        lowers.values().filter(|&v| *v).count() as i32
     }
 }
 
