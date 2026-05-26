@@ -152,6 +152,8 @@ mod count_elements_with_maximum_frequency;
 mod divide_an_array_into_subarrays_with_minimum_cost_i;
 // 3074. Apple Redistribution into Boxes
 mod apple_redistribution_into_boxes;
+// 3120. Count the Number of Special Characters I
+pub mod count_the_number_of_special_characters_i;
 // 3136. Valid Word
 mod valid_word;
 // 3190. Find Minimum Operations to Make All Elements Divisible by Three
