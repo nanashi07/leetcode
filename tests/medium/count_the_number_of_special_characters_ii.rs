@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_special_chars(word: String) -> i32 {
-        todo!()
+        let mut last_lower = [-1_i32; 26];
+        let mut first_upper = [i32::MAX; 26];
+
+        for (i, &b) in word.as_bytes().iter().enumerate() {
+            let pos = i as i32;
+            if b.is_ascii_lowercase() {
+                let idx = (b - b'a') as usize;
+                last_lower[idx] = pos;
+            } else {
+                let idx = (b - b'A') as usize;
+                first_upper[idx] = first_upper[idx].min(pos);
+            }
+        }
+
+        let mut count = 0;
+        for i in 0..26 {
+            if last_lower[i] != -1 && first_upper[i] != i32::MAX && last_lower[i] < first_upper[i] {
+                count += 1;
+            }
+        }
+
+        count
     }
 }
 
