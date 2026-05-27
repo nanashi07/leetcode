@@ -274,6 +274,8 @@ pub mod count_submatrices_with_top_left_element_and_sum_less_than_k;
 mod maximize_happiness_of_selected_children;
 // 3100. Water Bottles II
 mod water_bottles_ii;
+// 3121. Count the Number of Special Characters II
+pub mod count_the_number_of_special_characters_ii;
 // 3129. Find All Possible Stable Binary Arrays I
 pub mod find_all_possible_stable_binary_arrays_i;
 // 3147. Taking Maximum Energy From the Mystic Dungeon
