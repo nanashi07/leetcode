@@ -3,9 +3,79 @@
 
 struct Solution;
 
+#[derive(Clone, Copy)]
+struct Best {
+    len: usize,
+    idx: usize,
+}
+
+impl Best {
+    fn better_than(self, other: Self) -> bool {
+        self.len < other.len || (self.len == other.len && self.idx < other.idx)
+    }
+}
+
+struct Node {
+    next: [Option<usize>; 26],
+    best: Best,
+}
+
+impl Node {
+    fn new(best: Best) -> Self {
+        Self {
+            next: [None; 26],
+            best,
+        }
+    }
+}
+
 impl Solution {
     pub fn string_indices(words_container: Vec<String>, words_query: Vec<String>) -> Vec<i32> {
-        todo!()
+        let initial_best = Best {
+            len: usize::MAX,
+            idx: usize::MAX,
+        };
+        let mut trie = vec![Node::new(initial_best)];
+
+        for (i, w) in words_container.iter().enumerate() {
+            let candidate = Best {
+                len: w.len(),
+                idx: i,
+            };
+
+            if candidate.better_than(trie[0].best) {
+                trie[0].best = candidate;
+            }
+
+            let mut node = 0usize;
+            for &b in w.as_bytes().iter().rev() {
+                let c = (b - b'a') as usize;
+                if trie[node].next[c].is_none() {
+                    trie.push(Node::new(initial_best));
+                    let nxt = trie.len() - 1;
+                    trie[node].next[c] = Some(nxt);
+                }
+                node = trie[node].next[c].unwrap();
+                if candidate.better_than(trie[node].best) {
+                    trie[node].best = candidate;
+                }
+            }
+        }
+
+        let mut ans = Vec::with_capacity(words_query.len());
+        for q in &words_query {
+            let mut node = 0usize;
+            for &b in q.as_bytes().iter().rev() {
+                let c = (b - b'a') as usize;
+                match trie[node].next[c] {
+                    Some(nxt) => node = nxt,
+                    None => break,
+                }
+            }
+            ans.push(trie[node].best.idx as i32);
+        }
+
+        ans
     }
 }
 
