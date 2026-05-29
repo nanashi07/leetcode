@@ -5,7 +5,17 @@ struct Solution;
 
 impl Solution {
     pub fn min_element(nums: Vec<i32>) -> i32 {
-        todo!()
+        let mut min = i32::MAX;
+        for n in nums {
+            let mut n = n;
+            let mut v = n % 10;
+            while n > 9 {
+                n = n / 10;
+                v = v + n % 10;
+            }
+            min = min.min(v);
+        }
+        min
     }
 }
 
