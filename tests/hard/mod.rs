@@ -100,6 +100,8 @@ mod find_the_number_of_ways_to_place_people_ii;
 pub mod longest_common_suffix_queries;
 // 3130. Find All Possible Stable Binary Arrays II
 pub mod find_all_possible_stable_binary_arrays_ii;
+// 3161. Block Placement Queries
+pub mod block_placement_queries;
 // 3197. Find the Minimum Area to Cover All Ones II
 mod find_the_minimum_area_to_cover_all_ones_ii;
 // 3225. Maximum Score From Grid Operations
