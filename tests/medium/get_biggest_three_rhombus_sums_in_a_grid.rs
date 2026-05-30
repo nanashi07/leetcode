@@ -35,14 +35,15 @@ impl Solution {
                     let bottom = (row + radius, col);
                     let left = (row, col - radius);
 
-                    let border_sum = Self::down_right_sum(&down_right, top.0, top.1, right.0, right.1)
-                        + Self::down_left_sum(&down_left, right.0, right.1, bottom.0, bottom.1)
-                        + Self::down_right_sum(&down_right, left.0, left.1, bottom.0, bottom.1)
-                        + Self::down_left_sum(&down_left, top.0, top.1, left.0, left.1)
-                        - grid[top.0][top.1]
-                        - grid[right.0][right.1]
-                        - grid[bottom.0][bottom.1]
-                        - grid[left.0][left.1];
+                    let border_sum =
+                        Self::down_right_sum(&down_right, top.0, top.1, right.0, right.1)
+                            + Self::down_left_sum(&down_left, right.0, right.1, bottom.0, bottom.1)
+                            + Self::down_right_sum(&down_right, left.0, left.1, bottom.0, bottom.1)
+                            + Self::down_left_sum(&down_left, top.0, top.1, left.0, left.1)
+                            - grid[top.0][top.1]
+                            - grid[right.0][right.1]
+                            - grid[bottom.0][bottom.1]
+                            - grid[left.0][left.1];
 
                     Self::push_sum(&mut best, border_sum);
                 }

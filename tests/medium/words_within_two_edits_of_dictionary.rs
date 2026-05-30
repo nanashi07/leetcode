@@ -9,13 +9,9 @@ impl Solution {
             .into_iter()
             .filter(|q| {
                 let qb = q.as_bytes();
-                dictionary.iter().any(|d| {
-                    qb.iter()
-                        .zip(d.as_bytes())
-                        .filter(|(a, b)| a != b)
-                        .count()
-                        <= 2
-                })
+                dictionary
+                    .iter()
+                    .any(|d| qb.iter().zip(d.as_bytes()).filter(|(a, b)| a != b).count() <= 2)
             })
             .collect()
     }

@@ -58,7 +58,15 @@ impl Solution {
         }
 
         // collect survivors in original index order
-        (0..n).filter_map(|i| if healths[i] > 0 { Some(healths[i]) } else { None }).collect()
+        (0..n)
+            .filter_map(|i| {
+                if healths[i] > 0 {
+                    Some(healths[i])
+                } else {
+                    None
+                }
+            })
+            .collect()
     }
 }
 

@@ -14,7 +14,11 @@ impl Solution {
                 prefix[i][j] = grid[i][j]
                     + if i > 0 { prefix[i - 1][j] } else { 0 }
                     + if j > 0 { prefix[i][j - 1] } else { 0 }
-                    - if i > 0 && j > 0 { prefix[i - 1][j - 1] } else { 0 };
+                    - if i > 0 && j > 0 {
+                        prefix[i - 1][j - 1]
+                    } else {
+                        0
+                    };
                 if prefix[i][j] <= k {
                     count += 1;
                 }

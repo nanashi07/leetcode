@@ -7,10 +7,7 @@ struct Solution;
 
 impl Solution {
     pub fn robot_sim(commands: Vec<i32>, obstacles: Vec<Vec<i32>>) -> i32 {
-        let obstacle_set: HashSet<(i32, i32)> = obstacles
-            .iter()
-            .map(|o| (o[0], o[1]))
-            .collect();
+        let obstacle_set: HashSet<(i32, i32)> = obstacles.iter().map(|o| (o[0], o[1])).collect();
 
         // Directions: N, E, S, W
         let dirs: [(i32, i32); 4] = [(0, 1), (1, 0), (0, -1), (-1, 0)];

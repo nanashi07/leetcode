@@ -147,9 +147,7 @@ mod tests {
 
     #[test]
     fn test_task_manager_1() {
-        let task_manager = TaskManager::new(
-            to_vec2d([[1, 101, 10], [2, 102, 20], [3, 103, 15]]),
-        ); // Initializes with three tasks for Users 1, 2, and 3.
+        let task_manager = TaskManager::new(to_vec2d([[1, 101, 10], [2, 102, 20], [3, 103, 15]])); // Initializes with three tasks for Users 1, 2, and 3.
         task_manager.add(4, 104, 5); // Adds task 104 with priority 5 for User 4.
         task_manager.edit(102, 8); // Updates priority of task 102 to 8.
         assert_eq!(3, task_manager.exec_top()); // return 3. Executes task 103 for User 3.

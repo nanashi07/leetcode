@@ -27,7 +27,11 @@ impl Solution {
             map.insert(reverse(num), j);
         }
 
-        if min_dist == i32::MAX { -1 } else { min_dist }
+        if min_dist == i32::MAX {
+            -1
+        } else {
+            min_dist
+        }
     }
 }
 

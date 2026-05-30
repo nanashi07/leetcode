@@ -28,7 +28,11 @@ impl Solution {
         pos.sort_unstable();
 
         // Extended array for circular handling
-        let ext: Vec<i64> = pos.iter().copied().chain(pos.iter().map(|&p| p + perimeter)).collect();
+        let ext: Vec<i64> = pos
+            .iter()
+            .copied()
+            .chain(pos.iter().map(|&p| p + perimeter))
+            .collect();
         let m = 2 * n;
 
         let can = |d: i64| -> bool {
