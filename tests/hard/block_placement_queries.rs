@@ -69,13 +69,17 @@ impl Solution {
             }
         }
 
+        // Sentinel to model an obstacle beyond every queried x.
+        let sentinel = max_x + 1;
+
         let mut active = BTreeSet::new();
         active.insert(0usize);
+        active.insert(sentinel);
         for &x in &inserted {
             active.insert(x);
         }
 
-        let mut seg = SegTree::new(max_x + 1);
+        let mut seg = SegTree::new(sentinel + 1);
         let mut prev = 0usize;
         let mut first = true;
         for &x in &active {
@@ -108,9 +112,12 @@ impl Solution {
                 let x = q[1] as usize;
                 let sz = q[2];
                 let prev_obs = *active.range(..=x).next_back().unwrap();
-                let best_gap = seg.query_max(0, x);
+                // Must fit entirely in [0, x], and one end has to be at/left of x.
+                // Gaps ending at obstacle <= x contribute fully;
+                // for the first obstacle > x we can use only [prev_obs, x].
+                let best_full = seg.query_max(0, x);
                 let tail = (x - prev_obs) as i32;
-                rev_ans.push(best_gap.max(tail) >= sz);
+                rev_ans.push(best_full.max(tail) >= sz);
             }
         }
 
