@@ -34,11 +34,19 @@ impl Solution {
         //   right range: [r, min(r+d, next-1)]
         let left_lo = |i: usize| -> i64 {
             let lo = rd[i].0 - rd[i].1;
-            if i > 0 { lo.max(rd[i - 1].0 + 1) } else { lo }
+            if i > 0 {
+                lo.max(rd[i - 1].0 + 1)
+            } else {
+                lo
+            }
         };
         let right_hi = |i: usize| -> i64 {
             let hi = rd[i].0 + rd[i].1;
-            if i + 1 < n { hi.min(rd[i + 1].0 - 1) } else { hi }
+            if i + 1 < n {
+                hi.min(rd[i + 1].0 - 1)
+            } else {
+                hi
+            }
         };
 
         // DP: dp_l = best count when robot i goes LEFT
@@ -60,8 +68,8 @@ impl Solution {
             let ri_hi = right_hi(i);
             let prev_r_hi = right_hi(i - 1); // R[i-1]
 
-            let new_dp_l = (dp_l + count_in(li, ri))
-                .max(dp_r + count_in(li.max(prev_r_hi + 1), ri));
+            let new_dp_l =
+                (dp_l + count_in(li, ri)).max(dp_r + count_in(li.max(prev_r_hi + 1), ri));
             let new_dp_r = dp_l.max(dp_r) + count_in(ri, ri_hi);
 
             dp_l = new_dp_l;

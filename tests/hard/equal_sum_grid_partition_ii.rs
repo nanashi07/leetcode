@@ -51,9 +51,7 @@ impl Solution {
     }
 
     fn transpose(g: &[Vec<i32>], m: usize, n: usize) -> Vec<Vec<i32>> {
-        (0..n)
-            .map(|j| (0..m).map(|i| g[i][j]).collect())
-            .collect()
+        (0..n).map(|j| (0..m).map(|i| g[i][j]).collect()).collect()
     }
 }
 

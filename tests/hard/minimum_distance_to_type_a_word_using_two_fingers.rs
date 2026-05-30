@@ -37,7 +37,11 @@ impl Solution {
                     new_dp[j] = cost1;
                 }
                 // Option 2: move the finger at j to curr, other finger stays at prev
-                let cost2 = if j == 26 { dp[j] } else { dp[j] + dist(j, curr) };
+                let cost2 = if j == 26 {
+                    dp[j]
+                } else {
+                    dp[j] + dist(j, curr)
+                };
                 if cost2 < new_dp[prev] {
                     new_dp[prev] = cost2;
                 }

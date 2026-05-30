@@ -16,7 +16,11 @@ impl Solution {
         let spf = Self::smallest_prime_factors(max_val);
 
         // Prime values that appear in nums are valid teleport "keys".
-        let prime_values: HashSet<i32> = nums.iter().copied().filter(|&x| Self::is_prime(x)).collect();
+        let prime_values: HashSet<i32> = nums
+            .iter()
+            .copied()
+            .filter(|&x| Self::is_prime(x))
+            .collect();
 
         // For each prime p in nums, store all indices j where p divides nums[j].
         let mut groups: HashMap<i32, Vec<usize>> = HashMap::new();

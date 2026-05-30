@@ -14,9 +14,9 @@ struct Solution;
 
 #[derive(Clone)]
 struct Node {
-    max_gap: i32,   // max gap between consecutive blocked positions in this segment
-    left_dist: i32, // dist from left end to first blocked pos (= len if no blocks)
-    right_dist: i32,// dist from last blocked pos to right end (= len if no blocks)
+    max_gap: i32,    // max gap between consecutive blocked positions in this segment
+    left_dist: i32,  // dist from left end to first blocked pos (= len if no blocks)
+    right_dist: i32, // dist from last blocked pos to right end (= len if no blocks)
     has_block: bool,
     len: i32,
 }
@@ -24,8 +24,16 @@ struct Node {
 impl Node {
     fn merge(a: &Node, b: &Node) -> Node {
         let len = a.len + b.len;
-        let left_dist = if a.has_block { a.left_dist } else { a.len + b.left_dist };
-        let right_dist = if b.has_block { b.right_dist } else { b.len + a.right_dist };
+        let left_dist = if a.has_block {
+            a.left_dist
+        } else {
+            a.len + b.left_dist
+        };
+        let right_dist = if b.has_block {
+            b.right_dist
+        } else {
+            b.len + a.right_dist
+        };
         let has_block = a.has_block || b.has_block;
         let max_gap = match (a.has_block, b.has_block) {
             // gap between last block in a and first block in b = a.right_dist + b.left_dist + 1
@@ -34,7 +42,13 @@ impl Node {
             (false, true) => b.max_gap,
             (false, false) => 0,
         };
-        Node { max_gap, left_dist, right_dist, has_block, len }
+        Node {
+            max_gap,
+            left_dist,
+            right_dist,
+            has_block,
+            len,
+        }
     }
 }
 
@@ -44,14 +58,30 @@ struct SegTree {
 
 impl SegTree {
     fn new(n: usize) -> Self {
-        let empty = Node { max_gap: 0, left_dist: 0, right_dist: 0, has_block: false, len: 0 };
-        SegTree { tree: vec![empty; 4 * n] }
+        let empty = Node {
+            max_gap: 0,
+            left_dist: 0,
+            right_dist: 0,
+            has_block: false,
+            len: 0,
+        };
+        SegTree {
+            tree: vec![empty; 4 * n],
+        }
     }
 
     fn build(&mut self, node: usize, l: usize, r: usize) {
         let len = (r - l + 1) as i32;
-        self.tree[node] = Node { max_gap: 0, left_dist: len, right_dist: len, has_block: false, len };
-        if l == r { return; }
+        self.tree[node] = Node {
+            max_gap: 0,
+            left_dist: len,
+            right_dist: len,
+            has_block: false,
+            len,
+        };
+        if l == r {
+            return;
+        }
         let m = (l + r) / 2;
         self.build(2 * node, l, m);
         self.build(2 * node + 1, m + 1, r);
@@ -74,7 +104,10 @@ impl SegTree {
         } else {
             self.update(2 * node + 1, m + 1, r, pos, blocked);
         }
-        let merged = Node::merge(&self.tree[2 * node].clone(), &self.tree[2 * node + 1].clone());
+        let merged = Node::merge(
+            &self.tree[2 * node].clone(),
+            &self.tree[2 * node + 1].clone(),
+        );
         self.tree[node] = merged;
     }
 

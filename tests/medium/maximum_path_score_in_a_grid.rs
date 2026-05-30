@@ -33,7 +33,11 @@ impl Solution {
         }
 
         let ans = *dp[m - 1][n - 1].iter().max().unwrap();
-        if ans < 0 { -1 } else { ans }
+        if ans < 0 {
+            -1
+        } else {
+            ans
+        }
     }
 }
 

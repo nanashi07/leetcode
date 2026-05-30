@@ -19,7 +19,9 @@ impl Solution {
             let mut sorted = heights.clone();
             sorted.sort_unstable_by(|a, b| b.cmp(a));
             for (k, &h) in sorted.iter().enumerate() {
-                if h == 0 { break; }
+                if h == 0 {
+                    break;
+                }
                 ans = ans.max(h * (k as i32 + 1));
             }
         }

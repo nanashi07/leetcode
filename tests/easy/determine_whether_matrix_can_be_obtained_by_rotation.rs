@@ -11,10 +11,18 @@ impl Solution {
         for i in 0..n {
             for j in 0..n {
                 let v = mat[i][j];
-                if ok[0] && target[i][j] != v { ok[0] = false; }
-                if ok[1] && target[j][n - 1 - i] != v { ok[1] = false; }
-                if ok[2] && target[n - 1 - i][n - 1 - j] != v { ok[2] = false; }
-                if ok[3] && target[n - 1 - j][i] != v { ok[3] = false; }
+                if ok[0] && target[i][j] != v {
+                    ok[0] = false;
+                }
+                if ok[1] && target[j][n - 1 - i] != v {
+                    ok[1] = false;
+                }
+                if ok[2] && target[n - 1 - i][n - 1 - j] != v {
+                    ok[2] = false;
+                }
+                if ok[3] && target[n - 1 - j][i] != v {
+                    ok[3] = false;
+                }
             }
         }
         ok.iter().any(|&x| x)

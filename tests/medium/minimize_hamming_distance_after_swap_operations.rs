@@ -25,7 +25,9 @@ impl Solution {
         fn union(parent: &mut Vec<usize>, rank: &mut Vec<u32>, a: usize, b: usize) {
             let ra = find(parent, a);
             let rb = find(parent, b);
-            if ra == rb { return; }
+            if ra == rb {
+                return;
+            }
             if rank[ra] < rank[rb] {
                 parent[ra] = rb;
             } else if rank[ra] > rank[rb] {
@@ -44,7 +46,11 @@ impl Solution {
         let mut groups: HashMap<usize, HashMap<i32, i32>> = HashMap::new();
         for i in 0..n {
             let root = find(&mut parent, i);
-            *groups.entry(root).or_default().entry(source[i]).or_insert(0) += 1;
+            *groups
+                .entry(root)
+                .or_default()
+                .entry(source[i])
+                .or_insert(0) += 1;
         }
 
         let mut dist = 0;

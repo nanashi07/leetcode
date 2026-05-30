@@ -65,7 +65,11 @@ impl Solution {
             }
             prev = Some(key);
         }
-        if min_diff == i32::MAX { 0 } else { min_diff }
+        if min_diff == i32::MAX {
+            0
+        } else {
+            min_diff
+        }
     }
 }
 
