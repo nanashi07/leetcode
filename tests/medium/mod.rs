@@ -206,6 +206,8 @@ pub mod decode_the_slanted_ciphertext;
 mod number_of_smooth_descent_periods_of_a_stock;
 // 2125. Number of Laser Beams in a Bank
 mod number_of_laser_beams_in_a_bank;
+// 2126. Destroying Asteroids
+pub mod destroying_asteroids;
 // 2211. Count Collisions on a Road
 mod count_collisions_on_a_road;
 // 2221. Find Triangular Sum of an Array
