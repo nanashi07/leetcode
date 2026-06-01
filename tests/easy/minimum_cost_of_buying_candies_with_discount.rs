@@ -27,7 +27,7 @@ impl Solution {
                     }
                 }
             } else {
-                spend += cost[cost.len() - 1];
+                spend += cost.remove(cost.len() - 1);
             }
         }
         spend
@@ -54,5 +54,11 @@ mod tests {
     fn test_minimum_cost_3() {
         let cost = [5, 5].to_vec();
         assert_eq!(10, Solution::minimum_cost(cost));
+    }
+
+    #[test]
+    fn test_minimum_cost_4() {
+        let cost = [1].to_vec();
+        assert_eq!(1, Solution::minimum_cost(cost));
     }
 }

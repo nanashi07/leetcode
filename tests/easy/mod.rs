@@ -120,6 +120,8 @@ mod final_value_of_variable_after_performing_operations;
 pub mod two_furthest_houses_with_different_colors;
 // 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
+// 2144. Minimum Cost of Buying Candies With Discount
+pub mod minimum_cost_of_buying_candies_with_discount;
 // 2154. Keep Multiplying Found Values by Two
 mod keep_multiplying_found_values_by_two;
 // 2169. Count Operations to Obtain Zero
@@ -203,5 +205,4 @@ pub mod flip_square_submatrix_vertically;
 // 3740. Minimum Distance Between Three Equal Elements I
 pub mod minimum_distance_between_three_equal_elements_i;
 // 3783. Mirror Distance of an Integer
-pub mod minimum_cost_of_buying_candies_with_discount;
 pub mod mirror_distance_of_an_integer;
