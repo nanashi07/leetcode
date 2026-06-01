@@ -216,6 +216,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2075. Decode the Slanted Ciphertext](https://leetcode.com/problems/decode-the-slanted-ciphertext/)
 - [2110. Number of Smooth Descent Periods of a Stock](https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/)
 - [2125. Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/)
+- [2126. Destroying Asteroids](https://leetcode.com/problems/destroying-asteroids/)
 - [2211. Count Collisions on a Road](https://leetcode.com/problems/count-collisions-on-a-road/)
 - [2221. Find Triangular Sum of an Array](https://leetcode.com/problems/find-triangular-sum-of-an-array/)
 - [2257. Count Unguarded Cells in the Grid](https://leetcode.com/problems/count-unguarded-cells-in-the-grid/)
