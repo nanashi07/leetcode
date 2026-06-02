@@ -106,6 +106,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3516. Find Closest Person](https://leetcode.com/problems/find-closest-person/)
 - [3541. Find Most Frequent Vowel and Consonant](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/)
 - [3606. Coupon Code Validator](https://leetcode.com/problems/coupon-code-validator/)
+- [3633. Earliest Finish Time for Land and Water Rides I](https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-i/)
 - [3637. Trionic Array I](https://leetcode.com/problems/trionic-array-i/)
 - [3643. Flip Square Submatrix Vertically](https://leetcode.com/problems/flip-square-submatrix-vertically/)
 - [3740. Minimum Distance Between Three Equal Elements I](https://leetcode.com/problems/minimum-distance-between-three-equal-elements-i/)
