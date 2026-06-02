@@ -198,6 +198,8 @@ mod find_closest_person;
 mod find_most_frequent_vowel_and_consonant;
 // 3606. Coupon Code Validator
 mod coupon_code_validator;
+// 3633. Earliest Finish Time for Land and Water Rides I
+pub mod earliest_finish_time_for_land_and_water_rides_i;
 // 3637. Trionic Array I
 mod trionic_array_i;
 // 3643. Flip Square Submatrix Vertically
