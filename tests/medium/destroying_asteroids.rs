@@ -36,6 +36,6 @@ mod tests {
     fn test_asteroids_destroyed_2() {
         let mass = 5;
         let asteroids = [4, 9, 23, 4].to_vec();
-        assert_eq!(true, Solution::asteroids_destroyed(mass, asteroids));
+        assert_eq!(false, Solution::asteroids_destroyed(mass, asteroids));
     }
 }
