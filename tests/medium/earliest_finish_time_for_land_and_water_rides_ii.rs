@@ -10,7 +10,39 @@ impl Solution {
         water_start_time: Vec<i32>,
         water_duration: Vec<i32>,
     ) -> i32 {
-        todo!()
+        fn calc(
+            first_start_time: &[i32],
+            first_duration: &[i32],
+            second_start_time: &[i32],
+            second_duration: &[i32],
+        ) -> i32 {
+            let earliest_first_finish = first_start_time
+                .iter()
+                .zip(first_duration)
+                .map(|(&start, &duration)| start + duration)
+                .min()
+                .unwrap();
+
+            second_start_time
+                .iter()
+                .zip(second_duration)
+                .map(|(&start, &duration)| start.max(earliest_first_finish) + duration)
+                .min()
+                .unwrap()
+        }
+
+        calc(
+            &land_start_time,
+            &land_duration,
+            &water_start_time,
+            &water_duration,
+        )
+        .min(calc(
+            &water_start_time,
+            &water_duration,
+            &land_start_time,
+            &land_duration,
+        ))
     }
 }
 
