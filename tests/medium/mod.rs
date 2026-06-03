@@ -360,6 +360,8 @@ mod count_number_of_trapezoids_i;
 pub mod minimum_jumps_to_reach_end_via_prime_teleportation;
 // 3634. Minimum Removals to Balance Array
 mod minimum_removals_to_balance_array;
+// 3635. Earliest Finish Time for Land and Water Rides II
+pub mod earliest_finish_time_for_land_and_water_rides_ii;
 // 3650. Minimum Cost Path with Edge Reversals
 mod minimum_cost_path_with_edge_reversals;
 // 3652. Best Time to Buy and Sell Stock using Strategy
