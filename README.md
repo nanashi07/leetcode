@@ -305,6 +305,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3719. Longest Balanced Subarray I](https://leetcode.com/problems/longest-balanced-subarray-i/)
 - [3741. Minimum Distance Between Three Equal Elements II](https://leetcode.com/problems/minimum-distance-between-three-equal-elements-ii/)
 - [3742. Maximum Path Score in a Grid](https://leetcode.com/problems/maximum-path-score-in-a-grid/)
+- [3751. Total Waviness of Numbers in Range I](https://leetcode.com/problems/total-waviness-of-numbers-in-range-i/)
 - [3761. Minimum Absolute Distance Between Mirror Pairs](https://leetcode.com/problems/minimum-absolute-distance-between-mirror-pairs/)
 
 ### Hard Problems
