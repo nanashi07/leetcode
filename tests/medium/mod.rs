@@ -380,5 +380,7 @@ mod longest_balanced_subarray_i;
 pub mod minimum_distance_between_three_equal_elements_ii;
 // 3742. Maximum Path Score in a Grid
 pub mod maximum_path_score_in_a_grid;
+// 3751. Total Waviness of Numbers in Range I
+pub mod total_waviness_of_numbers_in_range_i;
 // 3761. Minimum Absolute Distance Between Mirror Pairs
 pub mod minimum_absolute_distance_between_mirror_pairs;
