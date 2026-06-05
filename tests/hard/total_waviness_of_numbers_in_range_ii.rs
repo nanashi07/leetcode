@@ -3,71 +3,81 @@
 
 struct Solution;
 
+type Memo = Vec<Vec<Vec<Vec<Vec<Option<(i64, i64)>>>>>>;
+
 impl Solution {
     pub fn total_waviness(num1: i64, num2: i64) -> i64 {
-        fn solve(x: i64) -> i64 {
-            if x <= 0 {
-                return 0;
-            }
+        Self::total_up_to(num2) - Self::total_up_to(num1 - 1)
+    }
 
-            let digits: Vec<u8> = x
-                .to_string()
-                .bytes()
-                .map(|b| b - b'0')
-                .collect();
-            let n = digits.len();
+    fn is_wavy(a: i32, b: i32, c: i32) -> i64 {
+        ((a < b && b > c) || (a > b && b < c)) as i64
+    }
 
-            let mut memo: Vec<Vec<Vec<[Option<(i64, i64)>; 11]>>> =
-                vec![vec![vec![[None; 11]; 2]; 2]; n + 1];
-
-            fn dfs(
-                pos: usize,
-                tight: usize,
-                started: usize,
-                prev: usize,
-                digits: &[u8],
-                memo: &mut [Vec<Vec<[Option<(i64, i64)>; 11]>>],
-            ) -> (i64, i64) {
-                if pos == digits.len() {
-                    return (1, 0);
-                }
-
-                if let Some(v) = memo[pos][tight][started][prev] {
-                    return v;
-                }
-
-                let limit = if tight == 1 { digits[pos] as usize } else { 9 };
-                let mut total_count = 0i64;
-                let mut total_sum = 0i64;
-
-                for d in 0..=limit {
-                    let next_tight = if tight == 1 && d == limit { 1 } else { 0 };
-
-                    if started == 0 && d == 0 {
-                        let (cnt, s) = dfs(pos + 1, next_tight, 0, 10, digits, memo);
-                        total_count += cnt;
-                        total_sum += s;
-                    } else {
-                        let next_started = 1;
-                        let next_prev = d;
-                        let (cnt, s) = dfs(pos + 1, next_tight, next_started, next_prev, digits, memo);
-
-                        let add = if started == 1 && prev != d { cnt } else { 0 };
-                        total_count += cnt;
-                        total_sum += s + add;
-                    }
-                }
-
-                let res = (total_count, total_sum);
-                memo[pos][tight][started][prev] = Some(res);
-                res
-            }
-
-            let (_, sum) = dfs(0, 1, 0, 10, &digits, &mut memo);
-            sum
+    fn solve(
+        pos: usize,
+        tight: usize,
+        started: usize,
+        prev1: usize,
+        prev2: usize,
+        digits: &[u8],
+        memo: &mut Memo,
+    ) -> (i64, i64) {
+        if pos == digits.len() {
+            return (1, 0);
+        }
+        if let Some(result) = memo[pos][tight][started][prev1][prev2] {
+            return result;
         }
 
-        solve(num2) - solve(num1 - 1)
+        let limit = if tight == 1 { digits[pos] } else { 9 } as usize;
+        let mut count = 0i64;
+        let mut total = 0i64;
+
+        for digit in 0..=limit {
+            let next_tight = usize::from(tight == 1 && digit == limit);
+
+            if started == 0 && digit == 0 {
+                let (sub_count, sub_total) =
+                    Self::solve(pos + 1, next_tight, 0, 10, 10, digits, memo);
+                count += sub_count;
+                total += sub_total;
+                continue;
+            }
+
+            if started == 0 {
+                let (sub_count, sub_total) =
+                    Self::solve(pos + 1, next_tight, 1, digit, 10, digits, memo);
+                count += sub_count;
+                total += sub_total;
+                continue;
+            }
+
+            let extra = if prev2 == 10 {
+                0
+            } else {
+                Self::is_wavy(prev2 as i32, prev1 as i32, digit as i32)
+            };
+            let (sub_count, sub_total) =
+                Self::solve(pos + 1, next_tight, 1, digit, prev1, digits, memo);
+            count += sub_count;
+            total += sub_total + extra * sub_count;
+        }
+
+        let result = (count, total);
+        memo[pos][tight][started][prev1][prev2] = Some(result);
+        result
+    }
+
+    fn total_up_to(n: i64) -> i64 {
+        if n <= 0 {
+            return 0;
+        }
+
+        let digits: Vec<u8> = n.to_string().bytes().map(|b| b - b'0').collect();
+        let len = digits.len();
+        let mut memo = vec![vec![vec![vec![vec![None; 11]; 11]; 2]; 2]; len];
+        Self::solve(0, 1, 0, 10, 10, &digits, &mut memo).1
     }
 }
 
