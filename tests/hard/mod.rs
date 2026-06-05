@@ -152,3 +152,5 @@ pub mod maximum_walls_destroyed_by_robots;
 pub mod minimum_operations_to_equalize_binary_string;
 // 3721. Longest Balanced Subarray II
 mod longest_balanced_subarray_ii;
+// 3753. Total Waviness of Numbers in Range II
+pub mod total_waviness_of_numbers_in_range_ii;
