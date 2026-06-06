@@ -138,6 +138,8 @@ pub mod shortest_distance_to_target_string_in_a_circular_array;
 mod minimum_common_value;
 // 2553. Separate the Digits in an Array
 pub mod separate_the_digits_in_an_array;
+// 2574. Left and Right Sum Differences
+pub mod left_and_right_sum_differences;
 // 2784. Check if Array is Good
 pub mod check_if_array_is_good;
 // 2833. Furthest Point From Origin
