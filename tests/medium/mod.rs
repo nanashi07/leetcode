@@ -208,6 +208,8 @@ mod number_of_smooth_descent_periods_of_a_stock;
 mod number_of_laser_beams_in_a_bank;
 // 2126. Destroying Asteroids
 pub mod destroying_asteroids;
+// 2196. Create Binary Tree From Descriptions
+pub mod create_binary_tree_from_descriptions;
 // 2211. Count Collisions on a Road
 mod count_collisions_on_a_road;
 // 2221. Find Triangular Sum of an Array
