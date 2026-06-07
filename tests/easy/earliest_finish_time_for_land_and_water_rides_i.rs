@@ -54,7 +54,8 @@ impl Solution {
 
         let (water_starts, water_pref_min_d, water_suf_min_sd) =
             build(&water_start_time, &water_duration);
-        let (land_starts, land_pref_min_d, land_suf_min_sd) = build(&land_start_time, &land_duration);
+        let (land_starts, land_pref_min_d, land_suf_min_sd) =
+            build(&land_start_time, &land_duration);
 
         let mut ans = i32::MAX;
 
