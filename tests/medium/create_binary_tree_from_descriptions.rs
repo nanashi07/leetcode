@@ -9,7 +9,39 @@ use std::rc::Rc;
 
 impl Solution {
     pub fn create_binary_tree(descriptions: Vec<Vec<i32>>) -> Option<Rc<RefCell<TreeNode>>> {
-        todo!()
+        use std::collections::{HashMap, HashSet};
+
+        let mut nodes = HashMap::with_capacity(descriptions.len() * 2);
+        let mut children = HashSet::with_capacity(descriptions.len());
+
+        for description in descriptions {
+            let parent = description[0];
+            let child = description[1];
+            let is_left = description[2] == 1;
+
+            let parent_node = Rc::clone(
+                nodes
+                    .entry(parent)
+                    .or_insert_with(|| Rc::new(RefCell::new(TreeNode::new(parent)))),
+            );
+            let child_node = Rc::clone(
+                nodes
+                    .entry(child)
+                    .or_insert_with(|| Rc::new(RefCell::new(TreeNode::new(child)))),
+            );
+
+            if is_left {
+                parent_node.borrow_mut().left = Some(child_node);
+            } else {
+                parent_node.borrow_mut().right = Some(child_node);
+            }
+
+            children.insert(child);
+        }
+
+        nodes
+            .into_iter()
+            .find_map(|(value, node)| (!children.contains(&value)).then_some(node))
     }
 }
 
