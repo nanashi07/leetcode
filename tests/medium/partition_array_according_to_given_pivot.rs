@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn pivot_array(nums: Vec<i32>, pivot: i32) -> Vec<i32> {
-        todo!()
+        let mut result = Vec::with_capacity(nums.len());
+        let mut pivot_count = 0;
+
+        for &num in &nums {
+            if num < pivot {
+                result.push(num);
+            } else if num == pivot {
+                pivot_count += 1;
+            }
+        }
+
+        result.extend(std::iter::repeat_n(pivot, pivot_count));
+
+        for num in nums {
+            if num > pivot {
+                result.push(num);
+            }
+        }
+
+        result
     }
 }
 
