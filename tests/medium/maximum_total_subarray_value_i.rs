@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn max_total_value(nums: Vec<i32>, k: i32) -> i64 {
-        todo!()
+        let mut min_num = nums[0];
+        let mut max_num = nums[0];
+
+        for &num in &nums[1..] {
+            if num < min_num {
+                min_num = num;
+            }
+            if num > max_num {
+                max_num = num;
+            }
+        }
+
+        (max_num as i64 - min_num as i64) * k as i64
     }
 }
 
