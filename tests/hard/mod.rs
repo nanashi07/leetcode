@@ -150,6 +150,8 @@ pub mod xor_after_range_multiplication_queries_ii;
 pub mod maximum_walls_destroyed_by_robots;
 // 3666. Minimum Operations to Equalize Binary String
 pub mod minimum_operations_to_equalize_binary_string;
+// 3691. Maximum Total Subarray Value II
+pub mod maximum_total_subarray_value_ii;
 // 3721. Longest Balanced Subarray II
 mod longest_balanced_subarray_ii;
 // 3753. Total Waviness of Numbers in Range II
