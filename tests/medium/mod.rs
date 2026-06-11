@@ -346,6 +346,8 @@ mod count_covered_buildings;
 mod minimum_operations_to_convert_all_elements_to_zero;
 // 3546. Equal Sum Grid Partition I
 pub mod equal_sum_grid_partition_i;
+// 3558. Number of Ways to Assign Edge Weights I
+pub mod number_of_ways_to_assign_edge_weights_i;
 // 3567. Minimum Absolute Difference in Sliding Submatrix
 pub mod minimum_absolute_difference_in_sliding_submatrix;
 // 3573. Best Time to Buy and Sell Stock V
