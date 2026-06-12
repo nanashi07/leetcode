@@ -134,6 +134,8 @@ mod minimum_pair_removal_to_sort_array_ii;
 mod find_sum_of_array_product_of_magical_sequences;
 // 3548. Equal Sum Grid Partition II
 pub mod equal_sum_grid_partition_ii;
+// 3559. Number of Ways to Assign Edge Weights II
+pub mod number_of_ways_to_assign_edge_weights_ii;
 // 3562. Maximum Profit from Trading Stocks with Discounts
 mod maximum_profit_from_trading_stocks_with_discounts;
 // 3600. Maximize Spanning Tree Stability with Upgrades
