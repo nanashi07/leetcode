@@ -210,3 +210,5 @@ pub mod flip_square_submatrix_vertically;
 pub mod minimum_distance_between_three_equal_elements_i;
 // 3783. Mirror Distance of an Integer
 pub mod mirror_distance_of_an_integer;
+// 3838. Weighted Word Mapping
+pub mod weighted_word_mapping;
