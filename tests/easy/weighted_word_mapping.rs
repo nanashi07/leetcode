@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn map_word_weights(words: Vec<String>, weights: Vec<i32>) -> String {
-        todo!()
+        words
+            .iter()
+            .map(|s| {
+                char::from_u32(
+                    'a' as u32 + 26
+                        - 1
+                        - (s.chars()
+                            .map(|c| weights[c as usize - 'a' as usize])
+                            .sum::<i32>() as u32
+                            % 26),
+                )
+                .unwrap()
+            })
+            .collect::<String>()
     }
 }
 
