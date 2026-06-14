@@ -7,7 +7,18 @@ struct Solution;
 
 impl Solution {
     pub fn pair_sum(head: Option<Box<ListNode>>) -> i32 {
-        todo!()
+        let mut vals = Vec::new();
+        let mut cur = &head;
+        while let Some(node) = cur {
+            vals.push(node.val);
+            cur = &node.next;
+        }
+        let n = vals.len();
+        let mut max = 0;
+        for i in 0..n / 2 {
+            max = max.max(vals[i] + vals[n - 1 - i]);
+        }
+        max
     }
 }
 
