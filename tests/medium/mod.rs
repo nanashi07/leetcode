@@ -208,6 +208,8 @@ mod number_of_smooth_descent_periods_of_a_stock;
 mod number_of_laser_beams_in_a_bank;
 // 2126. Destroying Asteroids
 pub mod destroying_asteroids;
+// 2130. Maximum Twin Sum of a Linked List
+pub mod maximum_twin_sum_of_a_linked_list;
 // 2161. Partition Array According to Given Pivot
 pub mod partition_array_according_to_given_pivot;
 // 2196. Create Binary Tree From Descriptions

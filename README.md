@@ -221,6 +221,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2110. Number of Smooth Descent Periods of a Stock](https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/)
 - [2125. Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/)
 - [2126. Destroying Asteroids](https://leetcode.com/problems/destroying-asteroids/)
+- [2130. Maximum Twin Sum of a Linked List](https://leetcode.com/problems/maximum-twin-sum-of-a-linked-list/)
 - [2161. Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)
 - [2196. Create Binary Tree From Descriptions](https://leetcode.com/problems/create-binary-tree-from-descriptions/)
 - [2211. Count Collisions on a Road](https://leetcode.com/problems/count-collisions-on-a-road/)
