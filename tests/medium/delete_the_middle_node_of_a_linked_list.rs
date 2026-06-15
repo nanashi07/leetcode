@@ -7,7 +7,20 @@ struct Solution;
 
 impl Solution {
     pub fn delete_middle(head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        todo!()
+        let mut dummy = Box::new(ListNode { val: 0, next: head });
+        let mut slow: *mut Box<ListNode> = &mut dummy;
+        let mut fast: *const Option<Box<ListNode>> = unsafe { &(*slow).next };
+        unsafe {
+            while (*fast).is_some()
+                && (*fast).as_ref().unwrap().next.is_some()
+            {
+                slow = (*slow).next.as_mut().unwrap();
+                fast = &(*fast).as_ref().unwrap().next.as_ref().unwrap().next;
+            }
+            let next = (*slow).next.take();
+            (*slow).next = next.unwrap().next;
+        }
+        dummy.next
     }
 }
 
