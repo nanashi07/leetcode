@@ -218,6 +218,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2054. Two Best Non-Overlapping Events](https://leetcode.com/problems/two-best-non-overlapping-events/)
 - [2069. Walking Robot Simulation II](https://leetcode.com/problems/walking-robot-simulation-ii/)
 - [2075. Decode the Slanted Ciphertext](https://leetcode.com/problems/decode-the-slanted-ciphertext/)
+- [2095. Delete the Middle Node of a Linked List](https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/)
 - [2110. Number of Smooth Descent Periods of a Stock](https://leetcode.com/problems/number-of-smooth-descent-periods-of-a-stock/)
 - [2125. Number of Laser Beams in a Bank](https://leetcode.com/problems/number-of-laser-beams-in-a-bank/)
 - [2126. Destroying Asteroids](https://leetcode.com/problems/destroying-asteroids/)

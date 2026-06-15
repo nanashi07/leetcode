@@ -202,6 +202,8 @@ mod two_best_non_overlapping_events;
 pub mod walking_robot_simulation_ii;
 // 2075. Decode the Slanted Ciphertext
 pub mod decode_the_slanted_ciphertext;
+// 2095. Delete the Middle Node of a Linked List
+pub mod delete_the_middle_node_of_a_linked_list;
 // 2110. Number of Smooth Descent Periods of a Stock
 mod number_of_smooth_descent_periods_of_a_stock;
 // 2125. Number of Laser Beams in a Bank
