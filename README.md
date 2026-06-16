@@ -299,6 +299,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3578. Count Partitions With Max-Min Difference at Most K](https://leetcode.com/problems/count-partitions-with-max-min-difference-at-most-k/)
 - [3583. Count Special Triplets](https://leetcode.com/problems/count-special-triplets/)
 - [3607. Power Grid Maintenance](https://leetcode.com/problems/power-grid-maintenance/)
+- [3612. Process String with Special Operations I](https://leetcode.com/problems/process-string-with-special-operations-i/)
 - [3623. Count Number of Trapezoids I](https://leetcode.com/problems/count-number-of-trapezoids-i/)
 - [3629. Minimum Jumps to Reach End via Prime Teleportation](https://leetcode.com/problems/minimum-jumps-to-reach-end-via-prime-teleportation/)
 - [3634. Minimum Removals to Balance Array](https://leetcode.com/problems/minimum-removals-to-balance-array/)
