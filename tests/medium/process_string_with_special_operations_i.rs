@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn process_str(s: String) -> String {
-        todo!()
+        let mut result = Vec::with_capacity(s.len());
+
+        for b in s.bytes() {
+            match b {
+                b'*' => {
+                    result.pop();
+                }
+                b'#' => result.extend_from_within(..),
+                b'%' => result.reverse(),
+                _ => result.push(b),
+            }
+        }
+
+        String::from_utf8(result).unwrap()
     }
 }
 
