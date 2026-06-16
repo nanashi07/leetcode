@@ -364,6 +364,8 @@ mod count_partitions_with_max_min_difference_at_most_k;
 mod count_special_triplets;
 // 3607. Power Grid Maintenance
 mod power_grid_maintenance;
+// 3612. Process String with Special Operations I
+pub mod process_string_with_special_operations_i;
 // 3623. Count Number of Trapezoids I
 mod count_number_of_trapezoids_i;
 // 3629. Minimum Jumps to Reach End via Prime Teleportation
