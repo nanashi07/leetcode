@@ -7,15 +7,15 @@ impl Solution {
     pub fn process_str(s: String, k: i64) -> char {
         let bytes = s.as_bytes();
         let n = bytes.len();
-        let cap: i64 = 2 * (k + 1);
+        const CAP: i64 = 4_000_000_000_000_000_000;
 
         let mut lens = vec![0i64; n + 1];
         for i in 0..n {
             lens[i + 1] = match bytes[i] {
                 b'*' => (lens[i] - 1).max(0),
-                b'#' => (lens[i] * 2).min(cap),
+                b'#' => lens[i].saturating_mul(2).min(CAP),
                 b'%' => lens[i],
-                _ => (lens[i] + 1).min(cap),
+                _ => lens[i].saturating_add(1).min(CAP),
             };
         }
 
@@ -74,5 +74,12 @@ mod tests {
         let s = "z*#".to_string();
         let k = 0;
         assert_eq!('.', Solution::process_str(s, k));
+    }
+
+    #[test]
+    fn test_process_str_4() {
+        let s = "#jief%k".to_string();
+        let k = 0;
+        assert_eq!('f', Solution::process_str(s, k));
     }
 }
