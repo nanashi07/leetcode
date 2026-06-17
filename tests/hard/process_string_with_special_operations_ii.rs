@@ -5,7 +5,49 @@ struct Solution;
 
 impl Solution {
     pub fn process_str(s: String, k: i64) -> char {
-        todo!()
+        let bytes = s.as_bytes();
+        let n = bytes.len();
+        let cap: i64 = 2 * (k + 1);
+
+        let mut lens = vec![0i64; n + 1];
+        for i in 0..n {
+            lens[i + 1] = match bytes[i] {
+                b'*' => (lens[i] - 1).max(0),
+                b'#' => (lens[i] * 2).min(cap),
+                b'%' => lens[i],
+                _ => (lens[i] + 1).min(cap),
+            };
+        }
+
+        if k >= lens[n] {
+            return '.';
+        }
+
+        let mut k = k;
+        for i in (0..n).rev() {
+            match bytes[i] {
+                b'*' => {
+                    if k == lens[i] {
+                        return '.';
+                    }
+                }
+                b'#' => {
+                    if lens[i] == 0 {
+                        continue;
+                    }
+                    k %= lens[i];
+                }
+                b'%' => {
+                    k = lens[i] - 1 - k;
+                }
+                c => {
+                    if k == lens[i] {
+                        return c as char;
+                    }
+                }
+            }
+        }
+        unreachable!()
     }
 }
 
