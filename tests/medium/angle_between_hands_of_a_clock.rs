@@ -5,7 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn angle_clock(hour: i32, minutes: i32) -> f64 {
-        todo!()
+        let minute_angle = minutes as f64 * 6.0;
+        let hour_angle = (hour % 12) as f64 * 30.0 + minutes as f64 * 0.5;
+        let diff = (minute_angle - hour_angle).abs();
+        diff.min(360.0 - diff)
     }
 }
 
