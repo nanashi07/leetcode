@@ -140,6 +140,8 @@ pub mod number_of_ways_to_assign_edge_weights_ii;
 mod maximum_profit_from_trading_stocks_with_discounts;
 // 3600. Maximize Spanning Tree Stability with Upgrades
 pub mod maximize_spanning_tree_stability_with_upgrades;
+// 3614. Process String with Special Operations II
+pub mod process_string_with_special_operations_ii;
 // 3625. Count Number of Trapezoids II
 mod count_number_of_trapezoids_ii;
 // 3640. Trionic Array II
