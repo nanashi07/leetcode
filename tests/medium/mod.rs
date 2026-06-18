@@ -108,6 +108,8 @@ mod maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold;
 pub mod jump_game_iii;
 // 1339. Maximum Product of Splitted Binary Tree
 mod maximum_product_of_splitted_binary_tree;
+// 1344. Angle Between Hands of a Clock
+pub mod angle_between_hands_of_a_clock;
 // 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
 // 1382. Balance a Binary Search Tree
