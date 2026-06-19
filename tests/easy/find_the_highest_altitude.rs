@@ -5,7 +5,13 @@ struct Solution;
 
 impl Solution {
     pub fn largest_altitude(gain: Vec<i32>) -> i32 {
-        todo!()
+        let mut h = gain[0];
+        let mut max = 0.max(h);
+        for i in 1..gain.len() {
+            h += gain[i];
+            max = max.max(h);
+        }
+        max
     }
 }
 
@@ -23,5 +29,11 @@ mod tests {
     fn test_largest_altitude_2() {
         let gain = [-4, -3, -2, -1, 4, 3, 2].to_vec();
         assert_eq!(0, Solution::largest_altitude(gain));
+    }
+
+    #[test]
+    fn test_largest_altitude_3() {
+        let gain = [52, -91, 72].to_vec();
+        assert_eq!(52, Solution::largest_altitude(gain));
     }
 }
