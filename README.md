@@ -347,6 +347,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1622. Fancy Sequence](https://leetcode.com/problems/fancy-sequence/)
 - [1665. Minimum Initial Energy to Finish Tasks](https://leetcode.com/problems/minimum-initial-energy-to-finish-tasks/)
 - [1751. Maximum Number of Events That Can Be Attended II](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended-ii/)
+- [1840. Maximum Building Height](https://leetcode.com/problems/maximum-building-height/)
 - [1900. The Earliest and Latest Rounds Where Players Compete](https://leetcode.com/problems/the-earliest-and-latest-rounds-where-players-compete/)
 - [1912. Design Movie Rental System](https://leetcode.com/problems/design-movie-rental-system/)
 - [1948. Delete Duplicate Folders in System](https://leetcode.com/problems/delete-duplicate-folders-in-system/)
