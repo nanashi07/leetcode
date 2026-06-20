@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn max_building(n: i32, restrictions: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let mut pts: Vec<(i64, i64)> = restrictions.iter().map(|r| (r[0] as i64, r[1] as i64)).collect();
+        pts.push((1, 0));
+        pts.sort();
+        if pts.last().unwrap().0 != n as i64 {
+            pts.push((n as i64, n as i64 - 1));
+        }
+
+        let len = pts.len();
+        for i in 1..len {
+            pts[i].1 = pts[i].1.min(pts[i - 1].1 + (pts[i].0 - pts[i - 1].0));
+        }
+        for i in (0..len - 1).rev() {
+            pts[i].1 = pts[i].1.min(pts[i + 1].1 + (pts[i + 1].0 - pts[i].0));
+        }
+
+        let mut ans: i64 = 0;
+        for i in 1..len {
+            let d = pts[i].0 - pts[i - 1].0;
+            let h = (d + pts[i - 1].1 + pts[i].1) / 2;
+            ans = ans.max(h);
+        }
+        ans as i32
     }
 }
 
