@@ -118,7 +118,7 @@ mod tests {
         let edges = to_vec2d([[1, 2], [1, 3], [3, 4], [3, 5]]);
         let queries = to_vec2d([[1, 4], [3, 4], [2, 5]]);
         assert_eq!(
-            [2,1,4].to_vec(),
+            [2, 1, 4].to_vec(),
             Solution::assign_edge_weights(edges, queries)
         );
     }

@@ -11,9 +11,7 @@ impl Solution {
         let mut slow: *mut Box<ListNode> = &mut dummy;
         let mut fast: *const Option<Box<ListNode>> = unsafe { &(*slow).next };
         unsafe {
-            while (*fast).is_some()
-                && (*fast).as_ref().unwrap().next.is_some()
-            {
+            while (*fast).is_some() && (*fast).as_ref().unwrap().next.is_some() {
                 slow = (*slow).next.as_mut().unwrap();
                 fast = &(*fast).as_ref().unwrap().next.as_ref().unwrap().next;
             }

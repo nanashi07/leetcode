@@ -32,7 +32,11 @@ impl Solution {
             }
         }
 
-        let value = |l: usize, r: usize, st_max: &Vec<Vec<i32>>, st_min: &Vec<Vec<i32>>, lg: &Vec<usize>| {
+        let value = |l: usize,
+                     r: usize,
+                     st_max: &Vec<Vec<i32>>,
+                     st_min: &Vec<Vec<i32>>,
+                     lg: &Vec<usize>| {
             let p = lg[r - l + 1];
             let len = 1usize << p;
             let mx = st_max[l][p].max(st_max[r + 1 - len][p]);

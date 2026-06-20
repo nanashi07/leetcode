@@ -5,7 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn max_building(n: i32, restrictions: Vec<Vec<i32>>) -> i32 {
-        let mut pts: Vec<(i64, i64)> = restrictions.iter().map(|r| (r[0] as i64, r[1] as i64)).collect();
+        let mut pts: Vec<(i64, i64)> = restrictions
+            .iter()
+            .map(|r| (r[0] as i64, r[1] as i64))
+            .collect();
         pts.push((1, 0));
         pts.sort();
         if pts.last().unwrap().0 != n as i64 {
