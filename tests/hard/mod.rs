@@ -50,6 +50,8 @@ pub mod fancy_sequence;
 pub mod minimum_initial_energy_to_finish_tasks;
 // 1751. Maximum Number of Events That Can Be Attended II
 mod maximum_number_of_events_that_can_be_attended_ii;
+// 1840. Maximum Building Height
+pub mod maximum_building_height;
 // 1900. The Earliest and Latest Rounds Where Players Compete
 mod the_earliest_and_latest_rounds_where_players_compete;
 // 1912. Design Movie Rental System
