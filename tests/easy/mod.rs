@@ -68,6 +68,8 @@ pub mod complement_of_base_10_integer;
 mod binary_prefix_divisible_by_5;
 // 1022. Sum of Root To Leaf Binary Numbers
 mod sum_of_root_to_leaf_binary_numbers;
+// 1189. Maximum Number of Balloons
+pub mod maximum_number_of_balloons;
 // 1200. Minimum Absolute Difference
 mod minimum_absolute_difference;
 // 1266. Minimum Time Visiting All Points
