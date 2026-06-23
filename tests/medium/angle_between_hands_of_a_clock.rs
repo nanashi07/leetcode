@@ -20,20 +20,20 @@ mod tests {
     fn test_angle_clock_1() {
         let hour = 12;
         let minutes = 30;
-        assert_eq!(165f64, Solution::angle_clock(hour, minutes));
+        assert_eq!(165.0, Solution::angle_clock(hour, minutes));
     }
 
     #[test]
     fn test_angle_clock_2() {
         let hour = 3;
         let minutes = 30;
-        assert_eq!(165f64, Solution::angle_clock(hour, minutes));
+        assert_eq!(75.0, Solution::angle_clock(hour, minutes));
     }
 
     #[test]
     fn test_angle_clock_3() {
         let hour = 3;
         let minutes = 15;
-        assert_eq!(165f64, Solution::angle_clock(hour, minutes));
+        assert_eq!(7.5, Solution::angle_clock(hour, minutes));
     }
 }
