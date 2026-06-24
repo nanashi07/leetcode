@@ -160,6 +160,8 @@ pub mod minimum_operations_to_equalize_binary_string;
 pub mod maximum_total_subarray_value_ii;
 // 3699. Number of ZigZag Arrays I
 pub mod number_of_zigzag_arrays_i;
+// 3700. Number of ZigZag Arrays II
+pub mod number_of_zigzag_arrays_ii;
 // 3721. Longest Balanced Subarray II
 mod longest_balanced_subarray_ii;
 // 3753. Total Waviness of Numbers in Range II
