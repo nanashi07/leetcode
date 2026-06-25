@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn count_majority_subarrays(nums: Vec<i32>, target: i32) -> i32 {
-        todo!()
+        let n = nums.len();
+        let mut count = 0;
+        for i in 0..n {
+            let mut target_count = 0;
+            for j in i..n {
+                if nums[j] == target {
+                    target_count += 1;
+                }
+                let len = j - i + 1;
+                if target_count * 2 > len {
+                    count += 1;
+                }
+            }
+        }
+        count
     }
 }
 
