@@ -407,6 +407,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3699. Number of ZigZag Arrays I](https://leetcode.com/problems/number-of-zigzag-arrays-i/)
 - [3700. Number of ZigZag Arrays II](https://leetcode.com/problems/number-of-zigzag-arrays-ii/)
 - [3721. Longest Balanced Subarray II](https://leetcode.com/problems/longest-balanced-subarray-ii/)
+- [3739. Count Subarrays With Majority Element II](https://leetcode.com/problems/count-subarrays-with-majority-element-ii/)
 - [3753. Total Waviness of Numbers in Range II](https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii/)
 
 ## How to Run
