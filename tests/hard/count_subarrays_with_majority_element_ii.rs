@@ -5,7 +5,40 @@ struct Solution;
 
 impl Solution {
     pub fn count_majority_subarrays(nums: Vec<i32>, target: i32) -> i64 {
-        todo!()
+        let n = nums.len();
+        let offset = n as i32 + 1;
+        let size = 2 * n + 3;
+        let mut bit = vec![0i64; size + 1];
+
+        let update = |bit: &mut Vec<i64>, mut i: usize, v: i64| {
+            while i <= size {
+                bit[i] += v;
+                i += i & i.wrapping_neg();
+            }
+        };
+
+        let query = |bit: &Vec<i64>, mut i: usize| -> i64 {
+            let mut s = 0i64;
+            while i > 0 {
+                s += bit[i];
+                i -= i & i.wrapping_neg();
+            }
+            s
+        };
+
+        let mut result = 0i64;
+        let mut prefix = 0i32;
+
+        update(&mut bit, (prefix + offset) as usize, 1);
+
+        for &x in &nums {
+            prefix += if x == target { 1 } else { -1 };
+            let idx = (prefix + offset) as usize;
+            result += query(&bit, idx - 1);
+            update(&mut bit, idx, 1);
+        }
+
+        result
     }
 }
 
@@ -23,8 +56,8 @@ mod tests {
     #[test]
     fn test_count_majority_subarrays_2() {
         let nums = [1, 1, 1, 1].to_vec();
-        let target = 10;
-        assert_eq!(1, Solution::count_majority_subarrays(nums, target));
+        let target = 1;
+        assert_eq!(10, Solution::count_majority_subarrays(nums, target));
     }
 
     #[test]
