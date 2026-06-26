@@ -164,5 +164,7 @@ pub mod number_of_zigzag_arrays_i;
 pub mod number_of_zigzag_arrays_ii;
 // 3721. Longest Balanced Subarray II
 mod longest_balanced_subarray_ii;
+// 3739. Count Subarrays With Majority Element II
+pub mod count_subarrays_with_majority_element_ii;
 // 3753. Total Waviness of Numbers in Range II
 pub mod total_waviness_of_numbers_in_range_ii;
