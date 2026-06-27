@@ -37,8 +37,8 @@ impl Solution {
                 // v is the new value; it was reached by going up from some u < v
                 // those u had dir=0 (needing up), now v's dir=1 (needing down)
                 ndp[v][1] = sum_up[v]; // sum of dp[0..v][0]
-                // v was reached by going down from some u > v
-                // those u had dir=1 (needing down), now v's dir=0 (needing up)
+                                       // v was reached by going down from some u > v
+                                       // those u had dir=1 (needing down), now v's dir=0 (needing up)
                 ndp[v][0] = (sum_down[m] - sum_down[v + 1] + MOD) % MOD;
             }
             dp = ndp;
