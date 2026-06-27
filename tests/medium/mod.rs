@@ -274,6 +274,8 @@ mod maximize_area_of_square_hole_in_grid;
 mod maximum_square_area_by_removing_fences_from_a_field;
 // 2976. Minimum Cost to Convert String I
 mod minimum_cost_to_convert_string_i;
+// 3020. Find the Maximum Number of Elements in Subset
+pub mod find_the_maximum_number_of_elements_in_subset;
 // 3021. Alice and Bob Playing Flower Game
 mod alice_and_bob_playing_flower_game;
 // 3025. Find the Number of Ways to Place People I

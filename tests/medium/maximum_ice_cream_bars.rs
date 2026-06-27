@@ -10,7 +10,9 @@ impl Solution {
         let mut coins = coins;
         let mut count = 0;
         for cost in costs {
-            if coins < cost { break; }
+            if coins < cost {
+                break;
+            }
             coins -= cost;
             count += 1;
         }
