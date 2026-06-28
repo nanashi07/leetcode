@@ -4,8 +4,15 @@
 struct Solution;
 
 impl Solution {
-    pub fn maximum_element_after_decrementing_and_rearranging(arr: Vec<i32>) -> i32 {
-        todo!()
+    pub fn maximum_element_after_decrementing_and_rearranging(mut arr: Vec<i32>) -> i32 {
+        arr.sort_unstable();
+        let mut ans = 1;
+        for &val in arr.iter().skip(1) {
+            if val > ans {
+                ans += 1;
+            }
+        }
+        ans
     }
 }
 
