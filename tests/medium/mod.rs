@@ -168,6 +168,8 @@ pub mod largest_submatrix_with_rearrangements;
 mod maximum_average_pass_ratio;
 // 1833. Maximum Ice Cream Bars
 pub mod maximum_ice_cream_bars;
+// 1846. Maximum Element After Decreasing and Rearranging
+pub mod maximum_element_after_decreasing_and_rearranging;
 // 1855. Maximum Distance Between a Pair of Values
 pub mod maximum_distance_between_a_pair_of_values;
 // 1861. Rotating the Box
