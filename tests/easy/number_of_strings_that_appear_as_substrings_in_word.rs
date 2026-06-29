@@ -5,7 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn num_of_strings(patterns: Vec<String>, word: String) -> i32 {
-        todo!()
+        patterns
+            .iter()
+            .map(|p| if word.contains(p) { 1 } else { 0 })
+            .sum()
     }
 }
 
