@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_substrings(s: String) -> i32 {
-        todo!()
+        let mut last = [-1; 3];
+        let mut count = 0;
+        for (i, &b) in s.as_bytes().iter().enumerate() {
+            match b {
+                b'a' => last[0] = i as i32,
+                b'b' => last[1] = i as i32,
+                b'c' => last[2] = i as i32,
+                _ => {}
+            }
+            let min_idx = last[0].min(last[1]).min(last[2]);
+            if min_idx >= 0 {
+                count += min_idx + 1;
+            }
+        }
+        count
     }
 }
 
