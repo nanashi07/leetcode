@@ -112,6 +112,8 @@ mod maximum_product_of_splitted_binary_tree;
 pub mod angle_between_hands_of_a_clock;
 // 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
+// 1358. Number of Substrings Containing All Three Characters
+pub mod number_of_substrings_containing_all_three_characters;
 // 1382. Balance a Binary Search Tree
 mod balance_a_binary_search_tree;
 // 1390. Four Divisors
