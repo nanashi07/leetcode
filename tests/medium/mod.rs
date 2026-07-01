@@ -268,6 +268,8 @@ pub mod maximum_number_of_jumps_to_reach_the_last_index;
 mod sort_vowels_in_a_string;
 // 2787. Ways to Express an Integer as Sum of Powers
 mod ways_to_express_an_integer_as_sum_of_powers;
+// 2812. Find the Safest Path in a Grid
+pub mod find_the_safest_path_in_a_grid;
 // 2840. Check if Strings Can be Made Equal With Operations II
 pub mod check_if_strings_can_be_made_equal_with_operations_ii;
 // 2906. Construct Product Matrix
