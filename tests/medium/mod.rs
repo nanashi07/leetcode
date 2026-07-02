@@ -320,6 +320,8 @@ mod vowels_game_in_a_string;
 mod maximum_number_of_operations_to_move_ones_to_the_end;
 // 3234. Count the Number of Substrings With Dominant Ones
 mod count_the_number_of_substrings_with_dominant_ones;
+// 3286. Find a Safe Walk Through a Grid
+pub mod find_a_safe_walk_through_a_grid;
 // 3296. Minimum Number of Seconds to Make Mountain Height Zero
 pub mod minimum_number_of_seconds_to_make_mountain_height_zero;
 // 3315. Construct the Minimum Bitwise Array II
