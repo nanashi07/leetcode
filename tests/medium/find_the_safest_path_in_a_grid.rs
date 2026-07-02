@@ -20,10 +20,14 @@ impl Solution {
             }
         }
 
-        let dirs: [(i32, i32); 4] = [(-1, 0), (1, 0), (0, -1), (0, 1)];
+        let bfs_dirs: [(i32, i32); 4] = [(-1, 0), (1, 0), (0, -1), (0, 1)];
+        let move_dirs: [(i32, i32); 8] = [
+            (-1, 0), (1, 0), (0, -1), (0, 1),
+            (-1, -1), (-1, 1), (1, -1), (1, 1),
+        ];
 
         while let Some((r, c)) = queue.pop_front() {
-            for (dr, dc) in dirs {
+            for (dr, dc) in bfs_dirs {
                 let nr = r as i32 + dr;
                 let nc = c as i32 + dc;
                 if nr >= 0 && nr < n as i32 && nc >= 0 && nc < n as i32 {
@@ -52,7 +56,7 @@ impl Solution {
                 if r == n - 1 && c == n - 1 {
                     return true;
                 }
-                for (dr, dc) in dirs {
+                for (dr, dc) in move_dirs {
                     let nr = r as i32 + dr;
                     let nc = c as i32 + dc;
                     if nr >= 0 && nr < n as i32 && nc >= 0 && nc < n as i32 {
