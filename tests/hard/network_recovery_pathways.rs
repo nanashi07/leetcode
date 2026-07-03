@@ -5,7 +5,54 @@ struct Solution;
 
 impl Solution {
     pub fn find_max_path_score(edges: Vec<Vec<i32>>, online: Vec<bool>, k: i64) -> i32 {
-        todo!()
+        use std::cmp::Reverse;
+        use std::collections::BinaryHeap;
+
+        let n = online.len();
+        let target = n - 1;
+        let mut adj = vec![vec![]; n];
+        for e in &edges {
+            let (u, v, w) = (e[0] as usize, e[1] as usize, e[2] as i64);
+            if online[u] && online[v] {
+                adj[u].push((v, w));
+                adj[v].push((u, w));
+            }
+        }
+
+        let mut lo = 0i32;
+        let mut hi = 0i32;
+        for e in &edges {
+            hi = hi.max(e[2]);
+        }
+        let mut ans = -1;
+
+        while lo <= hi {
+            let mid = lo + (hi - lo) / 2;
+            let threshold = mid as i64;
+            let mut dist = vec![i64::MAX; n];
+            dist[0] = 0;
+            let mut heap = BinaryHeap::new();
+            heap.push(Reverse((0i64, 0usize)));
+            while let Some(Reverse((d, u))) = heap.pop() {
+                if d > dist[u] {
+                    continue;
+                }
+                for &(v, w) in &adj[u] {
+                    if w >= threshold && d + w < dist[v] {
+                        dist[v] = d + w;
+                        heap.push(Reverse((dist[v], v)));
+                    }
+                }
+            }
+            if dist[target] <= k {
+                ans = mid;
+                lo = mid + 1;
+            } else {
+                hi = mid - 1;
+            }
+        }
+
+        ans
     }
 }
 
