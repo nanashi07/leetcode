@@ -403,6 +403,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3562. Maximum Profit from Trading Stocks with Discounts](https://leetcode.com/problems/maximum-profit-from-trading-stocks-with-discounts/)
 - [3600. Maximize Spanning Tree Stability with Upgrades](https://leetcode.com/problems/maximize-spanning-tree-stability-with-upgrades/)
 - [3614. Process String with Special Operations II](https://leetcode.com/problems/process-string-with-special-operations-ii/)
+- [3620. Network Recovery Pathways](https://leetcode.com/problems/network-recovery-pathways/)
 - [3625. Count Number of Trapezoids II](https://leetcode.com/problems/count-number-of-trapezoids-ii/)
 - [3640. Trionic Array II](https://leetcode.com/problems/trionic-array-ii/)
 - [3651. Minimum Cost Path with Teleportations](https://leetcode.com/problems/minimum-cost-path-with-teleportations/)
