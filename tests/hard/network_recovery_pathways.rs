@@ -15,7 +15,6 @@ impl Solution {
             let (u, v, w) = (e[0] as usize, e[1] as usize, e[2] as i64);
             if online[u] && online[v] {
                 adj[u].push((v, w));
-                adj[v].push((u, w));
             }
         }
 
@@ -82,5 +81,26 @@ mod tests {
         let online = [true, true, true, false, true].to_vec();
         let k = 12;
         assert_eq!(6, Solution::find_max_path_score(edges, online, k));
+    }
+
+    #[test]
+    fn test_find_max_path_score_3() {
+        let edges = to_vec2d([
+            [5, 6, 53],
+            [0, 3, 68],
+            [3, 4, 67],
+            [0, 6, 24],
+            [1, 3, 49],
+            [4, 6, 28],
+            [0, 2, 74],
+            [1, 5, 98],
+            [2, 4, 86],
+            [1, 6, 19],
+            [3, 6, 21],
+            [2, 5, 8],
+        ]);
+        let online = [true, true, true, true, true, true, true].to_vec();
+        let k = 402;
+        assert_eq!(28, Solution::find_max_path_score(edges, online, k));
     }
 }
