@@ -250,6 +250,8 @@ mod range_product_queries_of_powers;
 pub mod words_within_two_edits_of_dictionary;
 // 2483. Minimum Penalty for a Shop
 mod minimum_penalty_for_a_shop;
+// 2492. Minimum Score of a Path Between Two Cities
+pub mod minimum_score_of_a_path_between_two_cities;
 // 2536. Increment Submatrices by One
 mod increment_submatrices_by_one;
 // 2598. Smallest Missing Non-negative Integer After Operations
