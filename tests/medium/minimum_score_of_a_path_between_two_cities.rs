@@ -5,7 +5,62 @@ struct Solution;
 
 impl Solution {
     pub fn min_score(n: i32, roads: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let n = n as usize;
+        let mut parent: Vec<usize> = (0..=n).collect();
+        let mut rank = vec![0u8; n + 1];
+        let mut min_weight = vec![i32::MAX; n + 1];
+
+        fn find(parent: &mut Vec<usize>, i: usize) -> usize {
+            let mut root = i;
+            while root != parent[root] {
+                root = parent[root];
+            }
+            let mut curr = i;
+            while curr != root {
+                let next = parent[curr];
+                parent[curr] = root;
+                curr = next;
+            }
+            root
+        }
+
+        fn union(
+            parent: &mut Vec<usize>,
+            rank: &mut Vec<u8>,
+            min_weight: &mut Vec<i32>,
+            i: usize,
+            j: usize,
+            weight: i32,
+        ) {
+            let root_i = find(parent, i);
+            let root_j = find(parent, j);
+            let new_min = min_weight[root_i].min(min_weight[root_j]).min(weight);
+            if root_i != root_j {
+                if rank[root_i] < rank[root_j] {
+                    parent[root_i] = root_j;
+                    min_weight[root_j] = new_min;
+                } else if rank[root_i] > rank[root_j] {
+                    parent[root_j] = root_i;
+                    min_weight[root_i] = new_min;
+                } else {
+                    parent[root_i] = root_j;
+                    rank[root_j] += 1;
+                    min_weight[root_j] = new_min;
+                }
+            } else {
+                min_weight[root_i] = new_min;
+            }
+        }
+
+        for road in &roads {
+            let u = road[0] as usize;
+            let v = road[1] as usize;
+            let w = road[2];
+            union(&mut parent, &mut rank, &mut min_weight, u, v, w);
+        }
+
+        let root_1 = find(&mut parent, 1);
+        min_weight[root_1]
     }
 }
 
