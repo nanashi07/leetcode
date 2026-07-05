@@ -346,6 +346,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [761. Special Binary String](https://leetcode.com/problems/special-binary-string/)
 - [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 - [960. Delete Columns to Make Sorted III](https://leetcode.com/problems/delete-columns-to-make-sorted-iii/)
+- [1301. Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score/)
 - [1320. Minimum Distance to Type a Word Using Two Fingers](https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/)
 - [1340. Jump Game V](https://leetcode.com/problems/jump-game-v/)
 - [1345. Jump Game IV](https://leetcode.com/problems/jump-game-iv/)

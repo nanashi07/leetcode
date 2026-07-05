@@ -28,6 +28,8 @@ mod special_binary_string;
 mod swim_in_rising_water;
 // 960. Delete Columns to Make Sorted III
 mod delete_columns_to_make_sorted_iii;
+// 1301. Number of Paths with Max Score
+pub mod number_of_paths_with_max_score;
 // 1320. Minimum Distance to Type a Word Using Two Fingers
 pub mod minimum_distance_to_type_a_word_using_two_fingers;
 // 1340. Jump Game V
