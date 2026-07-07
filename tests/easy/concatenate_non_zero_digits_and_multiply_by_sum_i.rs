@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn sum_and_multiply(n: i32) -> i64 {
-        todo!()
+        let mut x = 0;
+        let mut sum = 0;
+        let mut n = n as i64;
+        let mut c = 0;
+        while n > 0 {
+            let s = n % 10;
+            if s > 0 {
+                x = x + s * 10i64.pow(c);
+                sum = sum + s;
+                c += 1;
+            }
+            n = n / 10
+        }
+        x * sum
     }
 }
 
