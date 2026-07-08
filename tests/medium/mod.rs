@@ -416,5 +416,7 @@ pub mod minimum_distance_between_three_equal_elements_ii;
 pub mod maximum_path_score_in_a_grid;
 // 3751. Total Waviness of Numbers in Range I
 pub mod total_waviness_of_numbers_in_range_i;
+// 3756. Concatenate Non-Zero Digits and Multiply by Sum II
+pub mod concatenate_non_zero_digits_and_multiply_by_sum_ii;
 // 3761. Minimum Absolute Distance Between Mirror Pairs
 pub mod minimum_absolute_distance_between_mirror_pairs;
