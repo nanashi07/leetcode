@@ -5,7 +5,51 @@ struct Solution;
 
 impl Solution {
     pub fn sum_and_multiply(s: String, queries: Vec<Vec<i32>>) -> Vec<i32> {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+        const INV10: i64 = 700000005;
+
+        let n = s.len();
+        let mut pow10 = vec![1i64; n + 1];
+        let mut pow_inv10 = vec![1i64; n + 1];
+        for i in 1..=n {
+            pow10[i] = (pow10[i - 1] * 10) % MOD;
+            pow_inv10[i] = (pow_inv10[i - 1] * INV10) % MOD;
+        }
+
+        let mut c_prefix = vec![0; n + 1];
+        let mut sum_prefix = vec![0i64; n + 1];
+        let mut a = vec![0i64; n + 1];
+
+        let bytes = s.as_bytes();
+        for i in 0..n {
+            let digit = (bytes[i] - b'0') as i64;
+            let is_nonzero = digit != 0;
+            c_prefix[i + 1] = c_prefix[i] + if is_nonzero { 1 } else { 0 };
+            sum_prefix[i + 1] = sum_prefix[i] + digit;
+
+            let contribution = if is_nonzero {
+                (digit * pow_inv10[c_prefix[i + 1]]) % MOD
+            } else {
+                0
+            };
+            a[i + 1] = (a[i] + contribution) % MOD;
+        }
+
+        let mut ans = Vec::with_capacity(queries.len());
+        for q in queries {
+            let l = q[0] as usize;
+            let r = q[1] as usize;
+            if c_prefix[r + 1] - c_prefix[l] == 0 {
+                ans.push(0);
+            } else {
+                let diff = (a[r + 1] - a[l] + MOD) % MOD;
+                let concat_val = (diff * pow10[c_prefix[r + 1]]) % MOD;
+                let sum_val = sum_prefix[r + 1] - sum_prefix[l];
+                let val = (concat_val * sum_val) % MOD;
+                ans.push(val as i32);
+            }
+        }
+        ans
     }
 }
 
