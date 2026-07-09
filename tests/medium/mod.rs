@@ -364,6 +364,8 @@ mod find_the_minimum_amount_of_time_to_brew_potions;
 mod implement_router;
 // 3531. Count Covered Buildings
 mod count_covered_buildings;
+// 3532. Path Existence Queries in a Graph I
+pub mod path_existence_queries_in_a_graph_i;
 // 3542. Minimum Operations to Convert All Elements to Zero
 mod minimum_operations_to_convert_all_elements_to_zero;
 // 3546. Equal Sum Grid Partition I
