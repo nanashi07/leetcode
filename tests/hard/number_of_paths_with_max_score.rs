@@ -30,7 +30,7 @@ impl Solution {
                 }
 
                 let mut max_val = -1;
-                
+
                 if dp_next[c] > max_val {
                     max_val = dp_next[c];
                 }
@@ -48,22 +48,29 @@ impl Solution {
                 let mut way = 0;
                 if dp_next[c] == max_val {
                     way += ways_next[c];
-                    if way >= modulo { way -= modulo; }
+                    if way >= modulo {
+                        way -= modulo;
+                    }
                 }
                 if dp_curr[c + 1] == max_val {
                     way += ways_curr[c + 1];
-                    if way >= modulo { way -= modulo; }
+                    if way >= modulo {
+                        way -= modulo;
+                    }
                 }
                 if dp_next[c + 1] == max_val {
                     way += ways_next[c + 1];
-                    if way >= modulo { way -= modulo; }
+                    if way >= modulo {
+                        way -= modulo;
+                    }
                 }
 
-                dp_curr[c] = max_val + if board_bytes[r][c] == b'E' {
-                    0
-                } else {
-                    (board_bytes[r][c] - b'0') as i32
-                };
+                dp_curr[c] = max_val
+                    + if board_bytes[r][c] == b'E' {
+                        0
+                    } else {
+                        (board_bytes[r][c] - b'0') as i32
+                    };
                 ways_curr[c] = way;
             }
 
