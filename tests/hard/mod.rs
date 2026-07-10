@@ -134,6 +134,8 @@ mod maximize_subarrays_after_removing_one_conflicting_pair;
 mod minimum_operations_to_make_array_elements_zero;
 // 3510. Minimum Pair Removal to Sort Array II
 mod minimum_pair_removal_to_sort_array_ii;
+// 3534. Path Existence Queries in a Graph II
+pub mod path_existence_queries_in_a_graph_ii;
 // 3539. Find Sum of Array Product of Magical Sequences
 mod find_sum_of_array_product_of_magical_sequences;
 // 3548. Equal Sum Grid Partition II
