@@ -10,7 +10,24 @@ impl Solution {
         max_diff: i32,
         queries: Vec<Vec<i32>>,
     ) -> Vec<bool> {
-        todo!()
+        let n = n as usize;
+        let mut g = vec![0; n];
+        let mut cnt = 0;
+        for i in 1..n {
+            if nums[i] - nums[i - 1] > max_diff {
+                cnt += 1;
+            }
+            g[i] = cnt;
+        }
+
+        queries
+            .into_iter()
+            .map(|q| {
+                let u = q[0] as usize;
+                let v = q[1] as usize;
+                g[u] == g[v]
+            })
+            .collect()
     }
 }
 
