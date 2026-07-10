@@ -10,7 +10,61 @@ impl Solution {
         max_diff: i32,
         queries: Vec<Vec<i32>>,
     ) -> Vec<i32> {
-        todo!()
+        let n = n as usize;
+        let mut order: Vec<usize> = (0..n).collect();
+        order.sort_unstable_by_key(|&i| nums[i]);
+
+        let mut pos = vec![0usize; n];
+        for (i, &idx) in order.iter().enumerate() {
+            pos[idx] = i;
+        }
+
+        let log = if n > 1 { (n as f64).log2() as usize + 1 } else { 1 };
+
+        let mut reach = vec![vec![0usize; n]; log];
+
+        let mut r = 0usize;
+        for i in 0..n {
+            if r < i {
+                r = i;
+            }
+            while r + 1 < n && nums[order[r + 1]] - nums[order[i]] <= max_diff {
+                r += 1;
+            }
+            reach[0][i] = r;
+        }
+
+        for k in 1..log {
+            for i in 0..n {
+                reach[k][i] = reach[k - 1][reach[k - 1][i]];
+            }
+        }
+
+        queries
+            .iter()
+            .map(|q| {
+                let mut a = pos[q[0] as usize];
+                let mut b = pos[q[1] as usize];
+                if a > b {
+                    std::mem::swap(&mut a, &mut b);
+                }
+                if a == b {
+                    return 0;
+                }
+                if reach[log - 1][a] < b {
+                    return -1;
+                }
+                let mut steps = 0i32;
+                let mut cur = a;
+                for k in (0..log).rev() {
+                    if reach[k][cur] < b {
+                        cur = reach[k][cur];
+                        steps += 1 << k;
+                    }
+                }
+                steps + 1
+            })
+            .collect()
     }
 }
 
