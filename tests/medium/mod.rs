@@ -264,6 +264,8 @@ pub mod sum_of_distances;
 mod minimum_number_of_operations_to_make_all_array_elements_equal_to_1;
 // 2657. Find the Prefix Common Array of Two Arrays
 pub mod find_the_prefix_common_array_of_two_arrays;
+// 2685. Count the Number of Complete Components
+pub mod count_the_number_of_complete_components;
 // 2749. Minimum Operations to Make the Integer Zero
 mod minimum_operations_to_make_the_integer_zero;
 // 2770. Maximum Number of Jumps to Reach the Last Index
