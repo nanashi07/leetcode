@@ -5,7 +5,50 @@ struct Solution;
 
 impl Solution {
     pub fn count_complete_components(n: i32, edges: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let n = n as usize;
+        let mut adj = vec![vec![]; n];
+        for edge in edges {
+            let u = edge[0] as usize;
+            let v = edge[1] as usize;
+            adj[u].push(v);
+            adj[v].push(u);
+        }
+
+        let mut visited = vec![false; n];
+        let mut complete_count = 0;
+
+        for i in 0..n {
+            if !visited[i] {
+                let mut component = Vec::new();
+                let mut stack = vec![i];
+                visited[i] = true;
+
+                while let Some(u) = stack.pop() {
+                    component.push(u);
+                    for &v in &adj[u] {
+                        if !visited[v] {
+                            visited[v] = true;
+                            stack.push(v);
+                        }
+                    }
+                }
+
+                let target_deg = component.len() - 1;
+                let mut is_complete = true;
+                for &u in &component {
+                    if adj[u].len() != target_deg {
+                        is_complete = false;
+                        break;
+                    }
+                }
+
+                if is_complete {
+                    complete_count += 1;
+                }
+            }
+        }
+
+        complete_count as i32
     }
 }
 
