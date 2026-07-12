@@ -48,6 +48,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1304. Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/)
 - [1317. Convert Integer to the Sum of Two No-Zero Integers](https://leetcode.com/problems/convert-integer-to-the-sum-of-two-no-zero-integers/)
 - [1323. Maximum 69 Number](https://leetcode.com/problems/maximum-69-number/)
+- [1331. Rank Transform of an Array](https://leetcode.com/problems/rank-transform-of-an-array/)
 - [1351. Count Negative Numbers in a Sorted Matrix](https://leetcode.com/problems/count-negative-numbers-in-a-sorted-matrix/)
 - [1356. Sort Integers by The Number of 1 Bits](https://leetcode.com/problems/sort-integers-by-the-number-of-1-bits/)
 - [1394. Find Lucky Integer in an Array](https://leetcode.com/problems/find-lucky-integer-in-an-array/)
