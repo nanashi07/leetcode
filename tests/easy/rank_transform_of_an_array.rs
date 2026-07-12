@@ -5,7 +5,16 @@ struct Solution;
 
 impl Solution {
     pub fn array_rank_transform(arr: Vec<i32>) -> Vec<i32> {
-        todo!()
+        let mut s = arr.clone();
+        s.sort_unstable();
+        s.dedup();
+        let mut arr = arr;
+        for i in 0..arr.len() {
+            let a = arr[i];
+            let r = s.binary_search(&a).unwrap();
+            arr[i] = r as i32 + 1;
+        }
+        arr
     }
 }
 
