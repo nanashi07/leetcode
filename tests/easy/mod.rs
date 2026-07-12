@@ -82,6 +82,8 @@ mod find_n_unique_integers_sum_up_to_zero;
 mod convert_integer_to_the_sum_of_two_no_zero_integers;
 // 1323. Maximum 69 Number
 mod maximum_69_number;
+// 1331. Rank Transform of an Array
+pub mod rank_transform_of_an_array;
 // 1351. Count Negative Numbers in a Sorted Matrix
 mod count_negative_numbers_in_a_sorted_matrix;
 // 1356. Sort Integers by The Number of 1 Bits
