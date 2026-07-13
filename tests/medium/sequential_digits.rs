@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn sequential_digits(low: i32, high: i32) -> Vec<i32> {
-        todo!()
+        let mut result = Vec::new();
+        for len in 2..=9 {
+            for start in 1..=(10 - len) {
+                let mut num = 0;
+                for digit in start..(start + len) {
+                    num = num * 10 + digit;
+                }
+                if num >= low && num <= high {
+                    result.push(num);
+                }
+            }
+        }
+        result
     }
 }
 
