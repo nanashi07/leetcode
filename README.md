@@ -174,6 +174,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
 - [1277. Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 - [1288. Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)
+- [1291. Sequential Digits](https://leetcode.com/problems/sequential-digits/)
 - [1292. Maximum Side Length of a Square with Sum Less than or Equal to Threshold](https://leetcode.com/problems/maximum-side-length-of-a-square-with-sum-less-than-or-equal-to-threshold/)
 - [1306. Jump Game III](https://leetcode.com/problems/jump-game-iii/)
 - [1339. Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/)
