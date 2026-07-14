@@ -104,6 +104,8 @@ mod greatest_sum_divisible_by_three;
 mod count_square_submatrices_with_all_ones;
 // 1288. Remove Covered Intervals
 pub mod remove_covered_intervals;
+// 1291. Sequential Digits
+pub mod sequential_digits;
 // 1292. Maximum Side Length of a Square with Sum Less than or Equal to Threshold
 mod maximum_side_length_of_a_square_with_sum_less_than_or_equal_to_threshold;
 // 1306. Jump Game III
