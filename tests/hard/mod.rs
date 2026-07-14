@@ -116,6 +116,8 @@ mod find_the_k_th_character_in_string_game_ii;
 mod find_x_sum_of_all_k_long_subarrays_ii;
 // 3333. Find the Original Typed String II
 mod find_the_original_typed_string_ii;
+// 3336. Find the Number of Subsequences With Equal GCD
+pub mod find_the_number_of_subsequences_with_equal_gcd;
 // 3347. Maximum Frequency of an Element After Performing Operations II
 mod maximum_frequency_of_an_element_after_performing_operations_ii;
 // 3363. Find the Maximum Number of Fruits Collected
