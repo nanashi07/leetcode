@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn gcd_of_odd_even_sums(n: i32) -> i32 {
-        todo!()
+        Self::gcd((1 + 2 * n - 1) * n / 2, (2 + 2 * n) * n / 2)
+    }
+
+    fn gcd(m: i32, n: i32) -> i32 {
+        let s = m.min(n);
+        let b = m.max(n);
+        let d = b % s;
+        if d == 0 {
+            s
+        } else {
+            Self::gcd(s, d)
+        }
     }
 }
 
