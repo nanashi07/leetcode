@@ -426,3 +426,5 @@ pub mod total_waviness_of_numbers_in_range_i;
 pub mod concatenate_non_zero_digits_and_multiply_by_sum_ii;
 // 3761. Minimum Absolute Distance Between Mirror Pairs
 pub mod minimum_absolute_distance_between_mirror_pairs;
+// 3867. Sum of GCD of Formed Pairs
+pub mod sum_of_gcd_of_formed_pairs;
