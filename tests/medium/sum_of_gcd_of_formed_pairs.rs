@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn gcd_sum(nums: Vec<i32>) -> i64 {
-        todo!()
+        fn gcd(mut a: i32, mut b: i32) -> i32 {
+            while b != 0 {
+                let t = a % b;
+                a = b;
+                b = t;
+            }
+            a
+        }
+
+        let n = nums.len();
+        let mut prefix_gcd = Vec::with_capacity(n);
+        let mut mx = 0;
+        for &x in &nums {
+            mx = mx.max(x);
+            prefix_gcd.push(gcd(x, mx));
+        }
+
+        prefix_gcd.sort_unstable();
+
+        let mut ans: i64 = 0;
+        for i in 0..n / 2 {
+            ans += gcd(prefix_gcd[i], prefix_gcd[n - 1 - i]) as i64;
+        }
+        ans
     }
 }
 
