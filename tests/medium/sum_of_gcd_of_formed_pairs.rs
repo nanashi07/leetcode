@@ -1,0 +1,27 @@
+// 3867. Sum of GCD of Formed Pairs
+// https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/
+
+struct Solution;
+
+impl Solution {
+    pub fn gcd_sum(nums: Vec<i32>) -> i64 {
+        todo!()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::medium::sum_of_gcd_of_formed_pairs::Solution;
+
+    #[test]
+    fn test_gcd_sum_1() {
+        let nums = [2, 6, 4].to_vec();
+        assert_eq!(2, Solution::gcd_sum(nums));
+    }
+
+    #[test]
+    fn test_gcd_sum_2() {
+        let nums = [3, 6, 2, 8].to_vec();
+        assert_eq!(5, Solution::gcd_sum(nums));
+    }
+}
