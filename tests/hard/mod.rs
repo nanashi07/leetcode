@@ -112,6 +112,8 @@ mod find_the_minimum_area_to_cover_all_ones_ii;
 pub mod maximum_score_from_grid_operations;
 // 3307. Find the K-th Character in String Game II
 mod find_the_k_th_character_in_string_game_ii;
+// 3312. Sorted GCD Pair Queries
+pub mod sorted_gcd_pair_queries;
 // 3321. Find X-Sum of All K-Long Subarrays II
 mod find_x_sum_of_all_k_long_subarrays_ii;
 // 3333. Find the Original Typed String II
