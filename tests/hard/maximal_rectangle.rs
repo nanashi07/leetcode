@@ -53,7 +53,6 @@ impl Solution {
 
         // Pop remaining elements from stack
         while let Some(h_idx) = stack.pop() {
-            
             let height = heights[h_idx];
             let width = if stack.is_empty() {
                 n as i32

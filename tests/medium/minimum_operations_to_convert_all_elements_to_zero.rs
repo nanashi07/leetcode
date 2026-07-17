@@ -32,7 +32,8 @@ impl Solution {
         let mut op = 0;
         let mut values = nums
             .iter()
-            .filter(|&n| *n > 0).copied()
+            .filter(|&n| *n > 0)
+            .copied()
             .collect::<HashSet<i32>>()
             .into_iter()
             .collect::<Vec<i32>>();

@@ -45,12 +45,7 @@ impl Solution {
         max_len
     }
 
-    fn get_straight_length(
-        grid: &[Vec<i32>],
-        start_i: i32,
-        start_j: i32,
-        dir: (i32, i32),
-    ) -> i32 {
+    fn get_straight_length(grid: &[Vec<i32>], start_i: i32, start_j: i32, dir: (i32, i32)) -> i32 {
         let m = grid.len() as i32;
         let n = grid[0].len() as i32;
 

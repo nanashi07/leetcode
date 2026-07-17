@@ -79,9 +79,7 @@ impl Solution {
                 continue;
             }
             let base = if j == 0 { 0 } else { f[j - 1] };
-            if source_chars[j] == target_chars[j]
-                && (f[j] == -1 || base < f[j])
-            {
+            if source_chars[j] == target_chars[j] && (f[j] == -1 || base < f[j]) {
                 f[j] = base;
             }
 

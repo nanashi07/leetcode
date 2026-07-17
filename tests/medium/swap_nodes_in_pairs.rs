@@ -52,7 +52,8 @@ impl Solution {
                     .as_mut()
                     .unwrap()
                     .next
-                    .as_mut().and_then(|x| x.next.take()),
+                    .as_mut()
+                    .and_then(|x| x.next.take()),
                 &mut c.as_mut().unwrap().next.take(),
                 &mut c.take(),
             );

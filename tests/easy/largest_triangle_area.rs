@@ -34,7 +34,6 @@ impl Solution {
         let x3 = p3[0] as f64;
         let y3 = p3[1] as f64;
 
-        
         0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)).abs()
     }
 }

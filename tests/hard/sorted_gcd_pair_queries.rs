@@ -9,12 +9,12 @@ impl Solution {
         if max_val == 0 {
             return vec![];
         }
-        
+
         let mut count = vec![0_i64; max_val + 1];
         for &x in nums.iter() {
             count[x as usize] += 1;
         }
-        
+
         let mut pairs_exact = vec![0_i64; max_val + 1];
         for i in (1..=max_val).rev() {
             let mut multiples = 0;
@@ -27,15 +27,16 @@ impl Solution {
             }
             pairs_exact[i] = exact;
         }
-        
+
         let mut prefix = vec![0_i64; max_val + 1];
         for i in 1..=max_val {
             prefix[i] = prefix[i - 1] + pairs_exact[i];
         }
-        
-        queries.into_iter().map(|q| {
-            prefix.partition_point(|&x| x <= q) as i32
-        }).collect()
+
+        queries
+            .into_iter()
+            .map(|q| prefix.partition_point(|&x| x <= q) as i32)
+            .collect()
     }
 }
 

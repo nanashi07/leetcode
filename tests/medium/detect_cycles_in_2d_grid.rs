@@ -38,14 +38,18 @@ impl Solution {
             for j in 0..n {
                 let idx = i * n + j;
                 // Only check right and down to avoid duplicate edges
-                if j + 1 < n && grid[i][j] == grid[i][j + 1]
-                    && union(&mut parent, &mut rank, idx, idx + 1) {
-                        return true;
-                    }
-                if i + 1 < m && grid[i][j] == grid[i + 1][j]
-                    && union(&mut parent, &mut rank, idx, idx + n) {
-                        return true;
-                    }
+                if j + 1 < n
+                    && grid[i][j] == grid[i][j + 1]
+                    && union(&mut parent, &mut rank, idx, idx + 1)
+                {
+                    return true;
+                }
+                if i + 1 < m
+                    && grid[i][j] == grid[i + 1][j]
+                    && union(&mut parent, &mut rank, idx, idx + n)
+                {
+                    return true;
+                }
             }
         }
         false

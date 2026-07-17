@@ -62,10 +62,7 @@ impl Solution {
     pub fn _find_lex_smallest_string(s: String, a: i32, b: i32) -> String {
         println!("s: {}, a: {}, b: {}", &s, &a, &b);
 
-        let mut n = s
-            .chars()
-            .map(|c| c as i32 - 48)
-            .collect::<Vec<i32>>();
+        let mut n = s.chars().map(|c| c as i32 - 48).collect::<Vec<i32>>();
 
         let mut map: HashSet<Vec<i32>> = HashSet::new();
         let mut min = n.clone();

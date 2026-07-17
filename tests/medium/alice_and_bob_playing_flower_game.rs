@@ -19,7 +19,6 @@ impl Solution {
         let even_m = m / 2;
 
         // Alice wins when: (odd_n * even_m) + (even_n * odd_m)
-        
 
         (odd_n as i64 * even_m as i64) + (even_n as i64 * odd_m as i64)
     }

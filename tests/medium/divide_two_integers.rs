@@ -31,7 +31,8 @@ impl Solution {
         }
 
         if sign {
-            count *= -1        };
+            count *= -1
+        };
 
         count as i32
     }

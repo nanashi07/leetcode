@@ -175,10 +175,7 @@ impl Solution {
         let mut prefix_sum = vec![0; n];
         prefix_sum[0] = sign(nums[0]);
         let mut pos_map: HashMap<i32, VecDeque<usize>> = HashMap::new();
-        pos_map
-            .entry(nums[0])
-            .or_default()
-            .push_back(1);
+        pos_map.entry(nums[0]).or_default().push_back(1);
 
         for i in 1..n {
             prefix_sum[i] = prefix_sum[i - 1];

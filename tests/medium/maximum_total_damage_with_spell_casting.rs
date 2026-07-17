@@ -94,7 +94,8 @@ impl Solution {
         let spell = remain[0];
         let range = remain
             .iter()
-            .take_while(|&s| *s >= spell - 2).copied()
+            .take_while(|&s| *s >= spell - 2)
+            .copied()
             .collect::<Vec<i32>>();
 
         let damage = range

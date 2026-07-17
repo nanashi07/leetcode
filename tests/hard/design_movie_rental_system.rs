@@ -38,10 +38,7 @@ impl MovieRentingSystem {
             prices.insert((shop, movie), price);
 
             // Add to unrented movies (sorted by price, then by shop)
-            unrented
-                .entry(movie)
-                .or_default()
-                .insert((price, shop));
+            unrented.entry(movie).or_default().insert((price, shop));
         }
 
         MovieRentingSystem {
