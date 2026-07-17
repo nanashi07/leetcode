@@ -20,8 +20,8 @@ impl Solution {
         }
 
         // Process each subsequent row
-        for row in 1..mat.len() {
-            current_sums = Self::merge_with_row(&current_sums, &mat[row], k);
+        for mat in mat.iter().skip(1) {
+            current_sums = Self::merge_with_row(&current_sums, mat, k);
         }
 
         current_sums[k - 1]
@@ -135,7 +135,7 @@ impl Solution {
 
         sums.sort();
         println!("sums: {:?}", &sums);
-        *sums.iter().take(k as usize).last().unwrap()
+        *sums.iter().take(k as usize).next_back().unwrap()
     }
 
     // too slow
@@ -175,7 +175,7 @@ impl Solution {
 
         heap.sort();
         println!("heap: {:?}", &heap);
-        *heap.iter().take(k as usize).last().unwrap()
+        *heap.iter().take(k as usize).next_back().unwrap()
     }
 }
 

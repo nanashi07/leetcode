@@ -36,11 +36,11 @@ impl Solution {
             }
 
             // Look down
-            for i in r + 1..m {
-                if grid[i][c] == 1 || grid[i][c] == 2 {
+            for row in grid.iter_mut().take(m).skip(r + 1) {
+                if row[c] == 1 || row[c] == 2 {
                     break; // Hit guard or wall
                 }
-                grid[i][c] = 3; // Mark as guarded
+                row[c] = 3; // Mark as guarded
             }
 
             // Look left
@@ -52,19 +52,19 @@ impl Solution {
             }
 
             // Look right
-            for j in c + 1..n {
-                if grid[r][j] == 1 || grid[r][j] == 2 {
+            for cell in grid[r].iter_mut().take(n).skip(c + 1) {
+                if *cell == 1 || *cell == 2 {
                     break; // Hit guard or wall
                 }
-                grid[r][j] = 3; // Mark as guarded
+                *cell = 3; // Mark as guarded
             }
         }
 
         // Count unguarded cells (cells with value 0)
         let mut count = 0;
-        for i in 0..m {
-            for j in 0..n {
-                if grid[i][j] == 0 {
+        for row in grid.iter().take(m) {
+            for cell in row.iter().take(n) {
+                if *cell == 0 {
                     count += 1;
                 }
             }

@@ -81,8 +81,8 @@ impl Solution {
         // Sum all ways to choose 0 to n-1 extra characters
         // 計算選擇 0 到 n-1 個額外字符的所有方法數
         let mut bad = 0;
-        for i in 0..n {
-            bad = (bad + dp[g.len() % 2][i]) % M
+        for v in dp[g.len() % 2].iter().take(n) {
+            bad = (bad + *v) % M
         }
 
         // Step 9: Return valid combinations

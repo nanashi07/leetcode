@@ -37,17 +37,22 @@ impl Solution {
         true
     }
 
-    fn is_valid(board: &Vec<Vec<char>>, row: usize, col: usize, digit: char) -> bool {
+    fn is_valid(board: &[Vec<char>], row: usize, col: usize, digit: char) -> bool {
         // Check row
-        for c in 0..9 {
-            if board[row][c] == digit {
+        for c in &board[row] {
+            if *c == digit {
+                return false;
+            }
+        }
+        for c in &board[row] {
+            if *c == digit {
                 return false;
             }
         }
 
         // Check column
-        for r in 0..9 {
-            if board[r][col] == digit {
+        for r in board {
+            if r[col] == digit {
                 return false;
             }
         }
@@ -55,9 +60,9 @@ impl Solution {
         // Check 3x3 box
         let box_row = (row / 3) * 3;
         let box_col = (col / 3) * 3;
-        for r in box_row..box_row + 3 {
-            for c in box_col..box_col + 3 {
-                if board[r][c] == digit {
+        for r in 0..3 {
+            for c in 0..3 {
+                if board[r + box_row][c + box_col] == digit {
                     return false;
                 }
             }
@@ -67,7 +72,7 @@ impl Solution {
     }
 
     // failed
-    pub fn _solve_sudoku(board: &mut Vec<Vec<char>>) {
+    pub fn _solve_sudoku(board: &mut [Vec<char>]) {
         use std::collections::HashSet;
 
         let h = board.len();
@@ -106,10 +111,10 @@ impl Solution {
                         continue;
                     }
 
-                    let xy = rx.intersection(ry).map(|s| *s).collect::<HashSet<_>>();
+                    let xy = rx.intersection(ry).copied().collect::<HashSet<_>>();
                     let matching = if !xy.is_empty() {
                         let rc = &chunks[y / 3][x / 3];
-                        let xyc = xy.intersection(&rc).collect::<HashSet<_>>();
+                        let xyc = xy.intersection(rc).collect::<HashSet<_>>();
                         if xyc.len() == 1 {
                             Some(**xyc.iter().next().unwrap())
                         } else {

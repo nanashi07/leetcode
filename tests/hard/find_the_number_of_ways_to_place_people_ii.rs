@@ -15,9 +15,7 @@ impl Solution {
             let mut y_min = i32::MIN;
             let y_max = point_a[1] + 1;
 
-            for j in i + 1..points.len() {
-                let point_b = &points[j];
-
+            for point_b in points.iter().skip(i + 1) {
                 if point_b[0] > x_min
                     && point_b[0] < x_max
                     && point_b[1] > y_min
@@ -56,13 +54,7 @@ impl Solution {
                     // Check if there are any other points inside the rectangle (including boundary)
                     let mut valid = true;
 
-                    for k in 0..n {
-                        if k == i || k == j {
-                            continue;
-                        }
-
-                        let (x3, y3) = points[k];
-
+                    for &(x3, y3) in points.iter().take(n) {
                         // Point k should not be inside/on the rectangle boundary
                         // Rectangle from upper-left (x1,y1) to lower-right (x2,y2)
                         if x1 <= x3 && x3 <= x2 && y2 <= y3 && y3 <= y1 {

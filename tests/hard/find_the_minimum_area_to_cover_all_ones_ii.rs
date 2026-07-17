@@ -10,9 +10,9 @@ impl Solution {
 
         // Find all positions with 1s
         let mut ones = Vec::new();
-        for i in 0..m {
-            for j in 0..n {
-                if grid[i][j] == 1 {
+        for (i, row) in grid.iter().take(m).enumerate() {
+            for (j, cell) in row.iter().take(n).enumerate() {
+                if *cell == 1 {
                     ones.push((i, j));
                 }
             }

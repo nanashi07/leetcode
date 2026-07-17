@@ -21,8 +21,8 @@ impl Solution {
                 if first_idx < last_idx {
                     // Count unique characters between first and last occurrence
                     let mut middle_chars = HashSet::new();
-                    for i in (first_idx + 1)..last_idx {
-                        middle_chars.insert(bytes[i]);
+                    for b in bytes.iter().take(last_idx).skip(first_idx + 1) {
+                        middle_chars.insert(b);
                     }
                     count += middle_chars.len() as i32;
                 }
@@ -37,14 +37,14 @@ impl Solution {
         println!("s: {:?}", &s);
 
         let mut set: HashSet<String> = HashSet::new();
-        let chars = s.chars().into_iter().collect::<Vec<_>>();
+        let chars = s.chars().collect::<Vec<_>>();
         let len = s.len();
 
         for i in 0..len - 2 {
             let l = chars[i];
             for j in i + 1..len - 1 {
                 let m = chars[j];
-                if let Some(_) = chars[j + 1..].iter().find(|&c| *c == l) {
+                if chars[j + 1..].iter().find(|&c| *c == l).is_some() {
                     set.insert(format!("{l}{m}{l}"));
                 }
             }

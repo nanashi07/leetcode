@@ -28,9 +28,8 @@ impl Solution {
                     i += 1;
                     continue;
                 }
-                for r in j..=i {
-                    let p = points[r];
-                    costs[p.0][p.1] = min_cost;
+                for &(x, y) in points.iter().take(i + 1).skip(j) {
+                    costs[x][y] = min_cost;
                 }
                 j = i + 1;
                 i += 1;

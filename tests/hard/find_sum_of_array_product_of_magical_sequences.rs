@@ -32,8 +32,8 @@ impl Solution {
         let mut ifac = vec![0u64; m + 1];
         ifac[0] = 1;
         ifac[1] = 1;
-        for i in 2..=m {
-            ifac[i] = quickmul(i as u64, mod_val - 2, mod_val);
+        for (i, ifac_v) in ifac.iter_mut().enumerate().take(m + 1).skip(2) {
+            *ifac_v = quickmul(i as u64, mod_val - 2, mod_val);
         }
         for i in 2..=m {
             ifac[i] = ifac[i - 1] * ifac[i] % mod_val;
@@ -58,13 +58,13 @@ impl Solution {
                 for p in 0..=m * 2 {
                     for q in 0..=k {
                         let current = f[i][j][p][q];
-                        let q2 = (p % 2) as usize + q;
+                        let q2 = (p % 2) + q;
                         if q2 > k {
                             break;
                         }
 
                         for r in 0..=(m - j) {
-                            let p2 = (p / 2) as usize + r;
+                            let p2 = (p / 2) + r;
                             let add_val =
                                 current * nums_power[i + 1][r] % mod_val * ifac[r] % mod_val;
                             f[i + 1][j + r][p2][q2] = (f[i + 1][j + r][p2][q2] + add_val) % mod_val;
@@ -75,10 +75,10 @@ impl Solution {
         }
 
         let mut res = 0u64;
-        for p in 0..=m * 2 {
-            for q in 0..=k {
+        for (p, fr) in f[n - 1][m].iter().enumerate().take(m * 2 + 1) {
+            for (q, fv) in fr.iter().enumerate().take(m * 2 + 1) {
                 if p.count_ones() as usize + q == k {
-                    res = (res + f[n - 1][m][p][q] * fac[m] % mod_val) % mod_val;
+                    res = (res + *fv * fac[m] % mod_val) % mod_val;
                 }
             }
         }

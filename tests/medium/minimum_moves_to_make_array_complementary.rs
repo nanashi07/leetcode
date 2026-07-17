@@ -27,8 +27,8 @@ impl Solution {
         let mut best = i32::MAX;
         let mut current = 0;
 
-        for s in 2..=max_sum {
-            current += diff[s];
+        for d in diff.iter().take(max_sum + 1).skip(2) {
+            current += *d;
             best = best.min(current);
         }
 

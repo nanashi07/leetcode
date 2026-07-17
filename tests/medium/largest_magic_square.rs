@@ -24,27 +24,22 @@ impl Solution {
         1 // At minimum, a 1x1 square is always a magic square
     }
 
-    fn is_magic_square(
-        grid: &Vec<Vec<i32>>,
-        start_row: usize,
-        start_col: usize,
-        size: usize,
-    ) -> bool {
+    fn is_magic_square(grid: &[Vec<i32>], start_row: usize, start_col: usize, size: usize) -> bool {
         if size == 1 {
             return true;
         }
 
         // Calculate the sum of the first row as the reference sum
         let mut target_sum = 0;
-        for j in start_col..start_col + size {
-            target_sum += grid[start_row][j];
+        for cell in grid[start_row].iter().skip(start_col).take(size) {
+            target_sum += *cell;
         }
 
         // Check all rows
-        for i in start_row + 1..start_row + size {
+        for row in grid.iter().take(start_row + size).skip(start_row + 1) {
             let mut row_sum = 0;
-            for j in start_col..start_col + size {
-                row_sum += grid[i][j];
+            for cell in row.iter().skip(start_col).take(size) {
+                row_sum += *cell;
             }
             if row_sum != target_sum {
                 return false;
@@ -54,8 +49,8 @@ impl Solution {
         // Check all columns
         for j in start_col..start_col + size {
             let mut col_sum = 0;
-            for i in start_row..start_row + size {
-                col_sum += grid[i][j];
+            for col in grid.iter().skip(start_row).take(size) {
+                col_sum += col[j];
             }
             if col_sum != target_sum {
                 return false;

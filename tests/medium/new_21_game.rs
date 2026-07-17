@@ -26,8 +26,8 @@ impl Solution {
         }
 
         let mut ans = 0.0;
-        for i in k..=n {
-            ans += dp[i];
+        for v in dp.iter().take(n + 1).skip(k) {
+            ans += *v;
         }
 
         ans

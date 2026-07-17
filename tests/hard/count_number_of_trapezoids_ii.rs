@@ -17,9 +17,9 @@ impl Solution {
         for i in 0..n {
             let x1 = points[i][0];
             let y1 = points[i][1];
-            for j in i + 1..n {
-                let x2 = points[j][0];
-                let y2 = points[j][1];
+            for point in points.iter().take(n).skip(i + 1) {
+                let x2 = point[0];
+                let y2 = point[1];
                 let dx = x1 - x2;
                 let dy = y1 - y2;
 
@@ -41,9 +41,9 @@ impl Solution {
                 let mid = (x1 + x2) as i64 * 10000 + (y1 + y2) as i64;
                 slope_to_intercept
                     .entry(k.clone())
-                    .or_insert(Vec::new())
+                    .or_default()
                     .push(b.clone());
-                mid_to_slope.entry(mid).or_insert(Vec::new()).push(k);
+                mid_to_slope.entry(mid).or_default().push(k);
             }
         }
 
