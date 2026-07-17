@@ -13,8 +13,8 @@ impl Solution {
 
         while i == 0 || n > 0 {
             let c = (n % 2 - 1).abs();
-            r = r + (c << i);
-            n = n / 2;
+            r += c << i;
+            n /= 2;
             i += 1;
         }
 

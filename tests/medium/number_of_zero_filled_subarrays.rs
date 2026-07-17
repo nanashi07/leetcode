@@ -21,7 +21,7 @@ impl Solution {
             s
         };
 
-        for i in 0..nums.len() {
+        for (i, _) in nums.iter().enumerate() {
             let n = nums[i];
 
             if n == 0 {

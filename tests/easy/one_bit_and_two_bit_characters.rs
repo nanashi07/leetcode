@@ -14,15 +14,15 @@ impl Solution {
         let len = bits.len();
         match len {
             0 => true,
-            1 => &bits == &[0],
+            1 => bits == [0],
             _ => {
-                if &bits[len - 1] == &0 && Self::extract(&bits[..len - 1]) {
+                if bits[len - 1] == 0 && Self::extract(&bits[..len - 1]) {
                     return true;
                 }
-                if &bits[len - 2..] == &[1, 0] && Self::extract(&bits[..len - 2]) {
+                if bits[len - 2..] == [1, 0] && Self::extract(&bits[..len - 2]) {
                     return true;
                 }
-                if &bits[len - 2..] == &[1, 1] && Self::extract(&bits[..len - 2]) {
+                if bits[len - 2..] == [1, 1] && Self::extract(&bits[..len - 2]) {
                     return true;
                 }
                 false
@@ -38,12 +38,12 @@ mod tests {
     #[test]
     fn test_is_one_bit_character_1() {
         let bits = [1, 0, 0].to_vec();
-        assert_eq!(true, Solution::is_one_bit_character(bits));
+        assert!(Solution::is_one_bit_character(bits));
     }
 
     #[test]
     fn test_is_one_bit_character_2() {
         let bits = [1, 1, 1, 0].to_vec();
-        assert_eq!(false, Solution::is_one_bit_character(bits));
+        assert!(!Solution::is_one_bit_character(bits));
     }
 }

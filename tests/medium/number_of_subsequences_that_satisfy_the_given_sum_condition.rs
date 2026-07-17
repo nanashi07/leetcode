@@ -23,7 +23,7 @@ impl Solution {
         while left <= right {
             if nums_copy[left as usize] + nums_copy[right as usize] <= target {
                 count += power_of_2[(right - left) as usize];
-                count = count % modulus;
+                count %= modulus;
                 left += 1;
             } else {
                 right -= 1;

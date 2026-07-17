@@ -3,12 +3,12 @@
 
 struct Solution;
 
-fn dp(fruits: &Vec<Vec<i32>>, n: usize) -> i32 {
+fn dp(fruits: &[Vec<i32>], n: usize) -> i32 {
     let mut prev = vec![i32::MIN; n];
     let mut curr = vec![i32::MIN; n];
 
     prev[n - 1] = fruits[0][n - 1];
-    for i in 1..n - 1 {
+    for (i, _) in fruits.iter().enumerate().take(n - 1).skip(1) {
         for j in (n - 1 - i).max(i + 1)..n {
             let mut best = prev[j];
             if j > 0 {
@@ -26,6 +26,7 @@ fn dp(fruits: &Vec<Vec<i32>>, n: usize) -> i32 {
 
 impl Solution {
     // https://leetcode.com/problems/find-the-maximum-number-of-fruits-collected/
+    #[allow(clippy::needless_range_loop)]
     pub fn max_collected_fruits(mut fruits: Vec<Vec<i32>>) -> i32 {
         let n = fruits.len();
         let mut ans = (0..n).map(|i| fruits[i][i]).sum::<i32>();

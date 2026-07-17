@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn maximum_profit(prices: Vec<i32>, k: i32) -> i64 {
         let n = prices.len();
         if n == 0 || k == 0 {

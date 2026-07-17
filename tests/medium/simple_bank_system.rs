@@ -11,7 +11,6 @@ struct Bank {
  * `&self` means the method takes an immutable reference.
  * If you need a mutable reference, change it to `&mut self` instead.
  */
-
 impl Bank {
     fn new(balance: Vec<i64>) -> Self {
         Bank {
@@ -84,7 +83,6 @@ impl Bank {
  * let ret_2: bool = obj.deposit(account, money);
  * let ret_3: bool = obj.withdraw(account, money);
  */
-
 #[cfg(test)]
 mod tests {
     use crate::medium::simple_bank_system::Bank;
@@ -92,10 +90,10 @@ mod tests {
     #[test]
     fn test_bank_1() {
         let bank = Bank::new([10, 100, 20, 50, 30].to_vec());
-        assert_eq!(true, bank.withdraw(3, 10));
-        assert_eq!(true, bank.transfer(5, 1, 20));
-        assert_eq!(true, bank.deposit(5, 20));
-        assert_eq!(false, bank.transfer(3, 4, 15));
-        assert_eq!(false, bank.withdraw(10, 50));
+        assert!(bank.withdraw(3, 10));
+        assert!(bank.transfer(5, 1, 20));
+        assert!(bank.deposit(5, 20));
+        assert!(!bank.transfer(3, 4, 15));
+        assert!(!bank.withdraw(10, 50));
     }
 }

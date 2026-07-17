@@ -177,12 +177,12 @@ impl Solution {
         let mut pos_map: HashMap<i32, VecDeque<usize>> = HashMap::new();
         pos_map
             .entry(nums[0])
-            .or_insert_with(VecDeque::new)
+            .or_default()
             .push_back(1);
 
         for i in 1..n {
             prefix_sum[i] = prefix_sum[i - 1];
-            let positions = pos_map.entry(nums[i]).or_insert_with(VecDeque::new);
+            let positions = pos_map.entry(nums[i]).or_default();
             if positions.is_empty() {
                 prefix_sum[i] += sign(nums[i]);
             }
@@ -192,7 +192,7 @@ impl Solution {
         let mut seg_tree = SegmentTree::new(&prefix_sum);
         let mut max_len = 0;
 
-        for i in 0..n {
+        for (i, _) in nums.iter().enumerate().take(n) {
             let start_idx = i + max_len as usize;
             if start_idx < n {
                 let last_pos = seg_tree.find_last_zero(start_idx + 1, 0);
@@ -211,7 +211,7 @@ impl Solution {
                 .unwrap_or(n + 2);
 
             let delta = -sign(num);
-            if i + 1 <= next_pos - 1 {
+            if i < next_pos - 1 {
                 seg_tree.range_add(i + 1, next_pos - 1, delta);
             }
         }

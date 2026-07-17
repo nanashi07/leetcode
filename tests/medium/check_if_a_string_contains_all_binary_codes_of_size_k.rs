@@ -43,20 +43,20 @@ mod tests {
     fn test_has_all_codes_1() {
         let s = "00110110".to_string();
         let k = 2;
-        assert_eq!(true, Solution::has_all_codes(s, k));
+        assert!(Solution::has_all_codes(s, k));
     }
 
     #[test]
     fn test_has_all_codes_2() {
         let s = "0110".to_string();
         let k = 1;
-        assert_eq!(true, Solution::has_all_codes(s, k));
+        assert!(Solution::has_all_codes(s, k));
     }
 
     #[test]
     fn test_has_all_codes_3() {
         let s = "0110".to_string();
         let k = 2;
-        assert_eq!(false, Solution::has_all_codes(s, k));
+        assert!(!Solution::has_all_codes(s, k));
     }
 }

@@ -36,9 +36,7 @@ impl Solution {
         }
 
         // If all nodes were deleted
-        if head.is_none() {
-            return None;
-        }
+        head.as_ref()?;
 
         // Traverse and delete nodes
         let mut current = head.as_mut();

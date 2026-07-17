@@ -24,7 +24,7 @@ impl Solution {
         }
 
         let mut roots = vec![];
-        for i in 0..n {
+        for (i, _) in has_parent.iter().enumerate().take(n) {
             if !has_parent[i] {
                 roots.push(i);
             }
@@ -136,7 +136,7 @@ impl Solution {
         res
     }
 
-    fn merge(dp1: &Vec<i32>, dp2: &Vec<i32>, budget: usize) -> Vec<i32> {
+    fn merge(dp1: &[i32], dp2: &[i32], budget: usize) -> Vec<i32> {
         const INF: i32 = -1_000_000_000;
         let mut res = vec![INF; budget + 1];
         let max_c1 = dp1.iter().rposition(|&x| x != INF).unwrap_or(0);

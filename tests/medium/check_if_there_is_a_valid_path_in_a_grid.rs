@@ -68,18 +68,18 @@ mod tests {
     #[test]
     fn test_has_valid_path_1() {
         let grid = to_vec2d([[2, 4, 3], [6, 5, 2]]);
-        assert_eq!(true, Solution::has_valid_path(grid));
+        assert!(Solution::has_valid_path(grid));
     }
 
     #[test]
     fn test_has_valid_path_2() {
         let grid = to_vec2d([[1, 2, 1], [1, 2, 1]]);
-        assert_eq!(false, Solution::has_valid_path(grid));
+        assert!(!Solution::has_valid_path(grid));
     }
 
     #[test]
     fn test_has_valid_path_3() {
         let grid = to_vec2d([[1, 1, 2]]);
-        assert_eq!(false, Solution::has_valid_path(grid));
+        assert!(!Solution::has_valid_path(grid));
     }
 }

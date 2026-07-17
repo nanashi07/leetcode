@@ -9,7 +9,7 @@ impl Solution {
         let mut count = 0;
         for i in 0..n {
             let mut target_count = 0;
-            for j in i..n {
+            for (j, _) in nums.iter().enumerate().take(n).skip(i) {
                 if nums[j] == target {
                     target_count += 1;
                 }

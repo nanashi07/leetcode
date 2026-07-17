@@ -39,20 +39,20 @@ mod tests {
     fn test_can_reach_1() {
         let arr = [4, 2, 3, 0, 3, 1, 2].to_vec();
         let start = 5;
-        assert_eq!(true, Solution::can_reach(arr, start));
+        assert!(Solution::can_reach(arr, start));
     }
 
     #[test]
     fn test_can_reach_2() {
         let arr = [4, 2, 3, 0, 3, 1, 2].to_vec();
         let start = 0;
-        assert_eq!(true, Solution::can_reach(arr, start));
+        assert!(Solution::can_reach(arr, start));
     }
 
     #[test]
     fn test_can_reach_3() {
         let arr = [3, 0, 2, 1, 2].to_vec();
         let start = 2;
-        assert_eq!(false, Solution::can_reach(arr, start));
+        assert!(!Solution::can_reach(arr, start));
     }
 }

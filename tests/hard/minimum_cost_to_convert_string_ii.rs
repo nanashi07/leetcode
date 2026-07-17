@@ -37,6 +37,7 @@ impl TrieNode {
 
 impl Solution {
     // https://leetcode.com/problems/minimum-cost-to-convert-string-ii/editorial/
+    #[allow(clippy::needless_range_loop)]
     pub fn minimum_cost(
         source: String,
         target: String,
@@ -78,10 +79,10 @@ impl Solution {
                 continue;
             }
             let base = if j == 0 { 0 } else { f[j - 1] };
-            if source_chars[j] == target_chars[j] {
-                if f[j] == -1 || base < f[j] {
-                    f[j] = base;
-                }
+            if source_chars[j] == target_chars[j]
+                && (f[j] == -1 || base < f[j])
+            {
+                f[j] = base;
             }
 
             let mut u = &root;
@@ -112,6 +113,7 @@ impl Solution {
     }
 
     // Time exceed
+    #[allow(clippy::needless_range_loop)]
     pub fn _minimum_cost(
         source: String,
         target: String,

@@ -13,7 +13,7 @@ impl Solution {
             let (person1, person2, time) = (meeting[0], meeting[1], meeting[2]);
             meetings_by_time
                 .entry(time)
-                .or_insert(Vec::new())
+                .or_default()
                 .push((person1, person2));
         }
 
@@ -35,8 +35,8 @@ impl Solution {
             let mut people_at_meeting: HashSet<i32> = HashSet::new();
 
             for &(person1, person2) in meetings_at_time {
-                graph.entry(person1).or_insert(Vec::new()).push(person2);
-                graph.entry(person2).or_insert(Vec::new()).push(person1);
+                graph.entry(person1).or_default().push(person2);
+                graph.entry(person2).or_default().push(person1);
                 people_at_meeting.insert(person1);
                 people_at_meeting.insert(person2);
             }

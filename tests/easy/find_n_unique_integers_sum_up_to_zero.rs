@@ -7,11 +7,10 @@ impl Solution {
     pub fn sum_zero(n: i32) -> Vec<i32> {
         if n % 2 == 0 {
             ((n / -2)..=(n / 2))
-                .into_iter()
                 .filter(|n| *n != 0)
                 .collect::<Vec<i32>>()
         } else {
-            ((n / -2)..=(n / 2)).into_iter().collect::<Vec<i32>>()
+            ((n / -2)..=(n / 2)).collect::<Vec<i32>>()
         }
     }
 }

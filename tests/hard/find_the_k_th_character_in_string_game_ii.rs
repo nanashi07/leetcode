@@ -10,11 +10,11 @@ impl Solution {
         let mut char_move: i32 = 0;
 
         let get_first_half_max_value = |position: i64| {
-            let mut p = position.clone();
+            let mut p = position;
             let mut c: i64 = 0;
             while p > 1 {
-                p = p >> 1;
-                c = c + 1;
+                p >>= 1;
+                c += 1;
             }
             c
         };
@@ -38,14 +38,14 @@ impl Solution {
                     char_move %= 26;
                 }
                 // find the previous position
-                position = position - 2_i64.pow(pow as u32 - 1);
+                position -= 2_i64.pow(pow as u32 - 1);
                 println!("previous position: {}, char_move: {}", position, char_move);
             }
             pow -= 1;
         }
 
         let a = 'a' as u32;
-        char::from_u32(a + (-1 * char_move) as u32).unwrap()
+        char::from_u32(a + -char_move as u32).unwrap()
     }
 }
 

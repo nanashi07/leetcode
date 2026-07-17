@@ -22,17 +22,16 @@ impl Solution {
 
             // find max subtractable
             while dividend > div << 1 && div << 1 > div {
-                div = div << 1;
-                times = times << 1;
+                div <<= 1;
+                times <<= 1;
             }
 
-            dividend = dividend - div;
-            count = count + times;
+            dividend -= div;
+            count += times;
         }
 
         if sign {
-            count = count * -1;
-        };
+            count *= -1        };
 
         count as i32
     }

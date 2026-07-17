@@ -13,7 +13,7 @@ impl Solution {
         let mut min = i32::MAX;
         let mut p = 0;
 
-        for i in 0..nums.len() {
+        for (i, _) in nums.iter().enumerate() {
             let num = nums[i];
             if i < l {
                 result.push(num);
@@ -27,7 +27,7 @@ impl Solution {
                     result.push(num);
                     min = i32::MAX;
 
-                    for x in 0..result.len() {
+                    for (x, _) in result.iter().enumerate() {
                         if result[x] < min {
                             min = result[x];
                             p = x;

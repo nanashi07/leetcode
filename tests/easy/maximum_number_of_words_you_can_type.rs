@@ -9,7 +9,7 @@ impl Solution {
     pub fn can_be_typed_words(text: String, broken_letters: String) -> i32 {
         println!("text: {:?}, broken_letters: {:?}", &text, &broken_letters);
 
-        let letters = broken_letters.chars().into_iter().collect::<HashSet<_>>();
+        let letters = broken_letters.chars().collect::<HashSet<_>>();
         text.split(' ')
             .filter(|&w| w.chars().filter(|c| letters.contains(c)).count() == 0)
             .count() as i32

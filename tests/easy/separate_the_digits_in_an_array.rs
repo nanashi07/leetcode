@@ -13,7 +13,7 @@ impl Solution {
 
             while s > 0 {
                 t.insert(0, s % 10);
-                s = s / 10;
+                s /= 10;
             }
 
             for s in t {

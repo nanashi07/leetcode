@@ -43,7 +43,7 @@ impl Solution {
 
         // Initialize: window is [1, min(1+dist, n-1)]
         let mut right = (1 + dist).min(n - 1);
-        for i in 1..=right {
+        for (i, _) in nums.iter().enumerate().take(right + 1).skip(1) {
             let key = (nums[i], i);
             if selected.len() < k - 1 {
                 selected.insert(key);
@@ -99,7 +99,7 @@ impl Solution {
 
             // Add new elements that enter the range
             let new_right = (left + dist).min(n - 1);
-            for i in (right + 1)..=new_right {
+            for (i, _) in nums.iter().enumerate().take(new_right + 1).skip(right + 1) {
                 if i >= n {
                     break;
                 }

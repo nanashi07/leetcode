@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn zig_zag_arrays(n: i32, l: i32, r: i32) -> i32 {
         const MOD: u64 = 1_000_000_007;
         let n = n as u64;
@@ -30,12 +31,12 @@ impl Solution {
             }
         }
 
-        let mat = mat_pow(&mat, (n - 1) as u64, sz, MOD);
+        let mat = mat_pow(&mat, n - 1, sz, MOD);
 
         let mut ans = 0u64;
-        for i in 0..sz {
+        for (i, _) in mat.iter().take(sz).enumerate() {
             let mut row_sum = 0u64;
-            for j in 0..sz {
+            for (j, _) in mat.iter().take(sz).enumerate() {
                 row_sum = (row_sum + mat[i][j]) % MOD;
             }
             ans = (ans + row_sum) % MOD;
@@ -59,6 +60,7 @@ fn mat_mul(a: &[Vec<u64>], b: &[Vec<u64>], sz: usize, md: u64) -> Vec<Vec<u64>> 
     c
 }
 
+#[allow(clippy::needless_range_loop)]
 fn mat_pow(base: &[Vec<u64>], mut exp: u64, sz: usize, md: u64) -> Vec<Vec<u64>> {
     let mut result = vec![vec![0u64; sz]; sz];
     for i in 0..sz {

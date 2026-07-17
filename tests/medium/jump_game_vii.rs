@@ -49,7 +49,7 @@ mod tests {
         let s = "011010".to_string();
         let min_jump = 2;
         let max_jump = 3;
-        assert_eq!(true, Solution::can_reach(s, min_jump, max_jump));
+        assert!(Solution::can_reach(s, min_jump, max_jump));
     }
 
     #[test]
@@ -57,6 +57,6 @@ mod tests {
         let s = "01101110".to_string();
         let min_jump = 2;
         let max_jump = 3;
-        assert_eq!(false, Solution::can_reach(s, min_jump, max_jump));
+        assert!(!Solution::can_reach(s, min_jump, max_jump));
     }
 }

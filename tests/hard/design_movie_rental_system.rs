@@ -40,7 +40,7 @@ impl MovieRentingSystem {
             // Add to unrented movies (sorted by price, then by shop)
             unrented
                 .entry(movie)
-                .or_insert_with(BTreeSet::new)
+                .or_default()
                 .insert((price, shop));
         }
 
@@ -84,7 +84,7 @@ impl MovieRentingSystem {
         // Add back to unrented
         self.unrented
             .entry(movie)
-            .or_insert_with(BTreeSet::new)
+            .or_default()
             .insert((price, shop));
     }
 

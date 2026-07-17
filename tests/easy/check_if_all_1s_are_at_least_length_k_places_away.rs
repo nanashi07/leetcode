@@ -9,7 +9,7 @@ impl Solution {
 
         let mut space = i32::MAX;
         let mut counter = -1;
-        for i in 0..nums.len() {
+        for (i, _) in nums.iter().enumerate() {
             let n = &nums[i];
             if *n == 1 {
                 if counter > -1 {
@@ -33,34 +33,34 @@ mod tests {
     fn test_k_length_apart_1() {
         let nums = [1, 0, 0, 0, 1, 0, 0, 1].to_vec();
         let k = 2;
-        assert_eq!(true, Solution::k_length_apart(nums, k));
+        assert!(Solution::k_length_apart(nums, k));
     }
 
     #[test]
     fn test_k_length_apart_2() {
         let nums = [1, 0, 0, 1, 0, 1].to_vec();
         let k = 2;
-        assert_eq!(false, Solution::k_length_apart(nums, k));
+        assert!(!Solution::k_length_apart(nums, k));
     }
 
     #[test]
     fn test_k_length_apart_3() {
         let nums = [1, 1, 1, 1, 1].to_vec();
         let k = 0;
-        assert_eq!(true, Solution::k_length_apart(nums, k));
+        assert!(Solution::k_length_apart(nums, k));
     }
 
     #[test]
     fn test_k_length_apart_4() {
         let nums = [1, 0, 0, 0, 1, 0, 0, 1, 0].to_vec();
         let k = 2;
-        assert_eq!(true, Solution::k_length_apart(nums, k));
+        assert!(Solution::k_length_apart(nums, k));
     }
 
     #[test]
     fn test_k_length_apart_5() {
         let nums = [0, 1, 0, 1].to_vec();
         let k = 1;
-        assert_eq!(true, Solution::k_length_apart(nums, k));
+        assert!(Solution::k_length_apart(nums, k));
     }
 }

@@ -20,6 +20,7 @@ struct Solution;
 //   }
 // }
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn merge_k_lists(lists: Vec<Option<Box<ListNode>>>) -> Option<Box<ListNode>> {
         let mut r: Option<Box<ListNode>> = None;
         let mut rx = &mut r;

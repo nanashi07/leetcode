@@ -4,7 +4,8 @@
 struct Solution;
 
 impl Solution {
-    pub fn rotate(matrix: &mut Vec<Vec<i32>>) {
+    #[allow(clippy::needless_range_loop)]
+    pub fn rotate(matrix: &mut [Vec<i32>]) {
         let n = matrix.len();
         // Transpose
         for i in 0..n {

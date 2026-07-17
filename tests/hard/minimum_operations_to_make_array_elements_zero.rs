@@ -10,7 +10,7 @@ impl Solution {
         let mut count = 0;
         let len = queries.len();
 
-        for i in 0..len {
+        for (i, _) in queries.iter().take(len).enumerate() {
             let start = queries[i][0] as i64;
             let end = queries[i][1] as i64;
 
@@ -21,7 +21,7 @@ impl Solution {
 
             // Self::_cx(start, end);
 
-            while n <= end || (n > end && p <= end) {
+            while !(n > end && p > end) {
                 if n < start {
                     // ignore
                 } else {
@@ -50,14 +50,14 @@ impl Solution {
             }
 
             println!("start: {start}, end: {end}, s: {s}");
-            count += (s / 2 + s % 2) as i64;
+            count += s / 2 + s % 2;
         }
 
         count
     }
 
     fn _cx(start: i32, end: i32) {
-        let r = (start..=end).into_iter().collect::<Vec<i32>>();
+        let r = (start..=end).collect::<Vec<i32>>();
         let mut c = vec![0; r.len()];
         {
             let mut r = r.clone();

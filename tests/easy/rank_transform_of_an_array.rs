@@ -9,10 +9,9 @@ impl Solution {
         s.sort_unstable();
         s.dedup();
         let mut arr = arr;
-        for i in 0..arr.len() {
-            let a = arr[i];
-            let r = s.binary_search(&a).unwrap();
-            arr[i] = r as i32 + 1;
+        for item in &mut arr {
+            let r = s.binary_search(item).unwrap();
+            *item = r as i32 + 1;
         }
         arr
     }

@@ -24,9 +24,9 @@ impl Solution {
                 if target == sum {
                     return sum;
                 } else if target < sum {
-                    i3 = i3 - 1;
+                    i3 -= 1;
                 } else {
-                    i2 = i2 + 1;
+                    i2 += 1;
                 }
 
                 if let Some(s) = closest_sum {

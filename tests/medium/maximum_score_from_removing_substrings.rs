@@ -62,13 +62,13 @@ impl Solution {
 
         if x < y {
             loop {
-                if s.contains(&ry) {
-                    s = s.replacen(&ry, "", 1);
+                if s.contains(ry) {
+                    s = s.replacen(ry, "", 1);
                     sum += y;
                     continue;
                 }
-                if s.contains(&rx) {
-                    s = s.replacen(&rx, "", 1);
+                if s.contains(rx) {
+                    s = s.replacen(rx, "", 1);
                     sum += x;
                     continue;
                 }
@@ -76,13 +76,13 @@ impl Solution {
             }
         } else {
             loop {
-                if s.contains(&rx) {
-                    s = s.replacen(&rx, "", 1);
+                if s.contains(rx) {
+                    s = s.replacen(rx, "", 1);
                     sum += x;
                     continue;
                 }
-                if s.contains(&ry) {
-                    s = s.replacen(&ry, "", 1);
+                if s.contains(ry) {
+                    s = s.replacen(ry, "", 1);
                     sum += y;
                     continue;
                 }

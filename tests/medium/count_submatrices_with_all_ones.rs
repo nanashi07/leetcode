@@ -14,7 +14,7 @@ impl Solution {
         let mut heights = vec![0; n];
         let mut result = 0;
 
-        for i in 0..m {
+        for (i, _) in mat.iter().take(m).enumerate() {
             // Update heights for current row
             for j in 0..n {
                 if mat[i][j] == 1 {

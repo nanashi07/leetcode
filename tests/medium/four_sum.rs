@@ -19,7 +19,7 @@ impl Solution {
         while i1 < len - 2 {
             // ignore duplicated & overflow
             if (i1 > 0 && nums[i1] == nums[i1 - 1]) || target.checked_sub(nums[i1]).is_none() {
-                i1 = i1 + 1;
+                i1 += 1;
                 continue;
             }
             let mut i2 = i1 + 1;
@@ -28,16 +28,16 @@ impl Solution {
                 if (i2 > i1 + 1 && nums[i2] == nums[i2 - 1])
                     || (target - nums[i1]).checked_sub(nums[i2]).is_none()
                 {
-                    i2 = i2 + 1;
+                    i2 += 1;
                     continue;
                 }
                 let two_sum = Solution::two_sum(&nums[i2 + 1..], target - nums[i1] - nums[i2]);
                 for v in two_sum {
                     r.push(vec![nums[i1], nums[i2], v[0], v[1]]);
                 }
-                i2 = i2 + 1;
+                i2 += 1;
             }
-            i1 = i1 + 1;
+            i1 += 1;
         }
 
         r
@@ -67,10 +67,10 @@ impl Solution {
 
             if next {
                 i4 = nums.len() - 1;
-                i1 = i1 + 1;
+                i1 += 1;
                 next = false;
             } else {
-                i4 = i4 - 1;
+                i4 -= 1;
                 next = i4 - i1 <= 3;
             }
         }
@@ -91,17 +91,17 @@ impl Solution {
                 r.push(vec![nums[i1], nums[i2]]);
 
                 while i1 + 1 < i2 && nums[i1] == nums[i1 + 1] {
-                    i1 = i1 + 1;
+                    i1 += 1;
                 }
                 while i1 < i2 - 1 && nums[i2 - 1] == nums[i2] {
-                    i2 = i2 - 1;
+                    i2 -= 1;
                 }
-                i1 = i1 + 1;
-                i2 = i2 - 1;
+                i1 += 1;
+                i2 -= 1;
             } else if sum - target > 0 {
-                i2 = i2 - 1;
+                i2 -= 1;
             } else {
-                i1 = i1 + 1;
+                i1 += 1;
             }
         }
 

@@ -48,7 +48,7 @@ impl Solution {
             }
         }
 
-        complete_count as i32
+        complete_count
     }
 }
 

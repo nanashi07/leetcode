@@ -26,7 +26,7 @@ impl Solution {
     // Calculate triangle area using cross product formula
     // For points (x1,y1), (x2,y2), (x3,y3):
     // Area = 0.5 * |x1(y2-y3) + x2(y3-y1) + x3(y1-y2)|
-    fn calculate_area(p1: &Vec<i32>, p2: &Vec<i32>, p3: &Vec<i32>) -> f64 {
+    fn calculate_area(p1: &[i32], p2: &[i32], p3: &[i32]) -> f64 {
         let x1 = p1[0] as f64;
         let y1 = p1[1] as f64;
         let x2 = p2[0] as f64;
@@ -34,8 +34,8 @@ impl Solution {
         let x3 = p3[0] as f64;
         let y3 = p3[1] as f64;
 
-        let area = 0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)).abs();
-        area
+        
+        0.5 * (x1 * (y2 - y3) + x2 * (y3 - y1) + x3 * (y1 - y2)).abs()
     }
 }
 

@@ -45,7 +45,7 @@ mod tests {
     #[test]
     fn test_is_balanced_1() {
         let root = create_tree(&[Some(3), Some(9), Some(20), None, None, Some(15), Some(7)]);
-        assert_eq!(true, Solution::is_balanced(root));
+        assert!(Solution::is_balanced(root));
     }
 
     #[test]
@@ -61,12 +61,12 @@ mod tests {
             Some(4),
             Some(4),
         ]);
-        assert_eq!(false, Solution::is_balanced(root));
+        assert!(!Solution::is_balanced(root));
     }
 
     #[test]
     fn test_is_balanced_3() {
         let root = create_tree(&[]);
-        assert_eq!(true, Solution::is_balanced(root));
+        assert!(Solution::is_balanced(root));
     }
 }

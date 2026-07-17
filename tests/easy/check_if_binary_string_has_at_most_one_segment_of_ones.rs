@@ -27,12 +27,12 @@ mod tests {
     #[test]
     fn test_check_ones_segment_1() {
         let s = "1001".to_string();
-        assert_eq!(false, Solution::check_ones_segment(s));
+        assert!(!Solution::check_ones_segment(s));
     }
 
     #[test]
     fn test_check_ones_segment_2() {
         let s = "110".to_string();
-        assert_eq!(true, Solution::check_ones_segment(s));
+        assert!(Solution::check_ones_segment(s));
     }
 }

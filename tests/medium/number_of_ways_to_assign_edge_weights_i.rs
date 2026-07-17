@@ -41,7 +41,7 @@ impl Solution {
         }
 
         let mut base = 2_i64;
-        let mut exp = (levels - 2) as i32;
+        let mut exp = levels - 2;
         let mut result = 1_i64;
         while exp > 0 {
             if exp & 1 == 1 {

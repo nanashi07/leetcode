@@ -3,7 +3,7 @@
 struct Solution;
 
 impl Solution {
-    pub fn remove_duplicates(nums: &mut Vec<i32>) -> i32 {
+    pub fn remove_duplicates(nums: &mut [i32]) -> i32 {
         let mut i = 0;
         // let mut moved = 0;
         let mut len = nums.len();
@@ -12,9 +12,9 @@ impl Solution {
                 for j in i + 1..len - 1 {
                     nums[j] = nums[j + 1];
                 }
-                len = len - 1;
+                len -= 1;
             } else {
-                i = i + 1;
+                i += 1;
             }
         }
 
@@ -27,7 +27,7 @@ impl Solution {
         for i in 1..nums.len() {
             if nums[i] == nums[i - 1] {
                 // sum duplicated count
-                count = count + 1;
+                count += 1;
             } else {
                 // copy value from next difference to `next position`
                 println!("{:?}", &nums);

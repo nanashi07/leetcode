@@ -20,7 +20,7 @@ impl Solution {
 
         for c in word.chars() {
             let n = c as u32;
-            if (n >= 48 && n <= 57) || (n >= 65 && n <= 90) || (n >= 97 && n <= 122) {
+            if (48..=57).contains(&n) || (65..=90).contains(&n) || (97..=122).contains(&n) {
                 if n >= 65 {
                     if vowel.contains(&n) || vowel.contains(&(n + 65 - 97)) {
                         vc += 1;
@@ -44,18 +44,18 @@ mod tests {
     #[test]
     fn test_is_valid_1() {
         let word = "234Adas".to_owned();
-        assert_eq!(true, Solution::is_valid(word));
+        assert!(Solution::is_valid(word));
     }
 
     #[test]
     fn test_is_valid_2() {
         let word = "b3".to_owned();
-        assert_eq!(false, Solution::is_valid(word));
+        assert!(!Solution::is_valid(word));
     }
 
     #[test]
     fn test_is_valid_3() {
         let word = "a3$e".to_owned();
-        assert_eq!(false, Solution::is_valid(word));
+        assert!(!Solution::is_valid(word));
     }
 }

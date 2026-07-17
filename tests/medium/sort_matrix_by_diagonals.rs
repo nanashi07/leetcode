@@ -23,10 +23,9 @@ impl Solution {
                 if ni < l && nj < l {
                     println!("move {:?} / {:?}", (ni, nj), (i, j));
 
-                    if i == 0 && grid[cj][ci] < grid[nj][ni] {
-                        (grid[cj][ci], grid[nj][ni]) = (grid[nj][ni], grid[cj][ci]);
-                        bubble = true;
-                    } else if i > 0 && grid[cj][ci] > grid[nj][ni] {
+                    if (i == 0 && grid[cj][ci] < grid[nj][ni])
+                        || (i > 0 && grid[cj][ci] > grid[nj][ni])
+                    {
                         (grid[cj][ci], grid[nj][ni]) = (grid[nj][ni], grid[cj][ci]);
                         bubble = true;
                     }

@@ -13,9 +13,9 @@ impl Solution {
         let mut it = 0;
         let mut count = 0;
 
-        for ip in 0..players.len() {
+        for (ip, _) in players.iter().enumerate() {
             while it < trainers.len() && trainers[it] < players[ip] {
-                it = it + 1;
+                it += 1;
             }
 
             if it < trainers.len() && trainers[it] >= players[ip] {

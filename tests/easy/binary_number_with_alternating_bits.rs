@@ -10,7 +10,7 @@ impl Solution {
         let mut last = n % 2;
         let mut n = n;
         while n > 0 {
-            n = n >> 1;
+            n >>= 1;
             if n % 2 == last {
                 return false;
             }
@@ -27,18 +27,18 @@ mod tests {
     #[test]
     fn test_has_alternating_bits_1() {
         let n = 5;
-        assert_eq!(true, Solution::has_alternating_bits(n));
+        assert!(Solution::has_alternating_bits(n));
     }
 
     #[test]
     fn test_has_alternating_bits_2() {
         let n = 7;
-        assert_eq!(false, Solution::has_alternating_bits(n));
+        assert!(!Solution::has_alternating_bits(n));
     }
 
     #[test]
     fn test_has_alternating_bits_3() {
         let n = 11;
-        assert_eq!(false, Solution::has_alternating_bits(n));
+        assert!(!Solution::has_alternating_bits(n));
     }
 }

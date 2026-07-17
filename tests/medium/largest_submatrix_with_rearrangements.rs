@@ -10,7 +10,7 @@ impl Solution {
         let mut heights = vec![0i32; n];
         let mut ans = 0;
 
-        for i in 0..m {
+        for (i, _) in matrix.iter().take(m).enumerate() {
             // Update column heights
             for j in 0..n {
                 heights[j] = if matrix[i][j] == 1 { heights[j] + 1 } else { 0 };

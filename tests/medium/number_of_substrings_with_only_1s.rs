@@ -12,7 +12,7 @@ impl Solution {
         let ones = s.split('0').filter(|&l| !l.is_empty()).collect::<Vec<_>>();
         for one in ones {
             c += Self::count(one.len() as u64);
-            c = c % MOD;
+            c %= MOD;
         }
 
         c as i32

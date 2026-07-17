@@ -20,7 +20,7 @@ impl Solution {
                     if r.checked_mul(10).is_none() {
                         return if negative == 1 { i32::MAX } else { i32::MIN };
                     }
-                    r = r * 10;
+                    r *= 10;
                     if r.checked_add(e - 48).is_none() {
                         return if negative == 1 { i32::MAX } else { i32::MIN };
                     }

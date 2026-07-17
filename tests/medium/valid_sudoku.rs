@@ -9,7 +9,7 @@ impl Solution {
     pub fn is_valid_sudoku(board: Vec<Vec<char>>) -> bool {
         let len = board.len();
 
-        for x in 0..len {
+        for (x, _) in board.iter().enumerate().take(len) {
             let fills = &board[x]
                 .iter()
                 .filter(|ele| **ele != '.')
@@ -21,7 +21,7 @@ impl Solution {
             }
 
             let mut uniq: HashSet<&char> = HashSet::new();
-            for y in 0..len {
+            for (y, _) in board.iter().enumerate().take(len) {
                 let c = &board[y][x];
                 if *c != '.' && !uniq.insert(c) {
                     println!("column {} has duplicate", y);
@@ -66,7 +66,7 @@ mod tests {
             vec!['.', '.', '.', '4', '1', '9', '.', '.', '5'],
             vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
         ];
-        assert_eq!(true, Solution::is_valid_sudoku(board));
+        assert!(Solution::is_valid_sudoku(board));
     }
 
     #[test]
@@ -82,6 +82,6 @@ mod tests {
             vec!['.', '.', '.', '4', '1', '9', '.', '.', '5'],
             vec!['.', '.', '.', '.', '8', '.', '.', '7', '9'],
         ];
-        assert_eq!(false, Solution::is_valid_sudoku(board));
+        assert!(!Solution::is_valid_sudoku(board));
     }
 }

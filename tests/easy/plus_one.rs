@@ -13,7 +13,7 @@ impl Solution {
 
         for i in (0..len).rev() {
             if digits[i] > 9 {
-                digits[i] = digits[i] % 10;
+                digits[i] %= 10;
                 if i == 0 {
                     digits.insert(0, 1);
                 } else {

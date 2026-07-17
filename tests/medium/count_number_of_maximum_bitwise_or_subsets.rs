@@ -10,7 +10,7 @@ impl Solution {
 
         let mut xor = 0;
         for n in &nums {
-            xor = xor | *n;
+            xor |= *n;
         }
         println!("xor: {}", &xor);
 

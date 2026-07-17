@@ -15,10 +15,10 @@ impl Solution {
             if c == '*' {
                 return Solution::next(p, pos + 1);
             }
-            return (c, false);
+            (c, false)
         } else {
             // indicate no pattern
-            return ('*', false);
+            ('*', false)
         }
     }
     pub fn is_match(s: String, p: String) -> bool {
@@ -35,7 +35,7 @@ impl Solution {
 
             // no next pattern
             if pp == '*' {
-                println!("[a] {} -> {} : {}", &s, &p, false);
+                println!("[a] {} -> {} : false", &s, &p);
                 return false;
             }
 
@@ -50,7 +50,7 @@ impl Solution {
                 } else {
                     if pp != c {
                         // non-matched, try next pattern
-                        pos = pos + 2; // skip next '*' char
+                        pos += 2; // skip next '*' char
                         continue;
                     } else {
                         // check check greedy
@@ -64,38 +64,38 @@ impl Solution {
             } else {
                 if pp == '.' {
                     // matched, next pattern
-                    pos = pos + 1
+                    pos += 1
                 } else {
                     if pp == c {
                         // matched, next patter
-                        pos = pos + 1
+                        pos += 1
                     } else {
-                        println!("[b] {} -> {} : {}", &s, &p, false);
+                        println!("[b] {} -> {} : false", &s, &p);
                         return false;
                     }
                 }
             }
 
-            si = si + 1;
+            si += 1;
             if si >= slen {
                 // check if last pattern
                 loop {
                     let (pp, any) = Solution::next(&p, if any { ps + 2 } else { ps + 1 });
                     if pp == '*' {
-                        println!("[c] {} -> {} : {}", &s, &p, true);
+                        println!("[c] {} -> {} : true", &s, &p);
                         return true;
                     } else {
                         if any {
-                            ps = ps + 1;
+                            ps += 1;
                         } else {
-                            println!("[d] {} -> {} : {}", &s, &p, false);
+                            println!("[d] {} -> {} : false", &s, &p);
                             return false;
                         }
                     }
                 }
             }
         }
-        println!("[e] {} -> {} : {}", &s, &p, true);
+        println!("[e] {} -> {} : true", &s, &p);
         true
     }
 }
@@ -127,57 +127,57 @@ fn test_is_match() {
     let s = "aa";
     let p = "a";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "aa";
     let p = "a*";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "ab";
     let p = ".*";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "mississippi";
     let p = "mis*is*ip*.";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "ab";
     let p = ".*c";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "aab";
     let p = "c*a*b";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "aaa";
     let p = "aaaa";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "aaa";
     let p = "a*a";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "a";
     let p = "ab*";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "a";
     let p = "ab*a";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "bbbba";
     let p = ".*a*a";
     let result = Solution::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 }
 
 #[test]
@@ -185,55 +185,55 @@ fn test_is_match_answer() {
     let s = "aa";
     let p = "a";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "aa";
     let p = "a*";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "ab";
     let p = ".*";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "mississippi";
     let p = "mis*is*ip*.";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "ab";
     let p = ".*c";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "aab";
     let p = "c*a*b";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "aaa";
     let p = "aaaa";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "aaa";
     let p = "a*a";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "a";
     let p = "ab*";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 
     let s = "a";
     let p = "ab*a";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(false, result, "input s: {}, p: {}", s, p);
+    assert!(!result, "input s: {}, p: {}", s, p);
 
     let s = "bbbba";
     let p = ".*a*a";
     let result = Answer::is_match(s.to_owned(), p.to_owned());
-    assert_eq!(true, result, "input s: {}, p: {}", s, p);
+    assert!(result, "input s: {}, p: {}", s, p);
 }

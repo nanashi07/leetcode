@@ -22,7 +22,7 @@ impl Solution {
 
         for i in 0..n {
             let mut g = nums[i];
-            for j in i..n {
+            for (j, _) in nums.iter().enumerate().take(n).skip(i) {
                 g = Self::gcd(g, nums[j]);
 
                 // If GCD becomes 1, we found a valid subarray

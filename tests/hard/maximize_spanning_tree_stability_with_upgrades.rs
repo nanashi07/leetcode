@@ -6,9 +6,8 @@ struct Solution;
 impl Solution {
     pub fn max_stability(n: i32, edges: Vec<Vec<i32>>, k: i32) -> i32 {
         let n = n as usize;
-        let k = k as i32;
 
-        fn find(parent: &mut Vec<usize>, mut x: usize) -> usize {
+        fn find(parent: &mut [usize], mut x: usize) -> usize {
             while parent[x] != x {
                 parent[x] = parent[parent[x]];
                 x = parent[x];
@@ -16,7 +15,7 @@ impl Solution {
             x
         }
 
-        fn union(parent: &mut Vec<usize>, size: &mut Vec<usize>, x: usize, y: usize) -> bool {
+        fn union(parent: &mut [usize], size: &mut [usize], x: usize, y: usize) -> bool {
             let px = find(parent, x);
             let py = find(parent, y);
             if px == py {

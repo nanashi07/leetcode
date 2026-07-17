@@ -12,7 +12,7 @@ impl Solution {
 
         for j in 0..size {
             let mut last_char = ' ';
-            for i in 0..strs.len() {
+            for (i, _) in strs.iter().enumerate() {
                 let str = &strs[i][..];
                 if let Some(curr_char) = str.chars().nth(j) {
                     if curr_char < last_char {

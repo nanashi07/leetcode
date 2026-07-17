@@ -3,6 +3,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn convert(s: String, num_rows: i32) -> String {
         if num_rows == 1 {
             s

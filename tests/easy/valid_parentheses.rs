@@ -34,13 +34,13 @@ impl Solution {
 fn test_is_valid() {
     let s = "()";
     let result = Solution::is_valid(s.to_owned());
-    assert_eq!(true, result, "s = {}", s);
+    assert!(result, "s = {}", s);
 
     let s = "()[]{}";
     let result = Solution::is_valid(s.to_owned());
-    assert_eq!(true, result, "s = {}", s);
+    assert!(result, "s = {}", s);
 
     let s = "(]";
     let result = Solution::is_valid(s.to_owned());
-    assert_eq!(false, result, "s = {}", s);
+    assert!(!result, "s = {}", s);
 }

@@ -13,7 +13,7 @@ impl Solution {
         let mut powers: Vec<usize> = Vec::new();
         let mut i: i64 = 1;
         loop {
-            let p = i.pow(x) as i64;
+            let p = i.pow(x);
             if p > n as i64 {
                 break;
             }

@@ -15,7 +15,7 @@ impl Solution {
             if n % 2 != 0 {
                 return false;
             }
-            n = n >> 1;
+            n >>= 1;
         }
 
         true
@@ -29,18 +29,18 @@ mod tests {
     #[test]
     fn test_is_power_of_two_1() {
         let n = 1;
-        assert_eq!(true, Solution::is_power_of_two(n));
+        assert!(Solution::is_power_of_two(n));
     }
 
     #[test]
     fn test_is_power_of_two_2() {
         let n = 16;
-        assert_eq!(true, Solution::is_power_of_two(n));
+        assert!(Solution::is_power_of_two(n));
     }
 
     #[test]
     fn test_is_power_of_two_3() {
         let n = 3;
-        assert_eq!(false, Solution::is_power_of_two(n));
+        assert!(!Solution::is_power_of_two(n));
     }
 }

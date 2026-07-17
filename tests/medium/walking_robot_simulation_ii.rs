@@ -31,11 +31,11 @@ impl Robot {
         let off = self.offset.get();
         let w = self.width;
         let h = self.height;
-        if off <= w - 1 {
+        if off < w {
             vec![off, 0]
-        } else if off <= w - 1 + h - 1 {
+        } else if off < w - 1 + h {
             vec![w - 1, off - (w - 1)]
-        } else if off <= 2 * (w - 1) + h - 1 {
+        } else if off < 2 * (w - 1) + h {
             vec![w - 1 - (off - (w - 1) - (h - 1)), h - 1]
         } else {
             vec![0, h - 1 - (off - 2 * (w - 1) - (h - 1))]
@@ -49,11 +49,11 @@ impl Robot {
         let off = self.offset.get();
         let w = self.width;
         let h = self.height;
-        if off > 0 && off <= w - 1 {
+        if off > 0 && off < w {
             "East"
-        } else if off > w - 1 && off <= w - 1 + h - 1 {
+        } else if off > w - 1 && off < w - 1 + h {
             "North"
-        } else if off > w - 1 + h - 1 && off <= 2 * (w - 1) + h - 1 {
+        } else if off > w - 1 + h - 1 && off < 2 * (w - 1) + h {
             "West"
         } else {
             "South"

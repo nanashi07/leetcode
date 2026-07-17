@@ -11,7 +11,7 @@ pub fn to_char_vec<'a>(data: impl IntoIterator<Item = &'a str>) -> Vec<char> {
 pub fn to_char_vec2d<'a, const N: usize>(
     data: impl IntoIterator<Item = [&'a str; N]>,
 ) -> Vec<Vec<char>> {
-    data.into_iter().map(|row| to_char_vec(row)).collect()
+    data.into_iter().map(to_char_vec).collect()
 }
 
 pub fn to_string_vec<S: AsRef<str>>(data: impl IntoIterator<Item = S>) -> Vec<String> {

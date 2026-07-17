@@ -25,6 +25,7 @@ impl Solution {
     //    then dp[prev][mod_num] = dp[mod_num][prev] + 1
     // 3. 轉換關係是：如果我們在模值為prev的數字後面添加當前數字（模值為mod_num），
     //    則 dp[prev][mod_num] = dp[mod_num][prev] + 1
+    #[allow(clippy::needless_range_loop)]
     pub fn maximum_length(nums: Vec<i32>, k: i32) -> i32 {
         // Convert k to usize for array indexing
         // 將k轉換為usize以便數組索引
@@ -91,7 +92,7 @@ impl Solution {
             max = max.max(m);
         }
 
-        max = max + 1;
+        max += 1;
 
         println!("max: {}", max);
 

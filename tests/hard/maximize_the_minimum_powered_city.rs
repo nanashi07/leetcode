@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn max_power(stations: Vec<i32>, r: i32, k: i32) -> i64 {
         let n = stations.len();
         let r = r as usize;
@@ -47,7 +48,7 @@ impl Solution {
         let mut window_sum = 0i64;
 
         // Initialize window for city 0 (original stations only)
-        for j in 0..=r.min(n - 1) {
+        for (j, _) in stations.iter().take(r.min(n - 1) + 1).enumerate() {
             window_sum += stations[j] as i64;
         }
 

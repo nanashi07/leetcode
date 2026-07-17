@@ -28,7 +28,7 @@ impl Solution {
                     if seen.get(key).unwrap_or(&0) > map.get(key).unwrap_or(&0) {
                         break;
                     }
-                    matched = matched + 1;
+                    matched += 1;
                 } else {
                     break;
                 }
@@ -67,7 +67,7 @@ impl Solution {
                 } else {
                     break;
                 }
-                j = j + 1;
+                j += 1;
             }
             if j == num {
                 indexes.push(i as i32);
@@ -101,19 +101,19 @@ impl Solution {
         result
     }
 
-    fn _match_next(p: usize, step: usize, s: &str, words: &Vec<String>) -> bool {
+    fn _match_next(_p: usize, step: usize, s: &str, words: &[String]) -> bool {
         if words.is_empty() {
             // matched
             return true;
         }
 
         for i in 0..words.len() {
-            let mut words = words.clone();
+            let mut words = words.to_owned();
             let w = words.remove(i);
 
             if s.len() >= step && w[..] == s[0..step] {
                 // next one
-                let matched = Solution::_match_next(p + step, step, &s[step..], &words);
+                let matched = Solution::_match_next(_p + step, step, &s[step..], &words);
                 if matched {
                     return true;
                 }

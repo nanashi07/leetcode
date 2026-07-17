@@ -21,12 +21,12 @@ impl Solution {
                 } else {
                     break;
                 }
-                count = count + 1;
+                count += 1;
             }
 
             if let Some(c) = next_char {
                 if count == strs.len() {
-                    r.push_str(&c.to_string())
+                    r.push(c)
                 } else {
                     break;
                 }
@@ -34,7 +34,7 @@ impl Solution {
                 break;
             }
 
-            i = i + 1;
+            i += 1;
         }
 
         r

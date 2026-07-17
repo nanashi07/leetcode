@@ -5,11 +5,12 @@ use std::collections::HashMap;
 
 struct Solution;
 
-struct DSU {
+struct Dsu {
     parent: Vec<usize>,
 }
 
-impl DSU {
+impl Dsu {
+    #[allow(clippy::needless_range_loop)]
     fn new(size: usize) -> Self {
         let mut parent = vec![0; size];
         for i in 0..size {
@@ -38,7 +39,7 @@ impl Solution {
     // https://leetcode.com/problems/power-grid-maintenance/editorial/
     pub fn process_queries(c: i32, connections: Vec<Vec<i32>>, queries: Vec<Vec<i32>>) -> Vec<i32> {
         let c = c as usize;
-        let mut dsu = DSU::new(c + 1);
+        let mut dsu = Dsu::new(c + 1);
 
         for p in connections {
             dsu.join(p[0] as usize, p[1] as usize);
@@ -57,17 +58,13 @@ impl Solution {
             }
         }
 
-        for i in 1..=c {
+        for (i, _) in online.iter().enumerate().take(c + 1).skip(1) {
             let root = dsu.find(i);
-            if !minimum_online_stations.contains_key(&root) {
-                minimum_online_stations.insert(root, -1);
-            }
+            minimum_online_stations.entry(root).or_insert(-1);
 
             let station = *minimum_online_stations.get(&root).unwrap();
-            if online[i] {
-                if station == -1 || station > i as i32 {
-                    minimum_online_stations.insert(root, i as i32);
-                }
+            if online[i] && (station == -1 || station > i as i32) {
+                minimum_online_stations.insert(root, i as i32);
             }
         }
 
@@ -104,6 +101,7 @@ impl Solution {
     }
 
     // wrong
+    #[allow(clippy::needless_range_loop)]
     pub fn _process_queries(
         c: i32,
         connections: Vec<Vec<i32>>,

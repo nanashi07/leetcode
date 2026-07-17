@@ -63,7 +63,7 @@ mod tests {
     fn test_find_safe_walk_1() {
         let grid = to_vec2d([[0, 1, 0, 0, 0], [0, 1, 0, 1, 0], [0, 0, 0, 1, 0]]);
         let health = 1;
-        assert_eq!(true, Solution::find_safe_walk(grid, health));
+        assert!(Solution::find_safe_walk(grid, health));
     }
 
     #[test]
@@ -75,13 +75,13 @@ mod tests {
             [0, 0, 1, 0, 1, 0],
         ]);
         let health = 3;
-        assert_eq!(false, Solution::find_safe_walk(grid, health));
+        assert!(!Solution::find_safe_walk(grid, health));
     }
 
     #[test]
     fn test_find_safe_walk_3() {
         let grid = to_vec2d([[1, 1, 1], [1, 0, 1], [1, 1, 1]]);
         let health = 5;
-        assert_eq!(true, Solution::find_safe_walk(grid, health));
+        assert!(Solution::find_safe_walk(grid, health));
     }
 }

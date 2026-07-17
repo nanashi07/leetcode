@@ -12,7 +12,7 @@ impl Solution {
         let mut total_happiness = 0i64;
 
         // Select k children
-        for i in 0..k as usize {
+        for (i, _) in happiness.iter().enumerate().take(k as usize) {
             // Each child's happiness decreases by the number of previously selected children
             let adjusted_happiness = happiness[i] - i as i32;
             // Happiness cannot be negative

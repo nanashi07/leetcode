@@ -28,18 +28,18 @@ mod tests {
     #[test]
     fn test_check_1() {
         let nums = [3, 4, 5, 1, 2].to_vec();
-        assert_eq!(true, Solution::check(nums));
+        assert!(Solution::check(nums));
     }
 
     #[test]
     fn test_check_2() {
         let nums = [2, 1, 3, 4].to_vec();
-        assert_eq!(false, Solution::check(nums));
+        assert!(!Solution::check(nums));
     }
 
     #[test]
     fn test_check_3() {
         let nums = [1, 2, 3].to_vec();
-        assert_eq!(true, Solution::check(nums));
+        assert!(Solution::check(nums));
     }
 }

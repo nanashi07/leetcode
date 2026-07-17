@@ -4,14 +4,16 @@ struct Solution;
 
 impl Solution {
     pub fn letter_combinations(digits: String) -> Vec<String> {
+        if digits.is_empty() {
+            return Vec::new();
+        }
         let mut r: Vec<String> = Vec::new();
-        let alphabet = vec!["abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"];
+        let alphabet = ["abc", "def", "ghi", "jkl", "mno", "pqrs", "tuv", "wxyz"];
 
-        let len = digits.len();
         let group_index: Vec<usize> = digits.chars().map(|c| (c as usize) - 50).collect();
         let mut item_index = vec![0_usize; group_index.len()];
 
-        while len > 0 {
+        loop {
             let mut s = String::new();
             for (ix, g) in group_index.iter().enumerate() {
                 let g = *g;
@@ -21,26 +23,20 @@ impl Solution {
 
             r.push(s);
 
-            let mut len = len - 1;
-            item_index[len] = item_index[len] + 1;
+            let mut idx = group_index.len() - 1;
+            item_index[idx] += 1;
             loop {
-                if item_index[len] < alphabet[group_index[len]].len() {
+                if item_index[idx] < alphabet[group_index[idx]].len() {
                     break;
+                } else if idx == 0 {
+                    return r;
                 } else {
-                    if len == 0 {
-                        return r;
-                    } else {
-                        item_index[len] = 0;
-                        item_index[len - 1] = item_index[len - 1] + 1;
-                    }
+                    item_index[idx] = 0;
+                    item_index[idx - 1] += 1;
                 }
-                if len > 0 {
-                    len = len - 1;
-                }
+                idx = idx.saturating_sub(1);
             }
         }
-
-        r
     }
 }
 

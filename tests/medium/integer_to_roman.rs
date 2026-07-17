@@ -25,7 +25,7 @@ impl Solution {
         let mut r = String::new();
         for (n, d) in map {
             while num >= n {
-                num = num - n;
+                num -= n;
                 r.push_str(d);
             }
         }

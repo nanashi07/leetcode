@@ -26,7 +26,7 @@ impl Solution {
                     // of the rectangle formed by these two points
                     let mut has_point_inside = false;
 
-                    for k in 0..n {
+                    for (k, _) in points.iter().enumerate().take(n) {
                         if k == i || k == j {
                             continue;
                         }
@@ -75,7 +75,7 @@ impl Solution {
                 if b[0] >= a[0] && a[1] >= b[1] {
                     let mut contains = false;
 
-                    for m in i + 1..j {
+                    for (m, _) in points.iter().take(j).skip(i + 1).enumerate() {
                         let c = &points[m];
                         if c[0] > a[0] && c[0] < b[0] && c[1] < a[1] && c[1] > b[1] {
                             println!("A: {:?}, B: {:?}, C: {:?}", a, b, c);

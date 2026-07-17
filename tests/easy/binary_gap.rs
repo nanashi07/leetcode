@@ -10,7 +10,7 @@ impl Solution {
         let mut n = n;
 
         while n > 0 && n % 2 == 0 {
-            n = n >> 1;
+            n >>= 1;
         }
 
         let mut p = -1;
@@ -27,7 +27,7 @@ impl Solution {
                 p - last
             };
             max = max.max(len);
-            n = n >> 1;
+            n >>= 1;
         }
 
         max

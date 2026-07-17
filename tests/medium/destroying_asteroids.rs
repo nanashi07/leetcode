@@ -29,13 +29,13 @@ mod tests {
     fn test_asteroids_destroyed_1() {
         let mass = 10;
         let asteroids = [3, 9, 19, 5, 21].to_vec();
-        assert_eq!(true, Solution::asteroids_destroyed(mass, asteroids));
+        assert!(Solution::asteroids_destroyed(mass, asteroids));
     }
 
     #[test]
     fn test_asteroids_destroyed_2() {
         let mass = 5;
         let asteroids = [4, 9, 23, 4].to_vec();
-        assert_eq!(false, Solution::asteroids_destroyed(mass, asteroids));
+        assert!(!Solution::asteroids_destroyed(mass, asteroids));
     }
 }

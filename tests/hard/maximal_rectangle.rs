@@ -14,7 +14,7 @@ impl Solution {
         let mut heights = vec![0; cols];
         let mut max_area = 0;
 
-        for row in 0..rows {
+        for (row, _) in matrix.iter().take(rows).enumerate() {
             // Update heights for current row
             for col in 0..cols {
                 if matrix[row][col] == '1' {
@@ -52,8 +52,8 @@ impl Solution {
         }
 
         // Pop remaining elements from stack
-        while !stack.is_empty() {
-            let h_idx = stack.pop().unwrap();
+        while let Some(h_idx) = stack.pop() {
+            
             let height = heights[h_idx];
             let width = if stack.is_empty() {
                 n as i32

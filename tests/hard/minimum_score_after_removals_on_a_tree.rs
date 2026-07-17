@@ -26,6 +26,7 @@ impl Solution {
 
         let mut res = i32::MAX;
 
+        #[allow(clippy::too_many_arguments)]
         fn dfs2(
             x: usize,
             f: usize,

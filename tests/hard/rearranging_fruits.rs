@@ -8,7 +8,7 @@ struct Solution;
 impl Solution {
     // https://leetcode.com/problems/rearranging-fruits/editorial/
     pub fn min_cost(basket1: Vec<i32>, basket2: Vec<i32>) -> i64 {
-        let mut freq = HashMap::new();
+        let mut freq: HashMap<i32, i32> = HashMap::new();
         let mut m = i32::MAX;
         for &b in &basket1 {
             *freq.entry(b).or_insert(0) += 1;
@@ -24,7 +24,7 @@ impl Solution {
             if v % 2 != 0 {
                 return -1;
             }
-            for _ in 0..((v as i32).abs() / 2) {
+            for _ in 0..(v.abs() / 2) {
                 merge.push(k);
             }
         }

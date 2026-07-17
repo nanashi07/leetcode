@@ -4,7 +4,7 @@ struct Solution;
 
 impl Solution {
     // https://leetcode.com/problems/next-permutation/discuss/13867/C%2B%2B-from-Wikipedia
-    pub fn next_permutation(nums: &mut Vec<i32>) {
+    pub fn next_permutation(nums: &mut [i32]) {
         let n = nums.len();
         let mut k = n;
         for i in (0..n - 1).rev() {
@@ -26,19 +26,17 @@ impl Solution {
         }
     }
 
-    fn swap(nums: &mut Vec<i32>, i: usize, j: usize) {
-        let tmp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = tmp;
+    fn swap(nums: &mut [i32], i: usize, j: usize) {
+        nums.swap(i, j);
     }
 
-    fn reverse_suffix(nums: &mut Vec<i32>, start: usize) {
+    fn reverse_suffix(nums: &mut [i32], start: usize) {
         let mut start = start;
         let mut end = nums.len() - 1;
         while start < end {
             Solution::swap(nums, start, end);
-            start = start + 1;
-            end = end - 1;
+            start += 1;
+            end -= 1;
         }
     }
 }

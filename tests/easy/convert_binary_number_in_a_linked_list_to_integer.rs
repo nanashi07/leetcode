@@ -26,7 +26,7 @@ impl Solution {
         let mut head = head;
         let mut n = 0;
         while let Some(value) = head {
-            n = n << 1;
+            n <<= 1;
             n += value.val;
             head = value.next
         }

@@ -14,7 +14,7 @@ impl Solution {
             counts[adjusted_n] += 1;
         }
 
-        for adjusted_n in 0..=100_000 {
+        for (adjusted_n, _) in counts.iter().enumerate() {
             let count = counts[adjusted_n];
 
             if count > 0 {
@@ -59,7 +59,7 @@ impl Solution {
         let mut run = |i| {
             let mut exchanged = false;
             for j in i + 1..len {
-                if &nums[i] > &nums[j] {
+                if nums[i] > nums[j] {
                     nums.swap(i, j);
                     exchanged = true;
                 }

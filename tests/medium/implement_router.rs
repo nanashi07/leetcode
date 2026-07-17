@@ -43,7 +43,7 @@ impl Router {
         // Update destination timestamps (insert in sorted order)
         {
             let mut dest_map = self.dest_timestamps.borrow_mut();
-            let timestamps = dest_map.entry(destination).or_insert_with(Vec::new);
+            let timestamps = dest_map.entry(destination).or_default();
 
             // Binary search to find insertion position
             let pos = timestamps.binary_search(&timestamp).unwrap_or_else(|e| e);
@@ -126,20 +126,20 @@ mod tests {
     #[test]
     fn test_router_1() {
         let router = Router::new(3); // Initialize Router with memoryLimit of 3.
-        assert_eq!(true, router.add_packet(1, 4, 90)); // Packet is added. Return True.
-        assert_eq!(true, router.add_packet(2, 5, 90)); // Packet is added. Return True.
-        assert_eq!(false, router.add_packet(1, 4, 90)); // This is a duplicate packet. Return False.
-        assert_eq!(true, router.add_packet(3, 5, 95)); // Packet is added. Return True
-        assert_eq!(true, router.add_packet(4, 5, 105)); // Packet is added, [1, 4, 90] is removed as number of packets exceeds memoryLimit. Return True.
+        assert!(router.add_packet(1, 4, 90)); // Packet is added. Return True.
+        assert!(router.add_packet(2, 5, 90)); // Packet is added. Return True.
+        assert!(!router.add_packet(1, 4, 90)); // This is a duplicate packet. Return False.
+        assert!(router.add_packet(3, 5, 95)); // Packet is added. Return True
+        assert!(router.add_packet(4, 5, 105)); // Packet is added, [1, 4, 90] is removed as number of packets exceeds memoryLimit. Return True.
         assert_eq!(vec![2, 5, 90], router.forward_packet()); // Return [2, 5, 90] and remove it from router.
-        assert_eq!(true, router.add_packet(5, 2, 110)); // Packet is added. Return True.
+        assert!(router.add_packet(5, 2, 110)); // Packet is added. Return True.
         assert_eq!(1, router.get_count(5, 100, 110)); // The only packet with destination 5 and timestamp in the inclusive range [100, 110] is [4, 5, 105]. Return 1.
     }
 
     #[test]
     fn test_router_2() {
         let router = Router::new(3);
-        assert_eq!(true, router.add_packet(7, 4, 90));
+        assert!(router.add_packet(7, 4, 90));
         assert_eq!(vec![7, 4, 90], router.forward_packet());
         assert_eq!(vec![0; 0], router.forward_packet());
     }
@@ -147,8 +147,8 @@ mod tests {
     #[test]
     fn test_router_3() {
         let router = Router::new(4);
-        assert_eq!(true, router.add_packet(4, 2, 1));
-        assert_eq!(true, router.add_packet(3, 2, 1));
+        assert!(router.add_packet(4, 2, 1));
+        assert!(router.add_packet(3, 2, 1));
         assert_eq!(2, router.get_count(2, 1, 1));
     }
 }

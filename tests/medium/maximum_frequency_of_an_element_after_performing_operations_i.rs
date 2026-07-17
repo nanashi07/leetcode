@@ -96,7 +96,7 @@ impl Solution {
             println!("=========={n}============");
             let mut op = num_operations;
             let mut dup = 0;
-            for i in 0..nums.len() {
+            for (i, _) in nums.iter().enumerate() {
                 if nums[i] - k <= n && nums[i] + k >= n {
                     if nums[i] == n {
                         dup += 1;

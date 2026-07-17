@@ -5,9 +5,10 @@ struct Solution;
 
 impl Solution {
     // https://leetcode.com/problems/smallest-subarrays-with-maximum-bitwise-or/editorial/
+    #[allow(clippy::needless_range_loop)]
     pub fn smallest_subarrays(nums: Vec<i32>) -> Vec<i32> {
         let n = nums.len();
-        let mut pos = vec![-1; 31];
+        let mut pos = [-1; 31];
         let mut ans = vec![0; n];
         for i in (0..n).rev() {
             let mut j = i;

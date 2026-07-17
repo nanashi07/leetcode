@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn number_of_stable_arrays(zero: i32, one: i32, limit: i32) -> i32 {
         const MOD: i64 = 1_000_000_007;
         let z = zero as usize;

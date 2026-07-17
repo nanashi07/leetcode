@@ -63,24 +63,24 @@ mod tests {
     #[test]
     fn test_can_partition_grid_1() {
         let grid = to_vec2d([[1, 4], [2, 3]]);
-        assert_eq!(true, Solution::can_partition_grid(grid));
+        assert!(Solution::can_partition_grid(grid));
     }
 
     #[test]
     fn test_can_partition_grid_2() {
         let grid = to_vec2d([[1, 2], [3, 4]]);
-        assert_eq!(true, Solution::can_partition_grid(grid));
+        assert!(Solution::can_partition_grid(grid));
     }
 
     #[test]
     fn test_can_partition_grid_3() {
         let grid = to_vec2d([[1, 2, 4], [2, 3, 5]]);
-        assert_eq!(false, Solution::can_partition_grid(grid));
+        assert!(!Solution::can_partition_grid(grid));
     }
 
     #[test]
     fn test_can_partition_grid_4() {
         let grid = to_vec2d([[4, 1, 8], [3, 2, 6]]);
-        assert_eq!(false, Solution::can_partition_grid(grid));
+        assert!(!Solution::can_partition_grid(grid));
     }
 }

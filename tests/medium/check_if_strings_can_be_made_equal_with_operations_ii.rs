@@ -29,13 +29,13 @@ mod tests {
     fn test_check_strings_1() {
         let s1 = "abcdba".to_string();
         let s2 = "cabdab".to_string();
-        assert_eq!(true, Solution::check_strings(s1, s2));
+        assert!(Solution::check_strings(s1, s2));
     }
 
     #[test]
     fn test_check_strings_2() {
         let s1 = "abe".to_string();
         let s2 = "bea".to_string();
-        assert_eq!(false, Solution::check_strings(s1, s2));
+        assert!(!Solution::check_strings(s1, s2));
     }
 }

@@ -13,7 +13,7 @@ impl Solution {
 
         for n in &nums {
             if *n == original {
-                original = 2 * original;
+                original *= 2;
             }
         }
 

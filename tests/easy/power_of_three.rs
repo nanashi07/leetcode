@@ -12,7 +12,7 @@ impl Solution {
         } else {
             while n > 1 {
                 if n % 3 == 0 {
-                    n = n / 3;
+                    n /= 3;
                 } else {
                     return false;
                 }
@@ -29,18 +29,18 @@ mod tests {
     #[test]
     fn test_is_power_of_three_1() {
         let n = 27;
-        assert_eq!(true, Solution::is_power_of_three(n));
+        assert!(Solution::is_power_of_three(n));
     }
 
     #[test]
     fn test_is_power_of_three_2() {
         let n = 0;
-        assert_eq!(false, Solution::is_power_of_three(n));
+        assert!(!Solution::is_power_of_three(n));
     }
 
     #[test]
     fn test_is_power_of_three_3() {
         let n = -1;
-        assert_eq!(false, Solution::is_power_of_three(n));
+        assert!(!Solution::is_power_of_three(n));
     }
 }

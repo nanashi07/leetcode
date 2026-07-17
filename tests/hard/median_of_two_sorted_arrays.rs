@@ -18,21 +18,21 @@ impl Solution {
 
             if n1.is_nan() || n1 > n2 {
                 n = n2;
-                i2 = i2 + 1;
+                i2 += 1;
             } else if n2.is_nan() || n1 <= n2 {
                 n = n1;
-                i1 = i1 + 1;
+                i1 += 1;
             }
 
             // x.5, odd count
             if mid - 1.0 < i as f32 {
-                return n as f64;
+                return n;
             } else if mid - 1.0 == i as f32 {
                 // get next
                 let n1 = if i1 < l1 { nums1[i1] as f64 } else { f64::NAN };
                 let n2 = if i2 < l2 { nums2[i2] as f64 } else { f64::NAN };
 
-                return (n + f64::min(n1, n2)) as f64 / 2.0;
+                return (n + f64::min(n1, n2)) / 2.0;
             }
         }
 

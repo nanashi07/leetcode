@@ -25,17 +25,17 @@ impl Solution {
                         r.push(vec![nums[i], nums[i2], nums[i3]]);
 
                         while i2 < i3 && nums[i2] == nums[i2 + 1] {
-                            i2 = i2 + 1
+                            i2 += 1
                         }
                         while i2 < i3 && nums[i3] == nums[i3 - 1] {
-                            i3 = i3 - 1
+                            i3 -= 1
                         }
-                        i2 = i2 + 1;
-                        i3 = i3 - 1;
+                        i2 += 1;
+                        i3 -= 1;
                     } else if nums[i2] + nums[i3] < sum {
-                        i2 = i2 + 1;
+                        i2 += 1;
                     } else {
-                        i3 = i3 - 1
+                        i3 -= 1
                     }
                 }
             }
@@ -67,20 +67,20 @@ impl Solution {
 
                     // ignore same number
                     while i2 < i3 && nums[i2] == nums[i2 + 1] {
-                        i2 = i2 + 1
+                        i2 += 1
                     }
                     while i2 < i3 && nums[i3] == nums[i3 - 1] {
-                        i3 = i3 - 1
+                        i3 -= 1
                     }
 
-                    i2 = i2 + 1;
-                    i3 = i3 - 1;
+                    i2 += 1;
+                    i3 -= 1;
                 } else if v1 + v2 + v3 > 0 {
                     // move i3 then v3 is smaller
-                    i3 = i3 - 1;
+                    i3 -= 1;
                 } else {
                     // move i2 then v2 is bigger
-                    i2 = i2 + 1;
+                    i2 += 1;
                 }
             }
         }

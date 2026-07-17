@@ -23,7 +23,7 @@ impl Solution {
         let mut len = 0;
 
         while let Some(node) = current {
-            len = len + 1;
+            len += 1;
             if node.next.is_none() {
                 // last one
                 break;

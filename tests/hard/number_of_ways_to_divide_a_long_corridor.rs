@@ -12,7 +12,7 @@ impl Solution {
             .map(|(i, _)| i)
             .collect();
 
-        if s_indices.len() == 0 || s_indices.len() % 2 != 0 {
+        if s_indices.is_empty() || !s_indices.len().is_multiple_of(2) {
             return 0;
         }
 

@@ -15,7 +15,7 @@ impl Solution {
         let mut prefix_sum = 0i64;
         let mut max_sum = i64::MIN;
 
-        for i in 0..n {
+        for (i, _) in nums.iter().enumerate().take(n) {
             prefix_sum += nums[i] as i64;
             let remainder = (i + 1) % k;
 
@@ -51,7 +51,7 @@ impl Solution {
             for j in 0..size {
                 let s = k * (j + 1);
                 if i >= s {
-                    sum[j] = sum[j] + (nums[i] - nums[i - s]) as i64;
+                    sum[j] += (nums[i] - nums[i - s]) as i64;
                     max[j] = max[j].max(sum[j]);
                 }
             }

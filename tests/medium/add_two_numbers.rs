@@ -32,7 +32,7 @@ impl Solution {
                 (
                     b1.val,
                     if let Some(next) = b1.next.as_ref() {
-                        Some(Box::clone(&next))
+                        Some(Box::clone(next))
                     } else {
                         None
                     },
@@ -45,7 +45,7 @@ impl Solution {
                 (
                     b2.val,
                     if let Some(next) = b2.next.as_ref() {
-                        Some(Box::clone(&next))
+                        Some(Box::clone(next))
                     } else {
                         None
                     },

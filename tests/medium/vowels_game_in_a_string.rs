@@ -22,12 +22,12 @@ mod tests {
     #[test]
     fn test_does_alice_win_1() {
         let s = "leetcoder".to_owned();
-        assert_eq!(true, Solution::does_alice_win(s));
+        assert!(Solution::does_alice_win(s));
     }
 
     #[test]
     fn test_does_alice_win_2() {
         let s = "bbcd".to_owned();
-        assert_eq!(false, Solution::does_alice_win(s));
+        assert!(!Solution::does_alice_win(s));
     }
 }

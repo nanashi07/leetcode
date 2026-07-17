@@ -13,7 +13,7 @@ impl Solution {
         let mut c1 = 0;
         let mut c2 = 0;
 
-        let counter = s.chars().into_iter().fold(HashMap::new(), |mut a, b| {
+        let counter = s.chars().fold(HashMap::new(), |mut a, b| {
             *a.entry(b).or_insert(0) += 1;
             a
         });

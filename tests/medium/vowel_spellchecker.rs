@@ -46,7 +46,7 @@ impl Solution {
                 .filter(|(i, _w)| *i < 4)
                 .collect::<Vec<_>>();
 
-            f.sort_unstable_by(|(a, _aw), (b, _bw)| a.cmp(b));
+            f.sort_unstable_by_key(|(a, _aw)| *a);
 
             if let Some(&(_, first)) = f.first() {
                 r.push(first.to_string());

@@ -51,7 +51,7 @@ impl Solution {
         let k = k as usize;
 
         // Binary search to find the rightmost event that ends before target start time
-        fn binary_search(events: &Vec<Vec<i32>>, target_start: i32, right: usize) -> usize {
+        fn binary_search(events: &[Vec<i32>], target_start: i32, right: usize) -> usize {
             let mut left = 0;
             let mut right = right;
             let mut result = 0;

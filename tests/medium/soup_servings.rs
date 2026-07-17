@@ -13,7 +13,7 @@ impl Solution {
         let mut dp: HashMap<i32, HashMap<i32, f64>> = HashMap::new();
 
         // Initialize dp[0][0]
-        dp.entry(0).or_insert_with(HashMap::new).insert(0, 0.5);
+        dp.entry(0).or_default().insert(0, 0.5);
 
         // Helper function to calculate DP value
         let calculate_dp = |dp: &HashMap<i32, HashMap<i32, f64>>, i: i32, j: i32| -> f64 {
@@ -33,16 +33,16 @@ impl Solution {
 
         for k in 1..=m {
             // dp[0][k] = 1
-            dp.entry(0).or_insert_with(HashMap::new).insert(k, 1.0);
+            dp.entry(0).or_default().insert(k, 1.0);
             // dp[k][0] = 0
-            dp.entry(k).or_insert_with(HashMap::new).insert(0, 0.0);
+            dp.entry(k).or_default().insert(0, 0.0);
 
             for j in 1..=k {
                 let val_jk = calculate_dp(&dp, j, k);
-                dp.entry(j).or_insert_with(HashMap::new).insert(k, val_jk);
+                dp.entry(j).or_default().insert(k, val_jk);
 
                 let val_kj = calculate_dp(&dp, k, j);
-                dp.entry(k).or_insert_with(HashMap::new).insert(j, val_kj);
+                dp.entry(k).or_default().insert(j, val_kj);
             }
 
             let dp_kk = dp

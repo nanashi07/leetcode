@@ -44,7 +44,7 @@ impl Solution {
         }
 
         let mut answer = 0_i64;
-        for g in 1..size {
+        for (g, _) in dp.iter().enumerate().take(size).skip(1) {
             answer += dp[g][g] as i64;
         }
 

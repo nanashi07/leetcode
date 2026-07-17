@@ -11,13 +11,13 @@ impl Solution {
         let mut s: Vec<i32> = Vec::new();
         let mut res: i32 = 0;
         for a in nums {
-            while s.last().map_or(false, |&x| x > a) {
+            while s.last().is_some_and(|&x| x > a) {
                 s.pop();
             }
             if a == 0 {
                 continue;
             }
-            if s.last().map_or(true, |&x| x < a) {
+            if s.last().is_none_or(|&x| x < a) {
                 res += 1;
                 s.push(a);
             }
@@ -32,8 +32,7 @@ impl Solution {
         let mut op = 0;
         let mut values = nums
             .iter()
-            .filter(|&n| *n > 0)
-            .map(|n| *n)
+            .filter(|&n| *n > 0).copied()
             .collect::<HashSet<i32>>()
             .into_iter()
             .collect::<Vec<i32>>();

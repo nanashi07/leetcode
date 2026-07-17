@@ -9,8 +9,8 @@ impl Solution {
         let mut l = 0;
         let mut r = nums.iter().sum::<i32>();
         for i in 0..nums.len() {
-            l = l + if i > 0 { nums[i - 1] } else { 0 };
-            r = r - nums[i];
+            l += if i > 0 { nums[i - 1] } else { 0 };
+            r -= nums[i];
             answer.push((l - r).abs());
         }
         answer

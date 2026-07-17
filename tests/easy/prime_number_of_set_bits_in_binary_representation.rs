@@ -15,7 +15,7 @@ impl Solution {
                 if n % 2 == 1 {
                     bits += 1;
                 }
-                n = n >> 1;
+                n >>= 1;
             }
             match bits {
                 2 | 3 | 5 | 7 | 11 | 13 | 17 | 19 => count += 1,

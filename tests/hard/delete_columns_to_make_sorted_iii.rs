@@ -29,7 +29,7 @@ impl Solution {
                 // Check if column j can come before column i
                 // (all characters in column j should be <= corresponding characters in column i)
                 let mut valid = true;
-                for row in 0..n {
+                for (row, _) in strs_bytes.iter().take(n).enumerate() {
                     if strs_bytes[row][j] > strs_bytes[row][i] {
                         valid = false;
                         break;

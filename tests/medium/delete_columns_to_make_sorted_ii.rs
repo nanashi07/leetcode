@@ -17,7 +17,7 @@ impl Solution {
         let mut sorted = vec![false; n - 1];
         let mut deletions = 0;
 
-        for col in 0..m {
+        for (col, _) in strs_bytes.iter().take(m).enumerate() {
             // Check if deleting this column would break the sorted property
             let mut would_break = false;
 

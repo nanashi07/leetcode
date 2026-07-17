@@ -102,7 +102,7 @@ impl Solution {
 
         // Calculate number of players that will advance to next round
         // 計算將晉級到下一輪的玩家數量
-        let n_half = (n + 1) / 2;
+        let n_half = n.div_ceil(2);
 
         if second <= n_half {
             // Case 1: Both players are on the left half or center
@@ -135,7 +135,7 @@ impl Solution {
 
             // Calculate the offset for positioning in next round
             // 計算下一輪定位的偏移量
-            let mid = (n - 2 * s_prime + 1) / 2;
+            let mid = (n - 2 * s_prime).div_ceil(2);
 
             // Try all possible advancement scenarios
             // 嘗試所有可能的晉級情況

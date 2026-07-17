@@ -26,7 +26,7 @@ impl Solution {
         let mut prefix_sum: i64 = 0;
         let mut min_len = n + 1;
 
-        for i in 0..n {
+        for (i, _) in nums.iter().enumerate().take(n) {
             prefix_sum += nums[i] as i64;
             let current_mod = prefix_sum.rem_euclid(p);
 

@@ -15,7 +15,7 @@ impl Solution {
             let chars: Vec<char> = s.chars().collect();
             if chars.len() == 3 {
                 let key = (chars[0], chars[1]);
-                map.entry(key).or_insert_with(Vec::new).push(chars[2]);
+                map.entry(key).or_default().push(chars[2]);
             }
         }
 
@@ -73,13 +73,13 @@ mod tests {
     fn test_pyramid_transition_1() {
         let bottom = "BCD".to_string();
         let allowed = to_string_vec(["BCC", "CDE", "CEA", "FFF"]);
-        assert_eq!(true, Solution::pyramid_transition(bottom, allowed));
+        assert!(Solution::pyramid_transition(bottom, allowed));
     }
 
     #[test]
     fn test_pyramid_transition_2() {
         let bottom = "AAAA".to_string();
         let allowed = to_string_vec(["AAB", "AAC", "BCD", "BBE", "DEF"]);
-        assert_eq!(false, Solution::pyramid_transition(bottom, allowed));
+        assert!(!Solution::pyramid_transition(bottom, allowed));
     }
 }

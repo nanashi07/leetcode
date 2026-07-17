@@ -58,12 +58,12 @@ impl Solution {
         format!("{}{}", &s[split_point..], &s[..split_point])
     }
 
+    #[allow(clippy::needless_range_loop)]
     pub fn _find_lex_smallest_string(s: String, a: i32, b: i32) -> String {
         println!("s: {}, a: {}, b: {}", &s, &a, &b);
 
         let mut n = s
             .chars()
-            .into_iter()
             .map(|c| c as i32 - 48)
             .collect::<Vec<i32>>();
 

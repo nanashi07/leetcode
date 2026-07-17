@@ -143,7 +143,7 @@ impl Solution {
         let calculate_xsum = |start: usize| -> i64 {
             let mut freq: HashMap<i32, i32> = HashMap::new();
 
-            for i in start..start + k {
+            for (i, _) in nums.iter().skip(start).take(k).enumerate() {
                 *freq.entry(nums[i]).or_insert(0) += 1;
             }
 
@@ -155,7 +155,7 @@ impl Solution {
 
             // Take top x elements and calculate sum
             let mut sum = 0i64;
-            for i in 0..x.min(freq_vec.len()) {
+            for (i, _) in freq_vec.iter().take(x.min(freq_vec.len())).enumerate() {
                 let (freq, val) = freq_vec[i];
                 sum += freq as i64 * val as i64;
             }

@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn minimum_cost(
         source: String,
         target: String,

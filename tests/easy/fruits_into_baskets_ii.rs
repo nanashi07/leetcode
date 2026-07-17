@@ -10,9 +10,9 @@ impl Solution {
         let mut remains = 0;
         let mut baskets = baskets;
 
-        for i in 0..fruits.len() {
+        for (i, _) in fruits.iter().enumerate() {
             let fruit = fruits[i];
-            let len = (&baskets).len();
+            let len = baskets.len();
             for j in 0..len {
                 if fruit <= baskets[j] {
                     baskets.remove(j);

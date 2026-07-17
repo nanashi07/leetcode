@@ -15,11 +15,11 @@ impl Solution {
                 low = mid + 1; // low always increases
             }
         }
-        return low as i32;
+        low as i32
     }
 
     pub fn _search_insert2(nums: Vec<i32>, target: i32) -> i32 {
-        if nums.len() == 0 {
+        if nums.is_empty() {
             return 0;
         }
 
@@ -36,7 +36,7 @@ impl Solution {
                 } else {
                     end = i;
                 }
-                i = (start + end) as usize / 2;
+                i = (start + end) / 2;
 
                 if start + 1 == end {
                     let n = nums.get(start).unwrap();
@@ -67,7 +67,7 @@ impl Solution {
             i = end + 1;
         }
 
-        return i as i32;
+        i as i32
     }
 }
 

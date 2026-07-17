@@ -7,8 +7,8 @@ impl Solution {
     pub fn largest_altitude(gain: Vec<i32>) -> i32 {
         let mut h = gain[0];
         let mut max = 0.max(h);
-        for i in 1..gain.len() {
-            h += gain[i];
+        for (i, _) in gain.iter().skip(1).enumerate() {
+            h += gain[i + 1];
             max = max.max(h);
         }
         max

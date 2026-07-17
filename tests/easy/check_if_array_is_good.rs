@@ -33,24 +33,24 @@ mod tests {
     #[test]
     fn test_is_good_1() {
         let nums = [2, 1, 3].to_vec();
-        assert_eq!(false, Solution::is_good(nums));
+        assert!(!Solution::is_good(nums));
     }
 
     #[test]
     fn test_is_good_2() {
         let nums = [1, 3, 3, 2].to_vec();
-        assert_eq!(true, Solution::is_good(nums));
+        assert!(Solution::is_good(nums));
     }
 
     #[test]
     fn test_is_good_3() {
         let nums = [1, 1].to_vec();
-        assert_eq!(true, Solution::is_good(nums));
+        assert!(Solution::is_good(nums));
     }
 
     #[test]
     fn test_is_good_4() {
         let nums = [3, 4, 4, 1, 2, 1].to_vec();
-        assert_eq!(false, Solution::is_good(nums));
+        assert!(!Solution::is_good(nums));
     }
 }

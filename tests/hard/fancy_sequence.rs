@@ -109,7 +109,6 @@ fn mod_pow(mut base: i64, mut exp: i64) -> i64 {
  * obj.mult_all(m);
  * let ret_4: i32 = obj.get_index(idx);
  */
-
 #[cfg(test)]
 mod tests {
     use crate::hard::fancy_sequence::Fancy;

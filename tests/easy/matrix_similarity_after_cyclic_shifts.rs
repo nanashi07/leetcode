@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn are_similar(mat: Vec<Vec<i32>>, k: i32) -> bool {
-        for i in 0..mat.len() {
+        for (i, _) in mat.iter().enumerate() {
             let l = mat[i].len() as i32;
             let k = k % l;
             for j in 0..mat[i].len() {
@@ -43,20 +43,20 @@ mod tests {
     fn test_are_similar_1() {
         let mat = to_vec2d([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
         let k = 4;
-        assert_eq!(false, Solution::are_similar(mat, k));
+        assert!(!Solution::are_similar(mat, k));
     }
 
     #[test]
     fn test_are_similar_2() {
         let mat = to_vec2d([[1, 2, 1, 2], [5, 5, 5, 5], [6, 3, 6, 3]]);
         let k = 2;
-        assert_eq!(true, Solution::are_similar(mat, k));
+        assert!(Solution::are_similar(mat, k));
     }
 
     #[test]
     fn test_are_similar_3() {
         let mat = to_vec2d([[2, 2], [2, 2]]);
         let k = 3;
-        assert_eq!(true, Solution::are_similar(mat, k));
+        assert!(Solution::are_similar(mat, k));
     }
 }

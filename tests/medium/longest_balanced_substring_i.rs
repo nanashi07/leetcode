@@ -12,12 +12,12 @@ impl Solution {
         // Try all possible substrings
         for i in 0..n {
             let mut freq = std::collections::HashMap::new();
-            for j in i..n {
+            for (j, _) in chars.iter().enumerate().take(n).skip(i) {
                 *freq.entry(chars[j]).or_insert(0) += 1;
 
                 // Check if all distinct characters have the same count
                 let counts: Vec<i32> = freq.values().cloned().collect();
-                if counts.len() > 0 && counts.iter().all(|&c| c == counts[0]) {
+                if !counts.is_empty() && counts.iter().all(|&c| c == counts[0]) {
                     max_len = max_len.max(j - i + 1);
                 }
             }

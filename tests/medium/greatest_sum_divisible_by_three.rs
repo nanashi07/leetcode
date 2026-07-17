@@ -16,7 +16,7 @@ impl Solution {
             let remainder = (num % 3) as usize;
 
             // Try adding current number to each previous state
-            for i in 0..3 {
+            for (i, _) in dp.iter().enumerate() {
                 if dp[i] != i32::MIN {
                     let new_remainder = (i + remainder) % 3;
                     temp[new_remainder] = temp[new_remainder].max(dp[i] + num);

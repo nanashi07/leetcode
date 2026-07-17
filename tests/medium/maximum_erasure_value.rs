@@ -77,7 +77,7 @@ impl Solution {
             let mut set: HashSet<i32> = HashSet::new();
             let n = nums[i];
             set.insert(n);
-            for j in i + 1..nums.len() {
+            for (j, _) in nums.iter().skip(i + 1).enumerate() {
                 let m = nums[j];
                 if set.contains(&m) {
                     break;

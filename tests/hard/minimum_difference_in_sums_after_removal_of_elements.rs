@@ -15,7 +15,7 @@ impl Solution {
         let mut sum = 0i64;
         // max heap
         let mut ql = BinaryHeap::new();
-        for i in 0..n {
+        for (i, _) in nums.iter().take(n).enumerate() {
             sum += nums[i] as i64;
             ql.push(nums[i]);
         }

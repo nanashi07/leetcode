@@ -10,8 +10,8 @@ impl Solution {
             let mut n = n;
             let mut v = n % 10;
             while n > 9 {
-                n = n / 10;
-                v = v + n % 10;
+                n /= 10;
+                v += n % 10;
             }
             min = min.min(v);
         }

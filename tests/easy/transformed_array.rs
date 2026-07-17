@@ -16,7 +16,7 @@ impl Solution {
             if n < 0 {
                 n = n + (n.abs() as f64 / len as f64).ceil() as i32 * len;
             }
-            n = n % len;
+            n %= len;
             results[i as usize] = nums[n as usize];
         }
 

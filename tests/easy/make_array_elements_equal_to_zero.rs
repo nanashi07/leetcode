@@ -10,7 +10,7 @@ impl Solution {
         let mut count = 0;
         let mut left_sum = 0;
 
-        for i in 0..n {
+        for (i, _) in nums.iter().take(n).enumerate() {
             if nums[i] == 0 {
                 let right_sum = total_sum - left_sum;
 

@@ -10,7 +10,7 @@ impl Solution {
         let mut rank = vec![0u8; n + 1];
         let mut min_weight = vec![i32::MAX; n + 1];
 
-        fn find(parent: &mut Vec<usize>, i: usize) -> usize {
+        fn find(parent: &mut [usize], i: usize) -> usize {
             let mut root = i;
             while root != parent[root] {
                 root = parent[root];
@@ -25,9 +25,9 @@ impl Solution {
         }
 
         fn union(
-            parent: &mut Vec<usize>,
-            rank: &mut Vec<u8>,
-            min_weight: &mut Vec<i32>,
+            parent: &mut [usize],
+            rank: &mut [u8],
+            min_weight: &mut [i32],
             i: usize,
             j: usize,
             weight: i32,

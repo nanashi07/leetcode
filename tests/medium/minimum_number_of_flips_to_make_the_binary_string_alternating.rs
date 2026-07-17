@@ -13,7 +13,7 @@ impl Solution {
         let mut diff0 = 0i32;
         let mut diff1 = 0i32;
 
-        for i in 0..n {
+        for (i, _) in bytes.iter().enumerate().take(n) {
             let c = bytes[i];
             if (c == b'0') != (i % 2 == 0) {
                 diff0 += 1;
@@ -26,7 +26,7 @@ impl Solution {
         let mut result = diff0.min(diff1);
 
         // Slide window over doubled string (s+s), window size n
-        for i in 0..n {
+        for (i, _) in bytes.iter().enumerate().take(n) {
             // Remove position i (absolute)
             let c_out = bytes[i];
             if (c_out == b'0') != (i % 2 == 0) {
@@ -39,10 +39,10 @@ impl Solution {
             // Add position i+n (in s+s, index i+n maps to bytes[i])
             let c_in = bytes[i];
             let abs_pos = i + n;
-            if (c_in == b'0') != (abs_pos % 2 == 0) {
+            if (c_in == b'0') != abs_pos.is_multiple_of(2) {
                 diff0 += 1;
             }
-            if (c_in == b'1') != (abs_pos % 2 == 0) {
+            if (c_in == b'1') != abs_pos.is_multiple_of(2) {
                 diff1 += 1;
             }
 

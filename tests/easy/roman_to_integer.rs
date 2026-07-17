@@ -32,14 +32,14 @@ impl Solution {
                 let k = &s[0..=1];
                 if let Some(v) = map2.get(k) {
                     s = &s[2..];
-                    n = n + v;
+                    n += v;
                     continue;
                 }
             }
             let k = &s[0..1];
             if let Some(v) = map.get(k) {
                 s = &s[1..];
-                n = n + v;
+                n += v;
             }
         }
 

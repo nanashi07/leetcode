@@ -16,8 +16,8 @@ impl Solution {
                 for l in 0..(i.min(s.len() - 1 - i)) {
                     if i >= 2 + l
                         && i + 1 + l < s.len()
-                        && &s[i + l..=i + l] == &s[i + 1 + l..=i + 1 + l]
-                        && &s[i - 2 - l..=i - 2 - l] == &s[i - 1 - l..=i - 1 - l]
+                        && s[i + l..=i + l] == s[i + 1 + l..=i + 1 + l]
+                        && s[i - 2 - l..=i - 2 - l] == s[i - 1 - l..=i - 1 - l]
                     {
                         c += 1;
                     } else {

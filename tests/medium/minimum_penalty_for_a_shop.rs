@@ -32,6 +32,7 @@ impl Solution {
     }
 
     // Time exceed
+    #[allow(clippy::needless_range_loop)]
     pub fn _best_closing_time(customers: String) -> i32 {
         println!("customers: {:?}", &customers);
 
@@ -46,10 +47,8 @@ impl Solution {
                             penalties[close_hour] += 1;
                         }
                     }
-                    'N' => {
-                        if hour < close_hour {
-                            penalties[close_hour] += 1;
-                        }
+                    'N' if hour < close_hour => {
+                        penalties[close_hour] += 1;
                     }
                     _ => {}
                 }

@@ -17,7 +17,7 @@ impl Solution {
         }
 
         for i in 0..len {
-            if i + 2 <= len && &s[i..(i + 1)] == &s[(i + 1)..(i + 2)] {
+            if i + 2 <= len && s[i..(i + 1)] == s[(i + 1)..(i + 2)] {
                 return s[i..(i + 2)].to_owned();
             }
         }
@@ -35,8 +35,8 @@ impl Solution {
             if s[i..(i + 1)] != s[j..(j + 1)] {
                 return -1;
             }
-            i = i + 1;
-            j = j - 1;
+            i += 1;
+            j -= 1;
 
             if i >= j {
                 break;

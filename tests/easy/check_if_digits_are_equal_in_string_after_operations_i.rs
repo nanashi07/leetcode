@@ -32,12 +32,12 @@ mod tests {
     #[test]
     fn test_has_same_digits_1() {
         let s = "3902".to_string();
-        assert_eq!(true, Solution::has_same_digits(s));
+        assert!(Solution::has_same_digits(s));
     }
 
     #[test]
     fn test_has_same_digits_2() {
         let s = "34789".to_string();
-        assert_eq!(false, Solution::has_same_digits(s));
+        assert!(!Solution::has_same_digits(s));
     }
 }

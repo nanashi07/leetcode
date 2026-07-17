@@ -62,7 +62,7 @@ impl Solution {
         let mut dp_l = count_in(left_lo(0), r0);
         let mut dp_r = count_in(r0, right_hi(0));
 
-        for i in 1..n {
+        for (i, _) in rd.iter().enumerate().take(n).skip(1) {
             let ri = rd[i].0;
             let li = left_lo(i);
             let ri_hi = right_hi(i);

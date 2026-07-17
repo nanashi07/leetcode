@@ -15,7 +15,7 @@ impl Solution {
 
         let chars: Vec<char> = s.chars().collect();
 
-        for i in 0..chars.len() {
+        for (i, _) in chars.iter().enumerate() {
             if chars[i] == z {
                 // when encountering the third character
                 mp.clear();
@@ -99,7 +99,7 @@ impl Solution {
                     }
                 }
             }
-            mp.entry(diff).or_insert_with(Vec::new).push(i + 1);
+            mp.entry(diff).or_default().push(i + 1);
         }
         ans
     }

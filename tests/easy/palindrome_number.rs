@@ -12,7 +12,7 @@ impl Solution {
         let mut y = 0;
         loop {
             y = y * 10 + t % 10;
-            t = t / 10;
+            t /= 10;
 
             if t == 0 {
                 break;
@@ -27,13 +27,13 @@ impl Solution {
 fn test_is_palindrome() {
     let x = 121;
     let result = Solution::is_palindrome(x);
-    assert_eq!(true, result, "input = {}", x);
+    assert!(result, "input = {}", x);
 
     let x = -121;
     let result = Solution::is_palindrome(x);
-    assert_eq!(false, result, "input = {}", x);
+    assert!(!result, "input = {}", x);
 
     let x = 10;
     let result = Solution::is_palindrome(x);
-    assert_eq!(false, result, "input = {}", x);
+    assert!(!result, "input = {}", x);
 }

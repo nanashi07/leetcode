@@ -10,7 +10,7 @@ impl Solution {
         let mut diagnoal = 0;
         let mut area = 0;
 
-        for i in 0..dimensions.len() {
+        for (i, _) in dimensions.iter().enumerate() {
             let d = dimensions[i][0].pow(2) + dimensions[i][1].pow(2);
             if d >= diagnoal {
                 if diagnoal == d {

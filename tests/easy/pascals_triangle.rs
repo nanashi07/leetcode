@@ -8,7 +8,7 @@ impl Solution {
         let mut rows: Vec<Vec<i32>> = Vec::new();
 
         for _ in 1..=num_rows {
-            if rows.len() == 0 {
+            if rows.is_empty() {
                 rows.push(vec![1])
             } else {
                 let last = &rows[rows.len() - 1];

@@ -19,7 +19,7 @@ impl Solution {
                     }
                 } else {
                     if d * (nums[i - 1] - nums[i - 2]) < 0 {
-                        c = c + 1;
+                        c += 1;
                     }
                 }
             }
@@ -36,18 +36,18 @@ mod tests {
     #[test]
     fn test_is_trionic_1() {
         let nums = [1, 3, 5, 4, 2, 6].to_vec();
-        assert_eq!(true, Solution::is_trionic(nums));
+        assert!(Solution::is_trionic(nums));
     }
 
     #[test]
     fn test_is_trionic_2() {
         let nums = [2, 1, 3].to_vec();
-        assert_eq!(false, Solution::is_trionic(nums));
+        assert!(!Solution::is_trionic(nums));
     }
 
     #[test]
     fn test_is_trionic_3() {
         let nums = [7, 7, 1, 6, 5].to_vec();
-        assert_eq!(false, Solution::is_trionic(nums));
+        assert!(!Solution::is_trionic(nums));
     }
 }

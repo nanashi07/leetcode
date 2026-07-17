@@ -5,17 +5,18 @@ struct Solution;
 
 impl Solution {
     // https://leetcode.com/problems/fruits-into-baskets-iii/editorial/
+    #[allow(clippy::needless_range_loop)]
     pub fn num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {
         use std::cmp::max;
 
         let n = baskets.len();
         let mut baskets = baskets;
         let m = (n as f64).sqrt() as usize;
-        let section = (n + m - 1) / m;
+        let section = n.div_ceil(m);
         let mut count = 0;
         let mut max_v = vec![0; section];
 
-        for i in 0..n {
+        for (i, _) in baskets.iter().enumerate().take(n) {
             let sec = i / m;
             max_v[sec] = max(max_v[sec], baskets[i])
         }
@@ -54,7 +55,7 @@ impl Solution {
         let mut remained = 0;
         let mut baskets = baskets;
 
-        for i in 0..fruits.len() {
+        for (i, _) in fruits.iter().enumerate() {
             let fruit = fruits[i];
             let len = baskets.len();
             for j in 0..len {

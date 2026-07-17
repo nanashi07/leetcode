@@ -9,7 +9,7 @@ impl Solution {
         Self::backtrack(&mut nums)
     }
 
-    fn backtrack(nums: &mut Vec<f64>) -> bool {
+    fn backtrack(nums: &mut [f64]) -> bool {
         const EPS: f64 = 1e-6;
 
         // Base case: if only one number left, check if it's close to 24
@@ -25,7 +25,7 @@ impl Solution {
 
                 // Remove the two numbers we're combining
                 let mut remaining = Vec::new();
-                for k in 0..nums.len() {
+                for (k, _) in nums.iter().enumerate() {
                     if k != i && k != j {
                         remaining.push(nums[k]);
                     }
@@ -72,12 +72,12 @@ mod tests {
     #[test]
     fn test_judge_point24_1() {
         let cards = [4, 1, 8, 7].to_vec();
-        assert_eq!(true, Solution::judge_point24(cards));
+        assert!(Solution::judge_point24(cards));
     }
 
     #[test]
     fn test_judge_point24_2() {
         let cards = [1, 2, 1, 2].to_vec();
-        assert_eq!(false, Solution::judge_point24(cards));
+        assert!(!Solution::judge_point24(cards));
     }
 }

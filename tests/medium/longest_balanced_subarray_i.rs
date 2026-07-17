@@ -14,7 +14,7 @@ impl Solution {
             let mut odd = HashMap::new();
             let mut even = HashMap::new();
 
-            for j in i..nums.len() {
+            for (j, _) in nums.iter().enumerate().skip(i) {
                 let map = if nums[j] & 1 == 1 {
                     &mut odd
                 } else {

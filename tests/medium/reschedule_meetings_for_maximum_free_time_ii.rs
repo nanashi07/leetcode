@@ -75,7 +75,7 @@ impl Solution {
             let current_space = spaces[i];
 
             if i > 0 {
-                for j in 0..i - 1 {
+                for (j, _) in spaces.iter().take(i - 1).enumerate() {
                     if spaces[j] >= previous_meeting {
                         let sum = previous_space + previous_meeting + current_space;
                         max = max.max(sum);
@@ -83,7 +83,7 @@ impl Solution {
                     }
                 }
             }
-            for j in i + 1..spaces.len() {
+            for (j, _) in spaces.iter().skip(i + 1).enumerate() {
                 if spaces[j] >= previous_meeting {
                     let sum = previous_space + previous_meeting + current_space;
                     max = max.max(sum);

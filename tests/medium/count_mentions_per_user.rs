@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn count_mentions(number_of_users: i32, events: Vec<Vec<String>>) -> Vec<i32> {
         let mut counts: Vec<i32> = vec![0; number_of_users as usize];
         let mut offline_until: Vec<i64> = vec![i64::MIN; number_of_users as usize];

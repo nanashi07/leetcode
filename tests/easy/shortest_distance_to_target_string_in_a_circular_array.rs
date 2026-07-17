@@ -8,7 +8,7 @@ impl Solution {
         let len = words.len() as i32;
         let mut move_left = -1;
         let mut move_right = -1;
-        for i in 0..len as i32 {
+        for i in 0..len {
             let index_left = (start_index - i + len) % len;
             let index_right = (start_index + i) % len;
             if move_left < 0 && target == words[index_left as usize] {

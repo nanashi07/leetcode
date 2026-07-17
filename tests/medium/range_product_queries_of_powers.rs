@@ -17,7 +17,7 @@ impl Solution {
                 if m & 1 == 1 {
                     tmp.push(p);
                 }
-                m = m >> 1;
+                m >>= 1;
                 p += 1;
             }
 
@@ -47,9 +47,8 @@ impl Solution {
 
         for range in queries {
             let value = (range[0]..=range[1])
-                .into_iter()
                 .map(|i| powers[i as usize])
-                .fold(1_i32, |a, b| multiply(a, b));
+                .fold(1_i32, &multiply);
             answers.push(value);
         }
 

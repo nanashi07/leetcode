@@ -41,6 +41,6 @@ mod tests {
     #[test]
     fn test_can_partition_grid_1() {
         let grid = to_vec2d([[1, 4], [2, 3]]);
-        assert_eq!(true, Solution::can_partition_grid(grid));
+        assert!(Solution::can_partition_grid(grid));
     }
 }

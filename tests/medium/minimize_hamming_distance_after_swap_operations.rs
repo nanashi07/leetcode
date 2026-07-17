@@ -22,7 +22,7 @@ impl Solution {
             parent[x]
         }
 
-        fn union(parent: &mut Vec<usize>, rank: &mut Vec<u32>, a: usize, b: usize) {
+        fn union(parent: &mut Vec<usize>, rank: &mut [u32], a: usize, b: usize) {
             let ra = find(parent, a);
             let rb = find(parent, b);
             if ra == rb {
@@ -44,7 +44,7 @@ impl Solution {
 
         // Group source values by root
         let mut groups: HashMap<usize, HashMap<i32, i32>> = HashMap::new();
-        for i in 0..n {
+        for (i, _) in source.iter().enumerate().take(n) {
             let root = find(&mut parent, i);
             *groups
                 .entry(root)
@@ -54,7 +54,7 @@ impl Solution {
         }
 
         let mut dist = 0;
-        for i in 0..n {
+        for (i, _) in target.iter().enumerate().take(n) {
             let root = find(&mut parent, i);
             let counts = groups.get_mut(&root).unwrap();
             if let Some(c) = counts.get_mut(&target[i]) {

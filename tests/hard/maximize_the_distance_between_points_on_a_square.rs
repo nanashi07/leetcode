@@ -64,9 +64,9 @@ impl Solution {
             }
 
             let steps = k - 1;
-            for i in 0..n {
+            for (i, _) in pos.iter().enumerate().take(n) {
                 let mut cur = i;
-                for t in 0..=log_k {
+                for (t, _) in jump.iter().enumerate().take(log_k + 1) {
                     if steps & (1 << t) != 0 {
                         cur = jump[t][cur];
                         if cur >= m {

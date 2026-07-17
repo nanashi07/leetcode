@@ -11,7 +11,7 @@ impl Solution {
         let mut v = 0;
         for _ in 0..32 {
             v = (v << 1) + n % 2;
-            n = n >> 1;
+            n >>= 1;
         }
 
         v

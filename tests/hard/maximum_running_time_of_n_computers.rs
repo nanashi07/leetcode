@@ -24,7 +24,7 @@ impl Solution {
         left
     }
 
-    fn can_run(n: i64, batteries: &Vec<i32>, time: i64) -> bool {
+    fn can_run(n: i64, batteries: &[i32], time: i64) -> bool {
         // Calculate total available energy, capping each battery at 'time'
         // If a battery has more than 'time', it can only serve one computer
         // for the entire duration, so we cap its contribution at 'time'

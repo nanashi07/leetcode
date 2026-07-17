@@ -38,7 +38,7 @@ impl Solution {
         for i in 1..vs.len() {
             if i + 1 < vs.len() {
                 r = r.max(vs[i].len() + vs[i + 1].len());
-                if vs[i].len() == 0 {
+                if vs[i].is_empty() {
                     r = r.max(vs[i - 1].len() + vs[i + 1].len());
                 }
             }

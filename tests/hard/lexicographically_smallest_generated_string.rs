@@ -16,9 +16,9 @@ impl Solution {
         let mut constrained = vec![false; n];
 
         // Apply T constraints: force result[i..i+n2] == str2
-        for i in 0..n1 {
+        for (i, _) in s1.iter().enumerate().take(n1) {
             if s1[i] == b'T' {
-                for j in 0..n2 {
+                for (j, _) in s2.iter().enumerate().take(n2) {
                     let pos = i + j;
                     if constrained[pos] && result[pos] != s2[j] {
                         return String::new(); // Conflict between two T windows

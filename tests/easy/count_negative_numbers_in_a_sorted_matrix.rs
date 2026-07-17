@@ -9,7 +9,7 @@ impl Solution {
 
         let mut c = 0;
 
-        for i in 0..grid.len() {
+        for (i, _) in grid.iter().enumerate() {
             for j in (0..grid[i].len()).rev() {
                 if grid[i][j] >= 0 {
                     break;

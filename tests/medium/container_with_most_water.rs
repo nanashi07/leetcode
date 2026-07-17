@@ -15,9 +15,9 @@ impl Solution {
 
             max = max.max((right - left) as i32 * v1.min(v2));
             if v1 > v2 {
-                right = right - 1;
+                right -= 1;
             } else {
-                left = left + 1;
+                left += 1;
             }
         }
         max

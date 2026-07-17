@@ -27,14 +27,14 @@ impl Solution {
         count
     }
 
-    fn is_magic_square(grid: &Vec<Vec<i32>>, row: usize, col: usize) -> bool {
+    fn is_magic_square(grid: &[Vec<i32>], row: usize, col: usize) -> bool {
         // Check if all numbers are between 1-9 and distinct
         let mut seen = [false; 10];
 
         for i in 0..3 {
             for j in 0..3 {
                 let num = grid[row + i][col + j];
-                if num < 1 || num > 9 {
+                if !(1..=9).contains(&num) {
                     return false;
                 }
                 if seen[num as usize] {

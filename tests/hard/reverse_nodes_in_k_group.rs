@@ -21,9 +21,7 @@ struct Solution;
 // }
 impl Solution {
     pub fn reverse_k_group(head: Option<Box<ListNode>>, k: i32) -> Option<Box<ListNode>> {
-        if head.is_none() {
-            return None;
-        }
+        head.as_ref()?;
 
         let mut head = head;
         let mut it = &mut head;
@@ -31,7 +29,7 @@ impl Solution {
 
         while size < k && it.is_some() {
             it = &mut it.as_mut().unwrap().next;
-            size = size + 1;
+            size += 1;
         }
 
         // size is less than k, return head directly

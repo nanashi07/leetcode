@@ -6,6 +6,7 @@ use std::collections::BTreeMap;
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn min_abs_diff(grid: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
         let k = k as usize;
         let m = grid.len();
@@ -21,8 +22,8 @@ impl Solution {
         for i in 0..rows {
             // Initialize BTreeMap for the first window in this row band
             let mut counts: BTreeMap<i32, i32> = BTreeMap::new();
-            for r in i..i + k {
-                for c in 0..k {
+            for (r, _) in grid.iter().skip(i).take(k).enumerate() {
+                for (c, _) in grid.iter().take(k).enumerate() {
                     *counts.entry(grid[r][c]).or_insert(0) += 1;
                 }
             }
@@ -31,7 +32,7 @@ impl Solution {
 
             for j in 1..cols {
                 // Slide right: remove outgoing column (j-1), add incoming column (j+k-1)
-                for r in i..i + k {
+                for (r, _) in grid.iter().skip(i).take(k).enumerate() {
                     let out_val = grid[r][j - 1];
                     let cnt = counts.get_mut(&out_val).unwrap();
                     if *cnt == 1 {

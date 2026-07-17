@@ -32,7 +32,7 @@ impl Solution {
         }
 
         // Check if each digit appears exactly as many times as its value
-        for digit in 0..10 {
+        for (digit, _) in freq.iter().enumerate() {
             if freq[digit] != 0 && freq[digit] != digit {
                 return false;
             }

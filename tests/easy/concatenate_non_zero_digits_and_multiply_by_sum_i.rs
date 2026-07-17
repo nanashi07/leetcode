@@ -12,11 +12,11 @@ impl Solution {
         while n > 0 {
             let s = n % 10;
             if s > 0 {
-                x = x + s * 10i64.pow(c);
-                sum = sum + s;
+                x += s * 10i64.pow(c);
+                sum += s;
                 c += 1;
             }
-            n = n / 10
+            n /= 10
         }
         x * sum
     }

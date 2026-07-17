@@ -13,7 +13,7 @@ impl Solution {
             if n % 4 > 0 {
                 return false;
             }
-            n = n >> 2
+            n >>= 2
         }
 
         n == 1
@@ -27,18 +27,18 @@ mod tests {
     #[test]
     fn test_is_power_of_four_1() {
         let n = 16;
-        assert_eq!(true, Solution::is_power_of_four(n));
+        assert!(Solution::is_power_of_four(n));
     }
 
     #[test]
     fn test_is_power_of_four_2() {
         let n = 5;
-        assert_eq!(false, Solution::is_power_of_four(n));
+        assert!(!Solution::is_power_of_four(n));
     }
 
     #[test]
     fn test_is_power_of_four_3() {
         let n = 1;
-        assert_eq!(true, Solution::is_power_of_four(n));
+        assert!(Solution::is_power_of_four(n));
     }
 }

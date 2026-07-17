@@ -11,7 +11,7 @@ impl Solution {
         // Flatten factories: each factory position repeated by its limit
         let facts: Vec<i64> = factory
             .iter()
-            .flat_map(|f| std::iter::repeat(f[0] as i64).take(f[1] as usize))
+            .flat_map(|f| std::iter::repeat_n(f[0] as i64, f[1] as usize))
             .collect();
 
         let n = robot.len();

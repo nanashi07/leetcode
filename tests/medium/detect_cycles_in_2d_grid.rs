@@ -17,7 +17,7 @@ impl Solution {
             parent[x]
         }
 
-        fn union(parent: &mut Vec<usize>, rank: &mut Vec<u8>, a: usize, b: usize) -> bool {
+        fn union(parent: &mut Vec<usize>, rank: &mut [u8], a: usize, b: usize) -> bool {
             let ra = find(parent, a);
             let rb = find(parent, b);
             if ra == rb {
@@ -38,16 +38,14 @@ impl Solution {
             for j in 0..n {
                 let idx = i * n + j;
                 // Only check right and down to avoid duplicate edges
-                if j + 1 < n && grid[i][j] == grid[i][j + 1] {
-                    if union(&mut parent, &mut rank, idx, idx + 1) {
+                if j + 1 < n && grid[i][j] == grid[i][j + 1]
+                    && union(&mut parent, &mut rank, idx, idx + 1) {
                         return true;
                     }
-                }
-                if i + 1 < m && grid[i][j] == grid[i + 1][j] {
-                    if union(&mut parent, &mut rank, idx, idx + n) {
+                if i + 1 < m && grid[i][j] == grid[i + 1][j]
+                    && union(&mut parent, &mut rank, idx, idx + n) {
                         return true;
                     }
-                }
             }
         }
         false
@@ -67,7 +65,7 @@ mod tests {
             ["a", "b", "b", "a"],
             ["a", "a", "a", "a"],
         ]);
-        assert_eq!(true, Solution::contains_cycle(grid));
+        assert!(Solution::contains_cycle(grid));
     }
 
     #[test]
@@ -78,12 +76,12 @@ mod tests {
             ["c", "c", "e", "c"],
             ["f", "c", "c", "c"],
         ]);
-        assert_eq!(true, Solution::contains_cycle(grid));
+        assert!(Solution::contains_cycle(grid));
     }
 
     #[test]
     fn test_contains_cycle_3() {
         let grid = to_char_vec2d([["a", "b", "b"], ["b", "z", "b"], ["b", "b", "a"]]);
-        assert_eq!(false, Solution::contains_cycle(grid));
+        assert!(!Solution::contains_cycle(grid));
     }
 }

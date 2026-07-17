@@ -9,7 +9,7 @@ impl Solution {
         for i in 0..mat.len() {
             let mut col = 0;
             let mut c = 0;
-            for j in 0..mat[i].len() {
+            for (j, _) in mat.iter().enumerate().take(mat[i].len()) {
                 if mat[i][j] > 0 {
                     col += mat[i][j];
                     c = j;
@@ -18,7 +18,7 @@ impl Solution {
 
             if col == 1 {
                 let mut row = 0;
-                for i2 in 0..mat.len() {
+                for (i2, _) in mat.iter().enumerate() {
                     row += mat[i2][c];
                 }
 

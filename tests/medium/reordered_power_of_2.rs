@@ -19,12 +19,12 @@ impl Solution {
         let mut min_p: i32 = -1;
 
         while min > 0 {
-            min = min >> 1;
+            min >>= 1;
             min_p += 1;
         }
 
         while max > 0 {
-            max = max >> 1;
+            max >>= 1;
             max_p += 1;
         }
 
@@ -36,7 +36,7 @@ impl Solution {
             let mut v: Vec<i64> = vec![];
             while p >= 10 {
                 v.push(p % 10);
-                p = p / 10;
+                p /= 10;
             }
             v.push(p);
             v.sort_unstable();
@@ -65,30 +65,30 @@ mod tests {
     #[test]
     fn test_reordered_power_of2_1() {
         let n = 1;
-        assert_eq!(true, Solution::reordered_power_of2(n));
+        assert!(Solution::reordered_power_of2(n));
     }
 
     #[test]
     fn test_reordered_power_of2_2() {
         let n = 10;
-        assert_eq!(false, Solution::reordered_power_of2(n));
+        assert!(!Solution::reordered_power_of2(n));
     }
 
     #[test]
     fn test_reordered_power_of2_3() {
         let n = 124387842;
-        assert_eq!(false, Solution::reordered_power_of2(n));
+        assert!(!Solution::reordered_power_of2(n));
     }
 
     #[test]
     fn test_reordered_power_of2_4() {
         let n = 4150876;
-        assert_eq!(true, Solution::reordered_power_of2(n));
+        assert!(Solution::reordered_power_of2(n));
     }
 
     #[test]
     fn test_reordered_power_of2_5() {
         let n = 218;
-        assert_eq!(true, Solution::reordered_power_of2(n));
+        assert!(Solution::reordered_power_of2(n));
     }
 }

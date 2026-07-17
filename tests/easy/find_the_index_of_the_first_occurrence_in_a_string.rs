@@ -8,7 +8,7 @@ impl Solution {
         let nl = needle.len();
         if nl <= hl {
             for i in 0..=hl - nl {
-                if i + nl <= hl && &haystack[i..i + nl] == &needle[..] {
+                if i + nl <= hl && haystack[i..i + nl] == needle[..] {
                     return i as i32;
                 }
             }

@@ -27,12 +27,12 @@ impl Solution {
         result as i32
     }
 
-    fn can_cross(row: usize, col: usize, cells: &Vec<Vec<i32>>, day: usize) -> bool {
+    fn can_cross(row: usize, col: usize, cells: &[Vec<i32>], day: usize) -> bool {
         // Create grid with water cells marked up to 'day'
         let mut grid = vec![vec![false; col]; row];
 
         // Mark cells as water for first 'day' days
-        for i in 0..day {
+        for (i, _) in cells.iter().take(day).enumerate() {
             let r = cells[i][0] as usize - 1;
             let c = cells[i][1] as usize - 1;
             grid[r][c] = true; // true means water

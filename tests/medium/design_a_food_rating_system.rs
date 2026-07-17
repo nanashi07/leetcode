@@ -18,6 +18,7 @@ struct FoodRatings {
     // Map from cuisine to a sorted set of (rating, food_name) pairs
     // BTreeSet keeps items sorted, with higher ratings first (due to Reverse)
     // and lexicographically smaller names first for same ratings
+    #[allow(clippy::type_complexity)]
     cuisine_to_foods: RefCell<HashMap<String, BTreeSet<(std::cmp::Reverse<i32>, String)>>>,
 }
 
@@ -42,7 +43,7 @@ impl FoodRatings {
 
             cuisine_to_foods
                 .entry(cuisine.clone())
-                .or_insert_with(BTreeSet::new)
+                .or_default()
                 .insert((std::cmp::Reverse(rating), food.clone()));
         }
 

@@ -4,6 +4,7 @@
 struct Solution;
 
 impl Solution {
+    #[allow(clippy::needless_range_loop)]
     pub fn zig_zag_arrays(n: i32, l: i32, r: i32) -> i32 {
         const MOD: i64 = 1_000_000_007;
         let n = n as usize;
@@ -44,7 +45,7 @@ impl Solution {
             dp = ndp;
         }
         let mut ans = 0i64;
-        for v in 0..m {
+        for (v, _) in dp.iter().take(m).enumerate() {
             ans = (ans + dp[v][0] + dp[v][1]) % MOD;
         }
         ans as i32

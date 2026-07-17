@@ -26,7 +26,7 @@ impl Solution {
                         max_len = max_len.max(straight_len);
 
                         // Try with clockwise turn to each other direction
-                        for turn_idx in 0..4 {
+                        for (turn_idx, _) in directions.iter().enumerate() {
                             if turn_idx != dir_idx {
                                 let turn_dir = directions[turn_idx];
                                 if Self::is_clockwise_turn(start_dir, turn_dir) {
@@ -46,7 +46,7 @@ impl Solution {
     }
 
     fn get_straight_length(
-        grid: &Vec<Vec<i32>>,
+        grid: &[Vec<i32>],
         start_i: i32,
         start_j: i32,
         dir: (i32, i32),
@@ -81,7 +81,7 @@ impl Solution {
     }
 
     fn get_v_length(
-        grid: &Vec<Vec<i32>>,
+        grid: &[Vec<i32>],
         start_i: i32,
         start_j: i32,
         dir1: (i32, i32),
@@ -107,7 +107,7 @@ impl Solution {
             first_segment_len += 1;
 
             // Try turning at this position
-            let second_segment_len = Self::get_second_segment_length(&grid, i, j, dir2, expected);
+            let second_segment_len = Self::get_second_segment_length(grid, i, j, dir2, expected);
 
             if second_segment_len > 1 {
                 max_length = max_length.max(first_segment_len + second_segment_len - 1);
@@ -129,7 +129,7 @@ impl Solution {
     }
 
     fn get_second_segment_length(
-        grid: &Vec<Vec<i32>>,
+        grid: &[Vec<i32>],
         start_i: i32,
         start_j: i32,
         dir: (i32, i32),
