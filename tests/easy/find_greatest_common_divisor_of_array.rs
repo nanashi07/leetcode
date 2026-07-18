@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn find_gcd(nums: Vec<i32>) -> i32 {
-        todo!()
+        Self::gcd(*nums.iter().min().unwrap(), *nums.iter().max().unwrap())
+    }
+
+    fn gcd(a: i32, b: i32) -> i32 {
+        let x = a.max(b);
+        let n = a.min(b);
+        let d = x % n;
+        if d == 0 {
+            n
+        } else {
+            Self::gcd(n, d)
+        }
     }
 }
 
