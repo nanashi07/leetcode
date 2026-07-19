@@ -94,6 +94,8 @@ mod vowel_spellchecker;
 mod smallest_integer_divisible_by_k;
 // 1039. Minimum Score Triangulation of Polygon
 mod minimum_score_triangulation_of_polygon;
+// 1081. Smallest Subsequence of Distinct Characters
+pub mod smallest_subsequence_of_distinct_characters;
 // 1161. Maximum Level Sum of a Binary Tree
 mod maximum_level_sum_of_a_binary_tree;
 // 1233. Remove Sub-Folders from the Filesystem
