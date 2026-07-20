@@ -72,6 +72,8 @@ mod sum_of_root_to_leaf_binary_numbers;
 pub mod maximum_number_of_balloons;
 // 1200. Minimum Absolute Difference
 mod minimum_absolute_difference;
+// 1260. Shift 2D Grid
+pub mod shift_2d_grid;
 // 1266. Minimum Time Visiting All Points
 mod minimum_time_visiting_all_points;
 // 1290. Convert Binary Number in a Linked List to Integer

@@ -43,6 +43,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1022. Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/)
 - [1189. Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)
 - [1200. Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/)
+- [1260. Shift 2D Grid](https://leetcode.com/problems/shift-2d-grid/)
 - [1266. Minimum Time Visiting All Points](https://leetcode.com/problems/minimum-time-visiting-all-points/)
 - [1290. Convert Binary Number in a Linked List to Integer](https://leetcode.com/problems/convert-binary-number-in-a-linked-list-to-integer/)
 - [1304. Find N Unique Integers Sum up to Zero](https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/)
