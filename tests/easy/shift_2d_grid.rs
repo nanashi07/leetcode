@@ -11,11 +11,11 @@ impl Solution {
         let mut result = grid.clone();
         let k = k as usize;
         for n in 0..size {
-            let d = if (n as i32 - k as i32) < 0 {
-                size + n - k
-            } else {
-                n - k
-            };
+            let mut d = n as i32 - k as i32;
+            while d < 0 {
+                d += size as i32;
+            }
+            let d = d as usize;
             result[n / row][n % row] = grid[d / row][d % row];
         }
         result
@@ -48,6 +48,14 @@ mod tests {
         let grid = to_vec2d([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
         let k = 9;
         let output = to_vec2d([[1, 2, 3], [4, 5, 6], [7, 8, 9]]);
+        assert_eq!(output, Solution::shift_grid(grid, k));
+    }
+
+    #[test]
+    fn test_shift_grid_4() {
+        let grid = to_vec2d([[1]]);
+        let k = 100;
+        let output = to_vec2d([[1]]);
         assert_eq!(output, Solution::shift_grid(grid, k));
     }
 }
