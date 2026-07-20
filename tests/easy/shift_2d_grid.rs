@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn shift_grid(grid: Vec<Vec<i32>>, k: i32) -> Vec<Vec<i32>> {
-        todo!()
+        let col = grid.len();
+        let row = grid[0].len();
+        let size = col * row;
+        let mut result = grid.clone();
+        let k = k as usize;
+        for n in 0..size {
+            let d = if (n as i32 - k as i32) < 0 {
+                size + n - k
+            } else {
+                n - k
+            };
+            result[n / row][n % row] = grid[d / row][d % row];
+        }
+        result
     }
 }
 
