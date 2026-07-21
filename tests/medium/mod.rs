@@ -366,6 +366,8 @@ mod design_spreadsheet;
 pub mod closest_equal_element_queries;
 // 3494. Find the Minimum Amount of Time to Brew Potions
 mod find_the_minimum_amount_of_time_to_brew_potions;
+// 3499. Maximize Active Section with Trade I
+pub mod maximize_active_section_with_trade_i;
 // 3508. Implement Router
 mod implement_router;
 // 3531. Count Covered Buildings
