@@ -136,6 +136,8 @@ pub mod lexicographically_smallest_generated_string;
 mod maximize_subarrays_after_removing_one_conflicting_pair;
 // 3495. Minimum Operations to Make Array Elements Zero
 mod minimum_operations_to_make_array_elements_zero;
+// 3501. Maximize Active Section with Trade II
+pub mod maximize_active_section_with_trade_ii;
 // 3510. Minimum Pair Removal to Sort Array II
 mod minimum_pair_removal_to_sort_array_ii;
 // 3534. Path Existence Queries in a Graph II
