@@ -5,7 +5,43 @@ struct Solution;
 
 impl Solution {
     pub fn max_active_sections_after_trade(s: String, queries: Vec<Vec<i32>>) -> Vec<i32> {
-        todo!()
+        let bytes = s.as_bytes();
+        let n = bytes.len();
+        let total_ones = bytes.iter().filter(|&&b| b == b'1').count() as i32;
+
+        let mut prefix_zeros = vec![0i32; n + 1];
+        for i in 0..n {
+            prefix_zeros[i + 1] = prefix_zeros[i] + if bytes[i] == b'0' { 1 } else { 0 };
+        }
+
+        let mut zero_sections: Vec<(usize, usize)> = Vec::new();
+        let mut i = 0;
+        while i < n {
+            if bytes[i] == b'0' {
+                let start = i;
+                while i < n && bytes[i] == b'0' {
+                    i += 1;
+                }
+                zero_sections.push((start, i - 1));
+            } else {
+                i += 1;
+            }
+        }
+
+        queries
+            .iter()
+            .map(|q| {
+                let l = q[0] as usize;
+                let r = q[1] as usize;
+                let lo = zero_sections.partition_point(|&(_, end)| end < l);
+                let hi = zero_sections.partition_point(|&(start, _)| start <= r);
+                if hi >= lo + 2 {
+                    total_ones + prefix_zeros[r + 1] - prefix_zeros[l]
+                } else {
+                    total_ones
+                }
+            })
+            .collect()
     }
 }
 
