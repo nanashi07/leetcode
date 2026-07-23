@@ -370,6 +370,8 @@ mod find_the_minimum_amount_of_time_to_brew_potions;
 pub mod maximize_active_section_with_trade_i;
 // 3508. Implement Router
 mod implement_router;
+// 3513. Number of Unique XOR Triplets I
+pub mod number_of_unique_xor_triplets_i;
 // 3531. Count Covered Buildings
 mod count_covered_buildings;
 // 3532. Path Existence Queries in a Graph I
