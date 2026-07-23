@@ -310,6 +310,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3494. Find the Minimum Amount of Time to Brew Potions](https://leetcode.com/problems/find-the-minimum-amount-of-time-to-brew-potions/)
 - [3499. Maximize Active Section with Trade I](https://leetcode.com/problems/maximize-active-section-with-trade-i/)
 - [3508. Implement Router](https://leetcode.com/problems/implement-router/)
+- [3513. Number of Unique XOR Triplets I](https://leetcode.com/problems/number-of-unique-xor-triplets-i/)
 - [3531. Count Covered Buildings](https://leetcode.com/problems/count-covered-buildings/)
 - [3532. Path Existence Queries in a Graph I](https://leetcode.com/problems/path-existence-queries-in-a-graph-i/)
 - [3542. Minimum Operations to Convert All Elements to Zero](https://leetcode.com/problems/minimum-operations-to-convert-all-elements-to-zero/)
