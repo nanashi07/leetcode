@@ -372,6 +372,8 @@ pub mod maximize_active_section_with_trade_i;
 mod implement_router;
 // 3513. Number of Unique XOR Triplets I
 pub mod number_of_unique_xor_triplets_i;
+// 3514. Number of Unique XOR Triplets II
+pub mod number_of_unique_xor_triplets_ii;
 // 3531. Count Covered Buildings
 mod count_covered_buildings;
 // 3532. Path Existence Queries in a Graph I
