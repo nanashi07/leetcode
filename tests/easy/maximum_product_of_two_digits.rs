@@ -21,7 +21,7 @@ impl Solution {
                         b = c;
                     }
                 }
-                n = n / 10;
+                n /= 10;
             }
             a * b
         }
