@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn max_product(n: i32) -> i32 {
-        todo!()
+        if n < 10 {
+            n
+        } else {
+            let mut n = n;
+            let mut a = 0;
+            let mut b = 0;
+            while n > 0 {
+                let c = n % 10;
+                if a < c {
+                    b = a;
+                    a = c;
+                } else {
+                    if b < c {
+                        b = c;
+                    }
+                }
+                n = n / 10;
+            }
+            a * b
+        }
     }
 }
 
