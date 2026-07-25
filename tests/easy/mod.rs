@@ -208,6 +208,8 @@ mod minimum_pair_removal_to_sort_array_i;
 mod minimum_operations_to_make_array_sum_divisible_by_k;
 // 3516. Find Closest Person
 mod find_closest_person;
+// 3536. Maximum Product of Two Digits
+pub mod maximum_product_of_two_digits;
 // 3541. Find Most Frequent Vowel and Consonant
 mod find_most_frequent_vowel_and_consonant;
 // 3606. Coupon Code Validator
