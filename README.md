@@ -26,6 +26,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [342. Power of Four](https://leetcode.com/problems/power-of-four/)
 - [401. Binary Watch](https://leetcode.com/problems/binary-watch/)
 - [594. Longest Harmonious Subsequence](https://leetcode.com/problems/longest-harmonious-subsequence/)
+- [628. Maximum Product of Three Numbers](https://leetcode.com/problems/maximum-product-of-three-numbers/)
 - [657. Robot Return to Origin](https://leetcode.com/problems/robot-return-to-origin/)
 - [693. Binary Number with Alternating Bits](https://leetcode.com/problems/binary-number-with-alternating-bits/)
 - [696. Count Binary Substrings](https://leetcode.com/problems/count-binary-substrings/)
