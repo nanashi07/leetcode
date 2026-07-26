@@ -38,6 +38,8 @@ mod power_of_four;
 mod binary_watch;
 // 594. Longest Harmonious Subsequence
 mod longest_harmonious_subsequence;
+// 628. Maximum Product of Three Numbers
+pub mod maximum_product_of_three_numbers;
 // 657. Robot Return to Origin
 pub mod robot_return_to_origin;
 // 693. Binary Number with Alternating Bits
