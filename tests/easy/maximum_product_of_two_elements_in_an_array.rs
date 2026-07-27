@@ -5,7 +5,9 @@ struct Solution;
 
 impl Solution {
     pub fn max_product(nums: Vec<i32>) -> i32 {
-        todo!()
+        let mut nums = nums;
+        nums.sort_unstable();
+        nums.iter().rev().take(2).map(|n| n - 1).product::<i32>()
     }
 }
 
