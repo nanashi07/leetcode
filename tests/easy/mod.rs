@@ -96,6 +96,8 @@ pub mod sort_integers_by_the_number_of_1_bits;
 mod find_lucky_integer_in_an_array;
 // 1437. Check If All 1's Are at Least Length K Places Away
 mod check_if_all_1s_are_at_least_length_k_places_away;
+// 1464. Maximum Product of Two Elements in an Array
+pub mod maximum_product_of_two_elements_in_an_array;
 // 1518. Water Bottles
 mod water_bottles;
 // 1523. Count Odd Numbers in an Interval Range
