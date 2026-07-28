@@ -374,6 +374,8 @@ mod implement_router;
 pub mod number_of_unique_xor_triplets_i;
 // 3514. Number of Unique XOR Triplets II
 pub mod number_of_unique_xor_triplets_ii;
+// 3517. Smallest Palindromic Rearrangement I
+pub mod smallest_palindromic_rearrangement_i;
 // 3531. Count Covered Buildings
 mod count_covered_buildings;
 // 3532. Path Existence Queries in a Graph I
