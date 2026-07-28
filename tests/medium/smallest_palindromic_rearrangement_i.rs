@@ -5,7 +5,37 @@ struct Solution;
 
 impl Solution {
     pub fn smallest_palindrome(s: String) -> String {
-        todo!()
+        let mut cnt = [0; 26];
+        for b in s.bytes() {
+            cnt[(b - b'a') as usize] += 1;
+        }
+
+        let mut t = Vec::with_capacity(s.len() / 2);
+        let mut ch = None;
+
+        for (i, &count) in cnt.iter().enumerate() {
+            let letter = (b'a' + i as u8) as char;
+            let half = count / 2;
+            for _ in 0..half {
+                t.push(letter);
+            }
+            if count % 2 == 1 {
+                ch = Some(letter);
+            }
+        }
+
+        let mut ans = String::with_capacity(s.len());
+        for &c in &t {
+            ans.push(c);
+        }
+        if let Some(c) = ch {
+            ans.push(c);
+        }
+        for &c in t.iter().rev() {
+            ans.push(c);
+        }
+
+        ans
     }
 }
 
