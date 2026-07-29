@@ -48,10 +48,17 @@ impl Solution {
         let mut result: u128 = 1;
         let mut top = n as u128;
         for &f in freq {
-            for j in 1..=(f as u128) {
-                result = result * top / j;
-                top -= 1;
+            let f128 = f as u128;
+            let k = f128.min(top - f128);
+            let mut binom: u128 = 1;
+            for j in 1..=k {
+                binom = binom * (top - j + 1) / j;
+                if binom > CAP as u128 {
+                    return CAP;
+                }
             }
+            top -= f128;
+            result *= binom;
             if result > CAP as u128 {
                 return CAP;
             }
