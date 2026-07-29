@@ -140,6 +140,8 @@ mod minimum_operations_to_make_array_elements_zero;
 pub mod maximize_active_section_with_trade_ii;
 // 3510. Minimum Pair Removal to Sort Array II
 mod minimum_pair_removal_to_sort_array_ii;
+// 3518. Smallest Palindromic Rearrangement II
+pub mod smallest_palindromic_rearrangement_ii;
 // 3534. Path Existence Queries in a Graph II
 pub mod path_existence_queries_in_a_graph_ii;
 // 3539. Find Sum of Array Product of Magical Sequences
