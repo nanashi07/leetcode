@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_pushes(word: String) -> i32 {
-        todo!()
+        (0..word.len() as i32).map(|i| i / 8 + 1).sum()
     }
 }
 
