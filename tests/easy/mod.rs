@@ -170,6 +170,8 @@ mod maximum_area_of_longest_diagonal_rectangle;
 mod count_elements_with_maximum_frequency;
 // 3010. Divide an Array Into Subarrays With Minimum Cost I
 mod divide_an_array_into_subarrays_with_minimum_cost_i;
+// 3014. Minimum Number of Pushes to Type Word I
+pub mod minimum_number_of_pushes_to_type_word_i;
 // 3074. Apple Redistribution into Boxes
 mod apple_redistribution_into_boxes;
 // 3120. Count the Number of Special Characters I
