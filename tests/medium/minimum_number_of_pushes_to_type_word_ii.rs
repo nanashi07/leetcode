@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_pushes(word: String) -> i32 {
-        todo!()
+        let mut counts = [0; 26];
+        for byte in word.bytes() {
+            counts[(byte - b'a') as usize] += 1;
+        }
+        counts.sort_unstable_by(|a, b| b.cmp(a));
+
+        let mut total_pushes = 0;
+        for (i, &count) in counts.iter().enumerate() {
+            if count == 0 {
+                break;
+            }
+            total_pushes += count * ((i as i32 / 8) + 1);
+        }
+        total_pushes
     }
 }
 
