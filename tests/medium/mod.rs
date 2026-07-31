@@ -290,6 +290,8 @@ mod maximize_area_of_square_hole_in_grid;
 mod maximum_square_area_by_removing_fences_from_a_field;
 // 2976. Minimum Cost to Convert String I
 mod minimum_cost_to_convert_string_i;
+// 3016. Minimum Number of Pushes to Type Word II
+pub mod minimum_number_of_pushes_to_type_word_ii;
 // 3020. Find the Maximum Number of Elements in Subset
 pub mod find_the_maximum_number_of_elements_in_subset;
 // 3021. Alice and Bob Playing Flower Game
