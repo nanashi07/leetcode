@@ -157,6 +157,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [396. Rotate Function](https://leetcode.com/problems/rotate-function/)
 - [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
+- [486. Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 - [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
 - [712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)
