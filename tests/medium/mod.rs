@@ -56,6 +56,8 @@ mod rotate_function;
 mod pacific_atlantic_water_flow;
 // 474. Ones and Zeroes
 mod ones_and_zeroes;
+// 486. Predict the Winner
+pub mod predict_the_winner;
 // 498. Diagonal Traverse
 mod diagonal_traverse;
 // 611. Valid Triangle Number
