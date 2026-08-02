@@ -4,12 +4,13 @@
 struct Solution;
 
 impl Solution {
-    pub fn stone_game(piles: Vec<i32>) -> bool {
-        todo!()
+    pub fn stone_game(_piles: Vec<i32>) -> bool {
+        true
     }
 }
 
 #[cfg(test)]
+#[allow(clippy::bool_assert_comparison)]
 mod tests {
     use crate::medium::stone_game::Solution;
 
