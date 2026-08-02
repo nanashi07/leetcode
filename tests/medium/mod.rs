@@ -82,6 +82,8 @@ mod smallest_subtree_with_all_the_deepest_nodes;
 mod reordered_power_of_2;
 // 874. Walking Robot Simulation
 pub mod walking_robot_simulation;
+// 877. Stone Game
+pub mod stone_game;
 // 898. Bitwise ORs of Subarrays
 mod bitwise_ors_of_subarrays;
 // 904. Fruit Into Baskets
