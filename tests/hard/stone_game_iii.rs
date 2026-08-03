@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn stone_game_iii(stone_value: Vec<i32>) -> String {
-        todo!()
+        let n = stone_value.len();
+        let mut dp = vec![i32::MIN; n + 1];
+        dp[n] = 0;
+        let suffix: Vec<i32> = {
+            let mut s = vec![0; n + 1];
+            for i in (0..n).rev() {
+                s[i] = s[i + 1] + stone_value[i];
+            }
+            s
+        };
+        for i in (0..n).rev() {
+            for k in 1..=3 {
+                if i + k <= n {
+                    let take = suffix[i] - suffix[i + k];
+                    dp[i] = dp[i].max(take - dp[i + k]);
+                }
+            }
+        }
+        match dp[0].cmp(&0) {
+            std::cmp::Ordering::Greater => "Alice".to_string(),
+            std::cmp::Ordering::Less => "Bob".to_string(),
+            std::cmp::Ordering::Equal => "Tie".to_string(),
+        }
     }
 }
 
