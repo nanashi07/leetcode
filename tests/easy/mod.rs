@@ -228,6 +228,8 @@ mod trionic_array_i;
 pub mod flip_square_submatrix_vertically;
 // 3658. GCD of Odd and Even Sums
 pub mod gcd_of_odd_and_even_sums;
+// 3731. Find Missing Elements
+pub mod find_missing_elements;
 // 3740. Minimum Distance Between Three Equal Elements I
 pub mod minimum_distance_between_three_equal_elements_i;
 // 3754. Concatenate Non-Zero Digits and Multiply by Sum I
