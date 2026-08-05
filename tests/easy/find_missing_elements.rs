@@ -9,11 +9,9 @@ impl Solution {
         nums.sort_unstable();
         let mut out = vec![];
         for (i, &n) in nums.iter().enumerate() {
-            if i > 0 {
-                if n - nums[i - 1] > 1 {
-                    for j in nums[i - 1] + 1..n {
-                        out.push(j);
-                    }
+            if i > 0 && n - nums[i - 1] > 1 {
+                for j in nums[i - 1] + 1..n {
+                    out.push(j);
                 }
             }
         }
