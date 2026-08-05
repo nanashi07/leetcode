@@ -5,7 +5,48 @@ struct Solution;
 
 impl Solution {
     pub fn remaining_methods(n: i32, k: i32, invocations: Vec<Vec<i32>>) -> Vec<i32> {
-        todo!()
+        let n = n as usize;
+        let k = k as usize;
+
+        let mut head = vec![usize::MAX; n];
+        let mut next = vec![0; invocations.len()];
+        let mut to = vec![0; invocations.len()];
+
+        for (i, edge) in invocations.iter().enumerate() {
+            let u = edge[0] as usize;
+            let v = edge[1] as usize;
+            to[i] = v;
+            next[i] = head[u];
+            head[u] = i;
+        }
+
+        let mut suspicious = vec![false; n];
+        let mut stack = vec![k];
+        suspicious[k] = true;
+
+        while let Some(u) = stack.pop() {
+            let mut idx = head[u];
+            while idx != usize::MAX {
+                let v = to[idx];
+                if !suspicious[v] {
+                    suspicious[v] = true;
+                    stack.push(v);
+                }
+                idx = next[idx];
+            }
+        }
+
+        for edge in &invocations {
+            let u = edge[0] as usize;
+            let v = edge[1] as usize;
+            if !suspicious[u] && suspicious[v] {
+                return (0..n as i32).collect();
+            }
+        }
+
+        (0..n as i32)
+            .filter(|&i| !suspicious[i as usize])
+            .collect()
     }
 }
 
