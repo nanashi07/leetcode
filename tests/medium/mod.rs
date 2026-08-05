@@ -340,6 +340,8 @@ mod count_the_number_of_substrings_with_dominant_ones;
 pub mod find_a_safe_walk_through_a_grid;
 // 3296. Minimum Number of Seconds to Make Mountain Height Zero
 pub mod minimum_number_of_seconds_to_make_mountain_height_zero;
+// 3310. Remove Methods From Project
+pub mod remove_methods_from_project;
 // 3315. Construct the Minimum Bitwise Array II
 mod construct_the_minimum_bitwise_array_ii;
 // 3346. Maximum Frequency of an Element After Performing Operations I
