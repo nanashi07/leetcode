@@ -192,6 +192,8 @@ mod construct_the_minimum_bitwise_array_i;
 mod find_x_sum_of_all_k_long_subarrays_i;
 // 3330. Find the Original Typed String I
 mod find_the_original_typed_string_i;
+// 3345. Smallest Divisible Digit Product I
+pub mod smallest_divisible_digit_product_i;
 // 3349. Adjacent Increasing Subarrays Detection I
 mod adjacent_increasing_subarrays_detection_i;
 // 3354. Make Array Elements Equal to Zero
