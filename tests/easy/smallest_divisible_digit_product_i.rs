@@ -5,7 +5,14 @@ struct Solution;
 
 impl Solution {
     pub fn smallest_number(n: i32, t: i32) -> i32 {
-        todo!()
+        let mut num = n;
+        loop {
+            let product: i32 = num.to_string().bytes().map(|b| (b - b'0') as i32).product();
+            if product % t == 0 {
+                return num;
+            }
+            num += 1;
+        }
     }
 }
 
