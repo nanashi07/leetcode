@@ -340,6 +340,8 @@ mod count_the_number_of_substrings_with_dominant_ones;
 pub mod find_a_safe_walk_through_a_grid;
 // 3296. Minimum Number of Seconds to Make Mountain Height Zero
 pub mod minimum_number_of_seconds_to_make_mountain_height_zero;
+// 3302. Find the Lexicographically Smallest Valid Sequence
+pub mod find_the_lexicographically_smallest_valid_sequence;
 // 3310. Remove Methods From Project
 pub mod remove_methods_from_project;
 // 3315. Construct the Minimum Bitwise Array II
