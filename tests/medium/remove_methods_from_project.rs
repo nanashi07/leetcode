@@ -44,9 +44,7 @@ impl Solution {
             }
         }
 
-        (0..n as i32)
-            .filter(|&i| !suspicious[i as usize])
-            .collect()
+        (0..n as i32).filter(|&i| !suspicious[i as usize]).collect()
     }
 }
 

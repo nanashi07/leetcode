@@ -124,6 +124,8 @@ mod find_the_original_typed_string_ii;
 pub mod find_the_number_of_subsequences_with_equal_gcd;
 // 3347. Maximum Frequency of an Element After Performing Operations II
 mod maximum_frequency_of_an_element_after_performing_operations_ii;
+// 3348. Smallest Divisible Digit Product II
+pub mod smallest_divisible_digit_product_ii;
 // 3363. Find the Maximum Number of Fruits Collected
 mod find_the_maximum_number_of_fruits_collected;
 // 3454. Separate Squares II
