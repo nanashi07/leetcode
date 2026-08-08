@@ -5,7 +5,49 @@ struct Solution;
 
 impl Solution {
     pub fn valid_sequence(word1: String, word2: String) -> Vec<i32> {
-        todo!()
+        let w1 = word1.as_bytes();
+        let w2 = word2.as_bytes();
+        let n = w1.len();
+        let m = w2.len();
+
+        let mut last = vec![-1i32; m + 1];
+        last[m] = n as i32;
+        let mut k = (n as i32) - 1;
+        for j in (0..m).rev() {
+            while k >= 0 && w1[k as usize] != w2[j] {
+                k -= 1;
+            }
+            if k >= 0 {
+                last[j] = k;
+                k -= 1;
+            }
+        }
+
+        let mut ans = Vec::with_capacity(m);
+        let mut curr_i = 0;
+        let mut changed = false;
+
+        for j in 0..m {
+            if curr_i >= n {
+                return vec![];
+            }
+            if w1[curr_i] == w2[j] {
+                ans.push(curr_i as i32);
+                curr_i += 1;
+            } else if !changed && (curr_i as i32) < last[j + 1] {
+                ans.push(curr_i as i32);
+                changed = true;
+                curr_i += 1;
+            } else if let Some(pos) = w1[curr_i..].iter().position(|&x| x == w2[j]) {
+                let idx = curr_i + pos;
+                ans.push(idx as i32);
+                curr_i = idx + 1;
+            } else {
+                return vec![];
+            }
+        }
+
+        ans
     }
 }
 
