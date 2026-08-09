@@ -5,7 +5,34 @@ struct Solution;
 
 impl Solution {
     pub fn stone_game_ii(piles: Vec<i32>) -> i32 {
-        todo!()
+        let n = piles.len();
+        if n == 0 {
+            return 0;
+        }
+        let mut suffix_sums = vec![0; n + 1];
+        for i in (0..n).rev() {
+            suffix_sums[i] = suffix_sums[i + 1] + piles[i];
+        }
+
+        let mut dp = vec![vec![0; n + 1]; n];
+
+        for i in (0..n).rev() {
+            for m in 1..=n {
+                if i + 2 * m >= n {
+                    dp[i][m] = suffix_sums[i];
+                } else {
+                    let mut max_stones = 0;
+                    for x in 1..=2 * m {
+                        let next_m = m.max(x);
+                        let val = suffix_sums[i] - dp[i + x][next_m];
+                        max_stones = max_stones.max(val);
+                    }
+                    dp[i][m] = max_stones;
+                }
+            }
+        }
+
+        dp[0][1]
     }
 }
 
