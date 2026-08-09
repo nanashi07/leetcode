@@ -100,6 +100,8 @@ mod smallest_integer_divisible_by_k;
 mod minimum_score_triangulation_of_polygon;
 // 1081. Smallest Subsequence of Distinct Characters
 pub mod smallest_subsequence_of_distinct_characters;
+// 1140. Stone Game II
+pub mod stone_game_ii;
 // 1161. Maximum Level Sum of a Binary Tree
 mod maximum_level_sum_of_a_binary_tree;
 // 1233. Remove Sub-Folders from the Filesystem
