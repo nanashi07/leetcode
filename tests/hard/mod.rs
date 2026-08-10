@@ -44,6 +44,8 @@ mod number_of_ways_to_paint_n_3_grid;
 mod find_the_kth_smallest_sum_of_a_matrix_with_sorted_rows;
 // 1458. Max Dot Product of Two Subsequences
 mod max_dot_product_of_two_subsequences;
+// 1510. Stone Game IV
+pub mod stone_game_iv;
 // 1526. Minimum Number of Increments on Subarrays to Form a Target Array
 mod minimum_number_of_increments_on_subarrays_to_form_a_target_array;
 // 1611. Minimum One Bit Operations to Make Integers Zero
