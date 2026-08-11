@@ -164,6 +164,8 @@ pub mod furthest_point_from_origin;
 pub mod check_if_strings_can_be_made_equal_with_operations_i;
 // 2946. Matrix Similarity After Cyclic Shifts
 pub mod matrix_similarity_after_cyclic_shifts;
+// 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum
+pub mod smallest_missing_integer_greater_than_sequential_prefix_sum;
 // 3000. Maximum Area of Longest Diagonal Rectangle
 mod maximum_area_of_longest_diagonal_rectangle;
 // 3005. Count Elements With Maximum Frequency
