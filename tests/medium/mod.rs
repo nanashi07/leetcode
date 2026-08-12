@@ -292,6 +292,8 @@ pub mod check_if_strings_can_be_made_equal_with_operations_ii;
 pub mod construct_product_matrix;
 // 2943. Maximize Area of Square Hole in Grid
 mod maximize_area_of_square_hole_in_grid;
+// 2958. Length of Longest Subarray With at Most K Frequency
+pub mod length_of_longest_subarray_with_at_most_k_frequency;
 // 2975. Maximum Square Area by Removing Fences From a Field
 mod maximum_square_area_by_removing_fences_from_a_field;
 // 2976. Minimum Cost to Convert String I
