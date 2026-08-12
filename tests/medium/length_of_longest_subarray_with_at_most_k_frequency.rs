@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn max_subarray_length(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        use std::collections::HashMap;
+        let mut counts = HashMap::new();
+        let (mut left, mut max_len) = (0, 0);
+        for right in 0..nums.len() {
+            *counts.entry(nums[right]).or_insert(0) += 1;
+            while counts[&nums[right]] > k {
+                *counts.get_mut(&nums[left]).unwrap() -= 1;
+                left += 1;
+            }
+            max_len = max_len.max(right - left + 1);
+        }
+        max_len as i32
     }
 }
 
