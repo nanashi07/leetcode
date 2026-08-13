@@ -78,6 +78,8 @@ mod number_of_ways_to_divide_a_long_corridor;
 mod minimum_difference_in_sums_after_removal_of_elements;
 // 2197. Replace Non-Coprime Numbers in Array
 mod replace_non_coprime_numbers_in_array;
+// 2213. Longest Substring of One Repeating Character
+pub mod longest_substring_of_one_repeating_character;
 // 2322. Minimum Score After Removals on a Tree
 mod minimum_score_after_removals_on_a_tree;
 // 2402. Meeting Rooms III
