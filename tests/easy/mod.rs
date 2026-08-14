@@ -176,6 +176,8 @@ mod divide_an_array_into_subarrays_with_minimum_cost_i;
 pub mod minimum_number_of_pushes_to_type_word_i;
 // 3074. Apple Redistribution into Boxes
 mod apple_redistribution_into_boxes;
+// 3090. Maximum Length Substring With Two Occurrences
+pub mod maximum_length_substring_with_two_occurrences;
 // 3120. Count the Number of Special Characters I
 pub mod count_the_number_of_special_characters_i;
 // 3136. Valid Word
