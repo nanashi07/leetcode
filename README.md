@@ -95,6 +95,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3010. Divide an Array Into Subarrays With Minimum Cost I](https://leetcode.com/problems/divide-an-array-into-subarrays-with-minimum-cost-i/)
 - [3014. Minimum Number of Pushes to Type Word I](https://leetcode.com/problems/minimum-number-of-pushes-to-type-word-i/)
 - [3074. Apple Redistribution into Boxes](https://leetcode.com/problems/apple-redistribution-into-boxes/)
+- [3090. Maximum Length Substring With Two Occurrences](https://leetcode.com/problems/maximum-length-substring-with-two-occurrences/)
 - [3120. Count the Number of Special Characters I](https://leetcode.com/problems/count-the-number-of-special-characters-i/)
 - [3136. Valid Word](https://leetcode.com/problems/valid-word/)
 - [3190. Find Minimum Operations to Make All Elements Divisible by Three](https://leetcode.com/problems/find-minimum-operations-to-make-all-elements-divisible-by-three/)
