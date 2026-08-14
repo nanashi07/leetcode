@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_length_substring(s: String) -> i32 {
-        todo!()
+        let s = s.as_bytes();
+        let mut counts = [0; 256];
+        let mut left = 0;
+        let mut max_len = 0;
+        for right in 0..s.len() {
+            let r_byte = s[right] as usize;
+            counts[r_byte] += 1;
+            while counts[r_byte] > 2 {
+                counts[s[left] as usize] -= 1;
+                left += 1;
+            }
+            max_len = max_len.max(right - left + 1);
+        }
+        max_len as i32
     }
 }
 
