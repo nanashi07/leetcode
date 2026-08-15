@@ -432,6 +432,8 @@ pub mod xor_after_range_multiplication_queries_i;
 pub mod jump_game_ix;
 // 3689. Maximum Total Subarray Value I
 pub mod maximum_total_subarray_value_i;
+// 3702. Longest Subsequence With Non-Zero Bitwise XOR
+pub mod longest_subsequence_with_non_zero_bitwise_xor;
 // 3713. Longest Balanced Substring I
 mod longest_balanced_substring_i;
 // 3714. Longest Balanced Substring II

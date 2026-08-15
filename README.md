@@ -349,6 +349,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3653. XOR After Range Multiplication Queries I](https://leetcode.com/problems/xor-after-range-multiplication-queries-i/)
 - [3660. Jump Game IX](https://leetcode.com/problems/jump-game-ix/)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i/)
+- [3702. Longest Subsequence With Non-Zero Bitwise XOR](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor/)
 - [3713. Longest Balanced Substring I](https://leetcode.com/problems/longest-balanced-substring-i/)
 - [3714. Longest Balanced Substring II](https://leetcode.com/problems/longest-balanced-substring-ii/)
 - [3719. Longest Balanced Subarray I](https://leetcode.com/problems/longest-balanced-subarray-i/)
