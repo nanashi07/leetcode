@@ -5,7 +5,21 @@ struct Solution;
 
 impl Solution {
     pub fn longest_subsequence(nums: Vec<i32>) -> i32 {
-        todo!()
+        let mut xor = 0;
+        let mut all_zero = true;
+        for &x in &nums {
+            xor ^= x;
+            if x != 0 {
+                all_zero = false;
+            }
+        }
+        if xor != 0 {
+            nums.len() as i32
+        } else if all_zero {
+            0
+        } else {
+            (nums.len() - 1) as i32
+        }
     }
 }
 
