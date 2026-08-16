@@ -208,6 +208,8 @@ mod unique_length_3_palindromic_subsequences;
 mod maximum_matrix_sum;
 // 1980. Find Unique Binary String
 pub mod find_unique_binary_string;
+// 2029. Stone Game IX
+pub mod stone_game_ix;
 // 2033. Minimum Operations to Make a Uni-Value Grid
 pub mod minimum_operations_to_make_a_uni_value_grid;
 // 2043. Simple Bank System
