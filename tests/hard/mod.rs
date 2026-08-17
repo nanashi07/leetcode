@@ -48,6 +48,8 @@ mod max_dot_product_of_two_subsequences;
 pub mod stone_game_iv;
 // 1526. Minimum Number of Increments on Subarrays to Form a Target Array
 mod minimum_number_of_increments_on_subarrays_to_form_a_target_array;
+// 1563. Stone Game V
+pub mod stone_game_v;
 // 1611. Minimum One Bit Operations to Make Integers Zero
 mod minimum_one_bit_operations_to_make_integers_zero;
 // 1622. Fancy Sequence
