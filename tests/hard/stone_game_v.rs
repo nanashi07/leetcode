@@ -22,12 +22,12 @@ impl Solution {
                 for split in left..right {
                     let left_sum = prefix[split + 1] - prefix[left];
                     let right_sum = prefix[right + 1] - prefix[split + 1];
-                    let score = if left_sum <= right_sum {
-                        left_sum + dp[left][split]
-                    } else {
-                        right_sum + dp[split + 1][right]
-                    };
-                    dp[left][right] = dp[left][right].max(score);
+                    if left_sum <= right_sum {
+                        dp[left][right] = dp[left][right].max(left_sum + dp[left][split]);
+                    }
+                    if right_sum <= left_sum {
+                        dp[left][right] = dp[left][right].max(right_sum + dp[split + 1][right]);
+                    }
                 }
             }
         }
@@ -43,12 +43,24 @@ mod tests {
     #[test]
     fn test_stone_game_v_1() {
         let stone_value = [6, 2, 3, 4, 5, 5].to_vec();
-        assert_eq!(28, Solution::stone_game_v(stone_value));
+        assert_eq!(18, Solution::stone_game_v(stone_value));
     }
 
     #[test]
     fn test_stone_game_v_2() {
+        let stone_value = [7, 7, 7, 7, 7, 7, 7].to_vec();
+        assert_eq!(28, Solution::stone_game_v(stone_value));
+    }
+
+    #[test]
+    fn test_stone_game_v_3() {
         let stone_value = [4].to_vec();
         assert_eq!(0, Solution::stone_game_v(stone_value));
+    }
+
+    #[test]
+    fn test_stone_game_v_4() {
+        let stone_value = [2, 1, 1].to_vec();
+        assert_eq!(3, Solution::stone_game_v(stone_value));
     }
 }
