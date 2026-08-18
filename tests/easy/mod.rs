@@ -210,6 +210,8 @@ mod transformed_array;
 mod count_partitions_with_even_sum_difference;
 // 3461. Check If Digits Are Equal in String After Operations I
 mod check_if_digits_are_equal_in_string_after_operations_i;
+// 3471. Find the Largest Almost Missing Integer
+pub mod find_the_largest_almost_missing_integer;
 // 3477. Fruits Into Baskets II
 mod fruits_into_baskets_ii;
 // 3487. Maximum Unique Subarray Sum After Deletion
