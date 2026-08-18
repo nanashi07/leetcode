@@ -18,7 +18,7 @@ impl Solution {
         }
         first
             .iter()
-            .filter(|(&v, &fi)| {
+            .filter(|(v, fi)| {
                 let li = last[&v];
                 // windows containing v: [fi-k+1, li] clamped to [0, n-k]
                 // count = min(li, n-k) - max(fi+1-k, 0) + 1 == 1
