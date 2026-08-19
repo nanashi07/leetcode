@@ -128,6 +128,8 @@ mod maximum_number_of_events_that_can_be_attended;
 pub mod number_of_substrings_containing_all_three_characters;
 // 1382. Balance a Binary Search Tree
 mod balance_a_binary_search_tree;
+// 1386. Cinema Seat Allocation
+pub mod cinema_seat_allocation;
 // 1390. Four Divisors
 mod four_divisors;
 // 1391. Check if There is a Valid Path in a Grid
