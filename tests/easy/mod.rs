@@ -174,6 +174,8 @@ mod count_elements_with_maximum_frequency;
 mod divide_an_array_into_subarrays_with_minimum_cost_i;
 // 3014. Minimum Number of Pushes to Type Word I
 pub mod minimum_number_of_pushes_to_type_word_i;
+// 3069. Distribute Elements Into Two Arrays I
+pub mod distribute_elements_into_two_arrays_i;
 // 3074. Apple Redistribution into Boxes
 mod apple_redistribution_into_boxes;
 // 3090. Maximum Length Substring With Two Occurrences
