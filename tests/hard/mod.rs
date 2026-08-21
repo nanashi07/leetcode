@@ -110,6 +110,8 @@ mod divide_an_array_into_subarrays_with_minimum_cost_ii;
 mod find_the_number_of_ways_to_place_people_ii;
 // 3093. Longest Common Suffix Queries
 pub mod longest_common_suffix_queries;
+// 3116. Kth Smallest Amount With Single Denomination Combination
+pub mod kth_smallest_amount_with_single_denomination_combination;
 // 3130. Find All Possible Stable Binary Arrays II
 pub mod find_all_possible_stable_binary_arrays_ii;
 // 3161. Block Placement Queries
