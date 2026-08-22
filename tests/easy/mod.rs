@@ -230,6 +230,8 @@ pub mod maximum_product_of_two_digits;
 mod find_most_frequent_vowel_and_consonant;
 // 3606. Coupon Code Validator
 mod coupon_code_validator;
+// 3622. Check Divisibility by Digit Sum and Product
+pub mod check_divisibility_by_digit_sum_and_product;
 // 3633. Earliest Finish Time for Land and Water Rides I
 pub mod earliest_finish_time_for_land_and_water_rides_i;
 // 3637. Trionic Array I
