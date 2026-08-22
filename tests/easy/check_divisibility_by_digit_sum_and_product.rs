@@ -5,7 +5,12 @@ struct Solution;
 
 impl Solution {
     pub fn check_divisibility(n: i32) -> bool {
-        todo!()
+        let v = n
+            .to_string()
+            .chars()
+            .map(|c| c as i32 - '0' as i32)
+            .collect::<Vec<i32>>();
+        n % (v.iter().product::<i32>() + v.iter().sum::<i32>()) == 0
     }
 }
 
