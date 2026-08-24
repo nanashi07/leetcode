@@ -1,11 +1,17 @@
 // 1872. Stone Game VIII
 // https://leetcode.com/problems/stone-game-viii/
 
-struct Solution;
+pub struct Solution;
 
 impl Solution {
     pub fn stone_game_viii(stones: Vec<i32>) -> i32 {
-        todo!()
+        let mut sum: i32 = stones.iter().sum();
+        let mut dp = sum;
+        for stone in stones[2..].iter().rev() {
+            sum -= stone;
+            dp = dp.max(sum - dp);
+        }
+        dp
     }
 }
 
