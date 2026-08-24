@@ -5,7 +5,27 @@ struct Solution;
 
 impl Solution {
     pub fn sum_game(num: String) -> bool {
-        todo!()
+        let mid = num.len() / 2;
+        let mut diff = 0;
+        let mut dq = 0;
+
+        for (i, &c) in num.as_bytes().iter().enumerate() {
+            if i < mid {
+                if c == b'?' {
+                    dq -= 1;
+                } else {
+                    diff += (c - b'0') as i32;
+                }
+            } else {
+                if c == b'?' {
+                    dq += 1;
+                } else {
+                    diff -= (c - b'0') as i32;
+                }
+            }
+        }
+
+        diff * 2 != dq * 9
     }
 }
 
