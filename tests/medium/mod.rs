@@ -204,6 +204,8 @@ pub mod minimum_number_of_flips_to_make_the_binary_string_alternating;
 mod largest_magic_square;
 // 1914. Cyclically Rotating a Grid
 mod cyclically_rotating_a_grid;
+// 1927. Sum Game
+pub mod sum_game;
 // 1930. Unique Length-3 Palindromic Subsequences
 mod unique_length_3_palindromic_subsequences;
 // 1975. Maximum Matrix Sum
