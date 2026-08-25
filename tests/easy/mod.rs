@@ -240,6 +240,8 @@ mod trionic_array_i;
 pub mod flip_square_submatrix_vertically;
 // 3658. GCD of Odd and Even Sums
 pub mod gcd_of_odd_and_even_sums;
+// 3718. Smallest Missing Multiple of K
+pub mod smallest_missing_multiple_of_k;
 // 3731. Find Missing Elements
 pub mod find_missing_elements;
 // 3740. Minimum Distance Between Three Equal Elements I
