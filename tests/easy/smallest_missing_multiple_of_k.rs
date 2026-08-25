@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn missing_multiple(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        let mut nums = nums
+            .into_iter()
+            .filter(|&n| n >= k && n % k == 0)
+            .collect::<Vec<_>>();
+        nums.sort_unstable();
+
+        for i in 0..nums.len() {
+            let n = (i + 1) as i32 * k;
+            if nums[i] > n {
+                return n;
+            }
+        }
+        (1 + nums.len()) as i32 * k
     }
 }
 
