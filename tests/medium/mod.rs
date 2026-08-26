@@ -294,6 +294,8 @@ mod ways_to_express_an_integer_as_sum_of_powers;
 pub mod find_the_safest_path_in_a_grid;
 // 2840. Check if Strings Can be Made Equal With Operations II
 pub mod check_if_strings_can_be_made_equal_with_operations_ii;
+// 2904. Shortest and Lexicographically Smallest Beautiful String
+pub mod shortest_and_lexicographically_smallest_beautiful_string;
 // 2906. Construct Product Matrix
 pub mod construct_product_matrix;
 // 2943. Maximize Area of Square Hole in Grid
