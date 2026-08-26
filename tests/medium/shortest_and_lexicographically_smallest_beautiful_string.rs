@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn shortest_beautiful_substring(s: String, k: i32) -> String {
-        todo!()
+        let k = k as usize;
+        let indices: Vec<usize> = s
+            .char_indices()
+            .filter(|&(_, c)| c == '1')
+            .map(|(i, _)| i)
+            .collect();
+
+        if indices.len() < k {
+            return "".to_string();
+        }
+
+        let mut best: Option<&str> = None;
+        for i in 0..=indices.len() - k {
+            let start = indices[i];
+            let end = indices[i + k - 1];
+            let sub = &s[start..=end];
+            if let Some(b) = best {
+                if sub.len() < b.len() || (sub.len() == b.len() && sub < b) {
+                    best = Some(sub);
+                }
+            } else {
+                best = Some(sub);
+            }
+        }
+
+        best.unwrap_or("").to_string()
     }
 }
 
