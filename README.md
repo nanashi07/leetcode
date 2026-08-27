@@ -361,6 +361,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3713. Longest Balanced Substring I](https://leetcode.com/problems/longest-balanced-substring-i/)
 - [3714. Longest Balanced Substring II](https://leetcode.com/problems/longest-balanced-substring-ii/)
 - [3719. Longest Balanced Subarray I](https://leetcode.com/problems/longest-balanced-subarray-i/)
+- [3720. Lexicographically Smallest Permutation Greater Than Target](https://leetcode.com/problems/lexicographically-smallest-permutation-greater-than-target/)
 - [3737. Count Subarrays With Majority Element I](https://leetcode.com/problems/count-subarrays-with-majority-element-i/)
 - [3741. Minimum Distance Between Three Equal Elements II](https://leetcode.com/problems/minimum-distance-between-three-equal-elements-ii/)
 - [3742. Maximum Path Score in a Grid](https://leetcode.com/problems/maximum-path-score-in-a-grid/)
