@@ -300,6 +300,8 @@ pub mod shortest_and_lexicographically_smallest_beautiful_string;
 pub mod construct_product_matrix;
 // 2943. Maximize Area of Square Hole in Grid
 mod maximize_area_of_square_hole_in_grid;
+// 2948. Make Lexicographically Smallest Array by Swapping Elements
+pub mod make_lexicographically_smallest_array_by_swapping_elements;
 // 2958. Length of Longest Subarray With at Most K Frequency
 pub mod length_of_longest_subarray_with_at_most_k_frequency;
 // 2975. Maximum Square Area by Removing Fences From a Field
