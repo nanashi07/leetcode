@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn lexicographically_smallest_array(nums: Vec<i32>, limit: i32) -> Vec<i32> {
-        todo!()
+        let n = nums.len();
+        // sort indices by value
+        let mut order: Vec<usize> = (0..n).collect();
+        order.sort_unstable_by_key(|&i| nums[i]);
+
+        let mut result = vec![0i32; n];
+        let mut g_start = 0usize;
+        while g_start < n {
+            // extend group while consecutive sorted values are within limit
+            let mut g_end = g_start + 1;
+            while g_end < n && nums[order[g_end]] - nums[order[g_end - 1]] <= limit {
+                g_end += 1;
+            }
+            // collect original indices in this group, sort them, assign sorted values
+            let group = &order[g_start..g_end];
+            let mut positions: Vec<usize> = group.to_vec();
+            positions.sort_unstable();
+            for (rank, &pos) in positions.iter().enumerate() {
+                result[pos] = nums[group[rank]];
+            }
+            g_start = g_end;
+        }
+        result
     }
 }
 
