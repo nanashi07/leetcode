@@ -5,7 +5,25 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_deletions(nums: Vec<i32>) -> i32 {
-        todo!()
+        let n = nums.len();
+        let (mut lo, mut hi) = (0, 0);
+        for i in 1..n {
+            if nums[i] < nums[lo] {
+                lo = i;
+            }
+            if nums[i] > nums[hi] {
+                hi = i;
+            }
+        }
+        // cost to remove index k: from left = k+1, from right = n-k
+        let left = |k: usize| k + 1;
+        let right = |k: usize| n - k;
+        // both from left, both from right, or split
+        (left(lo)
+            .max(left(hi))
+            .min(right(lo).max(right(hi)))
+            .min(left(lo) + right(hi))
+            .min(left(hi) + right(lo))) as i32
     }
 }
 
