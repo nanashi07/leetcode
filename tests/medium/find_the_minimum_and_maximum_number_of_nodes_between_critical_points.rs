@@ -23,7 +23,33 @@ struct Solution;
 // }
 impl Solution {
     pub fn nodes_between_critical_points(head: Option<Box<ListNode>>) -> Vec<i32> {
-        todo!();
+        let mut vals = Vec::new();
+        let mut cur = &head;
+        while let Some(node) = cur {
+            vals.push(node.val);
+            cur = &node.next;
+        }
+        if vals.len() < 3 {
+            return vec![-1, -1];
+        }
+        let mut criticals: Vec<usize> = Vec::new();
+        for i in 1..vals.len() - 1 {
+            if (vals[i] > vals[i - 1] && vals[i] > vals[i + 1])
+                || (vals[i] < vals[i - 1] && vals[i] < vals[i + 1])
+            {
+                criticals.push(i);
+            }
+        }
+        if criticals.len() < 2 {
+            return vec![-1, -1];
+        }
+        let max_dist = (criticals.last().unwrap() - criticals[0]) as i32;
+        let min_dist = criticals
+            .windows(2)
+            .map(|w| (w[1] - w[0]) as i32)
+            .min()
+            .unwrap();
+        vec![min_dist, max_dist]
     }
 }
 
