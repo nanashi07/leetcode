@@ -224,6 +224,8 @@ mod count_number_of_maximum_bitwise_or_subsets;
 mod next_greater_numerically_balanced_number;
 // 2054. Two Best Non-Overlapping Events
 mod two_best_non_overlapping_events;
+// 2058. Find the Minimum and Maximum Number of Nodes Between Critical Points
+pub mod find_the_minimum_and_maximum_number_of_nodes_between_critical_points;
 // 2069. Walking Robot Simulation II
 pub mod walking_robot_simulation_ii;
 // 2075. Decode the Slanted Ciphertext
