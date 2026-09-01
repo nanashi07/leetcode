@@ -416,6 +416,8 @@ pub mod equal_sum_grid_partition_i;
 pub mod number_of_ways_to_assign_edge_weights_i;
 // 3567. Minimum Absolute Difference in Sliding Submatrix
 pub mod minimum_absolute_difference_in_sliding_submatrix;
+// 3568. Minimum Moves to Clean the Classroom
+pub mod minimum_moves_to_clean_the_classroom;
 // 3573. Best Time to Buy and Sell Stock V
 mod best_time_to_buy_and_sell_stock_v;
 // 3577. Count the Number of Computer Unlocking Permutations
