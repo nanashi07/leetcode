@@ -252,3 +252,5 @@ pub mod concatenate_non_zero_digits_and_multiply_by_sum_i;
 pub mod mirror_distance_of_an_integer;
 // 3838. Weighted Word Mapping
 pub mod weighted_word_mapping;
+// 3875. Construct Uniform Parity Array I
+pub mod construct_uniform_parity_array_i;
