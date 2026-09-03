@@ -5,10 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn uniform_array(nums1: Vec<i32>) -> bool {
-        let n = nums1.len();
-        let odds = nums1.iter().filter(|&&x| x % 2 != 0).count();
-        let evens = n - odds;
-        odds.min(evens) <= (n - 1) / 2
+        let min_even = nums1.iter().filter(|&&x| x % 2 == 0).min();
+        let min_odd = nums1.iter().filter(|&&x| x % 2 != 0).min();
+
+        min_even.is_none() || min_odd.is_none() || min_odd.is_some_and(|odd| Some(odd) < min_even)
     }
 }
 
@@ -32,5 +32,17 @@ mod tests {
     fn test_uniform_array_3() {
         let nums1 = [4, 6].to_vec();
         assert!(Solution::uniform_array(nums1));
+    }
+
+    #[test]
+    fn test_uniform_array_4() {
+        let nums1 = [11, 16].to_vec();
+        assert!(Solution::uniform_array(nums1));
+    }
+
+    #[test]
+    fn test_uniform_array_5() {
+        let nums1 = [13, 10].to_vec();
+        assert!(!Solution::uniform_array(nums1));
     }
 }
