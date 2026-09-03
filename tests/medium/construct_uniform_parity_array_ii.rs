@@ -5,7 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn uniform_array(nums1: Vec<i32>) -> bool {
-        todo!()
+        let n = nums1.len();
+        let odds = nums1.iter().filter(|&&x| x % 2 != 0).count();
+        let evens = n - odds;
+        odds.min(evens) <= (n - 1) / 2
     }
 }
 
