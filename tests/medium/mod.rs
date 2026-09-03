@@ -472,3 +472,5 @@ pub mod concatenate_non_zero_digits_and_multiply_by_sum_ii;
 pub mod minimum_absolute_distance_between_mirror_pairs;
 // 3867. Sum of GCD of Formed Pairs
 pub mod sum_of_gcd_of_formed_pairs;
+// 3876. Construct Uniform Parity Array II
+pub mod construct_uniform_parity_array_ii;
