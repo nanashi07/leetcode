@@ -254,3 +254,5 @@ pub mod mirror_distance_of_an_integer;
 pub mod weighted_word_mapping;
 // 3875. Construct Uniform Parity Array I
 pub mod construct_uniform_parity_array_i;
+// 3903. Smallest Stable Index I
+pub mod smallest_stable_index_i;

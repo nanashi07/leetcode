@@ -134,6 +134,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3783. Mirror Distance of an Integer](https://leetcode.com/problems/mirror-distance-of-an-integer/)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping/)
 - [3875. Construct Uniform Parity Array I](https://leetcode.com/problems/construct-uniform-parity-array-i/)
+- [3903. Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)
 
 ### Medium Problems
 
