@@ -5,7 +5,15 @@ struct Solution;
 
 impl Solution {
     pub fn first_stable_index(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        for i in 0..nums.len() {
+            let max = *nums[0..=i].iter().max().unwrap();
+            let min = *nums[i..nums.len()].iter().min().unwrap();
+            let score = max - min;
+            if score <= k {
+                return i as i32;
+            }
+        }
+        -1
     }
 }
 
