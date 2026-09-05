@@ -376,6 +376,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3761. Minimum Absolute Distance Between Mirror Pairs](https://leetcode.com/problems/minimum-absolute-distance-between-mirror-pairs/)
 - [3867. Sum of GCD of Formed Pairs](https://leetcode.com/problems/sum-of-gcd-of-formed-pairs/)
 - [3876. Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/)
+- [3904. Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)
 
 ### Hard Problems
 
