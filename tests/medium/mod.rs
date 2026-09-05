@@ -474,3 +474,5 @@ pub mod minimum_absolute_distance_between_mirror_pairs;
 pub mod sum_of_gcd_of_formed_pairs;
 // 3876. Construct Uniform Parity Array II
 pub mod construct_uniform_parity_array_ii;
+// 3904. Smallest Stable Index II
+pub mod smallest_stable_index_ii;
