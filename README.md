@@ -388,6 +388,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [32. Longest Valid Parentheses](https://leetcode.com/problems/longest-valid-parentheses/)
 - [37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/)
 - [85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
+- [115. Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
 - [154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
 - [407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)
 - [679. 24 Game](https://leetcode.com/problems/24-game/)
