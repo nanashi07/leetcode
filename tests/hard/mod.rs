@@ -28,6 +28,8 @@ mod set_intersection_size_at_least_two;
 mod special_binary_string;
 // 778. Swim in Rising Water
 mod swim_in_rising_water;
+// 940. Distinct Subsequences II
+pub mod distinct_subsequences_ii;
 // 960. Delete Columns to Make Sorted III
 mod delete_columns_to_make_sorted_iii;
 // 1301. Number of Paths with Max Score
