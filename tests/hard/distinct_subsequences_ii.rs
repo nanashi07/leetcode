@@ -5,7 +5,16 @@ struct Solution;
 
 impl Solution {
     pub fn distinct_subseq_ii(s: String) -> i32 {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+        let mut dp = 1i64; // empty subsequence
+        let mut last = [0i64; 26];
+        for b in s.bytes() {
+            let i = (b - b'a') as usize;
+            let prev = last[i];
+            last[i] = dp;
+            dp = ((2 * dp - prev) % MOD + MOD) % MOD;
+        }
+        ((dp - 1 + MOD) % MOD) as i32 // subtract empty subsequence
     }
 }
 
