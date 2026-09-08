@@ -252,6 +252,8 @@ pub mod concatenate_non_zero_digits_and_multiply_by_sum_i;
 pub mod mirror_distance_of_an_integer;
 // 3838. Weighted Word Mapping
 pub mod weighted_word_mapping;
+// 3870. Count Commas in Range
+pub mod count_commas_in_range;
 // 3875. Construct Uniform Parity Array I
 pub mod construct_uniform_parity_array_i;
 // 3903. Smallest Stable Index I
