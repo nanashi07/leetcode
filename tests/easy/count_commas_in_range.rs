@@ -5,16 +5,13 @@ struct Solution;
 
 impl Solution {
     pub fn count_commas(n: i32) -> i32 {
-        let mut n = n;
-        let mut c = 0;
-        let mut x = 1;
-        while n >= 1000 {
-            let d = n % 1000 + 1;
-            c += x * d;
-            n = n / 1000;
-            x *= 1000;
+        let mut result = 0;
+        let mut base = 1_000;
+        while base <= n {
+            result += n - base + 1;
+            base *= 1_000;
         }
-        c
+        result
     }
 }
 
@@ -32,5 +29,11 @@ mod tests {
     fn test_count_commas_2() {
         let n = 998;
         assert_eq!(0, Solution::count_commas(n));
+    }
+
+    #[test]
+    fn test_count_commas_3() {
+        let n = 2019;
+        assert_eq!(1020, Solution::count_commas(n));
     }
 }
