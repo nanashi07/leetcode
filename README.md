@@ -133,6 +133,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)
 - [3783. Mirror Distance of an Integer](https://leetcode.com/problems/mirror-distance-of-an-integer/)
 - [3838. Weighted Word Mapping](https://leetcode.com/problems/weighted-word-mapping/)
+- [3870. Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/)
 - [3875. Construct Uniform Parity Array I](https://leetcode.com/problems/construct-uniform-parity-array-i/)
 - [3903. Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)
 
