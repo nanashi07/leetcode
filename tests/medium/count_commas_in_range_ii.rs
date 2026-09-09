@@ -28,6 +28,6 @@ mod tests {
     #[test]
     fn test_count_commas_2() {
         let n = 998;
-        assert_eq!(9, Solution::count_commas(n));
+        assert_eq!(0, Solution::count_commas(n));
     }
 }
