@@ -5,7 +5,13 @@ struct Solution;
 
 impl Solution {
     pub fn count_commas(n: i64) -> i64 {
-        todo!()
+        let mut result = 0;
+        let mut base = 1_000i64;
+        while base <= n {
+            result += n - base + 1;
+            base *= 1_000;
+        }
+        result
     }
 }
 
