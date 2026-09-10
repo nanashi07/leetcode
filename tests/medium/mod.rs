@@ -252,6 +252,8 @@ mod count_collisions_on_a_road;
 mod find_triangular_sum_of_an_array;
 // 2257. Count Unguarded Cells in the Grid
 mod count_unguarded_cells_in_the_grid;
+// 2265. Count Nodes Equal to Average of Subtree
+pub mod count_nodes_equal_to_average_of_subtree;
 // 2300. Successful Pairs of Spells and Potions
 mod successful_pairs_of_spells_and_potions;
 // 2327. Number of People Aware of a Secret
