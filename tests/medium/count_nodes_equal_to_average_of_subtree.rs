@@ -9,7 +9,22 @@ use std::rc::Rc;
 
 impl Solution {
     pub fn average_of_subtree(root: Option<Rc<RefCell<TreeNode>>>) -> i32 {
-        todo!()
+        Self::dfs(&root).2
+    }
+
+    // Returns (sum, node_count, matches) for the subtree rooted at `node`.
+    fn dfs(node: &Option<Rc<RefCell<TreeNode>>>) -> (i64, i64, i32) {
+        let Some(node_rc) = node else {
+            return (0, 0, 0);
+        };
+        let node_ref = node_rc.borrow();
+        let (ls, lc, lm) = Self::dfs(&node_ref.left);
+        let (rs, rc, rm) = Self::dfs(&node_ref.right);
+
+        let sum = ls + rs + node_ref.val as i64;
+        let count = lc + rc + 1;
+        let matches = lm + rm + (sum / count == node_ref.val as i64) as i32;
+        (sum, count, matches)
     }
 }
 
