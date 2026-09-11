@@ -5,7 +5,25 @@ struct Solution;
 
 impl Solution {
     pub fn total_numbers(digits: Vec<i32>) -> i32 {
-        todo!()
+        let mut cnt = [0i32; 10];
+        for d in digits {
+            cnt[d as usize] += 1;
+        }
+
+        let mut ans = 0;
+        for h in 1..10usize {
+            for t in 0..10usize {
+                for u in (0..5).map(|x| x * 2) {
+                    if cnt[h] >= 1 + (h == t) as i32 + (h == u) as i32
+                        && cnt[t] >= 1 + (t == h) as i32 + (t == u) as i32
+                        && cnt[u] >= 1 + (u == h) as i32 + (u == t) as i32
+                    {
+                        ans += 1;
+                    }
+                }
+            }
+        }
+        ans
     }
 }
 
