@@ -216,6 +216,8 @@ mod check_if_digits_are_equal_in_string_after_operations_i;
 pub mod find_the_largest_almost_missing_integer;
 // 3477. Fruits Into Baskets II
 mod fruits_into_baskets_ii;
+// 3483. Unique 3-Digit Even Numbers
+pub mod unique_3_digit_even_numbers;
 // 3487. Maximum Unique Subarray Sum After Deletion
 mod maximum_unique_subarray_sum_after_deletion;
 // 3507. Minimum Pair Removal to Sort Array I
