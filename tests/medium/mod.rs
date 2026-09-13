@@ -72,6 +72,8 @@ pub mod rotated_digits;
 mod champagne_tower;
 // 808. Soup Servings
 mod soup_servings;
+// 835. Image Overlap
+pub mod image_overlap;
 // 837. New 21 Game
 mod new_21_game;
 // 840. Magic Squares In Grid

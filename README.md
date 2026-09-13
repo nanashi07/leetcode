@@ -177,6 +177,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [788. Rotated Digits](https://leetcode.com/problems/rotated-digits/)
 - [799. Champagne Tower](https://leetcode.com/problems/champagne-tower/)
 - [808. Soup Servings](https://leetcode.com/problems/soup-servings/)
+- [835. Image Overlap](https://leetcode.com/problems/image-overlap/)
 - [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
 - [840. Magic Squares In Grid](https://leetcode.com/problems/magic-squares-in-grid/)
 - [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
