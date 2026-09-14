@@ -30,7 +30,7 @@ mod tests {
     #[test]
     fn test_is_rectangle_overlap_3() {
         let rec1 = [0, 0, 1, 1].to_vec();
-        let rec2 = [2,2,3,3].to_vec();
+        let rec2 = [2, 2, 3, 3].to_vec();
         assert!(!Solution::is_rectangle_overlap(rec1, rec2));
     }
 }
