@@ -56,6 +56,8 @@ mod prime_number_of_set_bits_in_binary_representation;
 pub mod rotate_string;
 // 812. Largest Triangle Area
 mod largest_triangle_area;
+// 836. Rectangle Overlap
+pub mod rectangle_overlap;
 // 868. Binary Gap
 mod binary_gap;
 // 944. Delete Columns to Make Sorted

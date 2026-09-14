@@ -35,6 +35,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [762. Prime Number of Set Bits in Binary Representation](https://leetcode.com/problems/prime-number-of-set-bits-in-binary-representation/)
 - [796. Rotate String](https://leetcode.com/problems/rotate-string/)
 - [812. Largest Triangle Area](https://leetcode.com/problems/largest-triangle-area/)
+- [836. Rectangle Overlap](https://leetcode.com/problems/rectangle-overlap/)
 - [868. Binary Gap](https://leetcode.com/problems/binary-gap/)
 - [944. Delete Columns to Make Sorted](https://leetcode.com/problems/delete-columns-to-make-sorted/)
 - [961. N-Repeated Element in Size 2N Array](https://leetcode.com/problems/n-repeated-element-in-size-2n-array/)
