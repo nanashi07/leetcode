@@ -96,6 +96,8 @@ mod meeting_rooms_iii;
 mod paths_in_matrix_whose_sum_is_divisible_by_k;
 // 2463. Minimum Total Distance Traveled
 pub mod minimum_total_distance_traveled;
+// 2472. Maximum Number of Non-overlapping Palindrome Substrings
+pub mod maximum_number_of_non_overlapping_palindrome_substrings;
 // 2528. Maximize the Minimum Powered City
 mod maximize_the_minimum_powered_city;
 // 2561. Rearranging Fruits
