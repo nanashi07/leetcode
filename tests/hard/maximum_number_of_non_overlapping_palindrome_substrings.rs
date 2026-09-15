@@ -5,7 +5,28 @@ struct Solution;
 
 impl Solution {
     pub fn max_palindromes(s: String, k: i32) -> i32 {
-        todo!()
+        let s = s.as_bytes();
+        let k = k as usize;
+        let n = s.len();
+        // Any palindrome can be shrunk (same center) to a palindrome of length k or k+1,
+        // so greedy earliest-finish over those window sizes is optimal.
+        let pal = |start: usize, len: usize| -> bool {
+            start + len <= n && (0..len / 2).all(|d| s[start + d] == s[start + len - 1 - d])
+        };
+        let mut ans = 0;
+        let mut i = 0;
+        while i + k <= n {
+            if pal(i, k) {
+                ans += 1;
+                i += k;
+            } else if pal(i, k + 1) {
+                ans += 1;
+                i += k + 1;
+            } else {
+                i += 1;
+            }
+        }
+        ans
     }
 }
 
