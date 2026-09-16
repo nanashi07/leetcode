@@ -164,6 +164,8 @@ mod minimum_time_to_make_rope_colorful;
 mod make_sum_divisible_by_p;
 // 1594. Maximum Non Negative Product in a Matrix
 pub mod maximum_non_negative_product_in_a_matrix;
+// 1621. Number of Sets of K Non-Overlapping Line Segments
+pub mod number_of_sets_of_k_non_overlapping_line_segments;
 // 1625. Lexicographically Smallest String After Applying Operations
 mod lexicographically_smallest_string_after_applying_operations;
 // 1653. Minimum Deletions to Make String Balanced
