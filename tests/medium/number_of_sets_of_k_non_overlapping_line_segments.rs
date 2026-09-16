@@ -5,7 +5,24 @@ struct Solution;
 
 impl Solution {
     pub fn number_of_sets(n: i32, k: i32) -> i32 {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+        let (n, k) = (n as usize, k as usize);
+
+        // `prev[i]` = ways to place the previous number of segments with every endpoint in 1..=i.
+        // Adding one segment whose right end is exactly `i`: its left end `l` may be any point
+        // below `i`, and earlier segments must fit inside 1..=l, so new[i] = new[i-1] + sum(prev[1..i]).
+        let mut prev = vec![1i64; n + 1]; // zero segments: one way for each prefix
+        for _ in 0..k {
+            let mut cur = vec![0i64; n + 1];
+            let mut sum = 0;
+            for i in 1..=n {
+                cur[i] = (cur[i - 1] + sum) % MOD;
+                sum = (sum + prev[i]) % MOD;
+            }
+            prev = cur;
+        }
+
+        prev[n] as i32
     }
 }
 
