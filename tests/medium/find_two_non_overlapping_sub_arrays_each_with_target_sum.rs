@@ -5,7 +5,35 @@ struct Solution;
 
 impl Solution {
     pub fn min_sum_of_lengths(arr: Vec<i32>, target: i32) -> i32 {
-        todo!()
+        // arr[i] >= 1, so a sliding window can find every window whose sum == target.
+        let target = target as i64;
+        // best[r] = shortest length of a target-sum subarray ending at or before r.
+        let mut best = vec![usize::MAX; arr.len()];
+        let (mut sum, mut left, mut ans) = (0i64, 0usize, usize::MAX);
+
+        for (right, &v) in arr.iter().enumerate() {
+            sum += v as i64;
+            while sum > target && left <= right {
+                sum -= arr[left] as i64;
+                left += 1;
+            }
+            if sum == target {
+                let len = right - left + 1;
+                if left > 0 && best[left - 1] != usize::MAX {
+                    ans = ans.min(best[left - 1] + len);
+                }
+                best[right] = len;
+            }
+            if right > 0 {
+                best[right] = best[right].min(best[right - 1]);
+            }
+        }
+
+        if ans == usize::MAX {
+            -1
+        } else {
+            ans as i32
+        }
     }
 }
 
