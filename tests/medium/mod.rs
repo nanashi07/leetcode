@@ -142,6 +142,8 @@ pub mod number_of_steps_to_reduce_a_number_in_binary_representation_to_one;
 pub mod the_k_th_lexicographical_string_of_all_happy_strings_of_length_n;
 // 1461. Check If a String Contains All Binary Codes of Size K
 mod check_if_a_string_contains_all_binary_codes_of_size_k;
+// 1477. Find Two Non-overlapping Sub-arrays Each With Target Sum
+pub mod find_two_non_overlapping_sub_arrays_each_with_target_sum;
 // 1488. Avoid Flood in The City
 mod avoid_flood_in_the_city;
 // 1493. Longest Subarray of 1's After Deleting One Element
