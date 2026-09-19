@@ -136,6 +136,8 @@ pub mod cinema_seat_allocation;
 mod four_divisors;
 // 1391. Check if There is a Valid Path in a Grid
 pub mod check_if_there_is_a_valid_path_in_a_grid;
+// 1401. Circle and Rectangle Overlapping
+pub mod circle_and_rectangle_overlapping;
 // 1404. Number of Steps to Reduce a Number in Binary Representation to One
 pub mod number_of_steps_to_reduce_a_number_in_binary_representation_to_one;
 // 1415. The k-th Lexicographical String of All Happy Strings of Length n
