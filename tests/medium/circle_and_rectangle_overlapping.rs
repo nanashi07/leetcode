@@ -13,7 +13,9 @@ impl Solution {
         x2: i32,
         y2: i32,
     ) -> bool {
-        todo!()
+        let dx = (x1 - x_center).max(x_center - x2).max(0) as i64;
+        let dy = (y1 - y_center).max(y_center - y2).max(0) as i64;
+        dx * dx + dy * dy <= radius as i64 * radius as i64
     }
 }
 
