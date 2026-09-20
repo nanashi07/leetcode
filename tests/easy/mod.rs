@@ -222,6 +222,8 @@ mod fruits_into_baskets_ii;
 pub mod unique_3_digit_even_numbers;
 // 3487. Maximum Unique Subarray Sum After Deletion
 mod maximum_unique_subarray_sum_after_deletion;
+// 3498. Reverse Degree of a String
+pub mod reverse_degree_of_a_string;
 // 3507. Minimum Pair Removal to Sort Array I
 mod minimum_pair_removal_to_sort_array_i;
 // 3512. Minimum Operations to Make Array Sum Divisible by K
