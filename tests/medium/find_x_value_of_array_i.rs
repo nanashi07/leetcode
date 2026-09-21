@@ -4,8 +4,28 @@
 struct Solution;
 
 impl Solution {
+    // Count subarrays (remaining segments after removing a prefix + suffix) by product mod k.
+    // `end[r]` = number of subarrays ending at the previous index with product % k == r. O(n * k).
     pub fn result_array(nums: Vec<i32>, k: i32) -> Vec<i64> {
-        todo!()
+        let ku = k as usize;
+        let mut ans = vec![0i64; ku];
+        let mut end = vec![0i64; ku];
+        let mut next = vec![0i64; ku];
+
+        for num in nums {
+            let v = (num % k) as usize;
+            next.fill(0);
+            for r in 0..ku {
+                next[(r * v) % ku] += end[r];
+            }
+            next[v] += 1; // subarray starting at the current element
+            for r in 0..ku {
+                ans[r] += next[r];
+            }
+            std::mem::swap(&mut end, &mut next);
+        }
+
+        ans
     }
 }
 
