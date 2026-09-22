@@ -3,9 +3,80 @@
 
 struct Solution;
 
+/// Segment node: `cnt[r]` = number of non-empty prefixes with product ≡ r (mod k),
+/// `prod` = whole segment product mod k. Concatenation is an associative monoid.
+#[derive(Clone, Copy)]
+struct Node {
+    cnt: [i32; 5],
+    prod: usize,
+}
+
 impl Solution {
+    fn merge(a: &Node, b: &Node, k: usize) -> Node {
+        let mut cnt = a.cnt;
+        for q in 0..k {
+            if b.cnt[q] != 0 {
+                cnt[(a.prod * q) % k] += b.cnt[q];
+            }
+        }
+        Node {
+            cnt,
+            prod: (a.prod * b.prod) % k,
+        }
+    }
+
+    fn leaf(v: i32, k: usize) -> Node {
+        let mut cnt = [0; 5];
+        let p = (v % k as i32) as usize;
+        cnt[p] = 1;
+        Node { cnt, prod: p }
+    }
+
     pub fn result_array(nums: Vec<i32>, k: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {
-        todo!()
+        let k = k as usize;
+        let n = nums.len();
+        let id = Node {
+            cnt: [0; 5],
+            prod: 1 % k,
+        };
+        let size = n.next_power_of_two();
+        let mut tree = vec![id; 2 * size];
+        for (i, v) in nums.iter().enumerate() {
+            tree[size + i] = Self::leaf(*v, k);
+        }
+        for i in (1..size).rev() {
+            tree[i] = Self::merge(&tree[2 * i], &tree[2 * i + 1], k);
+        }
+
+        queries
+            .iter()
+            .map(|q| {
+                let (idx, value, start, x) = (q[0] as usize, q[1], q[2] as usize, q[3] as usize);
+
+                let mut i = size + idx;
+                tree[i] = Self::leaf(value, k);
+                while i > 1 {
+                    i >>= 1;
+                    tree[i] = Self::merge(&tree[2 * i], &tree[2 * i + 1], k);
+                }
+
+                let (mut left, mut right) = (id, id);
+                let (mut l, mut r) = (size + start, size + n);
+                while l < r {
+                    if l & 1 == 1 {
+                        left = Self::merge(&left, &tree[l], k);
+                        l += 1;
+                    }
+                    if r & 1 == 1 {
+                        r -= 1;
+                        right = Self::merge(&tree[r], &right, k);
+                    }
+                    l >>= 1;
+                    r >>= 1;
+                }
+                Self::merge(&left, &right, k).cnt[x]
+            })
+            .collect()
     }
 }
 
