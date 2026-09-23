@@ -5,7 +5,37 @@ struct Solution;
 
 impl Solution {
     pub fn min_operations(nums: Vec<i32>, x: i32) -> i32 {
-        todo!()
+        // Taking elements only from the two ends is equivalent to leaving one
+        // contiguous middle subarray whose sum equals `total - x`. Minimizing
+        // the removed count means maximizing that middle window.
+        let target = nums.iter().map(|&v| v as i64).sum::<i64>() - x as i64;
+        if target < 0 {
+            return -1;
+        }
+
+        // -1 marks "no valid middle window found", which is distinct from the
+        // legitimate zero-length window returned when `target == 0`.
+        let mut longest = -1isize;
+        let mut window_sum = 0i64;
+        let mut left = 0usize;
+
+        for right in 0..nums.len() {
+            window_sum += nums[right] as i64;
+            // All values are positive, so shrink from the left while over budget.
+            while window_sum > target {
+                window_sum -= nums[left] as i64;
+                left += 1;
+            }
+            if window_sum == target {
+                longest = longest.max((right + 1 - left) as isize);
+            }
+        }
+
+        if longest < 0 {
+            -1
+        } else {
+            nums.len() as i32 - longest as i32
+        }
     }
 }
 
