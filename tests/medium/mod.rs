@@ -174,6 +174,8 @@ pub mod number_of_sets_of_k_non_overlapping_line_segments;
 mod lexicographically_smallest_string_after_applying_operations;
 // 1653. Minimum Deletions to Make String Balanced
 mod minimum_deletions_to_make_string_balanced;
+// 1658. Minimum Operations to Reduce X to Zero
+pub mod minimum_operations_to_reduce_x_to_zero;
 // 1674. Minimum Moves to Make Array Complementary
 pub mod minimum_moves_to_make_array_complementary;
 // 1680. Concatenation of Consecutive Binary Numbers
