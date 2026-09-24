@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn smallest_index(nums: Vec<i32>) -> i32 {
-        todo!()
+        let zero = '0' as usize;
+        for (i, &n) in nums.iter().enumerate() {
+            if i == n
+                .to_string()
+                .chars()
+                .map(|c| c as usize - zero)
+                .sum::<usize>()
+            {
+                return i as i32;
+            }
+        }
+        -1
     }
 }
 
