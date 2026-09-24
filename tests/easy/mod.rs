@@ -234,6 +234,8 @@ mod find_closest_person;
 pub mod maximum_product_of_two_digits;
 // 3541. Find Most Frequent Vowel and Consonant
 mod find_most_frequent_vowel_and_consonant;
+// 3550. Smallest Index With Digit Sum Equal to Index
+pub mod smallest_index_with_digit_sum_equal_to_index;
 // 3606. Coupon Code Validator
 mod coupon_code_validator;
 // 3622. Check Divisibility by Digit Sum and Product
