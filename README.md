@@ -124,6 +124,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3516. Find Closest Person](https://leetcode.com/problems/find-closest-person/)
 - [3536. Maximum Product of Two Digits](https://leetcode.com/problems/maximum-product-of-two-digits/)
 - [3541. Find Most Frequent Vowel and Consonant](https://leetcode.com/problems/find-most-frequent-vowel-and-consonant/)
+- [3550. Smallest Index With Digit Sum Equal to Index](https://leetcode.com/problems/smallest-index-with-digit-sum-equal-to-index/)
 - [3606. Coupon Code Validator](https://leetcode.com/problems/coupon-code-validator/)
 - [3622. Check Divisibility by Digit Sum and Product](https://leetcode.com/problems/check-divisibility-by-digit-sum-and-product/)
 - [3633. Earliest Finish Time for Land and Water Rides I](https://leetcode.com/problems/earliest-finish-time-for-land-and-water-rides-i/)
