@@ -410,6 +410,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [778. Swim in Rising Water](https://leetcode.com/problems/swim-in-rising-water/)
 - [940. Distinct Subsequences II](https://leetcode.com/problems/distinct-subsequences-ii/)
 - [960. Delete Columns to Make Sorted III](https://leetcode.com/problems/delete-columns-to-make-sorted-iii/)
+- [1096. Brace Expansion II](https://leetcode.com/problems/brace-expansion-ii/)
 - [1301. Number of Paths with Max Score](https://leetcode.com/problems/number-of-paths-with-max-score/)
 - [1320. Minimum Distance to Type a Word Using Two Fingers](https://leetcode.com/problems/minimum-distance-to-type-a-word-using-two-fingers/)
 - [1340. Jump Game V](https://leetcode.com/problems/jump-game-v/)
