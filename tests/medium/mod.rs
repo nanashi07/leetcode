@@ -192,6 +192,8 @@ pub mod minimize_hamming_distance_after_swap_operations;
 pub mod largest_submatrix_with_rearrangements;
 // 1792. Maximum Average Pass Ratio
 mod maximum_average_pass_ratio;
+// 1807. Evaluate the Bracket Pairs of a String
+pub mod evaluate_the_bracket_pairs_of_a_string;
 // 1833. Maximum Ice Cream Bars
 pub mod maximum_ice_cream_bars;
 // 1846. Maximum Element After Decreasing and Rearranging
