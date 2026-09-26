@@ -1,11 +1,42 @@
 // 1807. Evaluate the Bracket Pairs of a String
 // https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/
 
+use std::collections::HashMap;
+
 struct Solution;
 
 impl Solution {
     pub fn evaluate(s: String, knowledge: Vec<Vec<String>>) -> String {
-        todo!()
+        let map: HashMap<&str, &str> = knowledge
+            .iter()
+            .map(|entry| (entry[0].as_str(), entry[1].as_str()))
+            .collect();
+
+        let bytes = s.as_bytes();
+        let mut result = String::with_capacity(s.len());
+        let mut i = 0;
+
+        while i < bytes.len() {
+            if bytes[i] != b'(' {
+                // `s` holds only lowercase letters and ASCII parentheses, so a run of plain
+                // text can be advanced in one step.
+                let start = i;
+                while i < bytes.len() && bytes[i] != b'(' {
+                    i += 1;
+                }
+                result.push_str(&s[start..i]);
+                continue;
+            }
+
+            let close = i + 1 + bytes[i + 1..].iter().position(|&b| b == b')').unwrap();
+            match map.get(&s[i + 1..close]) {
+                Some(value) => result.push_str(value),
+                None => result.push('?'),
+            }
+            i = close + 1;
+        }
+
+        result
     }
 }
 
