@@ -106,6 +106,8 @@ pub mod smallest_subsequence_of_distinct_characters;
 pub mod stone_game_ii;
 // 1161. Maximum Level Sum of a Binary Tree
 mod maximum_level_sum_of_a_binary_tree;
+// 1190. Reverse Substrings Between Each Pair of Parentheses
+pub mod reverse_substrings_between_each_pair_of_parentheses;
 // 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
 // 1262. Greatest Sum Divisible by Three
