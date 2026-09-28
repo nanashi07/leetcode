@@ -5,7 +5,19 @@ struct Solution;
 
 impl Solution {
     pub fn max_depth(s: String) -> i32 {
-        todo!()
+        let mut d = 0;
+        let mut m = 0;
+        for c in s.chars() {
+            match c {
+                '(' => {
+                    d += 1;
+                    m = m.max(d);
+                }
+                ')' => d -= 1,
+                _ => {}
+            }
+        }
+        m
     }
 }
 
