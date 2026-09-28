@@ -43,7 +43,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::medium::evaluate_the_bracket_pairs_of_a_string::Solution;
-    use crate::shared::vec2d::{to_string_vec, to_string_vec2d};
+    use crate::shared::vec2d::to_string_vec2d;
 
     #[test]
     fn test_evaluate_1() {

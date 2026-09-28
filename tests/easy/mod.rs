@@ -106,6 +106,8 @@ mod water_bottles;
 mod count_odd_numbers_in_an_interval_range;
 // 1582. Special Positions in a Binary Matrix
 pub mod special_positions_in_a_binary_matrix;
+// 1614. Maximum Nesting Depth of the Parentheses
+pub mod maximum_nesting_depth_of_the_parentheses;
 // 1716. Calculate Money in Leetcode Bank
 mod calculate_money_in_leetcode_bank;
 // 1732. Find the Highest Altitude
