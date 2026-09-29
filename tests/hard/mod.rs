@@ -92,6 +92,8 @@ mod minimum_difference_in_sums_after_removal_of_elements;
 mod replace_non_coprime_numbers_in_array;
 // 2213. Longest Substring of One Repeating Character
 pub mod longest_substring_of_one_repeating_character;
+// 2267. Check if There Is a Valid Parentheses String Path
+pub mod check_if_there_is_a_valid_parentheses_string_path;
 // 2322. Minimum Score After Removals on a Tree
 mod minimum_score_after_removals_on_a_tree;
 // 2402. Meeting Rooms III
