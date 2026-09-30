@@ -47,7 +47,7 @@ impl Solution {
 #[cfg(test)]
 mod tests {
     use crate::hard::check_if_there_is_a_valid_parentheses_string_path::Solution;
-    use crate::shared::vec2d::{to_char_vec2d, to_string_vec2d};
+    use crate::shared::vec2d::to_char_vec2d;
 
     #[test]
     fn test_has_valid_path_1() {
