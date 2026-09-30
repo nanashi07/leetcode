@@ -102,6 +102,8 @@ mod smallest_integer_divisible_by_k;
 mod minimum_score_triangulation_of_polygon;
 // 1081. Smallest Subsequence of Distinct Characters
 pub mod smallest_subsequence_of_distinct_characters;
+// 1111. Maximum Nesting Depth of Two Valid Parentheses Strings
+pub mod maximum_nesting_depth_of_two_valid_parentheses_strings;
 // 1140. Stone Game II
 pub mod stone_game_ii;
 // 1161. Maximum Level Sum of a Binary Tree
