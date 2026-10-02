@@ -3,9 +3,29 @@
 struct Solution;
 
 impl Solution {
-    // wrong answer
     pub fn generate_parenthesis(n: i32) -> Vec<String> {
-        todo!()
+        let n = n as usize;
+        let mut r: Vec<String> = Vec::new();
+        let mut s = String::with_capacity(2 * n);
+        Self::backtrack(&mut r, &mut s, 0, 0, n);
+        r
+    }
+
+    fn backtrack(r: &mut Vec<String>, s: &mut String, open: usize, close: usize, n: usize) {
+        if s.len() == 2 * n {
+            r.push(s.clone());
+            return;
+        }
+        if open < n {
+            s.push('(');
+            Self::backtrack(r, s, open + 1, close, n);
+            s.pop();
+        }
+        if close < open {
+            s.push(')');
+            Self::backtrack(r, s, open, close + 1, n);
+            s.pop();
+        }
     }
 }
 
