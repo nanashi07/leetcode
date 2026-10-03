@@ -3,46 +3,30 @@
 struct Solution;
 
 impl Solution {
-    // https://leetcode.com/problems/longest-valid-parentheses/discuss/14126/My-O(n)-solution-using-a-stack
     pub fn longest_valid_parentheses(s: String) -> i32 {
-        // give a init value
-        let mut stk = vec![-1];
-        let mut ans = 0;
-
-        for i in 0..s.len() {
-            if s.chars().nth(i).unwrap() == '(' {
-                stk.push(i as i32);
-            } else {
-                stk.pop();
-                if stk.is_empty() {
-                    // push the start position
-                    stk.push(i as i32);
-                } else {
-                    // calculate max length from start position
-                    ans = ans.max(i as i32 - stk[stk.len() - 1])
-                }
-            }
-        }
-
-        ans
+        todo!()
     }
 }
 
-#[test]
-fn test_longest_valid_parentheses() {
-    let s = "(()";
-    let result = Solution::longest_valid_parentheses(s.to_owned());
-    assert_eq!(2, result);
+#[cfg(test)]
+mod tests {
+    use crate::hard::longest_valid_parentheses::Solution;
 
-    let s = ")()())";
-    let result = Solution::longest_valid_parentheses(s.to_owned());
-    assert_eq!(4, result);
+    #[test]
+    fn test_longest_valid_parentheses_1() {
+        let s = "(()".to_string();
+        assert_eq!(2, Solution::longest_valid_parentheses(s));
+    }
 
-    let s = "";
-    let result = Solution::longest_valid_parentheses(s.to_owned());
-    assert_eq!(0, result);
+    #[test]
+    fn test_longest_valid_parentheses_2() {
+        let s = ")()())".to_string();
+        assert_eq!(4, Solution::longest_valid_parentheses(s));
+    }
 
-    let s = "()(()";
-    let result = Solution::longest_valid_parentheses(s.to_owned());
-    assert_eq!(2, result);
+    #[test]
+    fn test_longest_valid_parentheses_3() {
+        let s = "".to_string();
+        assert_eq!(0, Solution::longest_valid_parentheses(s));
+    }
 }
