@@ -176,6 +176,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [486. Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)
 - [611. Valid Triangle Number](https://leetcode.com/problems/valid-triangle-number/)
+- [678. Valid Parenthesis String](https://leetcode.com/problems/valid-parenthesis-string/)
 - [712. Minimum ASCII Delete Sum for Two Strings](https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/)
 - [756. Pyramid Transition Matrix](https://leetcode.com/problems/pyramid-transition-matrix/)
 - [788. Rotated Digits](https://leetcode.com/problems/rotated-digits/)
