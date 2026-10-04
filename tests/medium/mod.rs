@@ -62,6 +62,8 @@ pub mod predict_the_winner;
 mod diagonal_traverse;
 // 611. Valid Triangle Number
 mod valid_triangle_number;
+// 678. Valid Parenthesis String
+pub mod valid_parenthesis_string;
 // 712. Minimum ASCII Delete Sum for Two Strings
 mod minimum_ascii_delete_sum_for_two_strings;
 // 756. Pyramid Transition Matrix
