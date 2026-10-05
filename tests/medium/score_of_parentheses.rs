@@ -5,7 +5,25 @@ struct Solution;
 
 impl Solution {
     pub fn score_of_parentheses(s: String) -> i32 {
-        todo!()
+        let mut score: i32 = 0;
+        let mut depth: u32 = 0;
+        let mut open_prev = false;
+
+        for byte in s.bytes() {
+            if byte == b'(' {
+                depth += 1;
+                open_prev = true;
+            } else {
+                depth -= 1;
+                // A primitive "()" at nesting level `depth` contributes 2^depth.
+                if open_prev {
+                    score += 1i32 << depth;
+                }
+                open_prev = false;
+            }
+        }
+
+        score
     }
 }
 
