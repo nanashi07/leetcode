@@ -80,6 +80,8 @@ pub mod image_overlap;
 mod new_21_game;
 // 840. Magic Squares In Grid
 mod magic_squares_in_grid;
+// 856. Score of Parentheses
+pub mod score_of_parentheses;
 // 865. Smallest Subtree with all the Deepest Nodes
 mod smallest_subtree_with_all_the_deepest_nodes;
 // 869. Reordered Power of 2

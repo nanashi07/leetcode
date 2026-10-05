@@ -185,6 +185,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [835. Image Overlap](https://leetcode.com/problems/image-overlap/)
 - [837. New 21 Game](https://leetcode.com/problems/new-21-game/)
 - [840. Magic Squares In Grid](https://leetcode.com/problems/magic-squares-in-grid/)
+- [856. Score of Parentheses](https://leetcode.com/problems/score-of-parentheses/)
 - [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 - [869. Reordered Power of 2](https://leetcode.com/problems/reordered-power-of-2/)
 - [874. Walking Robot Simulation](https://leetcode.com/problems/walking-robot-simulation/)
