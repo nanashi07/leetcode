@@ -96,6 +96,8 @@ mod bitwise_ors_of_subarrays;
 mod fruit_into_baskets;
 // 912. Sort an Array
 mod sort_an_array;
+// 921. Minimum Add to Make Parentheses Valid
+pub mod minimum_add_to_make_parentheses_valid;
 // 955. Delete Columns to Make Sorted II
 mod delete_columns_to_make_sorted_ii;
 // 966. Vowel Spellchecker
