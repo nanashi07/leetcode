@@ -5,7 +5,22 @@ struct Solution;
 
 impl Solution {
     pub fn min_add_to_make_valid(s: String) -> i32 {
-        todo!()
+        // `open` counts '(' still waiting for a partner; `missing` counts ')' that arrived with
+        // nothing to close. Every unmatched bracket needs exactly one insertion, so the answer is
+        // the two leftovers combined.
+        let (mut open, mut missing) = (0i32, 0i32);
+
+        for bracket in s.bytes() {
+            if bracket == b'(' {
+                open += 1;
+            } else if open > 0 {
+                open -= 1;
+            } else {
+                missing += 1;
+            }
+        }
+
+        open + missing
     }
 }
 
