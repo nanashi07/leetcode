@@ -410,6 +410,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [85. Maximal Rectangle](https://leetcode.com/problems/maximal-rectangle/)
 - [115. Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/)
 - [154. Find Minimum in Rotated Sorted Array II](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)
+- [301. Remove Invalid Parentheses](https://leetcode.com/problems/remove-invalid-parentheses/)
 - [407. Trapping Rain Water II](https://leetcode.com/problems/trapping-rain-water-ii/)
 - [679. 24 Game](https://leetcode.com/problems/24-game/)
 - [757. Set Intersection Size At Least Two](https://leetcode.com/problems/set-intersection-size-at-least-two/)

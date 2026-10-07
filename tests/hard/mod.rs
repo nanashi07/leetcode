@@ -18,6 +18,8 @@ mod maximal_rectangle;
 pub mod distinct_subsequences;
 // 154. Find Minimum in Rotated Sorted Array II
 pub mod find_minimum_in_rotated_sorted_array_ii;
+// 301. Remove Invalid Parentheses
+pub mod remove_invalid_parentheses;
 // 407. Trapping Rain Water II
 mod trapping_rain_water_ii;
 // 679. 24 Game
