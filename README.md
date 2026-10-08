@@ -42,6 +42,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [976. Largest Perimeter Triangle](https://leetcode.com/problems/largest-perimeter-triangle/)
 - [1009. Complement of Base 10 Integer](https://leetcode.com/problems/complement-of-base-10-integer/)
 - [1018. Binary Prefix Divisible By 5](https://leetcode.com/problems/binary-prefix-divisible-by-5/)
+- [1021. Remove Outermost Parentheses](https://leetcode.com/problems/remove-outermost-parentheses/)
 - [1022. Sum of Root To Leaf Binary Numbers](https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/)
 - [1189. Maximum Number of Balloons](https://leetcode.com/problems/maximum-number-of-balloons/)
 - [1200. Minimum Absolute Difference](https://leetcode.com/problems/minimum-absolute-difference/)

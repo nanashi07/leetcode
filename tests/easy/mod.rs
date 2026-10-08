@@ -70,6 +70,8 @@ mod largest_perimeter_triangle;
 pub mod complement_of_base_10_integer;
 // 1018. Binary Prefix Divisible By 5
 mod binary_prefix_divisible_by_5;
+// 1021. Remove Outermost Parentheses
+mod remove_outermost_parentheses;
 // 1022. Sum of Root To Leaf Binary Numbers
 mod sum_of_root_to_leaf_binary_numbers;
 // 1189. Maximum Number of Balloons
