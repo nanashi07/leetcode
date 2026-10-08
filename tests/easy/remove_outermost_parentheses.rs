@@ -5,7 +5,23 @@ struct Solution;
 
 impl Solution {
     pub fn remove_outer_parentheses(s: String) -> String {
-        todo!()
+        // One pass over the ASCII bytes, keeping a paren only while its depth is
+        // inside a primitive: ')' closes before the check, '(' opens after it,
+        // so both parens of an outermost pair sit at depth 0 and are skipped.
+        let mut out = String::with_capacity(s.len());
+        let mut depth = 0i32;
+        for b in s.bytes() {
+            if b == b')' {
+                depth -= 1;
+            }
+            if depth > 0 {
+                out.push(b as char);
+            }
+            if b == b'(' {
+                depth += 1;
+            }
+        }
+        out
     }
 }
 
