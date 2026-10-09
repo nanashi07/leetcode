@@ -168,6 +168,8 @@ mod count_submatrices_with_all_ones;
 mod number_of_substrings_with_only_1s;
 // 1536. Minimum Swaps to Arrange a Binary Grid
 pub mod minimum_swaps_to_arrange_a_binary_grid;
+// 1541. Minimum Insertions to Balance a Parentheses String
+mod minimum_insertions_to_balance_a_parentheses_string;
 // 1545. Find Kth Bit in Nth Binary String
 pub mod find_kth_bit_in_nth_binary_string;
 // 1559. Detect Cycles in 2D Grid
