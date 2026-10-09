@@ -5,7 +5,32 @@ struct Solution;
 
 impl Solution {
     pub fn min_insertions(s: String) -> i32 {
-        todo!()
+        // Greedy single pass. `need_close` is how many ')' are still required to
+        // balance every '(' seen so far, knowing that one '(' consumes two ')'.
+        let mut insertions = 0;
+        let mut need_close = 0;
+
+        for byte in s.bytes() {
+            if byte == b'(' {
+                need_close += 2;
+                // An odd requirement means a lone ')' is still pending from an earlier
+                // '('; inserting that ')' now keeps every pair contiguous.
+                if (need_close & 1) == 1 {
+                    need_close -= 1;
+                    insertions += 1;
+                }
+            } else {
+                need_close -= 1;
+                if need_close < 0 {
+                    // This ')' has no '(' in front of it, so insert one '('. It still
+                    // needs a single ')' because the current char covers the other half.
+                    insertions += 1;
+                    need_close = 1;
+                }
+            }
+        }
+
+        insertions + need_close
     }
 }
 
