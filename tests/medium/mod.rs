@@ -282,6 +282,8 @@ pub mod count_nodes_equal_to_average_of_subtree;
 mod successful_pairs_of_spells_and_potions;
 // 2327. Number of People Aware of a Secret
 mod number_of_people_aware_of_a_secret;
+// 2333. Minimum Sum of Squared Difference
+mod minimum_sum_of_squared_difference;
 // 2348. Number of Zero-Filled Subarrays
 mod number_of_zero_filled_subarrays;
 // 2353. Design a Food Rating System

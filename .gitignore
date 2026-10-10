@@ -111,4 +111,10 @@ Cargo.lock
 # AI
 .claude/
 
+# Project
+next.sh
+
+# Mac
+**/.DS_Store
+
 # End of https://www.toptal.com/developers/gitignore/api/intellij+all,rust
