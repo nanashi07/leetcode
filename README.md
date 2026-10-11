@@ -88,6 +88,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2540. Minimum Common Value](https://leetcode.com/problems/minimum-common-value/)
 - [2553. Separate the Digits in an Array](https://leetcode.com/problems/separate-the-digits-in-an-array/)
 - [2574. Left and Right Sum Differences](https://leetcode.com/problems/left-and-right-sum-differences/)
+- [2778. Sum of Squares of Special Elements](https://leetcode.com/problems/sum-of-squares-of-special-elements/)
 - [2784. Check if Array is Good](https://leetcode.com/problems/check-if-array-is-good/)
 - [2833. Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin/)
 - [2839. Check if Strings Can be Made Equal With Operations I](https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/)
