@@ -162,6 +162,8 @@ mod minimum_common_value;
 pub mod separate_the_digits_in_an_array;
 // 2574. Left and Right Sum Differences
 pub mod left_and_right_sum_differences;
+// 2778. Sum of Squares of Special Elements
+mod sum_of_squares_of_special_elements;
 // 2784. Check if Array is Good
 pub mod check_if_array_is_good;
 // 2833. Furthest Point From Origin
