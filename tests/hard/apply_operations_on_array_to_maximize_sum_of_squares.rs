@@ -5,7 +5,30 @@ struct Solution;
 
 impl Solution {
     pub fn max_sum(nums: Vec<i32>, k: i32) -> i32 {
-        todo!()
+        const MOD: i64 = 1_000_000_007;
+        const BIT_COUNT: usize = 31;
+
+        let mut bit_counts = [0_i32; BIT_COUNT];
+        for num in nums {
+            let num = num as u32;
+            for (bit, count) in bit_counts.iter_mut().enumerate() {
+                *count += ((num >> bit) & 1) as i32;
+            }
+        }
+
+        let mut answer = 0_i64;
+        for _ in 0..k {
+            let mut value = 0_i64;
+            for (bit, count) in bit_counts.iter_mut().enumerate() {
+                if *count > 0 {
+                    value |= 1_i64 << bit;
+                    *count -= 1;
+                }
+            }
+            answer = (answer + value * value) % MOD;
+        }
+
+        answer as i32
     }
 }
 
