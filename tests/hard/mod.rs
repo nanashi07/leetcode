@@ -116,6 +116,8 @@ pub mod find_the_string_with_lcp;
 pub mod robot_collisions;
 // 2872. Maximum Number of K-Divisible Components
 mod maximum_number_of_k_divisible_components;
+// 2897. Apply Operations on Array to Maximize Sum of Squares
+mod apply_operations_on_array_to_maximize_sum_of_squares;
 // 2977. Minimum Cost to Convert String II
 mod minimum_cost_to_convert_string_ii;
 // 3003. Maximize the Number of Partitions After Operations
