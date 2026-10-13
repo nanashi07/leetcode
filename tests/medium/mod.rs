@@ -488,6 +488,8 @@ mod longest_balanced_substring_ii;
 mod longest_balanced_subarray_i;
 // 3720. Lexicographically Smallest Permutation Greater Than Target
 pub mod lexicographically_smallest_permutation_greater_than_target;
+// 3727. Maximum Alternating Sum of Squares
+mod maximum_alternating_sum_of_squares;
 // 3737. Count Subarrays With Majority Element I
 pub mod count_subarrays_with_majority_element_i;
 // 3741. Minimum Distance Between Three Equal Elements II
