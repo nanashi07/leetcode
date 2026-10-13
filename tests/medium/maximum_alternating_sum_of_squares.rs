@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn max_alternating_sum(nums: Vec<i32>) -> i64 {
-        todo!()
+        let mut squares: Vec<i64> = nums.into_iter().map(|num| i64::from(num).pow(2)).collect();
+        let negative_count = squares.len() / 2;
+
+        if negative_count == 0 {
+            return squares.iter().sum();
+        }
+
+        squares.select_nth_unstable(negative_count);
+        let negative_sum: i64 = squares[..negative_count].iter().sum();
+        let total_sum: i64 = squares.iter().sum();
+
+        total_sum - 2 * negative_sum
     }
 }
 
