@@ -170,6 +170,8 @@ pub mod check_if_array_is_good;
 pub mod furthest_point_from_origin;
 // 2839. Check if Strings Can be Made Equal With Operations I
 pub mod check_if_strings_can_be_made_equal_with_operations_i;
+// 2913. Subarrays Distinct Element Sum of Squares I
+mod subarrays_distinct_element_sum_of_squares_i;
 // 2946. Matrix Similarity After Cyclic Shifts
 pub mod matrix_similarity_after_cyclic_shifts;
 // 2996. Smallest Missing Integer Greater Than Sequential Prefix Sum
