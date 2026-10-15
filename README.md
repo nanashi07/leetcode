@@ -92,6 +92,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2784. Check if Array is Good](https://leetcode.com/problems/check-if-array-is-good/)
 - [2833. Furthest Point From Origin](https://leetcode.com/problems/furthest-point-from-origin/)
 - [2839. Check if Strings Can be Made Equal With Operations I](https://leetcode.com/problems/check-if-strings-can-be-made-equal-with-operations-i/)
+- [2913. Subarrays Distinct Element Sum of Squares I](https://leetcode.com/problems/subarrays-distinct-element-sum-of-squares-i/)
 - [2946. Matrix Similarity After Cyclic Shifts](https://leetcode.com/problems/matrix-similarity-after-cyclic-shifts/)
 - [2996. Smallest Missing Integer Greater Than Sequential Prefix Sum](https://leetcode.com/problems/smallest-missing-integer-greater-than-sequential-prefix-sum/)
 - [3000. Maximum Area of Longest Diagonal Rectangle](https://leetcode.com/problems/maximum-area-of-longest-diagonal-rectangle/)
