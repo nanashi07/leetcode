@@ -442,6 +442,8 @@ pub mod path_existence_queries_in_a_graph_i;
 mod minimum_operations_to_convert_all_elements_to_zero;
 // 3546. Equal Sum Grid Partition I
 pub mod equal_sum_grid_partition_i;
+// 3551. Minimum Swaps to Sort by Digit Sum
+mod minimum_swaps_to_sort_by_digit_sum;
 // 3558. Number of Ways to Assign Edge Weights I
 pub mod number_of_ways_to_assign_edge_weights_i;
 // 3567. Minimum Absolute Difference in Sliding Submatrix
