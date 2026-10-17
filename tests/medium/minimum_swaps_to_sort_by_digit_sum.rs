@@ -5,7 +5,39 @@ struct Solution;
 
 impl Solution {
     pub fn min_swaps(nums: Vec<i32>) -> i32 {
-        todo!();
+        let mut ordered: Vec<(i32, i32, usize)> = nums
+            .iter()
+            .enumerate()
+            .map(|(index, &value)| {
+                let mut remaining = value;
+                let mut digit_sum = 0;
+                while remaining > 0 {
+                    digit_sum += remaining % 10;
+                    remaining /= 10;
+                }
+                (digit_sum, value, index)
+            })
+            .collect();
+        ordered.sort_unstable();
+
+        let mut visited = vec![false; nums.len()];
+        let mut swaps: usize = 0;
+        for start in 0..nums.len() {
+            if visited[start] {
+                continue;
+            }
+
+            let mut cycle_len = 0;
+            let mut index = start;
+            while !visited[index] {
+                visited[index] = true;
+                index = ordered[index].2;
+                cycle_len += 1;
+            }
+            swaps += cycle_len - 1;
+        }
+
+        swaps as i32
     }
 }
 
