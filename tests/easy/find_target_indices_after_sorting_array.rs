@@ -5,7 +5,20 @@ struct Solution;
 
 impl Solution {
     pub fn target_indices(nums: Vec<i32>, target: i32) -> Vec<i32> {
-        todo!()
+        // In the sorted array every element smaller than `target` sits before all
+        // occurrences of `target`, so the target indices form one contiguous run.
+        let mut smaller = 0usize;
+        let mut equal = 0usize;
+
+        for num in nums {
+            if num < target {
+                smaller += 1;
+            } else if num == target {
+                equal += 1;
+            }
+        }
+
+        (smaller..smaller + equal).map(|i| i as i32).collect()
     }
 }
 
