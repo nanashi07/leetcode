@@ -222,3 +222,5 @@ pub mod lexicographically_smallest_palindromic_permutation_greater_than_target;
 pub mod count_subarrays_with_majority_element_ii;
 // 3753. Total Waviness of Numbers in Range II
 pub mod total_waviness_of_numbers_in_range_ii;
+// 3886. Sum of Sortable Integers
+mod sum_of_sortable_integers;
