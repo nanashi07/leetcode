@@ -521,6 +521,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3734. Lexicographically Smallest Palindromic Permutation Greater Than Target](https://leetcode.com/problems/lexicographically-smallest-palindromic-permutation-greater-than-target/)
 - [3739. Count Subarrays With Majority Element II](https://leetcode.com/problems/count-subarrays-with-majority-element-ii/)
 - [3753. Total Waviness of Numbers in Range II](https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii/)
+- [3886. Sum of Sortable Integers](https://leetcode.com/problems/sum-of-sortable-integers/)
 
 ## How to Run
 
