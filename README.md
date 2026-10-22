@@ -407,6 +407,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3871. Count Commas in Range II](https://leetcode.com/problems/count-commas-in-range-ii/)
 - [3876. Construct Uniform Parity Array II](https://leetcode.com/problems/construct-uniform-parity-array-ii/)
 - [3904. Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)
+- [3942. Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/)
 
 ### Hard Problems
 
