@@ -4,8 +4,18 @@
 struct Solution;
 
 impl Solution {
+    // `a & b == k` forces every swapped value to contain all bits of `k`, so the values containing
+    // `k` form a single swappable component (value `k` itself ANDs to exactly `k` with each of
+    // them) while every other value is frozen in place. Sorting therefore needs each misplaced
+    // index and its value to share all bits of `k`, i.e. `k` is a submask of every `i & nums[i]`;
+    // the AND of those terms is itself the largest such `k` (0 when nothing is misplaced).
     pub fn sort_permutation(nums: Vec<i32>) -> i32 {
-        todo!()
+        nums.into_iter()
+            .enumerate()
+            .filter(|(i, v)| *v != *i as i32)
+            .map(|(i, v)| v & (i as i32))
+            .reduce(|a, b| a & b)
+            .unwrap_or_default()
     }
 }
 
