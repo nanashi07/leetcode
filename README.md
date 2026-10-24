@@ -85,6 +85,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2210. Count Hills and Valleys in an Array](https://leetcode.com/problems/count-hills-and-valleys-in-an-array/)
 - [2264. Largest 3-Same-Digit Number in String](https://leetcode.com/problems/largest-3-same-digit-number-in-string/)
 - [2273. Find Resultant Array After Removing Anagrams](https://leetcode.com/problems/find-resultant-array-after-removing-anagrams/)
+- [2409. Count Days Spent Together](https://leetcode.com/problems/count-days-spent-together/)
 - [2515. Shortest Distance to Target String in a Circular Array](https://leetcode.com/problems/shortest-distance-to-target-string-in-a-circular-array/)
 - [2540. Minimum Common Value](https://leetcode.com/problems/minimum-common-value/)
 - [2553. Separate the Digits in an Array](https://leetcode.com/problems/separate-the-digits-in-an-array/)

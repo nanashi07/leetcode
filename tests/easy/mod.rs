@@ -156,6 +156,8 @@ mod count_hills_and_valleys_in_an_array;
 mod largest_3_same_digit_number_in_string;
 // 2273. Find Resultant Array After Removing Anagrams
 mod find_resultant_array_after_removing_anagrams;
+// 2409. Count Days Spent Together
+mod count_days_spent_together;
 // 2515. Shortest Distance to Target String in a Circular Array
 pub mod shortest_distance_to_target_string_in_a_circular_array;
 // 2540. Minimum Common Value
