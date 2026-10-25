@@ -118,6 +118,8 @@ mod maximum_level_sum_of_a_binary_tree;
 pub mod reverse_substrings_between_each_pair_of_parentheses;
 // 1233. Remove Sub-Folders from the Filesystem
 mod remove_sub_folders_from_the_filesystem;
+// 1254. Number of Closed Islands
+mod number_of_closed_islands;
 // 1262. Greatest Sum Divisible by Three
 mod greatest_sum_divisible_by_three;
 // 1277. Count Square Submatrices with All Ones
