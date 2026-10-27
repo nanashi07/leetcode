@@ -278,3 +278,5 @@ pub mod count_commas_in_range;
 pub mod construct_uniform_parity_array_i;
 // 3903. Smallest Stable Index I
 pub mod smallest_stable_index_i;
+// 3963. Create Grid With Exactly One Path
+mod create_grid_with_exactly_one_path;
