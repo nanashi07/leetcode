@@ -5,7 +5,37 @@ struct Solution;
 
 impl Solution {
     pub fn create_grid(m: i32, n: i32) -> Vec<String> {
-        todo!()
+        let (rows, cols) = (m as usize, n as usize);
+        let mut grid = vec![vec![b'#'; cols]; rows];
+        let (mut r, mut c) = (0usize, 0usize);
+        let (mut down, mut right) = (rows - 1, cols - 1);
+        let mut go_right = true;
+
+        grid[r][c] = b'.';
+        while down > 0 || right > 0 {
+            // Alternate right/down so the open cells stay a single corridor; once one
+            // direction runs out, keep walking in the other one.
+            let step_right = if right == 0 {
+                false
+            } else if down == 0 {
+                true
+            } else {
+                go_right
+            };
+            if step_right {
+                c += 1;
+                right -= 1;
+            } else {
+                r += 1;
+                down -= 1;
+            }
+            go_right = !go_right;
+            grid[r][c] = b'.';
+        }
+
+        grid.into_iter()
+            .map(|row| row.into_iter().map(char::from).collect())
+            .collect()
     }
 }
 
