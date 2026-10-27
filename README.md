@@ -146,6 +146,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3870. Count Commas in Range](https://leetcode.com/problems/count-commas-in-range/)
 - [3875. Construct Uniform Parity Array I](https://leetcode.com/problems/construct-uniform-parity-array-i/)
 - [3903. Smallest Stable Index I](https://leetcode.com/problems/smallest-stable-index-i/)
+- [3963. Create Grid With Exactly One Path](https://leetcode.com/problems/create-grid-with-exactly-one-path/)
 
 ### Medium Problems
 
