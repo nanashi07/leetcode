@@ -520,6 +520,8 @@ pub mod sum_of_gcd_of_formed_pairs;
 pub mod count_commas_in_range_ii;
 // 3876. Construct Uniform Parity Array II
 pub mod construct_uniform_parity_array_ii;
+// 3882. Minimum XOR Path in a Grid
+mod minimum_xor_path_in_a_grid;
 // 3904. Smallest Stable Index II
 pub mod smallest_stable_index_ii;
 // 3942. Minimum Operations to Sort a Permutation
