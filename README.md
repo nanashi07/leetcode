@@ -414,6 +414,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3882. Minimum XOR Path in a Grid](https://leetcode.com/problems/minimum-xor-path-in-a-grid/)
 - [3904. Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)
 - [3942. Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/)
+- [3970. Shortest Path With At Most K Consecutive Identical Characters](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/)
 
 ### Hard Problems
 
