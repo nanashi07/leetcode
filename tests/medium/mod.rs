@@ -526,3 +526,5 @@ mod minimum_xor_path_in_a_grid;
 pub mod smallest_stable_index_ii;
 // 3942. Minimum Operations to Sort a Permutation
 mod minimum_operations_to_sort_a_permutation;
+// 3970. Shortest Path With At Most K Consecutive Identical Characters
+mod shortest_path_with_at_most_k_consecutive_identical_characters;
