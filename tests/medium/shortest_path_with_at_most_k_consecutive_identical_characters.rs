@@ -18,11 +18,10 @@ impl Solution {
         let n = n as usize;
         let label = labels.as_bytes();
 
+        // Edges are one-way: `[u, v, w]` can only be walked from `u` to `v`.
         let mut g = vec![Vec::new(); n];
         for e in &edges {
-            let (u, v, w) = (e[0] as usize, e[1] as usize, e[2]);
-            g[u].push((v, w));
-            g[v].push((u, w));
+            g[e[0] as usize].push((e[1] as usize, e[2]));
         }
 
         // `best[u]` is the Pareto frontier of node `u`; the start node begins with a single label.
@@ -101,5 +100,14 @@ mod tests {
         let labels = "aaa".to_string();
         let k = 2;
         assert_eq!(-1, Solution::shortest_path(n, edges, labels, k));
+    }
+
+    #[test]
+    fn test_shortest_path_4() {
+        let n = 2;
+        let edges = to_vec2d([[0, 1, 9817], [1, 0, 7215]]);
+        let labels = "pm".to_string();
+        let k = 1;
+        assert_eq!(9817, Solution::shortest_path(n, edges, labels, k));
     }
 }
