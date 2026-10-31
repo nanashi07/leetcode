@@ -393,6 +393,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3652. Best Time to Buy and Sell Stock using Strategy](https://leetcode.com/problems/best-time-to-buy-and-sell-stock-using-strategy/)
 - [3653. XOR After Range Multiplication Queries I](https://leetcode.com/problems/xor-after-range-multiplication-queries-i/)
 - [3660. Jump Game IX](https://leetcode.com/problems/jump-game-ix/)
+- [3665. Twisted Mirror Path Count](https://leetcode.com/problems/twisted-mirror-path-count/)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i/)
 - [3702. Longest Subsequence With Non-Zero Bitwise XOR](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor/)
 - [3713. Longest Balanced Substring I](https://leetcode.com/problems/longest-balanced-substring-i/)

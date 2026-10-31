@@ -484,6 +484,8 @@ mod best_time_to_buy_and_sell_stock_using_strategy;
 pub mod xor_after_range_multiplication_queries_i;
 // 3660. Jump Game IX
 pub mod jump_game_ix;
+// 3665. Twisted Mirror Path Count
+mod twisted_mirror_path_count;
 // 3689. Maximum Total Subarray Value I
 pub mod maximum_total_subarray_value_i;
 // 3702. Longest Subsequence With Non-Zero Bitwise XOR
