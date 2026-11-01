@@ -54,6 +54,8 @@ mod fraction_to_recurring_decimal;
 mod rotate_function;
 // 417. Pacific Atlantic Water Flow
 mod pacific_atlantic_water_flow;
+// 453. Minimum Moves to Equal Array Elements
+mod minimum_moves_to_equal_array_elements;
 // 474. Ones and Zeroes
 mod ones_and_zeroes;
 // 486. Predict the Winner
