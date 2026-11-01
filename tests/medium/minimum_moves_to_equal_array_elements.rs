@@ -4,8 +4,15 @@
 struct Solution;
 
 impl Solution {
+    // Incrementing n - 1 elements by 1 is equivalent to decrementing a single element
+    // by 1, so every move brings one element closer to the minimum. The answer is
+    // therefore sum(nums) - min(nums) * len(nums).
     pub fn min_moves(nums: Vec<i32>) -> i32 {
-        todo!()
+        let count = nums.len() as i64;
+        let smallest = nums.iter().copied().min().unwrap_or(0);
+        let sum: i64 = nums.into_iter().map(i64::from).sum();
+
+        (sum - i64::from(smallest) * count) as i32
     }
 }
 
