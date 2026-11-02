@@ -4,8 +4,18 @@
 struct Solution;
 
 impl Solution {
-    pub fn min_moves2(nums: Vec<i32>) -> i32 {
-        todo!()
+    // The sum of absolute deviations is minimised at the median, so sort and add up the
+    // distances from the middle element. Any of the two middle values works for even n.
+    pub fn min_moves2(mut nums: Vec<i32>) -> i32 {
+        nums.sort_unstable();
+
+        let Some(&median) = nums.get(nums.len() / 2) else {
+            return 0;
+        };
+
+        nums.iter()
+            .map(|&value| (i64::from(value) - i64::from(median)).abs())
+            .sum::<i64>() as i32
     }
 }
 
