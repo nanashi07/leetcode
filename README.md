@@ -179,6 +179,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [396. Rotate Function](https://leetcode.com/problems/rotate-function/)
 - [417. Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - [453. Minimum Moves to Equal Array Elements](https://leetcode.com/problems/minimum-moves-to-equal-array-elements/)
+- [462. Minimum Moves to Equal Array Elements II](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-ii/)
 - [474. Ones and Zeroes](https://leetcode.com/problems/ones-and-zeroes/)
 - [486. Predict the Winner](https://leetcode.com/problems/predict-the-winner/)
 - [498. Diagonal Traverse](https://leetcode.com/problems/diagonal-traverse/)

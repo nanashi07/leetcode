@@ -56,6 +56,8 @@ mod rotate_function;
 mod pacific_atlantic_water_flow;
 // 453. Minimum Moves to Equal Array Elements
 mod minimum_moves_to_equal_array_elements;
+// 462. Minimum Moves to Equal Array Elements II
+mod minimum_moves_to_equal_array_elements_ii;
 // 474. Ones and Zeroes
 mod ones_and_zeroes;
 // 486. Predict the Winner
