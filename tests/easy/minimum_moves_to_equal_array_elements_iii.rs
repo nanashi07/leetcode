@@ -5,7 +5,8 @@ struct Solution;
 
 impl Solution {
     pub fn min_moves(nums: Vec<i32>) -> i32 {
-        todo!()
+        let max = nums.iter().max().unwrap();
+        nums.iter().map(|&x| max - x).sum()
     }
 }
 
