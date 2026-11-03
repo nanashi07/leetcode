@@ -139,6 +139,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3658. GCD of Odd and Even Sums](https://leetcode.com/problems/gcd-of-odd-and-even-sums/)
 - [3718. Smallest Missing Multiple of K](https://leetcode.com/problems/smallest-missing-multiple-of-k/)
 - [3731. Find Missing Elements](https://leetcode.com/problems/find-missing-elements/)
+- [3736. Minimum Moves to Equal Array Elements III](https://leetcode.com/problems/minimum-moves-to-equal-array-elements-iii/)
 - [3740. Minimum Distance Between Three Equal Elements I](https://leetcode.com/problems/minimum-distance-between-three-equal-elements-i/)
 - [3754. Concatenate Non-Zero Digits and Multiply by Sum I](https://leetcode.com/problems/concatenate-non-zero-digits-and-multiply-by-sum-i/)
 - [3783. Mirror Distance of an Integer](https://leetcode.com/problems/mirror-distance-of-an-integer/)

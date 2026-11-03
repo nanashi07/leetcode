@@ -264,6 +264,8 @@ pub mod gcd_of_odd_and_even_sums;
 pub mod smallest_missing_multiple_of_k;
 // 3731. Find Missing Elements
 pub mod find_missing_elements;
+// 3736. Minimum Moves to Equal Array Elements III
+mod minimum_moves_to_equal_array_elements_iii;
 // 3740. Minimum Distance Between Three Equal Elements I
 pub mod minimum_distance_between_three_equal_elements_i;
 // 3754. Concatenate Non-Zero Digits and Multiply by Sum I
