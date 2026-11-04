@@ -174,6 +174,8 @@ mod maximize_subarrays_after_removing_one_conflicting_pair;
 mod minimum_operations_to_make_array_elements_zero;
 // 3501. Maximize Active Section with Trade II
 pub mod maximize_active_section_with_trade_ii;
+// 3505. Minimum Operations to Make Elements Within K Subarrays Equal
+mod minimum_operations_to_make_elements_within_k_subarrays_equal;
 // 3510. Minimum Pair Removal to Sort Array II
 mod minimum_pair_removal_to_sort_array_ii;
 // 3518. Smallest Palindromic Rearrangement II
