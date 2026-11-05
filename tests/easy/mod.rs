@@ -96,6 +96,8 @@ pub mod rank_transform_of_an_array;
 mod count_negative_numbers_in_a_sorted_matrix;
 // 1356. Sort Integers by The Number of 1 Bits
 pub mod sort_integers_by_the_number_of_1_bits;
+// 1385. Find the Distance Value Between Two Arrays
+mod find_the_distance_value_between_two_arrays;
 // 1394. Find Lucky Integer in an Array
 mod find_lucky_integer_in_an_array;
 // 1437. Check If All 1's Are at Least Length K Places Away
