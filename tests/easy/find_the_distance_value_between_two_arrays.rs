@@ -4,8 +4,29 @@
 struct Solution;
 
 impl Solution {
-    pub fn find_the_distance_value(arr1: Vec<i32>, arr2: Vec<i32>, d: i32) -> i32 {
-        todo!()
+    pub fn find_the_distance_value(arr1: Vec<i32>, mut arr2: Vec<i32>, d: i32) -> i32 {
+        // Sort arr2 once, then for every x in arr1 the nearest value of arr2 is one of
+        // the two neighbours of x's binary-search insertion point.
+        arr2.sort_unstable();
+
+        let mut count = 0;
+        for &x in &arr1 {
+            let i = arr2.partition_point(|&y| y < x);
+            let left = if i > 0 {
+                (x - arr2[i - 1]).abs()
+            } else {
+                i32::MAX
+            };
+            let right = if i < arr2.len() {
+                (arr2[i] - x).abs()
+            } else {
+                i32::MAX
+            };
+            if left.min(right) > d {
+                count += 1;
+            }
+        }
+        count
     }
 }
 
