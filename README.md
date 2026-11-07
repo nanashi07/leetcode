@@ -267,6 +267,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1871. Jump Game VII](https://leetcode.com/problems/jump-game-vii/)
 - [1877. Minimize Maximum Pair Sum in Array](https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/)
 - [1878. Get Biggest Three Rhombus Sums in a Grid](https://leetcode.com/problems/get-biggest-three-rhombus-sums-in-a-grid/)
+- [1882. Process Tasks Using Servers](https://leetcode.com/problems/process-tasks-using-servers/)
 - [1888. Minimum Number of Flips to Make the Binary String Alternating](https://leetcode.com/problems/minimum-number-of-flips-to-make-the-binary-string-alternating/)
 - [1895. Largest Magic Square](https://leetcode.com/problems/largest-magic-square/)
 - [1914. Cyclically Rotating a Grid](https://leetcode.com/problems/cyclically-rotating-a-grid/)

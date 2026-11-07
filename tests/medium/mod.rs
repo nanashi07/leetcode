@@ -228,6 +228,8 @@ pub mod jump_game_vii;
 mod minimize_maximum_pair_sum_in_array;
 // 1878. Get Biggest Three Rhombus Sums in a Grid
 pub mod get_biggest_three_rhombus_sums_in_a_grid;
+// 1882. Process Tasks Using Servers
+mod process_tasks_using_servers;
 // 1888. Minimum Number of Flips to Make the Binary String Alternating
 pub mod minimum_number_of_flips_to_make_the_binary_string_alternating;
 // 1895. Largest Magic Square
