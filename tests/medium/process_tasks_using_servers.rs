@@ -3,9 +3,47 @@
 
 struct Solution;
 
+use std::cmp::Reverse;
+use std::collections::BinaryHeap;
+
 impl Solution {
     pub fn assign_tasks(servers: Vec<i32>, tasks: Vec<i32>) -> Vec<i32> {
-        todo!()
+        // `idle` holds free servers as (weight, index); `busy` holds servers at work
+        // as (time they become free, weight, index). Both are min-heaps, so the
+        // preferred server per the problem rules is always on top.
+        let mut idle: BinaryHeap<Reverse<(i32, usize)>> = BinaryHeap::with_capacity(servers.len());
+        for (idx, &weight) in servers.iter().enumerate() {
+            idle.push(Reverse((weight, idx)));
+        }
+        let mut busy: BinaryHeap<Reverse<(i64, i32, usize)>> = BinaryHeap::new();
+
+        let mut answer = Vec::with_capacity(tasks.len());
+        for (i, &duration) in tasks.iter().enumerate() {
+            let now = i as i64;
+            // Release every server whose task finished at or before this second.
+            while let Some(&Reverse((free, _, _))) = busy.peek() {
+                if free > now {
+                    break;
+                }
+                let Reverse((_, weight, idx)) =
+                    busy.pop().expect("peek proved the heap is not empty");
+                idle.push(Reverse((weight, idx)));
+            }
+
+            let (start, weight, idx) = if let Some(Reverse(entry)) = idle.pop() {
+                (now, entry.0, entry.1)
+            } else {
+                // All servers are busy: wait for the one that frees up earliest.
+                let Reverse((free, weight, idx)) =
+                    busy.pop().expect("at least one server is always in use");
+                (free, weight, idx)
+            };
+
+            answer.push(idx as i32);
+            busy.push(Reverse((start + duration as i64, weight, idx)));
+        }
+
+        answer
     }
 }
 
