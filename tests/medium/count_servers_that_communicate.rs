@@ -5,7 +5,29 @@ struct Solution;
 
 impl Solution {
     pub fn count_servers(grid: Vec<Vec<i32>>) -> i32 {
-        todo!()
+        let (m, n) = (grid.len(), grid[0].len());
+        let mut rows = vec![0; m];
+        let mut cols = vec![0; n];
+
+        for (r, row) in grid.iter().enumerate() {
+            for (c, &v) in row.iter().enumerate() {
+                if v == 1 {
+                    rows[r] += 1;
+                    cols[c] += 1;
+                }
+            }
+        }
+
+        let mut ans = 0;
+        for (r, row) in grid.iter().enumerate() {
+            for (c, &v) in row.iter().enumerate() {
+                if v == 1 && (rows[r] > 1 || cols[c] > 1) {
+                    ans += 1;
+                }
+            }
+        }
+
+        ans
     }
 }
 
