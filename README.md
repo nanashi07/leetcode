@@ -216,6 +216,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1233. Remove Sub-Folders from the Filesystem](https://leetcode.com/problems/remove-sub-folders-from-the-filesystem/)
 - [1254. Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/)
 - [1262. Greatest Sum Divisible by Three](https://leetcode.com/problems/greatest-sum-divisible-by-three/)
+- [1267. Count Servers that Communicate](https://leetcode.com/problems/count-servers-that-communicate/)
 - [1277. Count Square Submatrices with All Ones](https://leetcode.com/problems/count-square-submatrices-with-all-ones/)
 - [1288. Remove Covered Intervals](https://leetcode.com/problems/remove-covered-intervals/)
 - [1291. Sequential Digits](https://leetcode.com/problems/sequential-digits/)
