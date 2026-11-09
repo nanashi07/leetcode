@@ -62,6 +62,8 @@ mod minimum_number_of_increments_on_subarrays_to_form_a_target_array;
 pub mod stone_game_v;
 // 1569. Number of Ways to Reorder Array to Get Same BST
 mod number_of_ways_to_reorder_array_to_get_same_bst;
+// 1606. Find Servers That Handled Most Number of Requests
+mod find_servers_that_handled_most_number_of_requests;
 // 1611. Minimum One Bit Operations to Make Integers Zero
 mod minimum_one_bit_operations_to_make_integers_zero;
 // 1622. Fancy Sequence
