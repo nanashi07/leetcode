@@ -5,7 +5,25 @@ struct Solution;
 
 impl Solution {
     pub fn climb_stairs(n: i32, costs: Vec<i32>) -> i32 {
-        todo!()
+        // dp[j] = cheapest total cost to stand on step `j`; step 0 is the start and is free.
+        // Step `j` is reachable from steps j-1, j-2 or j-3, paying the landing cost plus d^2,
+        // so each step only ever looks back three steps: a single forward pass suffices.
+        let len = n as usize;
+        let mut dp = vec![0i32; len + 1];
+
+        for (idx, &cost) in costs.iter().enumerate() {
+            let step = idx + 1; // `costs` is 1-indexed: costs[idx] belongs to step idx + 1
+            let mut best = dp[step - 1] + 1;
+            if step >= 2 {
+                best = best.min(dp[step - 2] + 4);
+            }
+            if step >= 3 {
+                best = best.min(dp[step - 3] + 9);
+            }
+            dp[step] = cost + best;
+        }
+
+        dp[len]
     }
 }
 
