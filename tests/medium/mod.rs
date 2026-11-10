@@ -498,6 +498,8 @@ pub mod jump_game_ix;
 mod twisted_mirror_path_count;
 // 3689. Maximum Total Subarray Value I
 pub mod maximum_total_subarray_value_i;
+// 3693. Climbing Stairs II
+mod climbing_stairs_ii;
 // 3702. Longest Subsequence With Non-Zero Bitwise XOR
 pub mod longest_subsequence_with_non_zero_bitwise_xor;
 // 3713. Longest Balanced Substring I

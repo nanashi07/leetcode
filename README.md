@@ -402,6 +402,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3660. Jump Game IX](https://leetcode.com/problems/jump-game-ix/)
 - [3665. Twisted Mirror Path Count](https://leetcode.com/problems/twisted-mirror-path-count/)
 - [3689. Maximum Total Subarray Value I](https://leetcode.com/problems/maximum-total-subarray-value-i/)
+- [3693. Climbing Stairs II](https://leetcode.com/problems/climbing-stairs-ii/)
 - [3702. Longest Subsequence With Non-Zero Bitwise XOR](https://leetcode.com/problems/longest-subsequence-with-non-zero-bitwise-xor/)
 - [3713. Longest Balanced Substring I](https://leetcode.com/problems/longest-balanced-substring-i/)
 - [3714. Longest Balanced Substring II](https://leetcode.com/problems/longest-balanced-substring-ii/)
