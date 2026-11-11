@@ -526,6 +526,8 @@ pub mod total_waviness_of_numbers_in_range_i;
 pub mod concatenate_non_zero_digits_and_multiply_by_sum_ii;
 // 3761. Minimum Absolute Distance Between Mirror Pairs
 pub mod minimum_absolute_distance_between_mirror_pairs;
+// 3789. Minimum Cost to Acquire Required Items
+mod minimum_cost_to_acquire_required_items;
 // 3863. Minimum Operations to Sort a String
 mod minimum_operations_to_sort_a_string;
 // 3867. Sum of GCD of Formed Pairs
