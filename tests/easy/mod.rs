@@ -196,6 +196,8 @@ pub mod distribute_elements_into_two_arrays_i;
 mod apple_redistribution_into_boxes;
 // 3090. Maximum Length Substring With Two Occurrences
 pub mod maximum_length_substring_with_two_occurrences;
+// 3105. Longest Strictly Increasing or Strictly Decreasing Subarray
+mod longest_strictly_increasing_or_strictly_decreasing_subarray;
 // 3120. Count the Number of Special Characters I
 pub mod count_the_number_of_special_characters_i;
 // 3136. Valid Word
