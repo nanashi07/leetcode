@@ -162,6 +162,8 @@ pub mod smallest_divisible_digit_product_ii;
 mod find_the_maximum_number_of_fruits_collected;
 // 3414. Maximum Score of Non-overlapping Intervals
 pub mod maximum_score_of_non_overlapping_intervals;
+// 3420. Count Non-Decreasing Subarrays After K Operations
+mod count_non_decreasing_subarrays_after_k_operations;
 // 3454. Separate Squares II
 mod separate_squares_ii;
 // 3459. Length of Longest V-Shaped Diagonal Segment
