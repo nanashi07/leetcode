@@ -5,7 +5,26 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_sum_subarray(nums: Vec<i32>, l: i32, r: i32) -> i32 {
-        todo!()
+        let (l, r) = (l as usize, r as usize);
+        let n = nums.len();
+
+        let mut prefix = vec![0i32; n + 1];
+        for (i, &v) in nums.iter().enumerate() {
+            prefix[i + 1] = prefix[i] + v;
+        }
+
+        let upper = r.min(n);
+        let mut ans: Option<i32> = None;
+        for len in l..=upper {
+            for end in len..=n {
+                let sum = prefix[end] - prefix[end - len];
+                if sum > 0 && ans.is_none_or(|cur| sum < cur) {
+                    ans = Some(sum);
+                }
+            }
+        }
+
+        ans.unwrap_or(-1)
     }
 }
 
