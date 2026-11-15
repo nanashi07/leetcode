@@ -174,6 +174,8 @@ mod number_of_subsequences_that_satisfy_the_given_sum_condition;
 mod count_submatrices_with_all_ones;
 // 1513. Number of Substrings With Only 1s
 mod number_of_substrings_with_only_1s;
+// 1524. Number of Sub-arrays With Odd Sum
+mod number_of_sub_arrays_with_odd_sum;
 // 1536. Minimum Swaps to Arrange a Binary Grid
 pub mod minimum_swaps_to_arrange_a_binary_grid;
 // 1541. Minimum Insertions to Balance a Parentheses String
