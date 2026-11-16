@@ -154,6 +154,8 @@ mod keep_multiplying_found_values_by_two;
 mod count_operations_to_obtain_zero;
 // 2210. Count Hills and Valleys in an Array
 mod count_hills_and_valleys_in_an_array;
+// 2243. Calculate Digit Sum of a String
+mod calculate_digit_sum_of_a_string;
 // 2264. Largest 3-Same-Digit Number in String
 mod largest_3_same_digit_number_in_string;
 // 2273. Find Resultant Array After Removing Anagrams
