@@ -5,7 +5,17 @@ struct Solution;
 
 impl Solution {
     pub fn digit_sum(s: String, k: i32) -> String {
-        todo!()
+        let k = k.max(1) as usize;
+        let mut round = s;
+        while round.len() > k {
+            let mut next = String::with_capacity(round.len());
+            for chunk in round.as_bytes().chunks(k) {
+                let sum: u32 = chunk.iter().map(|&b| u32::from(b - b'0')).sum();
+                next.push_str(&sum.to_string());
+            }
+            round = next;
+        }
+        round
     }
 }
 
