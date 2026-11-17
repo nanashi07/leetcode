@@ -122,6 +122,8 @@ pub mod robot_collisions;
 mod maximum_number_of_k_divisible_components;
 // 2897. Apply Operations on Array to Maximize Sum of Squares
 mod apply_operations_on_array_to_maximize_sum_of_squares;
+// 2911. Minimum Changes to Make K Semi-palindromes
+mod minimum_changes_to_make_k_semi_palindromes;
 // 2916. Subarrays Distinct Element Sum of Squares II
 mod subarrays_distinct_element_sum_of_squares_ii;
 // 2977. Minimum Cost to Convert String II
