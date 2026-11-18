@@ -4,8 +4,16 @@
 struct Solution;
 
 impl Solution {
+    // A beautiful string splits into even-length blocks of identical chars, so every
+    // block starts at an even index and each pair (2i, 2i+1) must hold equal chars.
+    // Count the mismatching pairs; one flip per pair fixes it.
     pub fn min_changes(s: String) -> i32 {
-        todo!()
+        s.as_bytes()
+            .as_chunks::<2>()
+            .0
+            .iter()
+            .filter(|pair| pair[0] != pair[1])
+            .count() as i32
     }
 }
 
