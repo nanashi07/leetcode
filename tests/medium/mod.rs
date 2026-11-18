@@ -344,6 +344,8 @@ pub mod check_if_strings_can_be_made_equal_with_operations_ii;
 pub mod shortest_and_lexicographically_smallest_beautiful_string;
 // 2906. Construct Product Matrix
 pub mod construct_product_matrix;
+// 2914. Minimum Number of Changes to Make Binary String Beautiful
+mod minimum_number_of_changes_to_make_binary_string_beautiful;
 // 2943. Maximize Area of Square Hole in Grid
 mod maximize_area_of_square_hole_in_grid;
 // 2948. Make Lexicographically Smallest Array by Swapping Elements
