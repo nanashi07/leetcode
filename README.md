@@ -314,6 +314,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [2483. Minimum Penalty for a Shop](https://leetcode.com/problems/minimum-penalty-for-a-shop/)
 - [2492. Minimum Score of a Path Between Two Cities](https://leetcode.com/problems/minimum-score-of-a-path-between-two-cities/)
 - [2536. Increment Submatrices by One](https://leetcode.com/problems/increment-submatrices-by-one/)
+- [2567. Minimum Score by Changing Two Elements](https://leetcode.com/problems/minimum-score-by-changing-two-elements/)
 - [2598. Smallest Missing Non-negative Integer After Operations](https://leetcode.com/problems/smallest-missing-non-negative-integer-after-operations/)
 - [2615. Sum of Distances](https://leetcode.com/problems/sum-of-distances/)
 - [2654. Minimum Number of Operations to Make All Array Elements Equal to 1](https://leetcode.com/problems/minimum-number-of-operations-to-make-all-array-elements-equal-to-1/)

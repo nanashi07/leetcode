@@ -316,6 +316,8 @@ mod minimum_penalty_for_a_shop;
 pub mod minimum_score_of_a_path_between_two_cities;
 // 2536. Increment Submatrices by One
 mod increment_submatrices_by_one;
+// 2567. Minimum Score by Changing Two Elements
+mod minimum_score_by_changing_two_elements;
 // 2598. Smallest Missing Non-negative Integer After Operations
 mod smallest_missing_non_negative_integer_after_operations;
 // 2615. Sum of Distances
