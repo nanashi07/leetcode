@@ -134,6 +134,8 @@ mod maximize_the_number_of_partitions_after_operations;
 mod divide_an_array_into_subarrays_with_minimum_cost_ii;
 // 3027. Find the Number of Ways to Place People II
 mod find_the_number_of_ways_to_place_people_ii;
+// 3041. Maximize Consecutive Elements in an Array After Modification
+mod maximize_consecutive_elements_in_an_array_after_modification;
 // 3093. Longest Common Suffix Queries
 pub mod longest_common_suffix_queries;
 // 3116. Kth Smallest Amount With Single Denomination Combination
