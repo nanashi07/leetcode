@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn compare_version(version1: String, version2: String) -> i32 {
-        println!("version!: {:?}, version2: {:?}", &version1, &version2);
+        println!("version!: {:?}, version2: {:?}", version1, version2);
 
         let v1 = version1
             .split(".")
@@ -18,7 +18,7 @@ impl Solution {
 
         let len = v1.len().max(v2.len());
 
-        println!("v1: {:?}, v2: {:?}", &v1, &v2);
+        println!("v1: {:?}, v2: {:?}", v1, v2);
 
         for i in 0..len {
             let n1 = v1.get(i).unwrap_or(&0);

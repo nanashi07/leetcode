@@ -53,7 +53,7 @@ impl Solution {
     }
 
     pub fn _modified_list(nums: Vec<i32>, head: Option<Box<ListNode>>) -> Option<Box<ListNode>> {
-        println!("nums: {:?}, head: {:?}", &nums, &head);
+        println!("nums: {:?}, head: {:?}", nums, head);
 
         if head.is_none() {
             return head;

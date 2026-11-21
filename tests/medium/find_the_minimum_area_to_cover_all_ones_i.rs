@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_area(grid: Vec<Vec<i32>>) -> i32 {
-        println!("grid: {:?}", &grid);
+        println!("grid: {:?}", grid);
 
         let w = grid.len();
         let h = grid[0].len();

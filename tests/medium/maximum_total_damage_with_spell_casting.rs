@@ -73,7 +73,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _maximum_total_damage(power: Vec<i32>) -> i64 {
-        println!("power: {:?}", &power);
+        println!("power: {:?}", power);
 
         let mut power = power;
         power.sort_unstable();

@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn min_deletion_size(strs: Vec<String>) -> i32 {
-        println!("strs: {:?}", &strs);
+        println!("strs: {:?}", strs);
 
         let mut del = 0;
         let size = strs[0].len();

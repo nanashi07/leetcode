@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn make_fancy_string(s: String) -> String {
-        println!("s: {}", &s);
+        println!("s: {}", s);
         if s.len() < 3 {
             return s;
         }

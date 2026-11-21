@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_boxes(apple: Vec<i32>, capacity: Vec<i32>) -> i32 {
-        println!("apple: {:?}, capacity: {:?}", &apple, &capacity);
+        println!("apple: {:?}, capacity: {:?}", apple, capacity);
 
         let mut sum_of_apple = apple.iter().sum::<i32>();
         let mut capacity = capacity;

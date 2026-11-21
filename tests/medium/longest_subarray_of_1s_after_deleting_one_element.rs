@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn longest_subarray(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut all_ones = nums[0];
         let mut vs = vec![];
@@ -32,7 +32,7 @@ impl Solution {
                 }
             }
         }
-        println!("vs: {:?}", &vs);
+        println!("vs: {:?}", vs);
 
         let mut r = vs[0].len();
         for i in 1..vs.len() {

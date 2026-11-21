@@ -32,20 +32,20 @@ impl Solution {
     pub fn sort_array(nums: Vec<i32>) -> Vec<i32> {
         let mut nums = nums;
         let len = nums.len();
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         for i in 1..len {
             let key = nums[i];
             let mut j = i;
 
             while j > 0 && nums[j - 1] > key {
-                println!("a {:?}, key = {}, i = {}, j = {}", &nums, key, i, j);
+                println!("a {:?}, key = {}, i = {}, j = {}", nums, key, i, j);
                 nums[j] = nums[j - 1];
-                println!("b {:?}, key = {}, i = {}, j = {}", &nums, key, i, j);
+                println!("b {:?}, key = {}, i = {}, j = {}", nums, key, i, j);
                 j -= 1;
             }
             nums[j] = key;
-            println!("c {:?}, key = {}, i = {}, j = {}", &nums, key, i, j);
+            println!("c {:?}, key = {}, i = {}, j = {}", nums, key, i, j);
         }
 
         nums

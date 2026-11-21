@@ -33,7 +33,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _max_subarray_sum(nums: Vec<i32>, k: i32) -> i64 {
-        println!("nums: {:?}, k: {k}", &nums);
+        println!("nums: {:?}, k: {k}", nums);
 
         let k = k as usize;
         let size = nums.len() / k;

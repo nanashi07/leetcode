@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn min_cost(colors: String, needed_time: Vec<i32>) -> i32 {
-        println!("colors: {:?}, needed_time: {:?}", &colors, &needed_time);
+        println!("colors: {:?}, needed_time: {:?}", colors, needed_time);
 
         let chars = colors.chars().collect::<Vec<_>>();
         let len = chars.len();

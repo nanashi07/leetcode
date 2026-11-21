@@ -6,13 +6,13 @@ struct Solution;
 impl Solution {
     // https://leetcode.com/problems/count-number-of-maximum-bitwise-or-subsets/editorial/
     pub fn count_max_or_subsets(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut xor = 0;
         for n in &nums {
             xor |= *n;
         }
-        println!("xor: {}", &xor);
+        println!("xor: {}", xor);
 
         Self::count(&nums, 0, 0, xor)
     }

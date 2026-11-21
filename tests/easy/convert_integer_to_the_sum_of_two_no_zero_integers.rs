@@ -27,7 +27,7 @@ impl Solution {
             p += 1;
         }
 
-        println!("r: {:?}", &r);
+        println!("r: {:?}", r);
 
         r
     }

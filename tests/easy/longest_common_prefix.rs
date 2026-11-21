@@ -48,12 +48,12 @@ fn test_longest_common_prefix() {
         .map(|s| s.to_string())
         .collect();
     let result = Solution::longest_common_prefix(strs.clone());
-    assert_eq!("fl".to_owned(), result, "strs = {:?}", &strs);
+    assert_eq!("fl".to_owned(), result, "strs = {:?}", strs);
 
     let strs: Vec<String> = ["dog", "racecar", "car"]
         .iter()
         .map(|s| s.to_string())
         .collect();
     let result = Solution::longest_common_prefix(strs.clone());
-    assert_eq!("".to_owned(), result, "strs = {:?}", &strs);
+    assert_eq!("".to_owned(), result, "strs = {:?}", strs);
 }

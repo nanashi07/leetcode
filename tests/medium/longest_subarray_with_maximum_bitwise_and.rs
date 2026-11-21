@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn longest_subarray(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let max_and = *nums.iter().max().unwrap();
         let mut max = 0;

@@ -13,7 +13,7 @@ impl Solution {
         let update = |bit: &mut Vec<i64>, mut i: usize, v: i64| {
             while i <= size {
                 bit[i] += v;
-                i += i & i.wrapping_neg();
+                i += i.isolate_lowest_one();
             }
         };
 
@@ -21,7 +21,7 @@ impl Solution {
             let mut s = 0i64;
             while i > 0 {
                 s += bit[i];
-                i -= i & i.wrapping_neg();
+                i -= i.isolate_lowest_one();
             }
             s
         };

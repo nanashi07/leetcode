@@ -22,7 +22,7 @@ impl Solution {
 
         let mut row_map: HashMap<i32, Vec<i32>> = HashMap::new();
         let mut col_map: HashMap<i32, Vec<i32>> = HashMap::new();
-        for (&(row, col), _) in counts.iter() {
+        for &(row, col) in counts.keys() {
             row_map.entry(row).or_default().push(col);
             col_map.entry(col).or_default().push(row);
         }

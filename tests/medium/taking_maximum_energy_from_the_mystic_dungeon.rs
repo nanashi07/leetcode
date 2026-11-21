@@ -5,14 +5,14 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_energy(energy: Vec<i32>, k: i32) -> i32 {
-        println!("energy: {:?}, k: {k}", &energy);
+        println!("energy: {:?}, k: {k}", energy);
 
         let mut max = i32::MIN;
         let k = k as usize;
 
         for i in 0..k {
             let len = 1 + energy.len() / k;
-            println!("{} / {} = {}", &energy.len(), k, len);
+            println!("{} / {} = {}", energy.len(), k, len);
             let mut values = vec![0; 0];
             for j in (0..len).rev() {
                 let p = i + j * k;
@@ -21,11 +21,11 @@ impl Solution {
                     if values.len() > 1 {
                         values[0] += values[1];
                     }
-                    println!("p: {p}, v: {:?}, values: {:?}", &energy[p], &values);
+                    println!("p: {p}, v: {:?}, values: {:?}", energy[p], values);
                 }
             }
             max = max.max(*values.iter().max().unwrap());
-            println!("max: {}", &max);
+            println!("max: {}", max);
         }
 
         max

@@ -83,10 +83,7 @@ impl Solution {
     }
 
     pub fn _max_frequency(nums: Vec<i32>, k: i32, num_operations: i32) -> i32 {
-        println!(
-            "nums: {:?}, k: {k}, num_operations: {num_operations}",
-            &nums
-        );
+        println!("nums: {:?}, k: {k}, num_operations: {num_operations}", nums);
 
         let min = *nums.iter().min().unwrap();
         let max = *nums.iter().max().unwrap();
@@ -100,12 +97,12 @@ impl Solution {
                 if nums[i] - k <= n && nums[i] + k >= n {
                     if nums[i] == n {
                         dup += 1;
-                        println!("[{}] dup + 1", &nums[i]);
+                        println!("[{}] dup + 1", nums[i]);
                     } else {
                         if op > 0 {
                             op -= 1;
                             dup += 1;
-                            println!("[{}] op + 1, dup + 1", &nums[i]);
+                            println!("[{}] op + 1, dup + 1", nums[i]);
                         }
                     }
                 }

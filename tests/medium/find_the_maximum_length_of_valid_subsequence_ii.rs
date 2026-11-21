@@ -72,7 +72,7 @@ impl Solution {
 
     // time exceed
     pub fn _maximum_length(nums: Vec<i32>, k: i32) -> i32 {
-        println!("nums: {:?}, k: {}", &nums, k);
+        println!("nums: {:?}, k: {}", nums, k);
 
         if nums.len() < 3 {
             return nums.len() as i32;

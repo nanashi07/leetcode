@@ -50,7 +50,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {
-        println!("fruits: {:?}, baskets: {:?}", &fruits, &baskets);
+        println!("fruits: {:?}, baskets: {:?}", fruits, baskets);
 
         let mut remained = 0;
         let mut baskets = baskets;

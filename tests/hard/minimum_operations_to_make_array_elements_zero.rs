@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn min_operations(queries: Vec<Vec<i32>>) -> i64 {
-        println!("queries: {:?}", &queries);
+        println!("queries: {:?}", queries);
 
         let mut count = 0;
         let len = queries.len();
@@ -70,8 +70,8 @@ impl Solution {
                 }
             }
         }
-        println!("r: {:?}", &r);
-        println!("c: {:?}, sum = {}", &c, c.iter().sum::<i32>());
+        println!("r: {:?}", r);
+        println!("c: {:?}, sum = {}", c, c.iter().sum::<i32>());
     }
 }
 

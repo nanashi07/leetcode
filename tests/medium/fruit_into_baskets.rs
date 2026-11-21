@@ -38,7 +38,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _total_fruit(fruits: Vec<i32>) -> i32 {
-        println!("fruits: {:?}", &fruits);
+        println!("fruits: {:?}", fruits);
 
         if fruits.len() < 3 {
             return fruits.len() as i32;

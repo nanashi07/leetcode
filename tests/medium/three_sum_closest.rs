@@ -59,15 +59,15 @@ fn test_three_sum_closest() {
     let nums: Vec<i32> = vec![-1, 2, 1, -4];
     let target = 1;
     let result = Solution::three_sum_closest(nums.clone(), target);
-    assert_eq!(2, result, "nums: {:?}, target: {}", &nums, target);
+    assert_eq!(2, result, "nums: {:?}, target: {}", nums, target);
 
     let nums: Vec<i32> = vec![0, 0, 0];
     let target = 1;
     let result = Solution::three_sum_closest(nums.clone(), target);
-    assert_eq!(0, result, "nums: {:?}, target: {}", &nums, target);
+    assert_eq!(0, result, "nums: {:?}, target: {}", nums, target);
 
     let nums: Vec<i32> = vec![4, 0, 5, -5, 3, 3, 0, -4, -5];
     let target = -2;
     let result = Solution::three_sum_closest(nums.clone(), target);
-    assert_eq!(-2, result, "nums: {:?}, target: {}", &nums, target);
+    assert_eq!(-2, result, "nums: {:?}, target: {}", nums, target);
 }

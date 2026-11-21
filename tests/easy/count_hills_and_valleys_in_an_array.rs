@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn count_hill_valley(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut count = 0;
         let mut last = nums[0];

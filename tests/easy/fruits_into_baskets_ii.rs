@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn num_of_unplaced_fruits(fruits: Vec<i32>, baskets: Vec<i32>) -> i32 {
-        println!("fruits: {:?}, baskets: {:?}", &fruits, &baskets);
+        println!("fruits: {:?}, baskets: {:?}", fruits, baskets);
 
         let mut remains = 0;
         let mut baskets = baskets;

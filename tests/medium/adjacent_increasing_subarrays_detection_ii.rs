@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn max_increasing_subarrays(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
         let n = nums.len();
         let mut cnt = 1;
         let mut precnt = 0;

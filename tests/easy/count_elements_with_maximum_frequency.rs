@@ -7,7 +7,7 @@ struct Solution;
 
 impl Solution {
     pub fn max_frequency_elements(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut map: HashMap<i32, i32> = HashMap::new();
         let mut max = 0;

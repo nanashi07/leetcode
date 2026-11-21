@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn largest_good_integer(num: String) -> String {
-        println!("num: {:?}", &num);
+        println!("num: {:?}", num);
 
         let mut count = 0;
         let mut good_integer = ' ';

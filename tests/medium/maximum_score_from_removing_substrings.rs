@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_gain(s: String, x: i32, y: i32) -> i32 {
-        println!("s: {}, x: {}, y: {}", &s, x, y);
+        println!("s: {}, x: {}, y: {}", s, x, y);
 
         let rx = "ab";
         let ry = "ba";
@@ -53,7 +53,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _maximum_gain(s: String, x: i32, y: i32) -> i32 {
-        println!("s: {}, x: {}, y: {}", &s, x, y);
+        println!("s: {}, x: {}, y: {}", s, x, y);
 
         let rx = "ab";
         let ry = "ba";

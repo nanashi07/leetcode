@@ -35,7 +35,7 @@ impl Solution {
 
             // no next pattern
             if pp == '*' {
-                println!("[a] {} -> {} : false", &s, &p);
+                println!("[a] {} -> {} : false", s, p);
                 return false;
             }
 
@@ -70,7 +70,7 @@ impl Solution {
                         // matched, next patter
                         pos += 1
                     } else {
-                        println!("[b] {} -> {} : false", &s, &p);
+                        println!("[b] {} -> {} : false", s, p);
                         return false;
                     }
                 }
@@ -82,20 +82,20 @@ impl Solution {
                 loop {
                     let (pp, any) = Solution::next(&p, if any { ps + 2 } else { ps + 1 });
                     if pp == '*' {
-                        println!("[c] {} -> {} : true", &s, &p);
+                        println!("[c] {} -> {} : true", s, p);
                         return true;
                     } else {
                         if any {
                             ps += 1;
                         } else {
-                            println!("[d] {} -> {} : false", &s, &p);
+                            println!("[d] {} -> {} : false", s, p);
                             return false;
                         }
                     }
                 }
             }
         }
-        println!("[e] {} -> {} : true", &s, &p);
+        println!("[e] {} -> {} : true", s, p);
         true
     }
 }

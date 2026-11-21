@@ -56,7 +56,7 @@ impl Solution {
         let mut points = points;
         points.sort_unstable_by(|a, b| (a[0], a[1]).cmp(&(b[0], b[1])));
 
-        println!("points: {:?}", &points);
+        println!("points: {:?}", points);
         let len = points.len();
         let mut count = 0;
 

@@ -76,7 +76,7 @@ impl Solution {
     pub fn _kth_smallest4(mat: Vec<Vec<i32>>, k: i32) -> i32 {
         let outer_len = mat.len();
         let inner_len = mat[0].len();
-        println!("mat: {:?}", &mat);
+        println!("mat: {:?}", mat);
         // let mut diff: Vec<Vec<i32>> = vec![vec![0; inner_len]; outer_len];
 
         // for o in 0..outer_len {
@@ -108,7 +108,7 @@ impl Solution {
                         base += mat[i][indexes[i]];
                     }
 
-                    println!("temp: {:?}, sum = {}", &_temp, base);
+                    println!("temp: {:?}, sum = {}", _temp, base);
                     sums.push(base);
                 }
             }
@@ -129,12 +129,12 @@ impl Solution {
             for i in 0..outer_len {
                 moved.push(mat[i][indexes[i]])
             }
-            println!("Move to {:?}, index: {:?}", &moved, &indexes);
+            println!("Move to {:?}, index: {:?}", moved, indexes);
             // println!("update indexes: {:?}", &indexes);
         }
 
         sums.sort();
-        println!("sums: {:?}", &sums);
+        println!("sums: {:?}", sums);
         *sums.iter().take(k as usize).next_back().unwrap()
     }
 
@@ -144,7 +144,7 @@ impl Solution {
         let mut heap: Vec<i32> = Vec::new();
         let outer_len = mat.len();
         let inner_len = mat[0].len();
-        println!("mat: {:?}", &mat);
+        println!("mat: {:?}", mat);
 
         let mut indexes = vec![0; outer_len];
 
@@ -174,7 +174,7 @@ impl Solution {
         }
 
         heap.sort();
-        println!("heap: {:?}", &heap);
+        println!("heap: {:?}", heap);
         *heap.iter().take(k as usize).next_back().unwrap()
     }
 }

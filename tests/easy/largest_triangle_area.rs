@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn largest_triangle_area(points: Vec<Vec<i32>>) -> f64 {
-        println!("points: {:?}", &points);
+        println!("points: {:?}", points);
 
         let mut max_area: f64 = 0.0;
         let n = points.len();

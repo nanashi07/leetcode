@@ -28,7 +28,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _smallest_subarrays(nums: Vec<i32>) -> Vec<i32> {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut xor = 0;
         for n in &nums {

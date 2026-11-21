@@ -7,7 +7,7 @@ struct Solution;
 
 impl Solution {
     pub fn find_x_sum(nums: Vec<i32>, k: i32, x: i32) -> Vec<i32> {
-        println!("nums: {:?}, k: {k}, x: {x}", &nums);
+        println!("nums: {:?}, k: {k}, x: {x}", nums);
 
         let k = k as usize;
         let mut result = vec![];

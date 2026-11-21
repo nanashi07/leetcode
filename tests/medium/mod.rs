@@ -410,6 +410,8 @@ pub mod find_the_lexicographically_smallest_valid_sequence;
 pub mod remove_methods_from_project;
 // 3315. Construct the Minimum Bitwise Array II
 mod construct_the_minimum_bitwise_array_ii;
+// 3331. Find Subtree Sizes After Changes
+mod find_subtree_sizes_after_changes;
 // 3346. Maximum Frequency of an Element After Performing Operations I
 mod maximum_frequency_of_an_element_after_performing_operations_i;
 // 3350. Adjacent Increasing Subarrays Detection II

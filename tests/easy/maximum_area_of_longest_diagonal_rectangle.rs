@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn area_of_max_diagonal(dimensions: Vec<Vec<i32>>) -> i32 {
-        println!("dimensions: {:?}", &dimensions);
+        println!("dimensions: {:?}", dimensions);
 
         let mut diagnoal = 0;
         let mut area = 0;

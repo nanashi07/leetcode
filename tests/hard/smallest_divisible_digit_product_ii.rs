@@ -107,8 +107,8 @@ impl Solution {
         let mut has3 = 0;
         let mut has5 = 0;
         let mut has7 = 0;
-        for j in 0..k {
-            let (f2, f3, f5, f7) = get_factors(bytes[j] - b'0');
+        for &byte in bytes.iter().take(k) {
+            let (f2, f3, f5, f7) = get_factors(byte - b'0');
             has2 += f2;
             has3 += f3;
             has5 += f5;
@@ -137,8 +137,8 @@ impl Solution {
                     let rem_len = n - 1 - i;
                     if dp[nr2][nr3] as usize + nr5 + nr7 <= rem_len {
                         let mut res = String::with_capacity(n);
-                        for j in 0..i {
-                            res.push(bytes[j] as char);
+                        for &byte in bytes.iter().take(i) {
+                            res.push(byte as char);
                         }
                         res.push((d + b'0') as char);
                         res.push_str(&build_greedy(nr2, nr3, nr5, nr7, rem_len));

@@ -7,7 +7,7 @@ struct Solution;
 
 impl Solution {
     pub fn max_freq_sum(s: String) -> i32 {
-        println!("s: {}", &s);
+        println!("s: {}", s);
 
         let vowels = HashSet::from(['a', 'e', 'i', 'o', 'u']);
         let mut c1 = 0;

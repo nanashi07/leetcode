@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn max_sum(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
         let mut nums = nums;
         nums.sort_unstable();
         let mut sum = 0;

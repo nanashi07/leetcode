@@ -11,7 +11,7 @@ impl Solution {
     ) -> Vec<String> {
         println!(
             "code: {:?}, business_line: {:?}, is_active: {:?}",
-            &code, &business_line, &is_active
+            code, business_line, is_active
         );
 
         let valid_category = ["electronics", "grocery", "pharmacy", "restaurant"];

@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn maximum_length(nums: Vec<i32>) -> i32 {
-        println!("num: {:?}", &nums);
+        println!("num: {:?}", nums);
 
         let mut all_even_max = 0;
         let mut all_odds_max = 0;
