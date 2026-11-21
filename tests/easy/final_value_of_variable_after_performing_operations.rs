@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn final_value_after_operations(operations: Vec<String>) -> i32 {
-        println!("operations: {:?}", &operations);
+        println!("operations: {:?}", operations);
 
         let mut x = 0;
 

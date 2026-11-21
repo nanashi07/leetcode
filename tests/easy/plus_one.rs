@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn plus_one(digits: Vec<i32>) -> Vec<i32> {
-        println!("digits: {:?}", &digits);
+        println!("digits: {:?}", digits);
 
         let len = digits.len();
         let mut digits = digits;

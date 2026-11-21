@@ -74,20 +74,20 @@ impl Solution {
 fn test_add_tw_numbers() {
     let l1 = create_node_list(&[2, 4, 3]);
     let l2 = create_node_list(&[5, 6, 4]);
-    println!("l1: {:?}", &l1);
-    println!("l2: {:?}", &l2);
+    println!("l1: {:?}", l1);
+    println!("l2: {:?}", l2);
     let result = Solution::add_two_numbers(l1, l2);
     let expected = create_node_list(&[7, 0, 8]);
-    print!("expected: {:?}", &expected);
+    print!("expected: {:?}", expected);
     assert_eq!(expected, result);
 
     let l1 = create_node_list(&[9, 9, 9, 9, 9, 9, 9]);
     let l2 = create_node_list(&[9, 9, 9, 9]);
-    println!("l1: {:?}", &l1);
-    println!("l2: {:?}", &l2);
+    println!("l1: {:?}", l1);
+    println!("l2: {:?}", l2);
     let result = Solution::add_two_numbers(l1, l2);
     let expected = create_node_list(&[8, 9, 9, 9, 0, 0, 0, 1]);
-    print!("expected: {:?}", &expected);
+    print!("expected: {:?}", expected);
     assert_eq!(expected, result);
 }
 

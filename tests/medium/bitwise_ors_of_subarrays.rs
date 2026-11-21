@@ -8,7 +8,7 @@ struct Solution;
 impl Solution {
     // https://leetcode.com/problems/bitwise-ors-of-subarrays/editorial/
     pub fn subarray_bitwise_o_rs(arr: Vec<i32>) -> i32 {
-        println!("arr: {:?}", &arr);
+        println!("arr: {:?}", arr);
 
         let mut xors: HashSet<i32> = HashSet::new();
         let mut curr: HashSet<i32> = HashSet::from([0]); // init one
@@ -21,7 +21,7 @@ impl Solution {
             for c in &curr {
                 tmp.insert(*c | n);
             }
-            println!("tmp: {:?}", &tmp);
+            println!("tmp: {:?}", tmp);
             // re-assign for next round
             curr = tmp;
 

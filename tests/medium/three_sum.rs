@@ -97,17 +97,17 @@ fn test_three_sum() {
         vec![vec![-1, -1, 2], vec![-1, 0, 1]],
         result,
         "nums = {:?}",
-        &nums
+        nums
     );
 
     let nums = vec![0, 1, 1];
     let result = Solution::three_sum(nums.clone());
     let expected: Vec<Vec<i32>> = vec![];
-    assert_eq!(expected, result, "nums = {:?}", &nums);
+    assert_eq!(expected, result, "nums = {:?}", nums);
 
     let nums = vec![0, 0, 0];
     let result = Solution::three_sum(nums.clone());
-    assert_eq!(vec![vec![0, 0, 0]], result, "nums = {:?}", &nums);
+    assert_eq!(vec![vec![0, 0, 0]], result, "nums = {:?}", nums);
 
     let nums = read_case_01();
     let _result = Solution::three_sum(nums.clone());

@@ -7,7 +7,7 @@ struct Solution;
 
 impl Solution {
     pub fn can_be_typed_words(text: String, broken_letters: String) -> i32 {
-        println!("text: {:?}, broken_letters: {:?}", &text, &broken_letters);
+        println!("text: {:?}, broken_letters: {:?}", text, broken_letters);
 
         let letters = broken_letters.chars().collect::<HashSet<_>>();
         text.split(' ')

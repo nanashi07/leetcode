@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn k_length_apart(nums: Vec<i32>, k: i32) -> bool {
-        println!("nums: {:?}, k: {k}", &nums);
+        println!("nums: {:?}, k: {k}", nums);
 
         let mut space = i32::MAX;
         let mut counter = -1;

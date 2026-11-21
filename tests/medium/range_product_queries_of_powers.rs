@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn product_queries(n: i32, queries: Vec<Vec<i32>>) -> Vec<i32> {
-        println!("n: {}, queries: {:?}", n, &queries);
+        println!("n: {}, queries: {:?}", n, queries);
         const M: i32 = 10_i32.pow(9) + 7;
 
         let powers = {
@@ -24,10 +24,10 @@ impl Solution {
             tmp
         };
 
-        println!("powers: {:?}", &powers);
+        println!("powers: {:?}", powers);
         println!(
             "powers: {:?}",
-            &powers
+            powers
                 .iter()
                 .map(|&p| 2_i32.pow(p as u32))
                 .collect::<Vec<i32>>()

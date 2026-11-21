@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn minimum_operations(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         nums.iter().filter(|&n| n % 3 != 0).count() as i32
     }

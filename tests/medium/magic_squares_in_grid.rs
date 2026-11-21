@@ -68,11 +68,7 @@ impl Solution {
 
         // Check diagonal (top-right to bottom-left)
         let diag2 = grid[row][col + 2] + grid[row + 1][col + 1] + grid[row + 2][col];
-        if diag2 != 15 {
-            return false;
-        }
-
-        true
+        diag2 == 15
     }
 }
 

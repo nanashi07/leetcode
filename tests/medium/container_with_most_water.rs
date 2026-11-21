@@ -35,7 +35,7 @@ mod tests {
         let height = vec![1, 8, 6, 2, 5, 4, 8, 3, 7];
         let result = Solution::max_area(height.clone());
         println!("cost time: {:?}", time.elapsed());
-        assert_eq!(49, result, "height: {:?}", &height);
+        assert_eq!(49, result, "height: {:?}", height);
     }
 
     #[test]
@@ -44,7 +44,7 @@ mod tests {
         let height = vec![1, 1];
         let result = Solution::max_area(height.clone());
         println!("cost time: {:?}", time.elapsed());
-        assert_eq!(1, result, "height: {:?}", &height);
+        assert_eq!(1, result, "height: {:?}", height);
     }
 
     #[test]

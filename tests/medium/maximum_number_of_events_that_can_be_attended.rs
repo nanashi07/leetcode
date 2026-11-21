@@ -12,7 +12,7 @@ impl Solution {
         let mut events = events;
         // sort events so can iterator accordingly
         events.sort_by(|a, b| a[0].cmp(&b[0]));
-        println!("events: {:?}", &events);
+        println!("events: {:?}", events);
         let max_day = events.iter().map(|e| e[1]).max().unwrap_or(0);
         let mut pq = BinaryHeap::new();
         let mut count = 0;
@@ -22,11 +22,11 @@ impl Solution {
         for day in 1..=max_day {
             // get all started events
             while i < events.len() && events[i][0] <= day {
-                println!("day: {}, add event: {:?}", day, &events[i]);
+                println!("day: {}, add event: {:?}", day, events[i]);
                 pq.push(Reverse(events[i][1]));
                 i += 1;
             }
-            println!("all ongoing events: {:?}", &pq);
+            println!("all ongoing events: {:?}", pq);
             // remove expired events (ended time before than day)
             while let Some(&Reverse(end)) = pq.peek() {
                 if end < day {
@@ -35,12 +35,12 @@ impl Solution {
                     break;
                 }
             }
-            println!("joinable events: {:?}", &pq);
+            println!("joinable events: {:?}", pq);
             // join the earliest event
             if let Some(Reverse(_)) = pq.pop() {
                 count += 1;
             }
-            println!("remained ongoing events: {:?}", &pq);
+            println!("remained ongoing events: {:?}", pq);
         }
         count
     }

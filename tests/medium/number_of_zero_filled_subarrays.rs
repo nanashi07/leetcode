@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn zero_filled_subarray(nums: Vec<i32>) -> i64 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut len = 0;
         let mut sum = 0;

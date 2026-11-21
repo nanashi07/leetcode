@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn spellchecker(wordlist: Vec<String>, queries: Vec<String>) -> Vec<String> {
-        println!("wordlist: {:?}\nqueries: {:?}", &wordlist, &queries);
+        println!("wordlist: {:?}\nqueries: {:?}", wordlist, queries);
 
         let mut r = vec![];
         let non_vowel = |s: &str| {

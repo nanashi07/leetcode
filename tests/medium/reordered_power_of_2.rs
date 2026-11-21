@@ -48,7 +48,7 @@ impl Solution {
         for i in min_p..=max_p {
             let pn = 2_i64.pow(i as u32);
             let vp = to_vec(pn);
-            println!("compare {:?} : {:?}", &vo, &vp);
+            println!("compare {:?} : {:?}", vo, vp);
             if vp.eq(&vo) {
                 return true;
             }

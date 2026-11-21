@@ -17,7 +17,7 @@ impl Solution {
             return String::new();
         }
 
-        let letters = [b'a', b'b', b'c'];
+        let letters = *b"abc";
         let mut result = String::with_capacity(n);
         let mut prev = None;
 

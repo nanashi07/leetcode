@@ -51,13 +51,13 @@ impl Solution {
 fn test_roman_to_int() {
     let s = "III";
     let result = Solution::roman_to_int(s.to_owned());
-    assert_eq!(3, result, "s = {}", &s);
+    assert_eq!(3, result, "s = {}", s);
 
     let s = "LVIII";
     let result = Solution::roman_to_int(s.to_owned());
-    assert_eq!(58, result, "s = {}", &s);
+    assert_eq!(58, result, "s = {}", s);
 
     let s = "MCMXCIV";
     let result = Solution::roman_to_int(s.to_owned());
-    assert_eq!(1994, result, "s = {}", &s);
+    assert_eq!(1994, result, "s = {}", s);
 }

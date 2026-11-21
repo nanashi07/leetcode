@@ -34,7 +34,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _count_palindromic_subsequence(s: String) -> i32 {
-        println!("s: {:?}", &s);
+        println!("s: {:?}", s);
 
         let mut set: HashSet<String> = HashSet::new();
         let chars = s.chars().collect::<Vec<_>>();

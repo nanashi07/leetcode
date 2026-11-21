@@ -27,7 +27,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _min_operations(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut op = 0;
         let mut values = nums

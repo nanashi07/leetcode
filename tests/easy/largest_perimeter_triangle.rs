@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn largest_perimeter(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let len = nums.len();
         let mut nums = nums;

@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn is_good(nums: Vec<i32>) -> bool {
-        print!("{:?}", &nums);
+        print!("{:?}", nums);
         let mut s = vec![0; nums.len() - 1];
         for n in &nums {
             let i = *n as usize - 1;

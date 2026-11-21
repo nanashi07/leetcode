@@ -49,7 +49,7 @@ impl Solution {
     pub fn _max_free_time(event_time: i32, start_time: Vec<i32>, end_time: Vec<i32>) -> i32 {
         println!(
             "event_time: {}, start_time: {:?}, end_time: {:?}",
-            event_time, &start_time, &end_time
+            event_time, start_time, end_time
         );
         let len = start_time.len();
         let mut spaces: Vec<i32> = Vec::new();
@@ -60,7 +60,7 @@ impl Solution {
             spaces.push(start_time[i + 1] - end_time[i]);
         }
         spaces.push(event_time - end_time[end_time.len() - 1]);
-        println!("spaces: {:?}", &spaces);
+        println!("spaces: {:?}", spaces);
 
         let mut max = 0;
 

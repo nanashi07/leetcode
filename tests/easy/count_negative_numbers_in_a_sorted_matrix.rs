@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn count_negatives(grid: Vec<Vec<i32>>) -> i32 {
-        println!("grid: {:?}", &grid);
+        println!("grid: {:?}", grid);
 
         let mut c = 0;
 

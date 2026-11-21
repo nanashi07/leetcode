@@ -71,11 +71,7 @@ impl Solution {
         for k in 0..size {
             anti_diag_sum += grid[start_row + k][start_col + size - 1 - k];
         }
-        if anti_diag_sum != target_sum {
-            return false;
-        }
-
-        true
+        anti_diag_sum == target_sum
     }
 }
 #[cfg(test)]

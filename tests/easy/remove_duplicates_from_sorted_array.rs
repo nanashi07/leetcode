@@ -23,18 +23,18 @@ impl Solution {
     // https://leetcode.com/problems/remove-duplicates-from-sorted-array/discuss/11782/Share-my-clean-C%2B%2B-code
     fn remove_duplicates_from_discuss(nums: &mut Vec<i32>) -> i32 {
         let mut count = 0;
-        println!("c: {}, v: {:?}", count, &nums);
+        println!("c: {}, v: {:?}", count, nums);
         for i in 1..nums.len() {
             if nums[i] == nums[i - 1] {
                 // sum duplicated count
                 count += 1;
             } else {
                 // copy value from next difference to `next position`
-                println!("{:?}", &nums);
+                println!("{:?}", nums);
                 nums[i - count] = nums[i];
-                println!("{:?}", &nums);
+                println!("{:?}", nums);
             };
-            println!("i: {}, c: {}, v: {:?}", i, count, &nums);
+            println!("i: {}, c: {}, v: {:?}", i, count, nums);
         }
         println!("------------------------");
         (nums.len() - count) as i32

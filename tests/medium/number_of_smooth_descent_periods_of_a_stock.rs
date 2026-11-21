@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn get_descent_periods(prices: Vec<i32>) -> i64 {
-        println!("prices: {:?}", &prices);
+        println!("prices: {:?}", prices);
 
         let mut start = 0;
         let mut sec = vec![];
@@ -25,7 +25,7 @@ impl Solution {
             }
         }
 
-        println!("sec: {:?}", &sec);
+        println!("sec: {:?}", sec);
 
         sec.iter().map(|s| (s + 1) * s / 2 - s).sum::<i64>() + prices.len() as i64
     }

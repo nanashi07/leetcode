@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn max_operations(s: String) -> i32 {
-        println!("s: {:?}", &s);
+        println!("s: {:?}", s);
 
         let chars: Vec<char> = s.chars().collect();
         let n = chars.len();

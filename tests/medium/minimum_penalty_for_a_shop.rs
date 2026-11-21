@@ -34,7 +34,7 @@ impl Solution {
     // Time exceed
     #[allow(clippy::needless_range_loop)]
     pub fn _best_closing_time(customers: String) -> i32 {
-        println!("customers: {:?}", &customers);
+        println!("customers: {:?}", customers);
 
         let mut penalties = vec![0; customers.len() + 1];
         let mut min = customers.len();
@@ -59,7 +59,7 @@ impl Solution {
             }
         }
 
-        println!("penalties: {:?}, min: {min}", &penalties);
+        println!("penalties: {:?}, min: {min}", penalties);
         for (i, &c) in penalties.iter().enumerate() {
             if c == min {
                 return i as i32;

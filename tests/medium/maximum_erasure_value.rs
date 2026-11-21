@@ -20,7 +20,7 @@ impl Solution {
     /// Space Complexity: O(min(m, n)) where m is the number of unique elements
     /// 空間複雜度：O(min(m, n))，其中 m 是唯一元素的數量
     pub fn maximum_unique_subarray(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         // Track the maximum sum found so far
         // 追蹤目前找到的最大和
@@ -69,7 +69,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _maximum_unique_subarray(nums: Vec<i32>) -> i32 {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut max = 0;
 

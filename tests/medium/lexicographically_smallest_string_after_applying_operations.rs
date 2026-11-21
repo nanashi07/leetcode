@@ -60,7 +60,7 @@ impl Solution {
 
     #[allow(clippy::needless_range_loop)]
     pub fn _find_lex_smallest_string(s: String, a: i32, b: i32) -> String {
-        println!("s: {}, a: {}, b: {}", &s, &a, &b);
+        println!("s: {}, a: {}, b: {}", s, a, b);
 
         let mut n = s.chars().map(|c| c as i32 - 48).collect::<Vec<i32>>();
 
@@ -97,7 +97,7 @@ impl Solution {
             }
         }
 
-        println!("n: {:?}", &n);
+        println!("n: {:?}", n);
 
         min.iter().map(|&x| (x as u8 + 48) as char).collect()
     }

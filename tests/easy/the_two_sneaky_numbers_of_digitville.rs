@@ -7,7 +7,7 @@ struct Solution;
 
 impl Solution {
     pub fn get_sneaky_numbers(nums: Vec<i32>) -> Vec<i32> {
-        println!("nums: {:?}", &nums);
+        println!("nums: {:?}", nums);
 
         let mut set = HashSet::new();
         let mut extra = vec![];

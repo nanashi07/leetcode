@@ -5,7 +5,7 @@ struct Solution;
 
 impl Solution {
     pub fn min_operations(nums: Vec<i32>, k: i32) -> i32 {
-        println!("nums: {:?}, k: {k}", &nums);
+        println!("nums: {:?}, k: {k}", nums);
 
         let sum = nums.iter().sum::<i32>();
         sum % k

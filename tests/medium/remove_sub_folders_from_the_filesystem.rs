@@ -10,7 +10,7 @@ impl Solution {
         let mut output: Vec<String> = Vec::new();
 
         for f in folder {
-            if output.is_empty() || !f.starts_with(&format!("{}/", &output[output.len() - 1])) {
+            if output.is_empty() || !f.starts_with(&format!("{}/", output[output.len() - 1])) {
                 output.push(f.clone())
             }
         }

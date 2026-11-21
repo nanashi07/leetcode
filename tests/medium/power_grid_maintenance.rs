@@ -109,7 +109,7 @@ impl Solution {
     ) -> Vec<i32> {
         println!(
             "c: {c}, connections: {:?}, queries: {:?}",
-            &connections, &queries
+            connections, queries
         );
 
         let mut stations = vec![true; 1 + c as usize];

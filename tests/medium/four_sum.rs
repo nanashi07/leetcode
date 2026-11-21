@@ -115,25 +115,25 @@ fn test_four_sum() {
     let target = 0;
     let result = Solution::four_sum(nums.clone(), target);
     let expected = vec![vec![-2, -1, 1, 2], vec![-2, 0, 0, 2], vec![-1, 0, 0, 1]];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 
     let nums = vec![2, 2, 2, 2, 2];
     let target = 8;
     let result = Solution::four_sum(nums.clone(), target);
     let expected = vec![vec![2, 2, 2, 2]];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 
     let nums = vec![-3, -1, 0, 2, 4, 5];
     let target = 0;
     let result = Solution::four_sum(nums.clone(), target);
     let expected = vec![vec![-3, -1, 0, 4]];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 
     let nums = vec![-2, -1, -1, 1, 1, 2, 2];
     let target = 0;
     let result = Solution::four_sum(nums.clone(), target);
     let expected = vec![vec![-2, -1, 1, 2], vec![-1, -1, 1, 1]];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 
     let nums = vec![-3, -2, -1, 0, 0, 1, 2, 3];
     let target = 0;
@@ -148,17 +148,17 @@ fn test_four_sum() {
         vec![-2, 0, 0, 2],
         vec![-1, 0, 0, 1],
     ];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 
     let nums = vec![2, 0, 3, 0, 1, 2, 4];
     let target = 7;
     let result = Solution::four_sum(nums.clone(), target);
     let expected = vec![vec![0, 0, 3, 4], vec![0, 1, 2, 4], vec![0, 2, 2, 3]];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 
     let nums = vec![1000000000, 1000000000, 1000000000, 1000000000];
     let target = -294967296;
     let result = Solution::four_sum(nums.clone(), target);
     let expected: Vec<Vec<i32>> = vec![];
-    assert_eq!(expected, result, "nums: {:?}, target: {}", &nums, &target);
+    assert_eq!(expected, result, "nums: {:?}, target: {}", nums, target);
 }

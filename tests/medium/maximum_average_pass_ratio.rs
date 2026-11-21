@@ -81,10 +81,7 @@ impl Solution {
 
     // Time Limit Exceeded
     pub fn _max_average_ratio(classes: Vec<Vec<i32>>, extra_students: i32) -> f64 {
-        println!(
-            "classes: {:?}, extra_students: {}",
-            &classes, &extra_students
-        );
+        println!("classes: {:?}, extra_students: {}", classes, extra_students);
 
         let mut ext = vec![0; classes.iter().len()];
         let mut data = vec![vec![0.0; classes.len()]; extra_students as usize + 1];
@@ -102,7 +99,7 @@ impl Solution {
         }
 
         let mut result: f64 = data[0].iter().sum();
-        data.iter().for_each(|r| println!("{:?}", &r));
+        data.iter().for_each(|r| println!("{:?}", r));
 
         while extra_students > 0 {
             let mut next = 0;

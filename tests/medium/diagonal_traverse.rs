@@ -54,7 +54,7 @@ impl Solution {
 
     // incorrect
     pub fn _find_diagonal_order(mat: Vec<Vec<i32>>) -> Vec<i32> {
-        println!("mat: {:?}", &mat);
+        println!("mat: {:?}", mat);
 
         let m = mat.len() as i32;
         let n = mat[0].len() as i32;

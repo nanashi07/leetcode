@@ -13,9 +13,9 @@ impl Solution {
             .collect::<Vec<_>>();
         nums.sort_unstable();
 
-        for i in 0..nums.len() {
+        for (i, &num) in nums.iter().enumerate() {
             let n = (i + 1) as i32 * k;
-            if nums[i] != n {
+            if num != n {
                 return n;
             }
         }
