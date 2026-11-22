@@ -146,6 +146,8 @@ pub mod two_furthest_houses_with_different_colors;
 mod find_target_indices_after_sorting_array;
 // 2099. Find Subsequence of Length K With the Largest Sum
 mod find_subsequence_of_length_k_with_the_largest_sum;
+// 2124. Check if All A's Appears Before All B's
+mod check_if_all_as_appears_before_all_bs;
 // 2144. Minimum Cost of Buying Candies With Discount
 pub mod minimum_cost_of_buying_candies_with_discount;
 // 2154. Keep Multiplying Found Values by Two
