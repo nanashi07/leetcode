@@ -5,7 +5,10 @@ struct Solution;
 
 impl Solution {
     pub fn check_string(s: String) -> bool {
-        todo!()
+        // All 'a's come before all 'b's iff "ba" never occurs as a substring.
+        !s.as_bytes()
+            .windows(2)
+            .any(|w| w[0] == b'b' && w[1] == b'a')
     }
 }
 
