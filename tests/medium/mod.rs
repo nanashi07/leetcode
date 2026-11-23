@@ -142,6 +142,8 @@ pub mod jump_game_iii;
 mod maximum_product_of_splitted_binary_tree;
 // 1344. Angle Between Hands of a Clock
 pub mod angle_between_hands_of_a_clock;
+// 1352. Product of the Last K Numbers
+mod product_of_the_last_k_numbers;
 // 1353. Maximum Number of Events That Can Be Attended
 mod maximum_number_of_events_that_can_be_attended;
 // 1358. Number of Substrings Containing All Three Characters
