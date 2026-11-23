@@ -228,6 +228,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [1306. Jump Game III](https://leetcode.com/problems/jump-game-iii/)
 - [1339. Maximum Product of Splitted Binary Tree](https://leetcode.com/problems/maximum-product-of-splitted-binary-tree/)
 - [1344. Angle Between Hands of a Clock](https://leetcode.com/problems/angle-between-hands-of-a-clock/)
+- [1352. Product of the Last K Numbers](https://leetcode.com/problems/product-of-the-last-k-numbers/)
 - [1353. Maximum Number of Events That Can Be Attended](https://leetcode.com/problems/maximum-number-of-events-that-can-be-attended/)
 - [1358. Number of Substrings Containing All Three Characters](https://leetcode.com/problems/number-of-substrings-containing-all-three-characters/)
 - [1382. Balance a Binary Search Tree](https://leetcode.com/problems/balance-a-binary-search-tree/)
