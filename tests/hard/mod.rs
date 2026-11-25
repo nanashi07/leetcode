@@ -236,3 +236,5 @@ pub mod total_waviness_of_numbers_in_range_ii;
 mod palindromic_path_queries_in_a_tree;
 // 3886. Sum of Sortable Integers
 mod sum_of_sortable_integers;
+// 3934. Smallest Unique Subarray
+mod smallest_unique_subarray;

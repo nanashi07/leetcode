@@ -557,6 +557,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3753. Total Waviness of Numbers in Range II](https://leetcode.com/problems/total-waviness-of-numbers-in-range-ii/)
 - [3841. Palindromic Path Queries in a Tree](https://leetcode.com/problems/palindromic-path-queries-in-a-tree/)
 - [3886. Sum of Sortable Integers](https://leetcode.com/problems/sum-of-sortable-integers/)
+- [3934. Smallest Unique Subarray](https://leetcode.com/problems/smallest-unique-subarray/)
 
 ## How to Run
 
