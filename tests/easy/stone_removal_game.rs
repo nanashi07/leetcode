@@ -5,7 +5,18 @@ struct Solution;
 
 impl Solution {
     pub fn can_alice_win(n: i32) -> bool {
-        todo!()
+        let mut remaining = n;
+        let mut remove = 10;
+        let mut moves = 0;
+
+        while remove > 0 && remaining >= remove {
+            remaining -= remove;
+            remove -= 1;
+            moves += 1;
+        }
+
+        // The player unable to move loses, so Alice wins iff she made the last legal move.
+        moves % 2 == 1
     }
 }
 
