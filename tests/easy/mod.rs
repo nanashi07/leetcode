@@ -226,6 +226,8 @@ pub mod smallest_divisible_digit_product_i;
 mod adjacent_increasing_subarrays_detection_i;
 // 3354. Make Array Elements Equal to Zero
 mod make_array_elements_equal_to_zero;
+// 3360. Stone Removal Game
+mod stone_removal_game;
 // 3364. Minimum Positive Sum Subarray
 mod minimum_positive_sum_subarray;
 // 3370. Smallest Number With All Set Bits
