@@ -436,6 +436,7 @@ This repository contains LeetCode problem solutions implemented in Rust.
 - [3904. Smallest Stable Index II](https://leetcode.com/problems/smallest-stable-index-ii/)
 - [3942. Minimum Operations to Sort a Permutation](https://leetcode.com/problems/minimum-operations-to-sort-a-permutation/)
 - [3946. Maximum Number of Items From Sale I](https://leetcode.com/problems/maximum-number-of-items-from-sale-i/)
+- [3947. Maximum Number of Items From Sale II](https://leetcode.com/problems/maximum-number-of-items-from-sale-ii/)
 - [3970. Shortest Path With At Most K Consecutive Identical Characters](https://leetcode.com/problems/shortest-path-with-at-most-k-consecutive-identical-characters/)
 
 ### Hard Problems
